@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+    <data noupdate="0">
+        <record id="mandate_passenger_security_category" model="ir.module.category">
+            <field name="name">Mandate and Passenger</field>
+        </record>
+
+
+        <record id="mandate_passenger_employee" model="res.groups">
+            <field name="name">Employee</field>
+            <field name="category_id" ref="mandate_passenger_security_category"/>
+            <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+            <field name="comment">Employee can read and create only</field>
+        </record>
+
+        <record id="mandate_passenger_direct_manager" model="res.groups">
+            <field name="name">Direct Manager</field>
+            <field name="category_id" ref="mandate_passenger_security_category"/>
+            <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+        </record>
+
+        <record id="mandate_passenger_department_manager" model="res.groups">
+            <field name="name">Department Manager</field>
+            <field name="category_id" ref="mandate_passenger_security_category"/>
+            <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+        </record>
+
+        <record id="mandate_passenger_hr_manager" model="res.groups">
+            <field name="name">HR Manager Access</field>
+            <field name="category_id" ref="mandate_passenger_security_category"/>
+            <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+        </record>
+
+        <record id="mandate_passenger_center_manager" model="res.groups">
+            <field name="name">Center Manager</field>
+            <field name="category_id" ref="mandate_passenger_security_category"/>
+            <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+        </record>
+
+        <record id="mandate_passenger_accounting_manager" model="res.groups">
+            <field name="name">Accounting Manager</field>
+            <field name="category_id" ref="mandate_passenger_security_category"/>
+            <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+        </record>
+
+<!--        Mandate and Passenger buttons-->
+        <record id="mandate_passenger_direct_manager_button" model="res.groups">
+            <field name="name">Direct Manager Button</field>
+            <field name="category_id" ref="mandate_passenger_security_category"/>
+            <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+        </record>
+        <record id="mandate_passenger_department_manager_button" model="res.groups">
+            <field name="name">Department Manager Button</field>
+            <field name="category_id" ref="mandate_passenger_security_category"/>
+            <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+        </record>
+
+        <record id="mandate_passenger_hr_manager_button" model="res.groups">
+            <field name="name">HR Manager Button</field>
+            <field name="category_id" ref="mandate_passenger_security_category"/>
+            <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+        </record>
+
+        <record id="mandate_passenger_accounting_manager_button" model="res.groups">
+            <field name="name">accounting Manager Button</field>
+            <field name="category_id" ref="mandate_passenger_security_category"/>
+            <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+        </record>
+        <record id="mandate_passenger_refuse_button" model="res.groups">
+            <field name="name">Refuse Button</field>
+            <field name="category_id" ref="mandate_passenger_security_category"/>
+            <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+        </record>
+        <record id="mandate_passenger_set_to_draft_button" model="res.groups">
+            <field name="name">Set To Draft Button</field>
+            <field name="category_id" ref="mandate_passenger_security_category"/>
+            <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+        </record>
+
+<!--        Mandate and Passenger buttons-->
+
+<!--        Mandate and Passenger Menu-->
+        <record id="mandate_passenger_waiting_direct_manager_approve_menu" model="res.groups">
+            <field name="name">Waiting Direct Manager Approve Menu</field>
+            <field name="category_id" ref="mandate_passenger_security_category"/>
+            <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+        </record>
+
+        <record id="mandate_passenger_waiting_department_manager_approve_menu" model="res.groups">
+            <field name="name">Waiting Department Manager Approve Menu</field>
+            <field name="category_id" ref="mandate_passenger_security_category"/>
+            <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+        </record>
+
+        <record id="mandate_passenger_waiting_accounting_manager_approve_menu" model="res.groups">
+            <field name="name">Waiting Accounting Manager Approve Menu</field>
+            <field name="category_id" ref="mandate_passenger_security_category"/>
+            <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+        </record>
+
+        <record id="mandate_passenger_hr_manager_menu" model="res.groups">
+            <field name="name">HR Manager Menu</field>
+            <field name="category_id" ref="mandate_passenger_security_category"/>
+            <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+        </record>
+
+        <record id="mandate_passenger_refuse_menu" model="res.groups">
+            <field name="name">Refuse Menu</field>
+            <field name="category_id" ref="mandate_passenger_security_category"/>
+            <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+        </record>
+
+        <record id="mandate_passenger_travel_ticket" model="res.groups">
+            <field name="name">Travel Ticket</field>
+            <field name="category_id" ref="mandate_passenger_security_category"/>
+            <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+        </record>
+
+<!--        Mandate and Passenger Menu-->
+
+
+
+
+
+        <record id="mandate_passenger_courses_category" model="ir.module.category">
+            <field name="name">Mandate and Passenger Courses</field>
+        </record>
+
+
+        <record id="mandate_passenger_user" model="res.groups">
+            <field name="name">user</field>
+            <field name="category_id" ref="mandate_passenger_courses_category"/>
+            <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+        </record>
+
+        <record id="mandate_passenger_manager" model="res.groups">
+            <field name="name">Manager</field>
+            <field name="category_id" ref="mandate_passenger_courses_category"/>
+            <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+        </record>
+
+
+
+        <record id="mandate_passenger_courses_place_category" model="ir.module.category">
+            <field name="name">Course place</field>
+        </record>
+
+
+        <record id="mandate_passenger_course_place_user" model="res.groups">
+            <field name="name">user</field>
+            <field name="category_id" ref="mandate_passenger_courses_place_category"/>
+            <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+        </record>
+
+        <record id="mandate_passenger_course_place_manager" model="res.groups">
+            <field name="name">Manager</field>
+            <field name="category_id" ref="mandate_passenger_courses_place_category"/>
+            <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+        </record>
+
+
+
+        <record id="mandate_passenger_employee_degree_category" model="ir.module.category">
+            <field name="name">Employee Degree</field>
+        </record>
+
+
+        <record id="mandate_passenger_employee_degree_user" model="res.groups">
+            <field name="name">User</field>
+            <field name="category_id" ref="mandate_passenger_employee_degree_category"/>
+            <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+        </record>
+
+        <record id="mandate_passenger_employee_degree_manager" model="res.groups">
+            <field name="name">Manager</field>
+            <field name="category_id" ref="mandate_passenger_employee_degree_category"/>
+            <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+        </record>
+
+
+        <record id="mandate_passenger_budget_category" model="ir.module.category">
+            <field name="name">Mandate and Passenger Budget</field>
+        </record>
+
+
+        <record id="mandate_passenger_budget_user" model="res.groups">
+            <field name="name">User</field>
+            <field name="category_id" ref="mandate_passenger_budget_category"/>
+            <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+        </record>
+
+        <record id="mandate_passenger_budget_manager" model="res.groups">
+            <field name="name">Manager</field>
+            <field name="category_id" ref="mandate_passenger_budget_category"/>
+            <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+        </record>
+
+</data>
+</odoo>
+

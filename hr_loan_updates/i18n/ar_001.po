@@ -1,0 +1,69 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* hr_loan_updates
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-12-29 17:01+0000\n"
+"PO-Revision-Date: 2020-12-29 17:01+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: hr_loan_updates
+#: model_terms:ir.ui.view,arch_db:hr_loan_updates.hr_loan_form_view_inherit
+msgid "Accounting Approve"
+msgstr "موافقه الماليه"
+
+#. module: hr_loan_updates
+#: model:ir.model.fields.selection,name:hr_loan_updates.selection__hr_loan__state__direct_manager_approve
+#: model_terms:ir.ui.view,arch_db:hr_loan_updates.hr_loan_form_view_inherit
+msgid "Direct Manager Approve"
+msgstr "موافقه المدير المباشر"
+
+#. module: hr_loan_updates
+#: model:ir.model.fields,field_description:hr_loan_updates.field_hr_loan__guarantor_employee_id
+msgid "Guarantor Employee"
+msgstr "الموظف الضامن"
+
+#. module: hr_loan_updates
+#: model:ir.model.fields.selection,name:hr_loan_updates.selection__hr_loan__state__guarantor_employee_approve
+#: model_terms:ir.ui.view,arch_db:hr_loan_updates.hr_loan_form_view_inherit
+msgid "Guarantor Employee Approve"
+msgstr "موافقه الموظف الضامن"
+
+#. module: hr_loan_updates
+#: model:ir.model.fields,field_description:hr_loan_updates.field_hr_loan__guarantor_employee_position_id
+msgid "Guarantor Employee Position"
+msgstr "وظيفه الموظف الضامن"
+
+#. module: hr_loan_updates
+#: model:ir.model.fields,field_description:hr_loan_updates.field_hr_loan__guarantor_employee_salary
+msgid "Guarantor Employee Salary"
+msgstr "راتب الموظف الضامن"
+
+#. module: hr_loan_updates
+#: model:ir.model.fields.selection,name:hr_loan_updates.selection__hr_loan__state__hr_approve
+#: model_terms:ir.ui.view,arch_db:hr_loan_updates.hr_loan_form_view_inherit
+msgid "Hr Approve"
+msgstr "موافقه الموارد البشريه"
+
+#. module: hr_loan_updates
+#: model:ir.model.fields,field_description:hr_loan_updates.field_hr_loan__is_direct_manager
+msgid "Is Direct Manager"
+msgstr "مدير مباشر"
+
+#. module: hr_loan_updates
+#: model:ir.model,name:hr_loan_updates.model_hr_loan
+msgid "Loan Request"
+msgstr "طلب سلفه"
+
+#. module: hr_loan_updates
+#: model:ir.model.fields,field_description:hr_loan_updates.field_hr_loan__state
+msgid "State"
+msgstr "الحاله"

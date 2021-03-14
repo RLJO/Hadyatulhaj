@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="ess_petty_cash" name="ESS Petty Cash">
+        <t t-call="portal.portal_layout">
+            <t>
+                <div class="row justify-content-between mt-4">
+
+                    <nav class="navbar-default navbar-static-side" role="navigation" style="z-index: 1;position: initial;">
+                        <t t-call="ess.side_menu"/>
+                    </nav>
+
+                    <div class="row col-10 col-md col-lg-10">
+                        <div class="col-lg-12">
+                            <div class="ibox ">
+                                <div class="row iess-title" style="text-align:left;margin-right: 20px;margin-left: 20px;">
+                                    <h3><span>Request Petty Cash</span></h3>
+                                </div>
+                                <div class="ibox-content">
+                                    <div class="row">
+                                        <div class="col-lg-12" style="margin-top:10px;">
+                                            <form action="/my/pettycash" method="post">
+                                                <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+                                                
+                                                <div class="row o_portal_details">
+                                                    <div class="col-lg-12">
+
+                                                            <div class="col-lg-12">
+                                                                <div t-if="error_message" class="alert alert-danger" role="alert">
+                                                                    <t t-foreach="error_message" t-as="err"><t t-esc="err"/><br /></t>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="row form-group col-lg-12">
+                                                                <div t-attf-class="form-group #{error.get('date_of_request') and 'o_has_error' or ''} col-xl-3">
+                                                                    <label class="col-form-label" for="date_of_request">Date of request</label>
+                                                                    <input type="date" name="date_of_request" t-attf-class="form-control #{error.get('date_of_request') and 'is-invalid' or ''}" required=""/>
+                                                                </div>
+                                                                <div t-attf-class="form-group #{error.get('value2') and 'o_has_error' or ''} col-xl-3">
+                                                                    <label class="col-form-label" for="value2">Amount</label>
+                                                                    <input type="number" name="value2" t-attf-class="form-control #{error.get('value2') and 'is-invalid' or ''}" required=""/>
+                                                                </div>
+                                                                <div t-attf-class="form-group #{error.get('description') and 'o_has_error' or ''} col-xl-6">
+                                                                    <label class="col-form-label" for="description">Reason</label>
+                                                                    <input type="text" name="description" t-attf-class="form-control #{error.get('description') and 'is-invalid' or ''}" required=""/>
+                                                                </div>
+                                                                
+                                                                
+                                                            </div>
+
+                                                            <div class="clearfix">
+                                                                <button type="submit" class="btn btn-primary float-right" style='margin-right: 30px;'>
+                                                                    Confirm
+                                                                    <span class="fa fa-long-arrow-right" />
+                                                                </button>
+                                                            </div> 
+
+                                                            <!--  -->
+                                                            <div t-if="pettycash_request_obj" class="ibox-content iess-p20">
+                                                                <div class="table-responsive">
+                                                                    <table class="table header-border table-hover table-custom spacing5 ess-table">
+                                                                        <thead>
+                                                                            <tr>
+                                                                                <th>Date of request</th>
+                                                                                <th>Reason</th>
+                                                                                <th>Amount</th>
+                                                                                <th>Status</th>
+                                                                            </tr>
+                                                                        </thead>
+                                                                        <tbody>
+                                                                            <tr t-foreach="pettycash_request_obj" t-as="petty">
+                                                                                <td><div t-esc="petty['date_of_request']"/></td>
+                                                                                <td><div t-esc="petty['description']"/></td>
+                                                                                <td><div t-esc="petty['value2']"/></td>
+                                                                                <td><div t-esc="petty['state']"/></td>
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        
+
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> 
+                    </div>
+                </div>
+            </t>
+        </t>
+    </template>
+
+
+</odoo>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+
+        <record id="employee_document_id" model="hr.employee">
+              <field name="name">الموظف رقم 1</field>
+              <field name="job_title">مدير شؤون الموظفين</field>
+              <field name="work_location">المبني الرئيسي ، الدور الأول و مكتب رقم 15</field>
+              <field name="work_phone">(014)-3852-7863</field>
+              <field name="work_email">a@example.com</field>
+              <field name="image_1920" type="base64"
+                     file="employee_documents_expiry/static/image/employee_image.jpeg"/>
+        </record>
+
+        <record id="document_one" model="document.type">
+            <field name="name">Driving License</field>
+        </record>
+
+        <record id="document_two" model="document.type">
+            <field name="name">Passport</field>
+        </record>
+
+        <record id="document_three" model="document.type">
+            <field name="name">ID Card</field>
+        </record>
+
+        <record id="document_action_one" model="hr.employee.document">
+            <field name="name">DC01</field>
+            <field name="employee_ref" ref="employee_document_id"/>
+        </record>
+
+
+    </data>
+</odoo>

@@ -1,0 +1,816 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* hr_employee_info_updation
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-12-29 12:46+0000\n"
+"PO-Revision-Date: 2020-12-29 12:46+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: hr_employee_info_updation
+#: model:ir.model.fields,field_description:hr_employee_info_updation.field_hr_job_history__message_needaction
+msgid "Action Needed"
+msgstr "إجراء مطلوب"
+
+#. module: hr_employee_info_updation
+#: model:ir.model.fields,field_description:hr_employee_info_updation.field_hr_job_history__activity_ids
+msgid "Activities"
+msgstr "الأنشطة"
+
+#. module: hr_employee_info_updation
+#: model:ir.model.fields,field_description:hr_employee_info_updation.field_hr_job_history__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr "زخرفة استثناء النشاط"
+
+#. module: hr_employee_info_updation
+#: model:ir.model.fields,field_description:hr_employee_info_updation.field_hr_job_history__activity_state
+msgid "Activity State"
+msgstr "حالة النشاط"
+
+#. module: hr_employee_info_updation
+#: model:ir.model.fields,field_description:hr_employee_info_updation.field_hr_employee__actual_job_name_code
+#: model:ir.model.fields,field_description:hr_employee_info_updation.field_hr_job_history__actual_job_name_code
+msgid "Actual Job Name Code"
+msgstr "الرمز الفعلى للمسمي الوظيفي"
+
+#. module: hr_employee_info_updation
+#: model:ir.model.fields,field_description:hr_employee_info_updation.field_hr_employee__actual_job_name_description
+#: model:ir.model.fields,field_description:hr_employee_info_updation.field_hr_job_history__actual_job_name_description
+msgid "Actual Job Name Description"
+msgstr "وصف المسمي الظيفي"
+
+#. module: hr_employee_info_updation
+#: model:ir.model.fields,field_description:hr_employee_info_updation.field_hr_employee__actual_organization_id
+#: model:ir.model.fields,field_description:hr_employee_info_updation.field_hr_job_history__actual_organization_id
+msgid "Actual Organization"
+msgstr "التنظيم الفعلي"
+
+#. module: hr_employee_info_updation
+#: model:ir.model.fields,field_description:hr_employee_info_updation.field_hr_employee__actual_organization_name
+#: model:ir.model.fields,field_description:hr_employee_info_updation.field_hr_job_history__actual_organization_name
+msgid "Actual Organization Name"
+msgstr "اسم المنظمة الفعلي"
+
+#. module: hr_employee_info_updation
+#: model:ir.model.fields,field_description:hr_employee_info_updation.field_hr_appraisal__appraisal_d
+msgid "Appraisal ID"
+msgstr "رقم التقييم"
+
+#. module: hr_employee_info_updation
+#: model:ir.model.fields,field_description:hr_employee_info_updation.field_hr_appraisal__appraisal_type_code
+msgid "Appraisal Type Code"
+msgstr "كود نوع التقييم"
+
+#. module: hr_employee_info_updation
+#: model_terms:ir.ui.view,arch_db:hr_employee_info_updation.view_employee_form_inherit
+msgid "Approve"
+msgstr "موافقه"
+
+#. module: hr_employee_info_updation
+#: model_terms:ir.ui.view,arch_db:hr_employee_info_updation.view_employee_form_inherit
+msgid "Arabic First Name....."
+msgstr "الاسم الأول بالعربية ....."
+
+#. module: hr_employee_info_updation
+#: model_terms:ir.ui.view,arch_db:hr_employee_info_updation.view_employee_form_inherit
+msgid "Arabic Third Name....."
+msgstr "الاسم الثالث بالعربية ....."
+
+#. module: hr_employee_info_updation
+#: model_terms:ir.ui.view,arch_db:hr_employee_info_updation.view_employee_form_inherit
+msgid "Arabic last Name....."
+msgstr "الاسم الاخير بالعربية ....."
+
+#. module: hr_employee_info_updation
+#: model_terms:ir.ui.view,arch_db:hr_employee_info_updation.view_employee_form_inherit
+msgid "Arabic second Name....."
+msgstr "الاسم الثاني بالعربية ....."
+
+#. module: hr_employee_info_updation
+#: model:ir.model.fields,field_description:hr_employee_info_updation.field_hr_job_history__message_attachment_count
+msgid "Attachment Count"
+msgstr "عدد المرفقات"
+
+#. module: hr_employee_info_updation
+#: model:ir.model.fields,field_description:hr_employee_info_updation.field_hr_employee__blood_id
+msgid "Blood Type"
+msgstr "فصيلة الدم"
+
+#. module: hr_employee_info_updation
+#: model:ir.model.fields,field_description:hr_employee_info_updation.field_hr_payslip__consolidation_set_id
+msgid "Consolidation Set"
+msgstr ""
+
+#. module: hr_employee_info_updation
+#: model:ir.model.fields,field_description:hr_employee_info_updation.field_hr_payslip__consolidation_set_description
+msgid "Consolidation Set Description"
+msgstr ""
+
+#. module: hr_employee_info_updation
+#: model:ir.model.fields,field_description:hr_employee_info_updation.field_blood_blood__create_uid
+#: model:ir.model.fields,field_description:hr_employee_info_updation.field_health_health__create_uid
+#: model:ir.model.fields,field_description:hr_employee_info_updation.field_hr_history_line__create_uid
+#: model:ir.model.fields,field_description:hr_employee_info_updation.field_hr_job_history__create_uid
+#: model:ir.model.fields,field_description:hr_employee_info_updation.field_religion_religion__create_uid
+msgid "Created by"
+msgstr "أنشئ بواسطة"
+
+#. module: hr_employee_info_updation
+#: model:ir.model.fields,field_description:hr_employee_info_updation.field_blood_blood__create_date
+#: model:ir.model.fields,field_description:hr_employee_info_updation.field_health_health__create_date
+#: model:ir.model.fields,field_description:hr_employee_info_updation.field_hr_history_line__create_date
+#: model:ir.model.fields,field_description:hr_employee_info_updation.field_hr_job_history__create_date
+#: model:ir.model.fields,field_description:hr_employee_info_updation.field_religion_religion__create_date
+msgid "Created on"
+msgstr "أنشئ في"
+
+#. module: hr_employee_info_updation
+#: model:ir.model.fields,field_description:hr_employee_info_updation.field_hr_history_line__hr_job_id
+msgid "Decision"
+msgstr "القرار"
+
+#. module: hr_employee_info_updation
+#: model:ir.model.fields,field_description:hr_employee_info_updation.field_hr_leave__decision_date
+msgid "Decision Date"
+msgstr "تاريخ القرار"
+
+#. module: hr_employee_info_updation
+#: model:ir.model.fields,field_description:hr_employee_info_updation.field_hr_leave__decision_number
+msgid "Decision Number"
+msgstr "رقم القرار"
+
+#. module: hr_employee_info_updation
+#: model:ir.model.fields,field_description:hr_employee_info_updation.field_hr_history_line__description
+msgid "Description"
+msgstr "الوصف"
+
+#. module: hr_employee_info_updation
+#: model:ir.model.fields,field_description:hr_employee_info_updation.field_blood_blood__display_name
+#: model:ir.model.fields,field_description:hr_employee_info_updation.field_health_health__display_name
+#: model:ir.model.fields,field_description:hr_employee_info_updation.field_hr_history_line__display_name
+#: model:ir.model.fields,field_description:hr_employee_info_updation.field_hr_job_history__display_name
+#: model:ir.model.fields,field_description:hr_employee_info_updation.field_religion_religion__display_name
+msgid "Display Name"
+msgstr "الاسم المعروض"
+
+#. module: hr_employee_info_updation
+#: model:ir.model.fields,field_description:hr_employee_info_updation.field_hr_payslip__element_classification
+msgid "Element Classification"
+msgstr "تصنيف العنصر"
+
+#. module: hr_employee_info_updation
+#: model:ir.model.fields,field_description:hr_employee_info_updation.field_hr_payslip__element_code
+msgid "Element Code"
+msgstr "كود العنصر"
+
+#. module: hr_employee_info_updation
+#: model:ir.model,name:hr_employee_info_updation.model_hr_employee
+msgid "Employee"
+msgstr "الموظف"
+
+#. module: hr_employee_info_updation
+#: model:ir.model,name:hr_employee_info_updation.model_hr_appraisal
+msgid "Employee Appraisal"
+msgstr "تقييم الموظف"
+
+#. module: hr_employee_info_updation
+#: model:ir.model.fields,field_description:hr_employee_info_updation.field_hr_appraisal__employee_number
+#: model:ir.model.fields,field_description:hr_employee_info_updation.field_hr_employee__employee_number
+#: model:ir.model.fields,field_description:hr_employee_info_updation.field_hr_leave__employee_number
+#: model:ir.model.fields,field_description:hr_employee_info_updation.field_hr_payslip__employee_number
+msgid "Employee Id"
+msgstr "هوية الموظف"
+
+#. module: hr_employee_info_updation
+#: model_terms:ir.ui.view,arch_db:hr_employee_info_updation.view_employee_form_inherit
+#: model_terms:ir.ui.view,arch_db:hr_employee_info_updation.view_hr_payslip_form_inherit
+msgid "Employee Info"
+msgstr "معلومات الموظف"
+
+#. module: hr_employee_info_updation
+#: model_terms:ir.ui.view,arch_db:hr_employee_info_updation.view_hr_payslip_form_inherit
+msgid "Employee Job Info"
+msgstr "معلومات وظيفة الموظف"
+
+#. module: hr_employee_info_updation
+#: model:ir.model.fields,field_description:hr_employee_info_updation.field_hr_employee__employee_status_code
+msgid "Employee Status Code"
+msgstr "كود حالة الموظف"
+
+#. module: hr_employee_info_updation
+#: model:ir.model.fields,field_description:hr_employee_info_updation.field_hr_employee__employee_type_code
+#: model:ir.model.fields,field_description:hr_employee_info_updation.field_hr_job_history__employee_type_code
+msgid "Employee Type Code"
+msgstr "كود نوع الموظف"
+
+#. module: hr_employee_info_updation
+#: model:ir.model.fields,field_description:hr_employee_info_updation.field_hr_employee__employee_type_description
+#: model:ir.model.fields,field_description:hr_employee_info_updation.field_hr_job_history__employee_type_description
+msgid "Employee Type Description"
+msgstr "وصف نوع الموظف"
+
+#. module: hr_employee_info_updation
+#: model_terms:ir.ui.view,arch_db:hr_employee_info_updation.view_employee_form_inherit
+msgid "English First Name....."
+msgstr "الاسم الأول بالإنجليزية ....."
+
+#. module: hr_employee_info_updation
+#: model_terms:ir.ui.view,arch_db:hr_employee_info_updation.view_employee_form_inherit
+msgid "English Third Name....."
+msgstr "الاسم الثالث بالإنجليزية ....."
+
+#. module: hr_employee_info_updation
+#: model_terms:ir.ui.view,arch_db:hr_employee_info_updation.view_employee_form_inherit
+msgid "English last Name....."
+msgstr "الاسم الاخير بالإنجليزية ....."
+
+#. module: hr_employee_info_updation
+#: model_terms:ir.ui.view,arch_db:hr_employee_info_updation.view_employee_form_inherit
+msgid "English second Name....."
+msgstr "الاسم الثاني بالإنجليزية ....."
+
+#. module: hr_employee_info_updation
+#: model:ir.model.fields,field_description:hr_employee_info_updation.field_hr_employee__first_grade_date
+#: model:ir.model.fields,field_description:hr_employee_info_updation.field_hr_job_history__first_grade_date
+msgid "First Grade Date"
+msgstr "تاريخ اول درجه"
+
+#. module: hr_employee_info_updation
+#: model:ir.model.fields,field_description:hr_employee_info_updation.field_hr_employee__first_name
+#: model:ir.model.fields,field_description:hr_employee_info_updation.field_hr_employee__first_name_e
+msgid "First Name"
+msgstr "الاسم الاول"
+
+#. module: hr_employee_info_updation
+#: model_terms:ir.ui.view,arch_db:hr_employee_info_updation.view_employee_form_inherit
+msgid "First Related Person"
+msgstr "أول شخص ذو قرابه"
+
+#. module: hr_employee_info_updation
+#: model:ir.model.fields,field_description:hr_employee_info_updation.field_hr_employee__first_related_person_name
+msgid "First Related Person Name"
+msgstr "الاسم"
+
+#. module: hr_employee_info_updation
+#: model:ir.model.fields,field_description:hr_employee_info_updation.field_hr_employee__first_related_person_phone
+msgid "First Related Person Phone"
+msgstr "الهاتف"
+
+#. module: hr_employee_info_updation
+#: model:ir.model.fields,field_description:hr_employee_info_updation.field_hr_employee__first_related_person_relation
+msgid "First Related Person Relation"
+msgstr "صله القرابه"
+
+#. module: hr_employee_info_updation
+#: model:ir.model.fields,field_description:hr_employee_info_updation.field_hr_job_history__message_follower_ids
+msgid "Followers"
+msgstr "المتابعون"
+
+#. module: hr_employee_info_updation
+#: model:ir.model.fields,field_description:hr_employee_info_updation.field_hr_job_history__message_channel_ids
+msgid "Followers (Channels)"
+msgstr "المتابعون (القنوات)"
+
+#. module: hr_employee_info_updation
+#: model:ir.model.fields,field_description:hr_employee_info_updation.field_hr_job_history__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "المتابعون (الشركاء)"
+
+#. module: hr_employee_info_updation
+#: model:ir.model.fields,field_description:hr_employee_info_updation.field_hr_employee__government_hire_date
+#: model:ir.model.fields,field_description:hr_employee_info_updation.field_hr_job_history__government_hire_date
+msgid "Government Hire Date"
+msgstr "تاريخ التعيين الحكومي"
+
+#. module: hr_employee_info_updation
+#: model_terms:ir.ui.view,arch_db:hr_employee_info_updation.view_employee_form_inherit
+#: model_terms:ir.ui.view,arch_db:hr_employee_info_updation.view_hr_appraisal_form_inherit
+#: model_terms:ir.ui.view,arch_db:hr_employee_info_updation.view_hr_payslip_form_inherit
+msgid "Government Information"
+msgstr "المعلومات الحكومية"
+
+#. module: hr_employee_info_updation
+#: model:ir.model.fields,field_description:hr_employee_info_updation.field_hr_history_line__hr_employee_id
+msgid "Hr Employee"
+msgstr "موظف موارد بشرية"
+
+#. module: hr_employee_info_updation
+#: model:ir.model.fields,field_description:hr_employee_info_updation.field_blood_blood__id
+#: model:ir.model.fields,field_description:hr_employee_info_updation.field_health_health__id
+#: model:ir.model.fields,field_description:hr_employee_info_updation.field_hr_history_line__id
+#: model:ir.model.fields,field_description:hr_employee_info_updation.field_hr_job_history__id
+#: model:ir.model.fields,field_description:hr_employee_info_updation.field_religion_religion__id
+msgid "ID"
+msgstr "المُعرف"
+
+#. module: hr_employee_info_updation
+#: model:ir.model.fields,field_description:hr_employee_info_updation.field_hr_job_history__activity_exception_icon
+msgid "Icon"
+msgstr "الأيقونة"
+
+#. module: hr_employee_info_updation
+#: model:ir.model.fields,help:hr_employee_info_updation.field_hr_job_history__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr "الأيقونة للإشارة إلى استثناء النشاط"
+
+#. module: hr_employee_info_updation
+#: model:ir.model.fields,help:hr_employee_info_updation.field_hr_job_history__message_needaction
+#: model:ir.model.fields,help:hr_employee_info_updation.field_hr_job_history__message_unread
+msgid "If checked, new messages require your attention."
+msgstr "إذا كان محددًا، فهناك رسائل جديدة تحتاج لرؤيتها."
+
+#. module: hr_employee_info_updation
+#: model:ir.model.fields,help:hr_employee_info_updation.field_hr_job_history__message_has_error
+#: model:ir.model.fields,help:hr_employee_info_updation.field_hr_job_history__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr "إذا كان محددًا، فقد حدث خطأ في تسليم بعض الرسائل."
+
+#. module: hr_employee_info_updation
+#: model:ir.model.fields,field_description:hr_employee_info_updation.field_hr_appraisal__iqama_no
+#: model:ir.model.fields,field_description:hr_employee_info_updation.field_hr_employee__iqama_no
+#: model:ir.model.fields,field_description:hr_employee_info_updation.field_hr_leave__iqama_no
+#: model:ir.model.fields,field_description:hr_employee_info_updation.field_hr_payslip__iqama_no
+msgid "Iqama Number"
+msgstr "رقم الاقامه"
+
+#. module: hr_employee_info_updation
+#: model:ir.model.fields,field_description:hr_employee_info_updation.field_hr_job_history__message_is_follower
+msgid "Is Follower"
+msgstr "متابع"
+
+#. module: hr_employee_info_updation
+#: model:ir.model.fields,field_description:hr_employee_info_updation.field_hr_employee__job_cat_chain
+#: model:ir.model.fields,field_description:hr_employee_info_updation.field_hr_job_history__job_cat_chain
+msgid "Job Cat Chain"
+msgstr ""
+
+#. module: hr_employee_info_updation
+#: model:ir.model.fields,field_description:hr_employee_info_updation.field_hr_employee__job_class_code
+#: model:ir.model.fields,field_description:hr_employee_info_updation.field_hr_job_history__job_class_code
+msgid "Job Class Code"
+msgstr "كود فئة الوظيفة"
+
+#. module: hr_employee_info_updation
+#: model:ir.model.fields,field_description:hr_employee_info_updation.field_hr_employee__job_class_description
+#: model:ir.model.fields,field_description:hr_employee_info_updation.field_hr_job_history__job_class_description
+msgid "Job Class Description"
+msgstr "وصف فئة الوظيفة"
+
+#. module: hr_employee_info_updation
+#: model:ir.model.fields,field_description:hr_employee_info_updation.field_hr_employee__job_history_ids
+msgid "Job History"
+msgstr "تاريخ الوظيفه"
+
+#. module: hr_employee_info_updation
+#: model_terms:ir.ui.view,arch_db:hr_employee_info_updation.view_employee_form_inherit
+msgid "Job Info"
+msgstr "معلومات الوظيفه"
+
+#. module: hr_employee_info_updation
+#: model:ir.model.fields,field_description:hr_employee_info_updation.field_hr_employee__job_name_code
+#: model:ir.model.fields,field_description:hr_employee_info_updation.field_hr_job_history__job_name_code
+msgid "Job Name Code"
+msgstr "كود الوظيفة"
+
+#. module: hr_employee_info_updation
+#: model:ir.model.fields,field_description:hr_employee_info_updation.field_hr_employee__job_name_description
+#: model:ir.model.fields,field_description:hr_employee_info_updation.field_hr_job_history__job_name_description
+msgid "Job Name Description"
+msgstr "وصف المسمي الوظيفي"
+
+#. module: hr_employee_info_updation
+#: model:ir.model.fields,field_description:hr_employee_info_updation.field_hr_employee__job_number
+#: model:ir.model.fields,field_description:hr_employee_info_updation.field_hr_job_history__job_number
+msgid "Job Number"
+msgstr "رقم الوظيفه"
+
+#. module: hr_employee_info_updation
+#: model:ir.model.fields,field_description:hr_employee_info_updation.field_hr_employee__job_organization_name
+#: model:ir.model.fields,field_description:hr_employee_info_updation.field_hr_job_history__job_organization_name
+msgid "Job Organization Name"
+msgstr "المسمي الوظيفي بالمؤسسه"
+
+#. module: hr_employee_info_updation
+#: model:ir.actions.act_window,name:hr_employee_info_updation.job_template_action
+#: model:ir.ui.menu,name:hr_employee_info_updation.request_letter_menu
+msgid "Jobs Information"
+msgstr "معلومات الوظيفه"
+
+#. module: hr_employee_info_updation
+#: model:ir.model.fields,field_description:hr_employee_info_updation.field_blood_blood____last_update
+#: model:ir.model.fields,field_description:hr_employee_info_updation.field_health_health____last_update
+#: model:ir.model.fields,field_description:hr_employee_info_updation.field_hr_history_line____last_update
+#: model:ir.model.fields,field_description:hr_employee_info_updation.field_hr_job_history____last_update
+#: model:ir.model.fields,field_description:hr_employee_info_updation.field_religion_religion____last_update
+msgid "Last Modified on"
+msgstr "آخر تعديل في"
+
+#. module: hr_employee_info_updation
+#: model:ir.model.fields,field_description:hr_employee_info_updation.field_hr_employee__last_name
+#: model:ir.model.fields,field_description:hr_employee_info_updation.field_hr_employee__last_name_e
+msgid "Last Name"
+msgstr "الاسم الاخير"
+
+#. module: hr_employee_info_updation
+#: model:ir.model.fields,field_description:hr_employee_info_updation.field_hr_employee__last_update_date
+#: model:ir.model.fields,field_description:hr_employee_info_updation.field_hr_job_history__last_update_date
+msgid "Last Update Date"
+msgstr "اخر تاريخ تحديث"
+
+#. module: hr_employee_info_updation
+#: model:ir.model.fields,field_description:hr_employee_info_updation.field_blood_blood__write_uid
+#: model:ir.model.fields,field_description:hr_employee_info_updation.field_health_health__write_uid
+#: model:ir.model.fields,field_description:hr_employee_info_updation.field_hr_history_line__write_uid
+#: model:ir.model.fields,field_description:hr_employee_info_updation.field_hr_job_history__write_uid
+#: model:ir.model.fields,field_description:hr_employee_info_updation.field_religion_religion__write_uid
+msgid "Last Updated by"
+msgstr "آخر تحديث بواسطة"
+
+#. module: hr_employee_info_updation
+#: model:ir.model.fields,field_description:hr_employee_info_updation.field_blood_blood__write_date
+#: model:ir.model.fields,field_description:hr_employee_info_updation.field_health_health__write_date
+#: model:ir.model.fields,field_description:hr_employee_info_updation.field_hr_history_line__write_date
+#: model:ir.model.fields,field_description:hr_employee_info_updation.field_hr_job_history__write_date
+#: model:ir.model.fields,field_description:hr_employee_info_updation.field_religion_religion__write_date
+msgid "Last Updated on"
+msgstr "آخر تحديث في"
+
+#. module: hr_employee_info_updation
+#: model:ir.model.fields,field_description:hr_employee_info_updation.field_hr_employee__location_code
+#: model:ir.model.fields,field_description:hr_employee_info_updation.field_hr_job_history__location_code
+msgid "Location Code"
+msgstr "كود الموقع"
+
+#. module: hr_employee_info_updation
+#: model:ir.model.fields,field_description:hr_employee_info_updation.field_hr_job_history__message_main_attachment_id
+msgid "Main Attachment"
+msgstr "المرفق الرئيسي"
+
+#. module: hr_employee_info_updation
+#: model:ir.model.fields,field_description:hr_employee_info_updation.field_hr_job_history__message_has_error
+msgid "Message Delivery error"
+msgstr "خطأ في تسليم الرسائل"
+
+#. module: hr_employee_info_updation
+#: model:ir.model.fields,field_description:hr_employee_info_updation.field_hr_job_history__message_ids
+msgid "Messages"
+msgstr "الرسائل"
+
+#. module: hr_employee_info_updation
+#: model:ir.model.fields,field_description:hr_employee_info_updation.field_hr_employee__ministry_hire_date
+#: model:ir.model.fields,field_description:hr_employee_info_updation.field_hr_job_history__ministry_hire_date
+msgid "Ministry Hire Date"
+msgstr "تاريخ التعيين في الوزارة"
+
+#. module: hr_employee_info_updation
+#: model:ir.model.fields,field_description:hr_employee_info_updation.field_blood_blood__name
+#: model:ir.model.fields,field_description:hr_employee_info_updation.field_health_health__name
+#: model:ir.model.fields,field_description:hr_employee_info_updation.field_religion_religion__name
+msgid "Name"
+msgstr "الاسم"
+
+#. module: hr_employee_info_updation
+#: model:ir.model.fields,field_description:hr_employee_info_updation.field_hr_appraisal__national_id
+#: model:ir.model.fields,field_description:hr_employee_info_updation.field_hr_employee__national_id
+#: model:ir.model.fields,field_description:hr_employee_info_updation.field_hr_leave__national_id
+#: model:ir.model.fields,field_description:hr_employee_info_updation.field_hr_payslip__national_id
+msgid "National Id"
+msgstr "الهوية الوطنية"
+
+#. module: hr_employee_info_updation
+#: model:ir.model.fields,field_description:hr_employee_info_updation.field_hr_job_history__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "الموعد النهائي للنشاط التالي"
+
+#. module: hr_employee_info_updation
+#: model:ir.model.fields,field_description:hr_employee_info_updation.field_hr_job_history__activity_summary
+msgid "Next Activity Summary"
+msgstr "ملخص النشاط التالي"
+
+#. module: hr_employee_info_updation
+#: model:ir.model.fields,field_description:hr_employee_info_updation.field_hr_job_history__activity_type_id
+msgid "Next Activity Type"
+msgstr "نوع النشاط التالي"
+
+#. module: hr_employee_info_updation
+#: model:ir.model.fields,field_description:hr_employee_info_updation.field_hr_employee__next_promotion_date
+#: model:ir.model.fields,field_description:hr_employee_info_updation.field_hr_job_history__next_promotion_date
+msgid "Next Promotion Date"
+msgstr "تاريخ الترقية التالية"
+
+#. module: hr_employee_info_updation
+#: code:addons/hr_employee_info_updation/models/hr_employee.py:0
+#, python-format
+msgid "Number Of Characters In National ID Must Not Exceed 10"
+msgstr "يجب ألا يتجاوز عدد الأحرف في الهوية الوطنية 10"
+
+#. module: hr_employee_info_updation
+#: model:ir.model.fields,field_description:hr_employee_info_updation.field_hr_job_history__message_needaction_counter
+msgid "Number of Actions"
+msgstr "عدد الإجراءات"
+
+#. module: hr_employee_info_updation
+#: model:ir.model.fields,field_description:hr_employee_info_updation.field_hr_job_history__message_has_error_counter
+msgid "Number of errors"
+msgstr "عدد الاخطاء"
+
+#. module: hr_employee_info_updation
+#: model:ir.model.fields,help:hr_employee_info_updation.field_hr_job_history__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr "عدد الرسائل التي تتطلب إجراء"
+
+#. module: hr_employee_info_updation
+#: model:ir.model.fields,help:hr_employee_info_updation.field_hr_job_history__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "عدد الرسائل الحادث بها خطأ في التسليم"
+
+#. module: hr_employee_info_updation
+#: model:ir.model.fields,help:hr_employee_info_updation.field_hr_job_history__message_unread_counter
+msgid "Number of unread messages"
+msgstr "عدد الرسائل الجديدة"
+
+#. module: hr_employee_info_updation
+#: model:ir.model.fields,field_description:hr_employee_info_updation.field_hr_employee__passport_number
+msgid "Passport Number"
+msgstr "رقم جواز السفر"
+
+#. module: hr_employee_info_updation
+#: model:ir.model,name:hr_employee_info_updation.model_hr_payslip
+msgid "Pay Slip"
+msgstr "إيصال المرتب"
+
+#. module: hr_employee_info_updation
+#: model:ir.model.fields,field_description:hr_employee_info_updation.field_hr_appraisal__personal_identifier
+#: model:ir.model.fields,field_description:hr_employee_info_updation.field_hr_employee__personal_identifier
+#: model:ir.model.fields,field_description:hr_employee_info_updation.field_hr_leave__personal_identifier
+#: model:ir.model.fields,field_description:hr_employee_info_updation.field_hr_payslip__personal_identifier
+msgid "Personal Identifier"
+msgstr "المعرف الشخصي"
+
+#. module: hr_employee_info_updation
+#: model:ir.model.fields,field_description:hr_employee_info_updation.field_hr_employee__personal_identifier_date
+msgid "Personal Identifier Date"
+msgstr "تاريخ المعرف الشخصي"
+
+#. module: hr_employee_info_updation
+#: model:ir.model.fields,field_description:hr_employee_info_updation.field_hr_employee__personal_identifier_place
+msgid "Personal Identifier Place"
+msgstr "مكان المعرف الشخصي"
+
+#. module: hr_employee_info_updation
+#: model_terms:ir.ui.view,arch_db:hr_employee_info_updation.view_employee_form_inherit
+msgid "Personal Name AR"
+msgstr "الاسم الشخصي بالعربيه"
+
+#. module: hr_employee_info_updation
+#: model_terms:ir.ui.view,arch_db:hr_employee_info_updation.view_employee_form_inherit
+msgid "Personal Name EN"
+msgstr "الاسم الشخصي بالانجليزيه"
+
+#. module: hr_employee_info_updation
+#: model:ir.model.fields,field_description:hr_employee_info_updation.field_hr_employee__rank_code
+#: model:ir.model.fields,field_description:hr_employee_info_updation.field_hr_job_history__rank_code
+#: model:ir.model.fields,field_description:hr_employee_info_updation.field_hr_payslip__rank_code
+msgid "Rank Code"
+msgstr "كود الترتيب"
+
+#. module: hr_employee_info_updation
+#: model:ir.model.fields,field_description:hr_employee_info_updation.field_hr_appraisal__rating_code
+msgid "Rating Code"
+msgstr "كود التصنيف"
+
+#. module: hr_employee_info_updation
+#: model:ir.model.fields,field_description:hr_employee_info_updation.field_hr_employee__religion_id
+msgid "Religion Type"
+msgstr "الديانه"
+
+#. module: hr_employee_info_updation
+#: model:ir.model.fields,field_description:hr_employee_info_updation.field_hr_employee__remaining_business_balance
+#: model:ir.model.fields,field_description:hr_employee_info_updation.field_hr_job_history__remaining_business_balance
+msgid "Remaining Business Balance"
+msgstr "رصيد الأعمال المتبقي"
+
+#. module: hr_employee_info_updation
+#: model:ir.model.fields,field_description:hr_employee_info_updation.field_hr_job_history__activity_user_id
+msgid "Responsible User"
+msgstr "المستخدم المسؤول"
+
+#. module: hr_employee_info_updation
+#: model:ir.model.fields,field_description:hr_employee_info_updation.field_hr_appraisal__rating_result
+msgid "Result"
+msgstr "النتيجة"
+
+#. module: hr_employee_info_updation
+#: model:ir.model.fields,field_description:hr_employee_info_updation.field_hr_job_history__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr "خطأ في تسليم الرسائل القصيرة"
+
+#. module: hr_employee_info_updation
+#: model:ir.model.fields,field_description:hr_employee_info_updation.field_hr_employee__second_name
+#: model:ir.model.fields,field_description:hr_employee_info_updation.field_hr_employee__second_name_e
+msgid "Second Name"
+msgstr "الاسم الثاني"
+
+#. module: hr_employee_info_updation
+#: model_terms:ir.ui.view,arch_db:hr_employee_info_updation.view_employee_form_inherit
+msgid "Second Related Person"
+msgstr "ثاني شخص ذو قرابه"
+
+#. module: hr_employee_info_updation
+#: model:ir.model.fields,field_description:hr_employee_info_updation.field_hr_employee__second_related_person_name
+msgid "Second Related Person Name"
+msgstr "الاسم"
+
+#. module: hr_employee_info_updation
+#: model:ir.model.fields,field_description:hr_employee_info_updation.field_hr_employee__second_related_person_phone
+msgid "Second Related Person Phone"
+msgstr "الهاتف "
+
+#. module: hr_employee_info_updation
+#: model:ir.model.fields,field_description:hr_employee_info_updation.field_hr_employee__second_related_person_relation
+msgid "Second Related Person Relation"
+msgstr "صله القرابه"
+
+#. module: hr_employee_info_updation
+#: model:ir.model.fields,field_description:hr_employee_info_updation.field_hr_appraisal__start_date
+msgid "Start Date"
+msgstr "تاريخ البداية"
+
+#. module: hr_employee_info_updation
+#: model:ir.model.fields,help:hr_employee_info_updation.field_hr_job_history__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+"الحالة على أساس الأنشطة\n"
+"المتأخرة: تاريخ الاستحقاق مر\n"
+"اليوم: تاريخ النشاط هو اليوم\n"
+"المخطط: الأنشطة المستقبلية."
+
+#. module: hr_employee_info_updation
+#: model:ir.model.fields,field_description:hr_employee_info_updation.field_hr_employee__step_id
+#: model:ir.model.fields,field_description:hr_employee_info_updation.field_hr_job_history__step_id
+#: model:ir.model.fields,field_description:hr_employee_info_updation.field_hr_payslip__step_id
+msgid "Step"
+msgstr "خطوة"
+
+#. module: hr_employee_info_updation
+#: model:ir.model.fields,field_description:hr_employee_info_updation.field_hr_employee__step_date
+#: model:ir.model.fields,field_description:hr_employee_info_updation.field_hr_job_history__step_date
+#: model:ir.model.fields,field_description:hr_employee_info_updation.field_hr_payslip__step_date
+msgid "Step Date"
+msgstr "تاريخ الخطوه"
+
+#. module: hr_employee_info_updation
+#: model:ir.model.fields,field_description:hr_employee_info_updation.field_hr_appraisal__sub_agency_id
+#: model:ir.model.fields,field_description:hr_employee_info_updation.field_hr_employee__sub_agency_id
+#: model:ir.model.fields,field_description:hr_employee_info_updation.field_hr_leave__sub_agency_id
+#: model:ir.model.fields,field_description:hr_employee_info_updation.field_hr_payslip__sub_agency_id
+msgid "Sub Agency Id"
+msgstr "هويه الوكالة الفرعية"
+
+#. module: hr_employee_info_updation
+#: model:ir.model.fields,field_description:hr_employee_info_updation.field_hr_employee__termination_date
+msgid "Termination Date"
+msgstr "تاريخ الإنهاء"
+
+#. module: hr_employee_info_updation
+#: model_terms:ir.ui.view,arch_db:hr_employee_info_updation.view_employee_form_inherit
+msgid "Termination Info"
+msgstr "معلومات الإنهاء"
+
+#. module: hr_employee_info_updation
+#: model:ir.model.fields,field_description:hr_employee_info_updation.field_hr_employee__termination_reason_code
+msgid "Termination Reason Code"
+msgstr "كود سبب الإنهاء"
+
+#. module: hr_employee_info_updation
+#: model:ir.model.fields,field_description:hr_employee_info_updation.field_hr_employee__Third_name
+#: model:ir.model.fields,field_description:hr_employee_info_updation.field_hr_employee__Third_name_e
+msgid "Third Name"
+msgstr "الاسم الثالث"
+
+#. module: hr_employee_info_updation
+#: model:ir.model,name:hr_employee_info_updation.model_hr_leave
+msgid "Time Off"
+msgstr "الاجازات"
+
+#. module: hr_employee_info_updation
+#: model:ir.model.fields,field_description:hr_employee_info_updation.field_hr_employee__transaction_code
+#: model:ir.model.fields,field_description:hr_employee_info_updation.field_hr_job_history__transaction_code
+msgid "Transaction Code"
+msgstr "كود العملية"
+
+#. module: hr_employee_info_updation
+#: model:ir.model.fields,field_description:hr_employee_info_updation.field_hr_job_history__transaction_description
+msgid "Transaction Description"
+msgstr "وصف العملية"
+
+#. module: hr_employee_info_updation
+#: model:ir.model.fields,field_description:hr_employee_info_updation.field_hr_job_history__transaction_end_date
+msgid "Transaction End Date"
+msgstr "تاريخ انتهاء المعاملة"
+
+#. module: hr_employee_info_updation
+#: model:ir.model.fields,field_description:hr_employee_info_updation.field_hr_job_history__transaction_start_date
+msgid "Transaction Start Date"
+msgstr "تاريخ بدء المعاملة"
+
+#. module: hr_employee_info_updation
+#: model:ir.model.fields,help:hr_employee_info_updation.field_hr_job_history__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr "نوع النشاط الاستثنائي المسجل."
+
+#. module: hr_employee_info_updation
+#: model:ir.model.fields,field_description:hr_employee_info_updation.field_hr_job_history__message_unread
+msgid "Unread Messages"
+msgstr "الرسائل الجديدة"
+
+#. module: hr_employee_info_updation
+#: model:ir.model.fields,field_description:hr_employee_info_updation.field_hr_job_history__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr "عدد الرسائل الجديدة"
+
+#. module: hr_employee_info_updation
+#: model:ir.model.fields,field_description:hr_employee_info_updation.field_hr_leave__vacation_code
+msgid "Vacation Code"
+msgstr "كود الاجازة"
+
+#. module: hr_employee_info_updation
+#: model:ir.model.fields,field_description:hr_employee_info_updation.field_hr_job_history__wage
+msgid "Wage"
+msgstr "المرتب"
+
+#. module: hr_employee_info_updation
+#: model:ir.model.fields,field_description:hr_employee_info_updation.field_hr_job_history__website_message_ids
+msgid "Website Messages"
+msgstr "رسائل الموقع"
+
+#. module: hr_employee_info_updation
+#: model:ir.model.fields,help:hr_employee_info_updation.field_hr_job_history__website_message_ids
+msgid "Website communication history"
+msgstr "سجل تواصل الموقع"
+
+#. module: hr_employee_info_updation
+#: model:ir.model.fields.selection,name:hr_employee_info_updation.selection__hr_appraisal__rating_code__bad
+#: model:ir.model.fields.selection,name:hr_employee_info_updation.selection__hr_appraisal__rating_result__bad
+msgid "bad"
+msgstr "سيئ"
+
+#. module: hr_employee_info_updation
+#: model:ir.model,name:hr_employee_info_updation.model_blood_blood
+msgid "blood.blood"
+msgstr ""
+
+#. module: hr_employee_info_updation
+#: model:ir.model.fields.selection,name:hr_employee_info_updation.selection__hr_appraisal__rating_code__excellent
+#: model:ir.model.fields.selection,name:hr_employee_info_updation.selection__hr_appraisal__rating_result__excellent
+msgid "excellent"
+msgstr "ممتاز"
+
+#. module: hr_employee_info_updation
+#: model:ir.model.fields.selection,name:hr_employee_info_updation.selection__hr_appraisal__rating_code__good
+#: model:ir.model.fields.selection,name:hr_employee_info_updation.selection__hr_appraisal__rating_result__good
+msgid "good"
+msgstr "جيد"
+
+#. module: hr_employee_info_updation
+#: model:ir.model.fields,field_description:hr_employee_info_updation.field_hr_employee__health_id
+msgid "health status Type"
+msgstr "نوع الحالة الصحية"
+
+#. module: hr_employee_info_updation
+#: model:ir.model,name:hr_employee_info_updation.model_health_health
+msgid "health.health"
+msgstr ""
+
+#. module: hr_employee_info_updation
+#: model:ir.model,name:hr_employee_info_updation.model_hr_history_line
+msgid "hr.history.line"
+msgstr ""
+
+#. module: hr_employee_info_updation
+#: model:ir.model,name:hr_employee_info_updation.model_hr_job_history
+msgid "hr.job.history"
+msgstr ""
+
+#. module: hr_employee_info_updation
+#: model:ir.model,name:hr_employee_info_updation.model_religion_religion
+msgid "religion.religion"
+msgstr ""
+
+#. module: hr_employee_info_updation
+#: model:ir.model.fields.selection,name:hr_employee_info_updation.selection__hr_appraisal__rating_code__usual
+#: model:ir.model.fields.selection,name:hr_employee_info_updation.selection__hr_appraisal__rating_result__usual
+msgid "usual"
+msgstr "عادى"

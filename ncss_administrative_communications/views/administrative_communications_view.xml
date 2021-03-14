@@ -1,0 +1,791 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!--    demo data-->
+    <record id="demo_contact_ncss" model="administrative.communication.source">
+        <field name="name">National center for social studies</field>
+    </record>
+    <!--    demo data-->
+
+    <!--    demo data-->
+    <record id="demo_source_direction" model="administrative.communication.category">
+        <field name="name">National center for social studies</field>
+    </record>
+    <!--    demo data-->
+
+    <!--    category-->
+    <record id="administrative_communication_category_form" model="ir.ui.view">
+        <field name="name">administrative.communication.category.form</field>
+        <field name="model">administrative.communication.category</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name" required="1"/>
+                        </group>
+                        <group>
+                            <field name="parent_id"/>
+                        </group>
+                    </group>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" widget="mail_followers"/>
+                    <field name="activity_ids" widget="mail_activity"/>
+                    <field name="message_ids" widget="mail_thread"/>
+                </div>
+            </form>
+        </field>
+    </record>
+
+    <record id="administrative_communication_category_tree" model="ir.ui.view">
+        <field name="name">administrative.communication.category.tree</field>
+        <field name="model">administrative.communication.category</field>
+        <field name="arch" type="xml">
+            <tree string="">
+                <field name="name" />
+                <field name="parent_id" />
+            </tree>
+        </field>
+    </record>
+
+    <record id="administrative_communication_category_action" model="ir.actions.act_window">
+            <field name="name">Administrative Communication Category</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">administrative.communication.category</field>
+            <field name="view_mode">tree,form</field>
+    </record>
+    <!--    category-->
+
+    <!--    years-->
+    <record id="administrative_communication_years_form" model="ir.ui.view">
+        <field name="name">administrative.communication.years.form</field>
+        <field name="model">administrative.communication.years</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="name" />
+                    </group>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" widget="mail_followers"/>
+                    <field name="activity_ids" widget="mail_activity"/>
+                    <field name="message_ids" widget="mail_thread"/>
+                </div>
+            </form>
+        </field>
+    </record>
+
+    <record id="administrative_communication_years_tree" model="ir.ui.view">
+        <field name="name">administrative.communication.years.tree</field>
+        <field name="model">administrative.communication.years</field>
+        <field name="arch" type="xml">
+            <tree string="">
+                <field name="name" />
+            </tree>
+        </field>
+    </record>
+
+    <record id="administrative_communication_years_action" model="ir.actions.act_window">
+            <field name="name">Administrative Communication Years</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">administrative.communication.years</field>
+            <field name="view_mode">tree,form</field>
+    </record>
+    <!--    years-->
+
+
+   <!--    source-->
+    <record id="administrative_communication_source_form" model="ir.ui.view">
+        <field name="name">administrative.communication.source.form</field>
+        <field name="model">administrative.communication.source</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="name" />
+                    </group>
+                    <notebook>
+                        <page string="contacts">
+                            <field name="contact_line_ids">
+                                <tree editable="bottom">
+                                    <field name="contact_id" />
+                                </tree>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" widget="mail_followers"/>
+                    <field name="activity_ids" widget="mail_activity"/>
+                    <field name="message_ids" widget="mail_thread"/>
+                </div>
+            </form>
+        </field>
+    </record>
+
+    <record id="administrative_communication_source_tree" model="ir.ui.view">
+        <field name="name">administrative.communication.source.tree</field>
+        <field name="model">administrative.communication.source</field>
+        <field name="arch" type="xml">
+            <tree string="">
+                <field name="name" />
+            </tree>
+        </field>
+    </record>
+
+    <record id="administrative_communication_source_action" model="ir.actions.act_window">
+            <field name="name">Administrative Communication Source</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">administrative.communication.source</field>
+            <field name="view_mode">tree,form</field>
+    </record>
+    <!--    source-->
+
+  <!--    management-->
+    <record id="administrative_communication_management_form" model="ir.ui.view">
+        <field name="name">administrative.communication.management.form</field>
+        <field name="model">administrative.communication.management</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="name" />
+                        <field name="user_id" />
+                    </group>
+                    <notebook>
+                        <page string="contacts">
+                            <field name="contact_line_ids">
+                                <tree editable="bottom">
+                                    <field name="contact_id" />
+                                </tree>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" widget="mail_followers"/>
+                    <field name="activity_ids" widget="mail_activity"/>
+                    <field name="message_ids" widget="mail_thread"/>
+                </div>
+            </form>
+        </field>
+    </record>
+
+    <record id="administrative_communication_management_tree" model="ir.ui.view">
+        <field name="name">administrative.communication.management.tree</field>
+        <field name="model">administrative.communication.management</field>
+        <field name="arch" type="xml">
+            <tree string="">
+                <field name="name" />
+                <field name="user_id" />
+            </tree>
+        </field>
+    </record>
+
+    <record id="administrative_communication_management_action" model="ir.actions.act_window">
+            <field name="name">Administrative Communication Management</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">administrative.communication.management</field>
+            <field name="view_mode">tree,form</field>
+    </record>
+    <!--    management-->
+
+   <!--    sender-->
+    <record id="administrative_communication_sender_form" model="ir.ui.view">
+        <field name="name">administrative.communication.sender.form</field>
+        <field name="model">administrative.communication.sender</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="name" />
+                    </group>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" widget="mail_followers"/>
+                    <field name="activity_ids" widget="mail_activity"/>
+                    <field name="message_ids" widget="mail_thread"/>
+                </div>
+            </form>
+        </field>
+    </record>
+
+    <record id="administrative_communication_sender_tree" model="ir.ui.view">
+        <field name="name">administrative.communication.sender.tree</field>
+        <field name="model">administrative.communication.sender</field>
+        <field name="arch" type="xml">
+            <tree string="">
+                <field name="name" />
+            </tree>
+        </field>
+    </record>
+
+    <record id="administrative_communication_sender_action" model="ir.actions.act_window">
+            <field name="name">Administrative Communication Sender</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">administrative.communication.sender</field>
+            <field name="view_mode">tree,form</field>
+    </record>
+    <!--    sender-->
+
+
+    <!--    contacts-->
+    <record id="administrative_communication_contact_form" model="ir.ui.view">
+        <field name="name">administrative.communication.contact.form</field>
+        <field name="model">administrative.communication.contact</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="name" />
+                    </group>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" widget="mail_followers"/>
+                    <field name="activity_ids" widget="mail_activity"/>
+                    <field name="message_ids" widget="mail_thread"/>
+                </div>
+            </form>
+        </field>
+    </record>
+
+    <record id="administrative_communication_contact_tree" model="ir.ui.view">
+        <field name="name">administrative.communication.contact.tree</field>
+        <field name="model">administrative.communication.contact</field>
+        <field name="arch" type="xml">
+            <tree string="">
+                <field name="name" />
+            </tree>
+        </field>
+    </record>
+
+    <record id="administrative_communication_contact_action" model="ir.actions.act_window">
+            <field name="name">Administrative Communication Contact</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">administrative.communication.contact</field>
+            <field name="view_mode">tree,form</field>
+    </record>
+    <!--    contacts-->
+
+
+    <!--    contacts-->
+    <record id="administrative_communication_procedures_form" model="ir.ui.view">
+        <field name="name">administrative.communication.procedures.form</field>
+        <field name="model">administrative.communication.procedures</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="name" />
+                        <field name="no_of_days" />
+                    </group>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" widget="mail_followers"/>
+                    <field name="activity_ids" widget="mail_activity"/>
+                    <field name="message_ids" widget="mail_thread"/>
+                </div>
+            </form>
+        </field>
+    </record>
+
+    <record id="administrative_communication_procedures_tree" model="ir.ui.view">
+        <field name="name">administrative.communication.procedures.tree</field>
+        <field name="model">administrative.communication.procedures</field>
+        <field name="arch" type="xml">
+            <tree string="">
+                <field name="name" />
+                <field name="no_of_days" />
+            </tree>
+        </field>
+    </record>
+
+    <record id="administrative_communication_procedures_action" model="ir.actions.act_window">
+            <field name="name">Administrative Communication Procedures</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">administrative.communication.procedures</field>
+            <field name="view_mode">tree,form</field>
+    </record>
+    <!--    contacts-->
+
+
+
+    <!--    Administration wizard-->
+    <record id="administrative_communication_wizard" model="ir.ui.view">
+		<field name="name">administrative.communication.wizard</field>
+		<field name="model">administrative.communication.wizard</field>
+		<field name="arch" type="xml">
+			<form>
+				<group>
+					<field name="position" invisible="1"/>
+					<field name="ncss_department_id" invisible="1"/>
+					<field name="user_id" required="1"/>
+					<field name="procedure_id" required="1"/>
+					<field name="no_of_days" />
+					<field name="due_date" />
+					<field name="sender_notes" />
+<!--					<field name="receipt_notes" />-->
+				</group>
+				<footer>
+					<button name="action_assign_to" string="Assign" type="object" default_focus="1" class="oe_highlight" />
+					<button string="Cancel" class="oe_link" special="cancel" />
+				</footer>
+			</form>
+		</field>
+	</record>
+
+    <!--    Administration wizard-->
+
+
+
+    <!--    Administration Form-->
+    <record id="administrative_communication_form" model="ir.ui.view">
+        <field name="name">administrative.communication.form</field>
+        <field name="model">administrative.communication</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <button name="assign_to_department_action"
+                            attrs="{'invisible':['|',('treatment_type','not in',['in','internal']),('state','!=','draft')]}"
+                            string="Assign To Department" type="object" class="oe_highlight"
+                            groups="ncss_administrative_communications.administrative_communication_assign_to_department_button"
+                    />
+<!--                    <button name="assign_to_employee_action" states='reviewed' string="Assign To Employee" type="object" class="oe_highlight"/>-->
+                    <button name="action_assign_to" states='reviewed,assigned,outgoing'
+                            attrs="{'invisible':['|',('treatment_type','=','out'),('state','not in',['reviewed','assigned','outgoing'])]}"
+                            string="Assign To Employee" type="object" class="oe_highlight"
+                            groups="ncss_administrative_communications.administrative_communication_assign_to_employee_button"
+                    />
+                    <button name="outgoing_treatment_action" states='assigned'
+                            attrs="{'invisible':['|',('treatment_type','=','out'),('state','!=','assigned')]}"
+                            string="Outgoing Treatment" type="object" class="oe_highlight"
+                            groups="ncss_administrative_communications.administrative_communication_outgoing_button"
+                    />
+                    <button name="outgoing_barcode_action" string="Print Barcode"
+                            attrs="{'invisible':['|',('treatment_type','in',['in','internal']),('state','!=','draft')]}"
+                            type="object" class="oe_highlight"
+                            groups="ncss_administrative_communications.administrative_communication_print_barcode_button"
+                    />
+                    <button name="outgoing_instrument_action" string="Print Instrument"
+                            attrs="{'invisible':['|',('treatment_type','in',['in','internal']),('state','!=','barcode')]}"
+                            groups="ncss_administrative_communications.administrative_communication_print_instrument_button"
+                            type="object" class="oe_highlight"/>
+                    <button name="action_done" string="Done"
+                            states='reviewed,assigned,outgoing,instrument'
+                            groups="ncss_administrative_communications.administrative_communication_done_button"
+                            type="object" class="oe_highlight"/>
+                    <button name="set_to_draft" string="Set To Draft"
+                            states='done' type="object"
+                            groups="ncss_administrative_communications.administrative_communication_set_to_draft_button"
+                            class="oe_highlight"/>
+                    <field name="state" widget="statusbar" invisible="1"
+                           statusbar_visible="draft,reviewed,assigned,outgoing,done"
+                    />
+                    <field name="state_in" widget="statusbar"
+                           statusbar_visible="draft,reviewed,assigned,outgoing,done"
+                           attrs="{'invisible':[('treatment_type','not in',['in','internal'])]}"
+                    />
+                    <field name="state_out" widget="statusbar"
+                           statusbar_visible="draft,barcode,instrument,done"
+                           attrs="{'invisible':[('treatment_type','!=','out')]}"
+                    />
+                </header>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="sequence" readonly="1"/>
+                            <field name="treatment_type" attrs="{'readonly':[('state','=','done')]}" required="1"/>
+                            <field name="source_id" attrs="{'readonly':[('state','=','done')]}"/>
+<!--                            <label for="Category"/>-->
+<!--                            <div name="Category" class="o_row">-->
+<!--                                <field name="Category"/>-->
+<!--                                <field name="category_name" />-->
+<!--                            </div>-->
+                            <field name="post_type" attrs="{'readonly':[('state','=','done')]}"/>
+                            <field name="transactions_number"
+                                   attrs="{'invisible':[('treatment_type','!=','in')],'readonly':[('state','=','done')]}"/>
+<!--                            <field name="years" />-->
+<!--                            <field name="reference_number" />-->
+                            <field name="nature_of_transaction" attrs="{'readonly':[('state','=','done')]}"/>
+                            <field name="way_of_send" attrs="{'readonly':[('state','=','done')]}"/>
+
+                            <field name="edit_transaction_date"
+                                   attrs="{'invisible':[('state','=','done')]}"
+                                   groups="ncss_administrative_communications.edit_transaction_date"/>
+                            <div class="o_td_label" attrs="{'invisible':[('treatment_type','!=','in')]}">
+                                <label for="transaction_date" string="Transaction In Date"/>
+                            </div>
+                            <div name="transaction_date" class="o_row">
+                                <field name="transaction_date" nolabel="1"
+                                       attrs="{'invisible':[('treatment_type','!=','in')],'readonly':[('edit_transaction_date','=',False)]}"/>
+                                <field name="hijri_date" attrs="{'invisible':[('treatment_type','!=','in')],'readonly':[('state','=','done')]}"/>
+                            </div>
+
+                            <div class="o_td_label" attrs="{'invisible':[('treatment_type','!=','out')]}">
+                                <label for="transaction_date" string="Transaction Out Date"/>
+                            </div>
+                            <div name="transaction_date" class="o_row">
+                                <field name="transaction_date"
+                                       attrs="{'invisible':[('treatment_type','!=','out')],'readonly':[('edit_transaction_date','=',False)]}" nolabel="1"/>
+                                <field name="hijri_date" attrs="{'invisible':[('treatment_type','!=','out')],'readonly':[('state','=','done')]}"/>
+                            </div>
+
+                            <div class="o_td_label" attrs="{'invisible':[('treatment_type','!=','internal')]}">
+                                <label for="transaction_date" string="Transaction Date"/>
+                            </div>
+                            <div name="transaction_date" class="o_row">
+                                <field name="transaction_date"
+                                       attrs="{'invisible':[('treatment_type','!=','internal')],'readonly':[('edit_transaction_date','=',False)]}" nolabel="1"/>
+                                <field name="hijri_date" attrs="{'invisible':[('treatment_type','!=','internal')],'readonly':[('state','=','done')]}"/>
+                            </div>
+
+<!--                            <label for="transaction_date"-->
+<!--                                    attrs="{'invisible':[('treatment_type','!=','in')]}"-->
+<!--                                   string="in transaction date"/>-->
+<!--                            <label for="transaction_date"-->
+<!--                                   attrs="{'invisible':[('treatment_type','!=','out')]}"-->
+<!--                                   string="out transaction date"/>-->
+<!--                            <div name="transaction_date" class="o_row">-->
+<!--                                <field name="transaction_date" />-->
+<!--                                <field name="hijri_date" />-->
+<!--                            </div>-->
+                        </group>
+                        <group>
+<!--                            <field name="destination_id" attrs="{'invisible':[('treatment_type','=','in')]}"/>-->
+                            <field name="transfer_to_id"
+                                   attrs="{'invisible':[('treatment_type','not in',['in','internal'])],'readonly':[('state','=','done')]}"/>
+                            <field name="user_id"
+                                   attrs="{'invisible':[('treatment_type','not in',['in','internal'])],'readonly':[('state','=','done')]}"/>
+
+                            <field name="assign_to_id"
+                                   attrs="{'invisible':[('treatment_type','!=','out')],'readonly':[('state','=','done')]}"/>
+                            <field name="assign_to_department_id"
+                                   domain="['|',('parent_id','=',assign_to_id),('id','=',assign_to_id)]"
+                                   attrs="{'invisible':[('treatment_type','!=','out')],'readonly':[('state','=','done')]}"/>
+
+<!--                            <field name="contact_id" attrs="{'invisible':[('state','=','draft')]}"/>-->
+                            <label for="transfer_date" attrs="{'invisible':[('treatment_type','!=','in')]}"/>
+                            <div name="transfer_date" class="o_row" attrs="{'invisible':[('treatment_type','!=','in')]}">
+                                <field name="transfer_date" attrs="{'readonly':[('allow_transfer_date','=',False)]}"/>
+                                <field name="allow_transfer_date" groups="ncss_administrative_communications.ncss_allow_edit_transaction_date"/>
+                            </div>
+<!--                            <field name="allow_transfer_date" />-->
+<!--                            <field name="transfer_date" />-->
+<!--                            <field name="transfer_number" />-->
+                            <field name="attachments" attrs="{'readonly':[('state','=','done')]}"/>
+                            <field name="file_number"
+                                   attrs="{'invisible':[('treatment_type','!=','in')],'readonly':[('state','=','done')]}"/>
+                            <field name="subject" attrs="{'readonly':[('state','=','done')]}"/>
+                            <field name="create_uid" readonly='1'/>
+<!--                            <field name="sender_type" />-->
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Treatment Information" name="Treatment Information" >
+                            <field name="transaction_line_ids" readonly="1">
+<!--                                context="{'default_source_id': source_id,'default_transfer_to_id': transfer_to_id,}"-->
+                                <tree editable="bottom">
+                                    <field name="user_attached_id"/>
+                                    <field name="user_id"/>
+<!--                                    <field name="recipient_by_id"/>-->
+<!--                                    <field name="source_id" invisible="1"/>-->
+<!--                                    <field name="transfer_to_id" invisible="1"/>-->
+                                    <field name="procedure_id"/>
+<!--                                    <field name="sender_type"/>-->
+                                    <field name="date_and_time"/>
+                                    <field name="due_date"/>
+                                    <field name="sender_notes"/>
+                                    <field name="receipt_notes"/>
+                                </tree>
+                            </field>
+                        </page>
+                        <page string="Attachments" name="Attachments">
+                            <field name="transaction_attachment_line_ids" attrs="{'readonly':[('state','=','done')]}">
+                                <tree editable="bottom">
+                                    <field name="attachments" invisible="1"/>
+                                    <field name="attachment_ids"  string='المرفقات' widget="many2many_binary" required="1"/>
+                                    <field name="description"/>
+                                </tree>
+                            </field>
+                        </page>
+                        <page string="Other Information" name="info">
+                            <group>
+                                <field name="administrative_communication_in_id" readonly="1"
+                                       attrs="{'invisible':[('treatment_type','=','in')]}"/>
+                                <field name="administrative_communication_out_id" readonly="1"
+                                       attrs="{'invisible':[('treatment_type','=','out')]}"/>
+                                <field name="notes" attrs="{'readonly':[('state','=','done')]}"/>
+                            </group>
+                        </page>
+
+                    </notebook>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" widget="mail_followers"/>
+                    <field name="activity_ids" widget="mail_activity"/>
+                    <field name="message_ids" widget="mail_thread"/>
+                </div>
+            </form>
+        </field>
+    </record>
+
+    <record id="administrative_communication_tree" model="ir.ui.view">
+        <field name="name">administrative.communication.tree</field>
+        <field name="model">administrative.communication</field>
+        <field name="arch" type="xml">
+            <tree string="">
+                <field name="sequence" />
+                 <field name="transaction_date" />
+                <field name="treatment_type" />
+                <field name="post_type" />
+                <field name="nature_of_transaction" />
+                <field name="way_of_send" />
+                <field name="source_id" />
+                <field name="transfer_to_id" invisible="context.get('default_treatment_type') not in ('in', 'internal')"/>
+                <field name="user_id" invisible="context.get('default_treatment_type') not in ('in', 'internal')"/>
+<!--                <field name="transfer_date" />-->
+                <field name="assign_to_id" invisible="context.get('default_treatment_type') in ('in', 'internal')"/>
+                <field name="assign_to_department_id" invisible="context.get('default_treatment_type') in ('in', 'internal')"/>
+                <field name="transactions_number" invisible="context.get('default_treatment_type') not in ('in', 'internal')"/>
+                <field name="subject" />
+                <field name="state_in" invisible="context.get('default_treatment_type') not in ('in', 'internal')"/>
+                <field name="state_out" invisible="context.get('default_treatment_type') in ('in', 'internal')"/>
+<!--                <field name="attachments" />-->
+            </tree>
+        </field>
+    </record>
+
+    <record id="administrative_communication_action" model="ir.actions.act_window">
+        <field name="name">Administrative Communication</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">administrative.communication</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+    <record id="administrative_communication_in_action" model="ir.actions.act_window">
+        <field name="name">IN</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">administrative.communication</field>
+        <field name="domain">[('treatment_type','=','in')]</field>
+        <field name="context">{'default_treatment_type':'in'}</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+    <record id="administrative_communication_out_action" model="ir.actions.act_window">
+        <field name="name">ِOUT</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">administrative.communication</field>
+        <field name="domain">[('treatment_type','=','out')]</field>
+        <field name="context">{'default_treatment_type':'out'}</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+    <record id="administrative_communication_internal_action" model="ir.actions.act_window">
+        <field name="name">Internal</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">administrative.communication</field>
+        <field name="domain">[('treatment_type','=','internal')]</field>
+        <field name="context">{'default_treatment_type':'internal'}</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+    <record id="administrative_communication_server_action" model="ir.actions.server">
+        <field name="name">Administrative Server Action</field>
+        <field name="model_id" ref="ncss_administrative_communications.model_administrative_communication"/>
+        <field name="state">code</field>
+        <field name="code">action = model.action_administrative_communication()</field>
+    </record>
+
+    <!--    Administration Form-->
+
+    <!--    Administration lines tree-->
+        <record id="administrative_communication_line_form" model="ir.ui.view">
+        <field name="name">administrative.communication.line</field>
+        <field name="model">administrative.communication.line</field>
+        <field name="arch" type="xml">
+            <form string="">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="administrative_communication_id" string="Name" force_save='1' readonly="1"/>
+                            <field name="subject" force_save='1' readonly="1"/>
+                            <field name="user_attached_id" string="Attached By" force_save='1' readonly="1"/>
+                            <field name="user_id" string="Receipt" force_save='1' readonly="1"/>
+<!--                            <field name="source_id" />-->
+                        </group>
+                        <group>
+<!--                            <field name="transfer_to_id" />-->
+                            <field name="procedure_id" force_save='1' readonly="1"/>
+                            <field name="date_and_time" force_save='1' readonly="1"/>
+                            <field name="sender_notes" force_save='1' readonly="1"/>
+                            <field name="receipt_notes" />
+                        </group>
+                    </group>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" widget="mail_followers"/>
+                    <field name="activity_ids" widget="mail_activity"/>
+                    <field name="message_ids" widget="mail_thread"/>
+                </div>
+            </form>
+        </field>
+    </record>
+
+    <record id="administrative_communication_line_tree" model="ir.ui.view">
+        <field name="name">administrative.communication.line</field>
+        <field name="model">administrative.communication.line</field>
+        <field name="arch" type="xml">
+            <tree string="">
+                <field name="administrative_communication_id" string="Name"/>
+                <field name="subject" />
+<!--                <field name="attached_by_id" />-->
+<!--                <field name="recipient_by_id" />-->
+                <field name="user_attached_id" string="Attached By"/>
+                <field name="user_id" string="Receipt"/>
+<!--                <field name="transfer_to_id" />-->
+                <field name="procedure_id" />
+                <field name="date_and_time" />
+                <field name="sender_notes" />
+                <field name="receipt_notes" />
+            </tree>
+        </field>
+    </record>
+
+    <record id="administrative_communication_line_action" model="ir.actions.act_window">
+        <field name="name">Administrative Line</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">administrative.communication.line</field>
+        <field name="domain">[('user_id','=',uid)]</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <record id="all_administrative_communication_line_action" model="ir.actions.act_window">
+        <field name="name">Administrative Line</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">administrative.communication.line</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+    <!--    Administration line-->
+
+
+    <menuitem id="administrative_communication_root"
+              name="Administrative Communication"
+              web_icon="ncss_administrative_communications,static/src/img/communication.jpg"
+    />
+
+
+    <menuitem id="administrative_communication_line_menu"
+              name="Administrative Communication Line"
+              parent="administrative_communication_root"
+              sequence="4"
+    />
+
+    <menuitem id="administrative_communication_line_child"
+              name="Transactions Assigned To Me"
+              action="administrative_communication_line_action"
+              parent="administrative_communication_line_menu"
+              sequence="4"
+              groups="ncss_administrative_communications.administrative_communication_assigned_to_me_menu"
+    />
+
+
+    <menuitem id="all_administrative_communication_line"
+              name="All Administrative Communication"
+              action="all_administrative_communication_line_action"
+              parent="administrative_communication_line_menu"
+              sequence="2"
+              groups="ncss_administrative_communications.administrative_communication_all_treatment_menu"
+    />
+
+
+    <menuitem id="administrative_communication_menu"
+              name="Administrative Communication"
+              parent="administrative_communication_root"
+              sequence="2"
+    />
+
+    <menuitem id="administrative_communication_child"
+              name="Administrative Communication"
+              action="administrative_communication_action"
+              parent="administrative_communication_menu"
+    />
+
+    <menuitem id="administrative_communication_in_child"
+              name="IN"
+              action="administrative_communication_in_action"
+              parent="administrative_communication_menu"
+              groups="ncss_administrative_communications.administrative_communication_incoming_menu"
+    />
+
+    <menuitem id="administrative_communication_out_child"
+              name="OUT"
+              action="administrative_communication_out_action"
+              parent="administrative_communication_menu"
+              groups="ncss_administrative_communications.administrative_communication_outgoing_menu"
+    />
+    <menuitem id="administrative_communication_internal_child"
+              name="Internal"
+              action="administrative_communication_internal_action"
+              parent="administrative_communication_menu"
+              groups="ncss_administrative_communications.administrative_communication_internal_menu"
+    />
+    <menuitem id="administrative_communication_server_action_menu"
+              name="Assigned To Me"
+              parent="administrative_communication_menu"
+              action="administrative_communication_server_action"
+              groups="ncss_administrative_communications.administrative_assigned_to_me_menu"
+    />
+
+
+    <menuitem id="administrative_communication_configuration"
+              name="Configuration"
+              parent="administrative_communication_root"
+              sequence="6"
+    />
+    <menuitem id="administrative_communication_config_category"
+              name="Assign To"
+              action="administrative_communication_category_action"
+              parent="administrative_communication_configuration"
+              groups="ncss_administrative_communications.administrative_communication_destination_menu"
+    />
+<!--    <menuitem id="administrative_communication_config_years"-->
+<!--              name="years"-->
+<!--              action="administrative_communication_years_action"-->
+<!--              parent="administrative_communication_configuration"-->
+<!--    />-->
+
+    <menuitem id="administrative_communication_config_source"
+              name="Source"
+              action="administrative_communication_source_action"
+              parent="administrative_communication_configuration"
+              groups="ncss_administrative_communications.administrative_communication_source_menu"
+    />
+
+    <menuitem id="administrative_communication_config_management"
+              name="Management"
+              action="administrative_communication_management_action"
+              parent="administrative_communication_configuration"
+              groups="ncss_administrative_communications.administrative_communication_department_menu"
+    />
+
+    <menuitem id="administrative_communication_config_sender"
+              name="Sender"
+              action="administrative_communication_sender_action"
+              parent="administrative_communication_configuration"
+              groups="ncss_administrative_communications.administrative_communication_sender_menu"
+    />
+
+    <menuitem id="administrative_communication_config_contact"
+              name="Contacts"
+              action="administrative_communication_contact_action"
+              parent="administrative_communication_configuration"
+              groups="ncss_administrative_communications.administrative_communication_contacts_menu"
+    />
+
+    <menuitem id="administrative_communication_config_procedures"
+              name="Procedures"
+              action="administrative_communication_procedures_action"
+              parent="administrative_communication_configuration"
+              groups="ncss_administrative_communications.administrative_communication_procedure_menu"
+    />
+
+
+</odoo>

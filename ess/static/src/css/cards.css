@@ -1,0 +1,22 @@
+.iess-title {
+margin: 15px;
+}
+ .carddash:hover {
+  transform: scale(1.15);
+  box-shadow: 5px 5px 15px rgba(0,0,0,0.6);
+  transition: 0.5s ease;
+  border-radius: 15px;
+background-image: linear-gradient(to right, #ff8177 0%, #ff867a 0%, #ff8c7f 21%, #f99185 52%, #cf556c 78%, #b12a5b 100%);
+  position: relative;
+  z-index: 9999;
+  width:120%;
+
+}
+.carddash{
+ font-family: 'Cairo', sans-serif;
+}
+.container {
+    max-width: 1200px;
+}
+
+

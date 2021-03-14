@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        
+<!--        <record id="ncss_allow_edit_transaction_date" model="res.groups">-->
+<!--            <field name="name">Allow To Edit Date</field>-->
+<!--            <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>-->
+<!--        </record>-->
+
+<!--        <record id="edit_transaction_date" model="res.groups">-->
+<!--            <field name="name">Edit Transaction Date</field>-->
+<!--            <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>-->
+<!--        </record>-->
+
+    </data>
+</odoo>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+    <t t-extend="website.GoToButtons">
+        <t t-jquery='a[role="button"]' t-operation='replace'>
+            <a role="button" href="/my/dashboard" class="btn btn-primary" title="Go to Website">
+                Go to Website
+            </a>
+        </t>
+    </t>
+</templates>

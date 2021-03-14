@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+custody_request,custody_request,model_custody_request,,1,1,1,1
+custody_request_line,custody_request_line,model_custody_request_line,,1,1,1,1

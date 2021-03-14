@@ -1,0 +1,43 @@
+<odoo>
+<data>
+
+        <record id="view_country_form_inherit" model="ir.ui.view">
+            <field name="name">res.country</field>
+            <field name="model">res.country</field>
+            <field name="inherit_id" ref="base.view_country_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='code']" position="after">
+                    <field name="is_default_country" />
+                </xpath>
+            </field>
+        </record>
+
+        <record id="view_employee_form_inherit" model="ir.ui.view">
+            <field name="name">hr.employee</field>
+            <field name="model">hr.employee</field>
+            <field name="inherit_id" ref="hr.view_employee_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='passport_id']" position="after">
+                    <field name="date_of_issue" />
+                    <field name="date_of_expiry" />
+                    <field name="bank_name" />
+                    <field name="account_number" />
+                    <field name="iban_number" />
+
+                </xpath>
+                <xpath expr="//group[@name='work_permit']" position="attributes">
+                	<attribute name="attrs">{'invisible':[('is_default_country','=',True) ]}</attribute>
+                </xpath>
+                <xpath expr="//field[@name='identification_id']" position="after">
+                    <field name="is_default_country" invisible="1"/>
+                    <field name="employee_code" />
+                    <field name="iqama_number" attrs="{'invisible':[('is_default_country','=',True) ]}"/>
+                    <field name="iqama_date_of_issue" attrs="{'invisible':[('is_default_country','=',True) ]}"/>
+                    <field name="iqama_date_of_expiry" attrs="{'invisible':[('is_default_country','=',True) ]}"/>
+                </xpath>
+
+            </field>
+        </record>
+
+</data>
+</odoo>

@@ -1,0 +1,2336 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* ess
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-01-27 08:56+0000\n"
+"PO-Revision-Date: 2021-01-27 08:56+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: ess
+#: code:addons/ess/controllers/main.py:0
+#, python-format
+msgid " days"
+msgstr " أيام"
+
+#. module: ess
+#: code:addons/ess/controllers/main.py:0
+#, python-format
+msgid " hours"
+msgstr "ساعات"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.side_menu
+msgid ""
+"<i class=\"fa fa-diamond\"/> <span class=\"nav-label\">Announcements &amp; "
+"Events</span> <span class=\"fa arrow\"/>"
+msgstr ""
+"<i class=\"fa fa-diamond\"/> <span class=\"nav-label\">الاعلانات &amp; "
+"الاحداث </span> <span class=\"fa arrow\"/>"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.side_menu
+msgid ""
+"<i class=\"fa fa-diamond\"/> <span class=\"nav-label\">Leaves</span> <span "
+"class=\"fa arrow\"/>"
+msgstr ""
+"<i class=\"fa fa-diamond\"/> <span class=\"nav-label\">الأجازات</span> <span"
+" class=\"fa arrow\"/>"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.side_menu
+msgid ""
+"<i class=\"fa fa-fa-money\"/> <span class=\"nav-label\">Petty Cash</span> "
+"<span class=\"fa arrow\"/>"
+msgstr ""
+"<i class=\"fa fa-fa-money\"/> <span class=\"nav-label\">العهد</span> <span "
+"class=\"fa arrow\"/>"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.side_menu
+msgid ""
+"<i class=\"fa fa-file-text-o\"/> <span class=\"nav-label\">Company "
+"Docs</span> <span class=\"fa arrow\"/>"
+msgstr ""
+"<i class=\"fa fa-file-text-o\"/> <span class=\"nav-label\">مستندات "
+"الشركة</span> <span class=\"fa arrow\"/>"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.side_menu
+msgid ""
+"<i class=\"fa fa-file-text-o\"/> <span class=\"nav-label\">Personal "
+"Docs</span> <span class=\"fa arrow\"/>"
+msgstr ""
+"<i class=\"fa fa-file-text-o\"/> <span class=\"nav-label\">المستندات "
+"الشخصية</span> <span class=\"fa arrow\"/>"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.side_menu
+msgid ""
+"<i class=\"fa fa-handshake-o\"/> <span class=\"nav-label\">Loans</span> "
+"<span class=\"fa arrow\"/>"
+msgstr ""
+"<i class=\"fa fa-handshake-o\"/> <span class=\"nav-label\">السلف</span> "
+"<span class=\"fa arrow\"/>"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.side_menu
+msgid ""
+"<i class=\"fa fa-money\"/> <span class=\"nav-label\">Asset "
+"Assignation</span> <span class=\"fa arrow\"/>"
+msgstr ""
+"<i class=\"fa fa-money\"/> <span class=\"nav-label\">العهد العينية</span> "
+"<span class=\"fa arrow\"/>"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.side_menu
+msgid ""
+"<i class=\"fa fa-money\"/> <span class=\"nav-label\">Custody</span> <span "
+"class=\"fa arrow\"/>"
+msgstr ""
+"<i class=\"fa fa-money\"/> <span class=\"nav-label\">العهد المالية</span> "
+"<span class=\"fa arrow\"/>"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.side_menu
+msgid ""
+"<i class=\"fa fa-money\"/> <span class=\"nav-label\">Expenses</span> <span "
+"class=\"fa arrow\"/>"
+msgstr ""
+"<i class=\"fa fa-money\"/> <span class=\"nav-label\">المصروفات</span> <span "
+"class=\"fa arrow\"/>"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.side_menu
+msgid ""
+"<i class=\"fa fa-money\"/> <span class=\"nav-label\">Passenger And "
+"Mandate</span> <span class=\"fa arrow\"/>"
+msgstr ""
+"<i class=\"fa fa-money\"/> <span class=\"nav-label\">الانتداب و "
+"الإركاب</span> <span class=\"fa arrow\"/>"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.side_menu
+msgid ""
+"<i class=\"fa fa-pencil-square-o\"/> <span class=\"nav-label\">Intranet "
+"Requests &amp; Communication</span> <span class=\"fa arrow\"/>"
+msgstr ""
+"<i class=\"fa fa-pencil-square-o\"/> <span class=\"nav-label\">الاتصالات "
+"الادارية</span> <span class=\"fa arrow\"/>"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.side_menu
+msgid ""
+"<i class=\"fa fa-pencil-square-o\"/> <span class=\"nav-label\">Letters &amp;"
+" Certificates</span> <span class=\"fa arrow\"/>"
+msgstr ""
+"<i class=\"fa fa-pencil-square-o\"/> <span class=\"nav-label\"> "
+"الخطابات&amp; الشهادات</span> <span class=\"fa arrow\"/>"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.side_menu
+msgid ""
+"<i class=\"fa fa-pencil-square-o\"/> <span class=\"nav-label\">Tasks &amp; "
+"Projects</span> <span class=\"fa arrow\"/>"
+msgstr ""
+"<i class=\"fa fa-pencil-square-o\"/> <span class=\"nav-label\">الخطابات و "
+"الشهادات</span> <span class=\"fa arrow\"/>"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_letter
+#: model_terms:ir.ui.view,arch_db:ess.ess_payslip
+#: model_terms:ir.ui.view,arch_db:ess.ess_statement
+#: model_terms:ir.ui.view,arch_db:ess.ess_track_letter
+msgid "<i class=\"fa fa-print float-sm-none float-md-right\"> Print</i>"
+msgstr "<i class=\"fa fa-print float-sm-none float-md-right\"> طباعة</i>"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.side_menu
+msgid ""
+"<i class=\"fa fa-th-large\"/> <span class=\"nav-label\">Appraisal</span> "
+"<span class=\"fa arrow\"/>"
+msgstr ""
+"<i class=\"fa fa-th-large\"/> <span class=\"nav-label\">التقييمات</span> "
+"<span class=\"fa arrow\"/>"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.side_menu
+msgid ""
+"<i class=\"fa fa-th-large\"/> <span class=\"nav-label\">Atteandance</span> "
+"<span class=\"fa arrow\"/>"
+msgstr ""
+"<i class=\"fa fa-th-large\"/> <span class=\"nav-label\">الحضور</span> <span "
+"class=\"fa arrow\"/>"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.side_menu
+msgid "<i class=\"fa fa-th-large\"/> <span class=\"nav-label\">Home</span>"
+msgstr "<i class=\"fa fa-th-large\"/> <span class=\"nav-label\">الرئيسية</span>"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.side_menu
+msgid ""
+"<i class=\"fa fa-th-large\"/> <span class=\"nav-label\">Payroll</span> <span"
+" class=\"fa arrow\"/>"
+msgstr ""
+"<i class=\"fa fa-th-large\"/> <span class=\"nav-label\">الرواتب</span> <span"
+" class=\"fa arrow\"/>"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.side_menu
+msgid ""
+"<i class=\"fa fa-th-large\"/> <span class=\"nav-label\">Training "
+"Management</span> <span class=\"fa arrow\"/>"
+msgstr ""
+"<i class=\"fa fa-th-large\"/> <span class=\"nav-label\">التدريب</span> <span"
+" class=\"fa arrow\"/>"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_view_attendance_day
+msgid ""
+"<span> To  </span>  <i class=\"fa fa-calendar\">\n"
+"         </i>"
+msgstr ""
+"<span> إلى  </span>  <i class=\"fa fa-calendar\">\n"
+"         </i>"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_add_custody_line
+msgid "<span>Add Custody Lines</span>"
+msgstr "<span>إضافة بنود الصرف</span>"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.employee_announcement
+msgid "<span>All Announcement</span>"
+msgstr "<span>اعلانات خاصة</span>"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.employee_notification
+msgid "<span>All Notification</span>"
+msgstr "<span> الاشعارات </span>"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_leaves
+msgid "<span>Apply Leave</span>"
+msgstr "<span>طلب اجازة</span>"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_track_appraisal
+#: model_terms:ir.ui.view,arch_db:ess.ess_view_appraisal
+msgid "<span>Appraisal Report</span>"
+msgstr "<span>متابعه تقيماتي</span>"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_view_asset_assignation
+msgid "<span>Asset Assignation</span>"
+msgstr "<span>العهد المسنده الي</span>"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_custody_in_progress
+msgid "<span>Custody In Progress</span>"
+msgstr "<span>العهد الجارى اهلاكها</span>"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_custody_request
+msgid "<span>Custody Request</span>"
+msgstr "<span>طلب عهدة مالية</span>"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.custody_warning_message
+msgid "<span>Custody Warning</span>"
+msgstr "<span>تحذير العهد المالية</span>"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_view_custody
+msgid "<span>Custody</span>"
+msgstr "<span>العهد المالية</span>"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_view_attendance
+#: model_terms:ir.ui.view,arch_db:ess.ess_view_attendance_day
+msgid "<span>Daily Attendance</span>"
+msgstr "<span>الحضور اليومي</span>"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_eos
+msgid "<span>EOS Calculator</span>"
+msgstr "<span>حاسبة مكافآنة نهاية الخدمة</span>"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_statement
+msgid "<span>Financial Report</span>"
+msgstr "<span>كشف حساب</span>"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.employee_important_date
+msgid "<span>Important Dates</span>"
+msgstr "<span>تواريح مهمة</span>"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_allocation
+msgid "<span>Leave Allocation Request</span>"
+msgstr "<span>طلب تخصيص أجازة</span>"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_balance_leaves
+msgid "<span>Leave Balance Summary</span>"
+msgstr "<span>ملخص رصيد الأجازات</span>"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_installments_loan
+msgid "<span>Loan Installments</span>"
+msgstr "<span>سدادات السلفة</span>"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_loan_report
+msgid "<span>Loans Repor</span>"
+msgstr "<span>تقارير السلف</span>"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_passenger_mandate_private
+msgid "<span>Mandate And Passenger Private</span>"
+msgstr "إنشاء دورة خاصة"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_passenger_mandate
+#: model_terms:ir.ui.view,arch_db:ess.ess_view_courses_and_mandate
+msgid "<span>Mandate And Passenger</span>"
+msgstr "<span>الانتداب والاركاب</span>"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_announcement
+msgid "<span>My Announcements</span>"
+msgstr "<span>إعلاناتي</span>"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.employee_appraisal
+msgid "<span>My Appraisal</span>"
+msgstr "<span>التقييم الخاص بي</span>"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.employee_leave_allocation
+msgid "<span>My Balance</span>"
+msgstr "<span>رصيدي</span>"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_contract
+msgid "<span>My Contracts</span>"
+msgstr "<span>عملائى</span>"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_my_courses_training
+msgid "<span>My Courses</span>"
+msgstr "<span>دوراتي</span>"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.employee_document
+msgid "<span>My Documents</span>"
+msgstr "<span>مستنداتي</span>"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_myeducational
+msgid "<span>My Educational</span>"
+msgstr "<span>درجاتي التعليميه</span>"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_myexperians
+msgid "<span>My Experians</span>"
+msgstr "<span>خبرتي</span>"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_network
+msgid "<span>My Network Directory</span>"
+msgstr "<spanمجلداتى على الشبكة</span>"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.employee_asset_assignation
+msgid "<span>My Newest Assignations</span>"
+msgstr "<span>متابعه عهدى العينيه</span>"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.employee_custody
+msgid "<span>My Newest Custody</span>"
+msgstr "<span>متابعه عهدى الماليه</span>"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.employee_mandate
+msgid "<span>My Newest Mandate</span>"
+msgstr "<span>متابعه الانتداب والاركاب</span>"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_payslip
+msgid "<span>My Payslips</span>"
+msgstr "<span>رواتبي</span>"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_myorofile
+msgid "<span>My Profile</span>"
+msgstr "<span>الصفحه الشخصيه</span>"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_document_my_request
+msgid "<span>My Requests Documents</span>"
+msgstr "<span>طلب ملف</span>"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_myskills
+msgid "<span>My Skills</span>"
+msgstr "<span>مهاراتي</span>"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_tasks
+msgid "<span>My Tasks</span>"
+msgstr "<span>المهام المسنده الي</span>"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.employee_organization
+msgid "<span>Organization Chart</span>"
+msgstr "<span>الهيكل التنظيمي</span>"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_view_company_docs_owner
+msgid "<span>Owne Doucments</span>"
+msgstr "<span>مستنداتي</span>"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_payslip_correction
+msgid "<span>Payslip Correction Request</span>"
+msgstr "<span>طلب تصحيح الراتب</span>"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.employee_announcement_public
+msgid "<span>Public Announcement</span>"
+msgstr "<span> اعلانات عامة</span>"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_expenses
+msgid "<span>Register Expense</span>"
+msgstr "<span>طلب مصروفات</span>"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_asset_assignation
+msgid "<span>Request Asset Assignation</span>"
+msgstr "<span>طلب عهده عينيه</span>"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_loan
+msgid "<span>Request Loan</span>"
+msgstr "<span>طلب سلفه</span>"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_petty_cash
+msgid "<span>Request Petty Cash</span>"
+msgstr "<span>طلب مصروفات</span>"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_letter
+msgid "<span>Request a Document</span>"
+msgstr "<span>طلب وثيقه</span>"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_request_appraisal
+msgid "<span>Request for Appraisal</span>"
+msgstr "<span>طلب تقييم</span>"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_view_company_docs_req
+msgid "<span>Requested Documents</span>"
+msgstr "<span>الوثائقالمطلوبه</span>"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_short_leaves
+msgid "<span>Short Leave Request</span>"
+msgstr "<span>طلب اذن</span>"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.employee_leaves
+msgid "<span>Time Off</span>"
+msgstr "<span>الاجازات</span>"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.employee_attendance
+msgid "<span>Time Office</span>"
+msgstr "<span>وقت الدوام</span>"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_track_letter
+msgid "<span>Track Document Requests</span>"
+msgstr "<span>متابعه الوثائق المطلوبه</span>"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_track_expenses
+msgid "<span>Track Expense Approvals</span>"
+msgstr "<span>مصروفاتي</span>"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_track_leaves
+msgid "<span>Track Leaves Requests</span>"
+msgstr "<span>متابعه طلبات الاجازات</span>"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_track_loan
+msgid "<span>Track Loan Request</span>"
+msgstr "<span>متابعه طلبات السلف</span>"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_payslip_correction_track
+msgid "<span>Track Payslip Corrections</span>"
+msgstr "<span>متابعه تصحيح الرواتب</span>"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_track_petty_cash
+msgid "<span>Track Petty Requests</span>"
+msgstr "<span>متابعة طلبات المصروفات</span>"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_track_training
+msgid "<span>Track Training Request</span>"
+msgstr "<span>متابعة طلبات التدريب</span>"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_training
+msgid "<span>Training Request</span>"
+msgstr "<span>طلب تدريب</span>"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_document
+msgid "<span>Upload Document</span>"
+msgstr "\"<span>رفع مستندات</span>\""
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_view_docs
+msgid "<span>View Documents</span>"
+msgstr "<span>عرض المستندات</span>"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_history_leaves
+msgid "<span>View Leaves History</span>"
+msgstr "<span>الاجازات السابقه</span>"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_balance_leaves
+msgid "<span>remaining</span>"
+msgstr "<span>المتبقى</span>"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_leaves
+#: model_terms:ir.ui.view,arch_db:ess.ess_short_leaves
+msgid "<strong>Confirm</strong>"
+msgstr "<strong>موافقه</strong>"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_myorofile
+msgid "<strong>Name</strong>"
+msgstr "<strong>الاسم</strong>"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.de_partner_ledger_pdf_report
+#: model_terms:ir.ui.view,arch_db:ess.ess_statement
+msgid "Account"
+msgstr "الحساب"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_view_courses_and_mandate
+msgid "Accounting Manager Approved"
+msgstr "تمت موافقه الماليه"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_document_my_request
+msgid "Activity type"
+msgstr "نوع النشاط"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_custody_in_progress
+msgid "Add Custody Line"
+msgstr "إضافة بند صرف"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_view_asset_assignation
+msgid "All Asset Assignation"
+msgstr "جميع العهد العينية"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_view_custody
+msgid "All Custody"
+msgstr "جميع العهد المالية"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_view_custody
+msgid "All Manager Approval"
+msgstr "موافقه المديرين"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_view_courses_and_mandate
+msgid "All Mandate And Passenger"
+msgstr "جميع طلبات الانتداب"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_allocation
+msgid "Allocated Until"
+msgstr "اجازه الي"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.employee_custody
+#: model_terms:ir.ui.view,arch_db:ess.ess_add_custody_line
+#: model_terms:ir.ui.view,arch_db:ess.ess_custody_in_progress
+#: model_terms:ir.ui.view,arch_db:ess.ess_custody_request
+#: model_terms:ir.ui.view,arch_db:ess.ess_petty_cash
+#: model_terms:ir.ui.view,arch_db:ess.ess_track_petty_cash
+#: model_terms:ir.ui.view,arch_db:ess.ess_view_custody
+msgid "Amount"
+msgstr "المبلغ"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.side_menu
+msgid "Apply Leave"
+msgstr "طلب اجازه"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.side_menu
+msgid "Appraisal Report"
+msgstr "تقرير التقييم"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_letter
+#: model_terms:ir.ui.view,arch_db:ess.ess_track_letter
+msgid "Approval"
+msgstr "الموافقه"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_expenses
+#: model_terms:ir.ui.view,arch_db:ess.ess_track_expenses
+#: model_terms:ir.ui.view,arch_db:ess.ess_view_asset_assignation
+msgid "Approved"
+msgstr "معتمد"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_asset_assignation
+msgid "Assest Request Reason"
+msgstr "سبب الطلب"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.employee_asset_assignation
+#: model_terms:ir.ui.view,arch_db:ess.ess_view_asset_assignation
+msgid "Asset"
+msgstr "الأصل"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.side_menu
+msgid "Asset Assigned To Me"
+msgstr "العهد المسنده الي"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_tasks
+msgid "Assigend to me"
+msgstr "مسند الي"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_tasks
+msgid "Assigne To"
+msgstr "مسند الي"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_view_asset_assignation
+msgid "Assigned To Me"
+msgstr " المسنده الي"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_tasks
+msgid "Assigned by me"
+msgstr "المسند بواسطتي"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_add_custody_line
+#: model_terms:ir.ui.view,arch_db:ess.ess_announcement
+#: model_terms:ir.ui.view,arch_db:ess.ess_document
+#: model_terms:ir.ui.view,arch_db:ess.ess_passenger_mandate_private
+msgid "Attachment"
+msgstr "مرفق"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_view_courses_and_mandate
+msgid "Attachment File"
+msgstr "الملف المرفق"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_view_courses_and_mandate
+msgid "Attachment Ticket"
+msgstr "التذكره المرفقه"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_myorofile
+#: model_terms:ir.ui.view,arch_db:ess.ess_view_attendance
+#: model_terms:ir.ui.view,arch_db:ess.ess_view_attendance_day
+#: model_terms:ir.ui.view,arch_db:ess.side_menu
+msgid "Attendance"
+msgstr "الحضور"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_view_attendance
+msgid "Attendance Percentage"
+msgstr "نسبة الحضور"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_allocation
+msgid "Available From"
+msgstr "متاح من"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_myorofile
+msgid "Badge ID"
+msgstr "رقم الشارة"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.de_partner_ledger_pdf_report
+#: model_terms:ir.ui.view,arch_db:ess.ess_statement
+msgid "Balance"
+msgstr "الرصيد"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_loan
+#: model_terms:ir.ui.view,arch_db:ess.ess_loan_report
+#: model_terms:ir.ui.view,arch_db:ess.ess_track_loan
+msgid "Balance Amount"
+msgstr "قيمه الرصيد"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_myorofile
+msgid "Bank Account Number"
+msgstr "رقم الحساب البنكي"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.employee_data
+msgid "Basic Info"
+msgstr "معلومات أساسية"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_payslip
+msgid "Basic Wage"
+msgstr "الراتب الاساسى"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_expenses
+#: model_terms:ir.ui.view,arch_db:ess.ess_track_expenses
+msgid "Bill Reference"
+msgstr "رقم إشارة الفاتورة"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_announcement
+msgid "By Department"
+msgstr "حسب القسم"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_announcement
+msgid "By Employee"
+msgstr "حسب الموظف"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_announcement
+msgid "By Job Position"
+msgstr "موجه لمنصب وظيفي"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.side_menu
+msgid "Calendar"
+msgstr "التقويم"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_payslip_correction_track
+msgid "Cancel"
+msgstr "إلغاء"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_my_courses_training
+#: model_terms:ir.ui.view,arch_db:ess.ess_track_training
+#: model_terms:ir.ui.view,arch_db:ess.ess_training
+msgid "Capacity"
+msgstr "السعة"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_myorofile
+msgid "Certificate Level"
+msgstr "مستوى الشهادة"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_myorofile
+msgid "Citizenship"
+msgstr "المواطنة"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_letter
+#: model_terms:ir.ui.view,arch_db:ess.ess_payslip
+#: model_terms:ir.ui.view,arch_db:ess.ess_statement
+#: model_terms:ir.ui.view,arch_db:ess.ess_track_letter
+msgid "Clear"
+msgstr "إخلاء"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_view_asset_assignation
+msgid "Clearance"
+msgstr "تم اخلاء طرفها"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.de_partner_ledger_pdf_report
+#: model_terms:ir.ui.view,arch_db:ess.ess_statement
+msgid "Closing Balance"
+msgstr "اغلاق الرصيد"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_announcement
+msgid "Code"
+msgstr "الكود"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_track_appraisal
+#: model_terms:ir.ui.view,arch_db:ess.ess_view_appraisal
+msgid "Colleagues"
+msgstr "الزملاء"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_expenses
+msgid "Company"
+msgstr "الشركة"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_allocation
+#: model_terms:ir.ui.view,arch_db:ess.ess_document
+#: model_terms:ir.ui.view,arch_db:ess.ess_eos
+#: model_terms:ir.ui.view,arch_db:ess.ess_expenses
+#: model_terms:ir.ui.view,arch_db:ess.ess_letter
+#: model_terms:ir.ui.view,arch_db:ess.ess_loan
+#: model_terms:ir.ui.view,arch_db:ess.ess_payslip_correction
+#: model_terms:ir.ui.view,arch_db:ess.ess_request_appraisal
+#: model_terms:ir.ui.view,arch_db:ess.ess_statement
+msgid "Confirm"
+msgstr "تأكيد"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_document_my_request
+#: model_terms:ir.ui.view,arch_db:ess.ess_petty_cash
+msgid ""
+"Confirm\n"
+"                                                                    <span class=\"fa fa-long-arrow-right\"/>"
+msgstr ""
+"تأكيد\n"
+"                                                                    <span class=\"fa fa-long-arrow-right\"/>"
+
+#. module: ess
+#: model:ir.model,name:ess.model_res_partner
+#: model_terms:ir.ui.view,arch_db:ess.ess_document_my_request
+#: model_terms:ir.ui.view,arch_db:ess.ess_view_company_docs_owner
+#: model_terms:ir.ui.view,arch_db:ess.ess_view_company_docs_req
+msgid "Contact"
+msgstr "جهة الاتصال"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_eos
+msgid "Contact End Type"
+msgstr "طريقه نهايه العقد"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_myorofile
+msgid "Country of Birth"
+msgstr "بلد الميلاد"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.employee_mandate
+#: model_terms:ir.ui.view,arch_db:ess.ess_my_courses_training
+#: model_terms:ir.ui.view,arch_db:ess.ess_passenger_mandate
+#: model_terms:ir.ui.view,arch_db:ess.ess_track_training
+#: model_terms:ir.ui.view,arch_db:ess.ess_training
+#: model_terms:ir.ui.view,arch_db:ess.ess_view_courses_and_mandate
+msgid "Course"
+msgstr "دوره"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_passenger_mandate
+#: model_terms:ir.ui.view,arch_db:ess.ess_passenger_mandate_private
+msgid "Course PLace"
+msgstr "مقر الدوره"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_view_courses_and_mandate
+msgid "Course Place"
+msgstr "مقر الدوره"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_view_courses_and_mandate
+msgid "Course Price"
+msgstr "سعر الدوره"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.employee_mandate
+#: model_terms:ir.ui.view,arch_db:ess.ess_passenger_mandate
+#: model_terms:ir.ui.view,arch_db:ess.ess_passenger_mandate_private
+#: model_terms:ir.ui.view,arch_db:ess.ess_view_courses_and_mandate
+msgid "Course Type"
+msgstr "نوع الدوره"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_add_custody_line
+#: model_terms:ir.ui.view,arch_db:ess.ess_asset_assignation
+#: model_terms:ir.ui.view,arch_db:ess.ess_custody_request
+#: model_terms:ir.ui.view,arch_db:ess.ess_passenger_mandate
+#: model_terms:ir.ui.view,arch_db:ess.ess_passenger_mandate_private
+msgid "Create"
+msgstr "إنشاء"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_tasks
+msgid "Create By"
+msgstr "أنشئ بواسطة"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.side_menu
+msgid "Create Private Course"
+msgstr "إنشاء دورة خاصة"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.side_menu
+msgid "Create Ticket"
+msgstr "إنشاء تذكرة"
+
+#. module: ess
+#: model:ir.model.fields,field_description:ess.field_report_de_partner_statement_de_partner_ledger_pdf_report__create_uid
+msgid "Created by"
+msgstr "أنشئ بواسطة"
+
+#. module: ess
+#: model:ir.model.fields,field_description:ess.field_report_de_partner_statement_de_partner_ledger_pdf_report__create_date
+msgid "Created on"
+msgstr "أنشئ في"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.de_partner_ledger_pdf_report
+#: model_terms:ir.ui.view,arch_db:ess.ess_statement
+msgid "Credit"
+msgstr "الدائن"
+
+#. module: ess
+#. openerp-web
+#: code:addons/ess/static/src/js/resume_widget.js:0
+#: model_terms:ir.ui.view,arch_db:ess.ess_myeducational
+#: model_terms:ir.ui.view,arch_db:ess.ess_myexperians
+#, python-format
+msgid "Current"
+msgstr "الجاري"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_add_custody_line
+msgid "Custody Description"
+msgstr "بنود العهد"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.side_menu
+msgid "Custody In Progress"
+msgstr "العهد الجارى اهلاكها"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.side_menu
+msgid "Custody Request"
+msgstr "طلب عهده"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.side_menu
+msgid "Daily Attendance"
+msgstr "الحضور اليومي"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.de_partner_ledger_pdf_report
+#: model_terms:ir.ui.view,arch_db:ess.employee_appraisal
+#: model_terms:ir.ui.view,arch_db:ess.employee_attendance
+#: model_terms:ir.ui.view,arch_db:ess.employee_custody
+#: model_terms:ir.ui.view,arch_db:ess.employee_important_date
+#: model_terms:ir.ui.view,arch_db:ess.ess_add_custody_line
+#: model_terms:ir.ui.view,arch_db:ess.ess_custody_in_progress
+#: model_terms:ir.ui.view,arch_db:ess.ess_custody_request
+#: model_terms:ir.ui.view,arch_db:ess.ess_expenses
+#: model_terms:ir.ui.view,arch_db:ess.ess_installments_loan
+#: model_terms:ir.ui.view,arch_db:ess.ess_letter
+#: model_terms:ir.ui.view,arch_db:ess.ess_statement
+#: model_terms:ir.ui.view,arch_db:ess.ess_track_appraisal
+#: model_terms:ir.ui.view,arch_db:ess.ess_track_expenses
+#: model_terms:ir.ui.view,arch_db:ess.ess_track_letter
+#: model_terms:ir.ui.view,arch_db:ess.ess_view_appraisal
+#: model_terms:ir.ui.view,arch_db:ess.ess_view_asset_assignation
+#: model_terms:ir.ui.view,arch_db:ess.ess_view_attendance
+#: model_terms:ir.ui.view,arch_db:ess.ess_view_attendance_day
+#: model_terms:ir.ui.view,arch_db:ess.ess_view_custody
+msgid "Date"
+msgstr "التاريخ"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.employee_announcement
+#: model_terms:ir.ui.view,arch_db:ess.employee_announcement_public
+msgid "Date End"
+msgstr "تاريخ النهايه"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_view_asset_assignation
+msgid "Date Of Disclaimer"
+msgstr "تاريخ اخلاء الطرف"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.employee_announcement
+#: model_terms:ir.ui.view,arch_db:ess.employee_announcement_public
+msgid "Date Start"
+msgstr "تاريخ البدايه"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_myorofile
+msgid "Date of Birthe"
+msgstr "تاريخ الميلاد"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_document
+#: model_terms:ir.ui.view,arch_db:ess.ess_view_docs
+msgid "Date of expiry"
+msgstr "تاريخ الانتهاء"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_document
+#: model_terms:ir.ui.view,arch_db:ess.ess_view_docs
+msgid "Date of issue"
+msgstr "تاريخ الإصدار"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_petty_cash
+#: model_terms:ir.ui.view,arch_db:ess.ess_track_petty_cash
+msgid "Date of request"
+msgstr "تاريخ الطلب"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.employee_leave_allocation
+#: model_terms:ir.ui.view,arch_db:ess.employee_leaves
+#: model_terms:ir.ui.view,arch_db:ess.ess_allocation
+#: model_terms:ir.ui.view,arch_db:ess.ess_balance_leaves
+#: model_terms:ir.ui.view,arch_db:ess.ess_document
+#: model_terms:ir.ui.view,arch_db:ess.ess_leaves
+#: model_terms:ir.ui.view,arch_db:ess.ess_track_leaves
+msgid "Days"
+msgstr "الأيام"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_tasks
+msgid "Deadline"
+msgstr "الموعد النهائي"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.de_partner_ledger_pdf_report
+#: model_terms:ir.ui.view,arch_db:ess.ess_statement
+msgid "Debit"
+msgstr "المدين"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_asset_assignation
+msgid "Delivery Date"
+msgstr "تاريخ التسليم"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_contract
+#: model_terms:ir.ui.view,arch_db:ess.ess_myorofile
+msgid "Department"
+msgstr "القسم"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_view_courses_and_mandate
+msgid "Department Manager Approved"
+msgstr "تمت موافقه مدير القسم"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_myorofile
+msgid "Dependant"
+msgstr "المعالين"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.de_partner_ledger_pdf_report
+#: model_terms:ir.ui.view,arch_db:ess.employee_asset_assignation
+#: model_terms:ir.ui.view,arch_db:ess.employee_important_date
+#: model_terms:ir.ui.view,arch_db:ess.ess_add_custody_line
+#: model_terms:ir.ui.view,arch_db:ess.ess_allocation
+#: model_terms:ir.ui.view,arch_db:ess.ess_asset_assignation
+#: model_terms:ir.ui.view,arch_db:ess.ess_custody_in_progress
+#: model_terms:ir.ui.view,arch_db:ess.ess_custody_request
+#: model_terms:ir.ui.view,arch_db:ess.ess_expenses
+#: model_terms:ir.ui.view,arch_db:ess.ess_leaves
+#: model_terms:ir.ui.view,arch_db:ess.ess_passenger_mandate
+#: model_terms:ir.ui.view,arch_db:ess.ess_passenger_mandate_private
+#: model_terms:ir.ui.view,arch_db:ess.ess_short_leaves
+#: model_terms:ir.ui.view,arch_db:ess.ess_statement
+#: model_terms:ir.ui.view,arch_db:ess.ess_view_asset_assignation
+#: model_terms:ir.ui.view,arch_db:ess.ess_view_courses_and_mandate
+#: model_terms:ir.ui.view,arch_db:ess.ess_view_custody
+msgid "Description"
+msgstr "الوصف"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_eos
+msgid "Deserve First Period"
+msgstr "المستحق خلال الفتره الاولي"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_eos
+msgid "Deserve Second Period"
+msgstr "المستحق خلال الفتره الثانيه"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_eos
+msgid "Deserving"
+msgstr "المستحق"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_request_appraisal
+msgid "Desired Deadline"
+msgstr "الموعد النهائي المطلوب"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_view_courses_and_mandate
+msgid "Direct Manager Approved"
+msgstr "تمت موافقه المدير المباشر"
+
+#. module: ess
+#: model:ir.model.fields,field_description:ess.field_report_de_partner_statement_de_partner_ledger_pdf_report__display_name
+msgid "Display Name"
+msgstr "الاسم المعروض"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.de_partner_ledger_pdf_report
+#: model_terms:ir.ui.view,arch_db:ess.ess_statement
+msgid "Doc No."
+msgstr "رقم الملف"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_document
+msgid "Document Number"
+msgstr "رقم المستند"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_document
+#: model_terms:ir.ui.view,arch_db:ess.ess_view_docs
+msgid "Document Type"
+msgstr "نوع المستند"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_payslip_correction_track
+#: model_terms:ir.ui.view,arch_db:ess.ess_view_custody
+msgid "Done"
+msgstr "تمت تصفيه العهده"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_add_custody_line
+#: model_terms:ir.ui.view,arch_db:ess.ess_document
+#: model_terms:ir.ui.view,arch_db:ess.ess_document_my_request
+#: model_terms:ir.ui.view,arch_db:ess.ess_view_company_docs_owner
+#: model_terms:ir.ui.view,arch_db:ess.ess_view_docs
+msgid "Download"
+msgstr "تحميل"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_view_asset_assignation
+#: model_terms:ir.ui.view,arch_db:ess.ess_view_courses_and_mandate
+msgid "Draft"
+msgstr "مسوده"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_allocation
+#: model_terms:ir.ui.view,arch_db:ess.ess_leaves
+#: model_terms:ir.ui.view,arch_db:ess.ess_my_courses_training
+#: model_terms:ir.ui.view,arch_db:ess.ess_short_leaves
+#: model_terms:ir.ui.view,arch_db:ess.ess_track_training
+#: model_terms:ir.ui.view,arch_db:ess.ess_training
+msgid "Duration"
+msgstr "المدة"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.side_menu
+msgid "EOS Calculator"
+msgstr "حساب نهايه الخدمه"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_myeducational
+#: model_terms:ir.ui.view,arch_db:ess.ess_myorofile
+msgid "Education"
+msgstr "التعليم"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_myorofile
+msgid "Email"
+msgstr "البريد الإلكتروني"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_myorofile
+msgid "Emergency"
+msgstr "حالة طوارئ"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_myorofile
+msgid "Emergency Contact"
+msgstr "جهة الاتصال في حالة الطوارئ"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_myorofile
+msgid "Emergency Phone"
+msgstr "هاتف الطوارئ"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_expenses
+msgid "Employee (to reimburse)"
+msgstr "الموظف (لسداد مديونية)"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_payslip_correction_track
+msgid "Employee Note"
+msgstr "ملاحظات الموظف"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_announcement
+#: model_terms:ir.ui.view,arch_db:ess.ess_contract
+#: model_terms:ir.ui.view,arch_db:ess.ess_history_leaves
+#: model_terms:ir.ui.view,arch_db:ess.ess_passenger_mandate
+#: model_terms:ir.ui.view,arch_db:ess.ess_passenger_mandate_private
+#: model_terms:ir.ui.view,arch_db:ess.ess_view_courses_and_mandate
+msgid "End Date"
+msgstr "تاريخ الانتهاء"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_eos
+msgid "End of Contract Period"
+msgstr "مع نهايه العقد"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_document
+msgid "Everyday till expiry date"
+msgstr "كل يوم حتى تاريخ الانتهاء"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_myexperians
+msgid "Experience"
+msgstr "الخبره"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_allocation
+#: model_terms:ir.ui.view,arch_db:ess.ess_document
+msgid "Expiry Date"
+msgstr "تاريخ النهايه"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_myorofile
+msgid "Field of Study"
+msgstr "مجال الدراسة"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_eos
+msgid "Final Deserving"
+msgstr "المستحق النهائى"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_track_appraisal
+#: model_terms:ir.ui.view,arch_db:ess.ess_view_appraisal
+msgid "Final Evaluation"
+msgstr "التقييم النهائي"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.side_menu
+msgid "Financial Correction Request"
+msgstr "طلب تصحيح مالي"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.side_menu
+msgid "Financial Report"
+msgstr "التقرير المالي"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.side_menu
+msgid "Followup Requests"
+msgstr "متابعة الطلبات"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_leaves
+#: model_terms:ir.ui.view,arch_db:ess.ess_my_courses_training
+#: model_terms:ir.ui.view,arch_db:ess.ess_short_leaves
+#: model_terms:ir.ui.view,arch_db:ess.ess_track_training
+#: model_terms:ir.ui.view,arch_db:ess.ess_training
+msgid "From"
+msgstr "من"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_view_attendance_day
+msgid ""
+"From\n"
+"         <i class=\"fa fa-calendar\">\n"
+"         </i>"
+msgstr ""
+"من\n"
+"         <i class=\"fa fa-calendar\">\n"
+"         </i>"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_statement
+#: model_terms:ir.ui.view,arch_db:ess.ess_training
+msgid "From Date"
+msgstr "من تاريخ"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.de_partner_ledger_pdf_report
+msgid "From Date:"
+msgstr "من تاريخ"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_myorofile
+msgid "Gender"
+msgstr "الجنس"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_payslip_correction_track
+msgid "HR Approve"
+msgstr "موافقه الموارد البشريه"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_payslip_correction_track
+msgid "HR Note"
+msgstr "ملاحظات الموارد البشريه"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_myorofile
+msgid "HR Settings"
+msgstr "إعدادات الموارد البشرية"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_view_courses_and_mandate
+msgid "Human Resources Manager Approved"
+msgstr "موافقة الموارد البشرية"
+
+#. module: ess
+#: model:ir.model.fields,field_description:ess.field_report_de_partner_statement_de_partner_ledger_pdf_report__id
+msgid "ID"
+msgstr "المُعرف"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_myorofile
+msgid "Identification Nor"
+msgstr "رقم الهوية"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_eos
+msgid "Immediate resignation"
+msgstr "استقالة فورية"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.employee_attendance
+#: model_terms:ir.ui.view,arch_db:ess.ess_view_attendance
+#: model_terms:ir.ui.view,arch_db:ess.ess_view_attendance_day
+msgid "In"
+msgstr "من"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_view_custody
+msgid "In Progress"
+msgstr "جارى اهلاكها"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_document
+msgid "Issue Date"
+msgstr "تاريخ الاصدار"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_contract
+#: model_terms:ir.ui.view,arch_db:ess.ess_myorofile
+msgid "Job Position"
+msgstr "المنصب الوظيفي"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_eos
+#: model_terms:ir.ui.view,arch_db:ess.ess_myorofile
+msgid "Join Date"
+msgstr "تاريخ الانضمام للعمل"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_tasks
+msgid "Kanban State"
+msgstr "حالة كانبان"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_myorofile
+msgid "Km Home-Work"
+msgstr "كم من البيت للعمل"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_allocation
+#: model_terms:ir.ui.view,arch_db:ess.ess_myorofile
+msgid "Last Allocation Date"
+msgstr "تاريخ آخر اجازه"
+
+#. module: ess
+#: model:ir.model.fields,field_description:ess.field_report_de_partner_statement_de_partner_ledger_pdf_report____last_update
+msgid "Last Modified on"
+msgstr "آخر تعديل في"
+
+#. module: ess
+#: model:ir.model.fields,field_description:ess.field_report_de_partner_statement_de_partner_ledger_pdf_report__write_uid
+msgid "Last Updated by"
+msgstr "آخر تحديث بواسطة"
+
+#. module: ess
+#: model:ir.model.fields,field_description:ess.field_report_de_partner_statement_de_partner_ledger_pdf_report__write_date
+msgid "Last Updated on"
+msgstr "آخر تحديث في"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_eos
+msgid "Last Work Date"
+msgstr "اخر يوم عمل"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_eos
+msgid "Law 77 By Company"
+msgstr "قانون 77 بالشركه"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_eos
+msgid "Law 77 By Employee"
+msgstr "قانون 77 للموظف"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_eos
+msgid "Law 80"
+msgstr "قانون 80"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.side_menu
+msgid "Leave Balance Summary"
+msgstr " رصيد الإجازة"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_letter
+#: model_terms:ir.ui.view,arch_db:ess.ess_track_letter
+msgid "Letter Type"
+msgstr "نوع الخطاب"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_installments_loan
+#: model_terms:ir.ui.view,arch_db:ess.ess_loan
+#: model_terms:ir.ui.view,arch_db:ess.ess_loan_report
+#: model_terms:ir.ui.view,arch_db:ess.ess_track_loan
+msgid "Loan Amount"
+msgstr "قيمه السلفه"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.side_menu
+msgid "Loan Installments Summary"
+msgstr " أقساط القرض"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_installments_loan
+msgid "Loan Ref."
+msgstr "مرجع السلفه"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.side_menu
+msgid "Loans Report"
+msgstr "تقرير السلف"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_view_attendance_day
+msgid "MM/DD/YYYY"
+msgstr ""
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.side_menu
+msgid "Manage Documents"
+msgstr "إدارة المستندات"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.side_menu
+msgid "Manage Taskss"
+msgstr "إدارة المهام"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_myorofile
+msgid "Manager"
+msgstr "المدير"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_payslip_correction_track
+msgid "Manager Approved"
+msgstr "تمت موافقه المدير"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_payslip_correction_track
+msgid "Manager Note"
+msgstr "ملاحظه المدير"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_myorofile
+msgid "Marital Status"
+msgstr "الحالة الاجتماعية"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_view_attendance
+msgid "Month Absent"
+msgstr "غياب الشهر"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_view_attendance
+msgid "Month Late"
+msgstr "تأخير الشهر"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.side_menu
+msgid "My Annoncement"
+msgstr "اعلاناتى"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.employee_leaves
+msgid "My Approval"
+msgstr "موافقاتي"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.side_menu
+msgid "My Courses"
+msgstr "دوراتي"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.side_menu
+msgid "My Custody"
+msgstr "العهد المسندة إليّ"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.my_dashboard_link
+msgid "My Dashboard"
+msgstr "صفحة حسابي"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.side_menu
+msgid "My Passenger And Mandate"
+msgstr "الانتداب الخاص بي"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.side_menu
+msgid "My Payslips"
+msgstr "مسيرات الرواتب"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.side_menu
+msgid "My Requests"
+msgstr "طلباتي"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.employee_leaves
+msgid "My Requser"
+msgstr "طلباتي"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.side_menu
+msgid "My Tasks"
+msgstr "مهامي"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.employee_document
+#: model_terms:ir.ui.view,arch_db:ess.employee_leave_allocation
+#: model_terms:ir.ui.view,arch_db:ess.employee_leaves
+#: model_terms:ir.ui.view,arch_db:ess.ess_allocation
+#: model_terms:ir.ui.view,arch_db:ess.ess_contract
+#: model_terms:ir.ui.view,arch_db:ess.ess_document
+#: model_terms:ir.ui.view,arch_db:ess.ess_document_my_request
+#: model_terms:ir.ui.view,arch_db:ess.ess_expenses
+#: model_terms:ir.ui.view,arch_db:ess.ess_history_leaves
+#: model_terms:ir.ui.view,arch_db:ess.ess_leaves
+#: model_terms:ir.ui.view,arch_db:ess.ess_letter
+#: model_terms:ir.ui.view,arch_db:ess.ess_loan
+#: model_terms:ir.ui.view,arch_db:ess.ess_loan_report
+#: model_terms:ir.ui.view,arch_db:ess.ess_passenger_mandate_private
+#: model_terms:ir.ui.view,arch_db:ess.ess_payslip
+#: model_terms:ir.ui.view,arch_db:ess.ess_tasks
+#: model_terms:ir.ui.view,arch_db:ess.ess_track_expenses
+#: model_terms:ir.ui.view,arch_db:ess.ess_track_leaves
+#: model_terms:ir.ui.view,arch_db:ess.ess_track_letter
+#: model_terms:ir.ui.view,arch_db:ess.ess_track_loan
+#: model_terms:ir.ui.view,arch_db:ess.ess_view_company_docs_owner
+#: model_terms:ir.ui.view,arch_db:ess.ess_view_company_docs_req
+#: model_terms:ir.ui.view,arch_db:ess.ess_view_docs
+msgid "Name"
+msgstr "الاسم"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_myorofile
+msgid "Nationality (Country)"
+msgstr "الجنسية (البلد)"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_eos
+msgid "Net Period"
+msgstr "صافي الفتره"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_payslip
+msgid "Net Wage"
+msgstr "صافي الراتب"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_loan
+msgid "No Of Installments"
+msgstr "عدد الأقساط"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_passenger_mandate_private
+msgid "No of Days"
+msgstr "عدد الايام"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_payslip_correction
+msgid "Note"
+msgstr "الملاحظات"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_allocation
+#: model_terms:ir.ui.view,arch_db:ess.side_menu
+msgid "Notes"
+msgstr "الملاحظات"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_document
+msgid "Notification Type"
+msgstr "نوع التنبيه"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_document
+msgid "Notification before few days"
+msgstr "التنبية قبل أيام قليلة"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_document
+msgid "Notification on and after expiry"
+msgstr "تنبيه حالى وبعد الانتهاء"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_document
+msgid "Notification on expiry date"
+msgstr "تنبيه عند تاريخ الانتهاء"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.employee_mandate
+#: model_terms:ir.ui.view,arch_db:ess.ess_view_courses_and_mandate
+msgid "Number Of Days"
+msgstr "عدد الايام"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_myorofile
+msgid "Number of Children"
+msgstr "عدد الأبناء"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_eos
+msgid "Number of Days From Join Date"
+msgstr "عدد الايام من تاريخ الانضمام للعمل"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.de_partner_ledger_pdf_report
+#: model_terms:ir.ui.view,arch_db:ess.ess_statement
+msgid "Opening Balance"
+msgstr "الرصيد الافتتاحي"
+
+#. module: ess
+#. openerp-web
+#: code:addons/ess/static/src/js/resume_widget.js:0
+#, python-format
+msgid "Other"
+msgstr "غير ذلك"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.employee_attendance
+#: model_terms:ir.ui.view,arch_db:ess.ess_view_attendance
+#: model_terms:ir.ui.view,arch_db:ess.ess_view_attendance_day
+msgid "Out"
+msgstr "إلى"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_document_my_request
+msgid "Owner"
+msgstr "المالك"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.side_menu
+msgid "Ownered"
+msgstr "صاحبها"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_myorofile
+msgid "PIN Code"
+msgstr "كود PIN"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_expenses
+#: model_terms:ir.ui.view,arch_db:ess.ess_installments_loan
+#: model_terms:ir.ui.view,arch_db:ess.ess_track_expenses
+msgid "Paid"
+msgstr "مدفوع"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_expenses
+msgid "Paid By"
+msgstr "مدفوعة بواسطة"
+
+#. module: ess
+#: model:ir.actions.report,name:ess.partner_ledger_pdf
+msgid "Partner Ledger"
+msgstr "دفتر الأستاذ العام للشركاء"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.de_partner_ledger_pdf_report
+msgid "Partner Statement"
+msgstr "أوامر الموظف"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.side_menu
+msgid "Passenger And Mandate"
+msgstr "طلب انتداب"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_myorofile
+msgid "Passport No"
+msgstr "رقم جواز السفر"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_loan
+msgid "Payment Start Date"
+msgstr "تاريخ بدايه الدفع"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_payslip_correction
+#: model_terms:ir.ui.view,arch_db:ess.ess_payslip_correction_track
+msgid "Payslip"
+msgstr "إيصال المرتب"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.side_menu
+msgid "Payslip Correction Request"
+msgstr "طلب تصحيح الراتب"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.side_menu
+msgid "Petty Cash Report"
+msgstr "تقارير المصروفات"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.side_menu
+msgid "Petty Ledger Report"
+msgstr "تقرير حساب المصروفات"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_myorofile
+msgid "Phone"
+msgstr "رقم الهاتف"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_myorofile
+msgid "Place of Birth"
+msgstr "مكان الميلاد"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_expenses
+#: model_terms:ir.ui.view,arch_db:ess.ess_my_courses_training
+#: model_terms:ir.ui.view,arch_db:ess.ess_track_expenses
+#: model_terms:ir.ui.view,arch_db:ess.ess_track_training
+#: model_terms:ir.ui.view,arch_db:ess.ess_training
+msgid "Price"
+msgstr "السعر"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_payslip
+msgid "Print"
+msgstr "طباعة"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_myorofile
+msgid "Private Contact"
+msgstr "جهة اتصال خاصة"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_myorofile
+msgid "Private Information"
+msgstr "معلومات خاصة"
+
+#. module: ess
+#: model:ir.model,name:ess.model_product_product
+#: model_terms:ir.ui.view,arch_db:ess.ess_expenses
+msgid "Product"
+msgstr "المنتج"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_tasks
+msgid "Project Name"
+msgstr "اسم المشروع"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_announcement
+msgid "Public Announcement"
+msgstr "اعلانات عامه"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_expenses
+#: model_terms:ir.ui.view,arch_db:ess.ess_track_expenses
+msgid "Quantity"
+msgstr "الكمية"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_payslip_correction_track
+#: model_terms:ir.ui.view,arch_db:ess.ess_petty_cash
+#: model_terms:ir.ui.view,arch_db:ess.ess_track_petty_cash
+#: model_terms:ir.ui.view,arch_db:ess.ess_view_custody
+msgid "Reason"
+msgstr "السبب"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_request_appraisal
+msgid "Recipient"
+msgstr "المستلم"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_payslip
+msgid "Reference"
+msgstr "رقم الإشارة"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_view_asset_assignation
+msgid "Refuse Reason"
+msgstr "سبب الرفض"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_expenses
+#: model_terms:ir.ui.view,arch_db:ess.ess_track_expenses
+#: model_terms:ir.ui.view,arch_db:ess.ess_view_asset_assignation
+#: model_terms:ir.ui.view,arch_db:ess.ess_view_courses_and_mandate
+#: model_terms:ir.ui.view,arch_db:ess.ess_view_custody
+msgid "Refused"
+msgstr "مرفوض"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.side_menu
+msgid "Register Expense"
+msgstr "مصاريف التسجيل"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_myorofile
+msgid "Rejoin Date"
+msgstr "تاريخ العوده ومداومه العمل"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_myorofile
+msgid "Related User"
+msgstr "مستخدم مرتبط"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.employee_custody
+#: model_terms:ir.ui.view,arch_db:ess.ess_custody_in_progress
+#: model_terms:ir.ui.view,arch_db:ess.ess_view_custody
+msgid "Remaining Amount"
+msgstr "المبلغ المتبقي"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_add_custody_line
+msgid "Remaining amount"
+msgstr "المبلغ المتبقي"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.side_menu
+msgid "Request Asset"
+msgstr "طلب عهده"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.side_menu
+msgid "Request Loan"
+msgstr "طلب سلفه"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.side_menu
+msgid "Request Petty Cash"
+msgstr "طلب مصروفات"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.side_menu
+msgid "Request a Document"
+msgstr "طلب مستند"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.side_menu
+msgid "Request for Appraisal"
+msgstr "طلب تقييم"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.side_menu
+msgid "Requested"
+msgstr "تم الطلب"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_history_leaves
+msgid "Requested (Days/Hours)"
+msgstr "الطلوب (بالايام/بالساعات)"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_announcement
+msgid "Requested Date"
+msgstr "التاريخ المطلوب"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_view_company_docs_req
+msgid "Requester"
+msgstr "الطالب"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_passenger_mandate
+#: model_terms:ir.ui.view,arch_db:ess.ess_passenger_mandate_private
+msgid "Reset"
+msgstr "إعادة"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_eos
+msgid "Resignation After Month"
+msgstr "استقالة بعد شهر"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_payslip_correction_track
+msgid "Result"
+msgstr "النتيجة"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_myorofile
+msgid "School"
+msgstr "مدرسة"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_myskills
+msgid "Skills"
+msgstr "المهارات"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_tasks
+msgid "Stage"
+msgstr "المرحلة"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_announcement
+#: model_terms:ir.ui.view,arch_db:ess.ess_asset_assignation
+#: model_terms:ir.ui.view,arch_db:ess.ess_contract
+#: model_terms:ir.ui.view,arch_db:ess.ess_history_leaves
+#: model_terms:ir.ui.view,arch_db:ess.ess_passenger_mandate
+#: model_terms:ir.ui.view,arch_db:ess.ess_passenger_mandate_private
+#: model_terms:ir.ui.view,arch_db:ess.ess_view_courses_and_mandate
+msgid "Start Date"
+msgstr "تاريخ البداية"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.employee_asset_assignation
+#: model_terms:ir.ui.view,arch_db:ess.employee_custody
+#: model_terms:ir.ui.view,arch_db:ess.employee_mandate
+#: model_terms:ir.ui.view,arch_db:ess.ess_custody_in_progress
+#: model_terms:ir.ui.view,arch_db:ess.ess_view_asset_assignation
+#: model_terms:ir.ui.view,arch_db:ess.ess_view_courses_and_mandate
+#: model_terms:ir.ui.view,arch_db:ess.ess_view_custody
+msgid "State"
+msgstr "الحالة"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_view_asset_assignation
+msgid "State Of Asset When Delivery"
+msgstr "حاله الجهاز عند التسليم"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_view_asset_assignation
+msgid "State Of Asset When Receive"
+msgstr "حاله الجهاز عند الاستلام"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.employee_appraisal
+#: model_terms:ir.ui.view,arch_db:ess.ess_allocation
+#: model_terms:ir.ui.view,arch_db:ess.ess_contract
+#: model_terms:ir.ui.view,arch_db:ess.ess_leaves
+#: model_terms:ir.ui.view,arch_db:ess.ess_letter
+#: model_terms:ir.ui.view,arch_db:ess.ess_loan
+#: model_terms:ir.ui.view,arch_db:ess.ess_loan_report
+#: model_terms:ir.ui.view,arch_db:ess.ess_myorofile
+#: model_terms:ir.ui.view,arch_db:ess.ess_payslip
+#: model_terms:ir.ui.view,arch_db:ess.ess_petty_cash
+#: model_terms:ir.ui.view,arch_db:ess.ess_track_appraisal
+#: model_terms:ir.ui.view,arch_db:ess.ess_track_leaves
+#: model_terms:ir.ui.view,arch_db:ess.ess_track_letter
+#: model_terms:ir.ui.view,arch_db:ess.ess_track_loan
+#: model_terms:ir.ui.view,arch_db:ess.ess_track_petty_cash
+#: model_terms:ir.ui.view,arch_db:ess.ess_track_training
+#: model_terms:ir.ui.view,arch_db:ess.ess_view_appraisal
+msgid "Status"
+msgstr "الحالة"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_request_appraisal
+msgid "Subject"
+msgstr "العنوان"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_expenses
+#: model_terms:ir.ui.view,arch_db:ess.ess_track_expenses
+#: model_terms:ir.ui.view,arch_db:ess.ess_view_asset_assignation
+msgid "Submitted"
+msgstr "تم ارسال الطلب"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_payslip_correction_track
+msgid "Submittedt"
+msgstr "تحرير وارسال"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_track_appraisal
+#: model_terms:ir.ui.view,arch_db:ess.ess_view_appraisal
+msgid "Subordinates"
+msgstr "المرؤوسين"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.side_menu
+msgid "Team Tasks"
+msgstr "مهام الفريق"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.side_menu
+msgid "TeleNoc"
+msgstr "تلينوك"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_allocation
+#: model_terms:ir.ui.view,arch_db:ess.ess_leaves
+#: model_terms:ir.ui.view,arch_db:ess.ess_short_leaves
+msgid "Time Off Type"
+msgstr "نوع الاجازه"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.employee_announcement
+#: model_terms:ir.ui.view,arch_db:ess.employee_announcement_public
+#: model_terms:ir.ui.view,arch_db:ess.employee_notification
+#: model_terms:ir.ui.view,arch_db:ess.ess_announcement
+msgid "Title"
+msgstr "العنوان"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_leaves
+#: model_terms:ir.ui.view,arch_db:ess.ess_my_courses_training
+#: model_terms:ir.ui.view,arch_db:ess.ess_short_leaves
+#: model_terms:ir.ui.view,arch_db:ess.ess_track_training
+#: model_terms:ir.ui.view,arch_db:ess.ess_training
+msgid "To"
+msgstr "إلى"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_statement
+#: model_terms:ir.ui.view,arch_db:ess.ess_training
+msgid "To Date"
+msgstr "إلى تاريخ"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.de_partner_ledger_pdf_report
+msgid "To Date:"
+msgstr "الي تاريخ"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_expenses
+#: model_terms:ir.ui.view,arch_db:ess.ess_track_expenses
+msgid "To Submit"
+msgstr "للإرسال"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_view_attendance
+msgid "Today Late"
+msgstr "تأخير اليوم"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_expenses
+#: model_terms:ir.ui.view,arch_db:ess.ess_track_expenses
+#: model_terms:ir.ui.view,arch_db:ess.ess_view_courses_and_mandate
+msgid "Total"
+msgstr "الإجمالي"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_loan
+#: model_terms:ir.ui.view,arch_db:ess.ess_loan_report
+#: model_terms:ir.ui.view,arch_db:ess.ess_track_loan
+msgid "Total Paid Amount"
+msgstr "اجمالي المدفوع"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_eos
+msgid "Total Unpaid Days"
+msgstr "اجمالي الايام غير المدفوعه"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_eos
+msgid "Total Years After Five Years"
+msgstr "اجمالي السنوات بعد 5 سنوات"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_eos
+msgid "Total Years Before Five Years"
+msgstr "اجمالي السنوات قبل 5 سنوات"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.side_menu
+msgid "Track Appraisal Requests"
+msgstr "متابعه تقيماتي"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.side_menu
+msgid "Track Document Requests"
+msgstr "متابعه ملفاتي"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.side_menu
+msgid "Track Expense Approvals"
+msgstr "متابعه مصروفاتي"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.side_menu
+msgid "Track Financial Corrections"
+msgstr "تتبع التصحيحات المالية"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.side_menu
+msgid "Track Leaves Requests"
+msgstr "متابعه طلبات الاجازات"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.side_menu
+msgid "Track Loan Requests"
+msgstr "متابعه طلبات السلف"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.side_menu
+msgid "Track My Requests"
+msgstr "متابعه طلباتي"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.side_menu
+msgid "Track My Tickets"
+msgstr "متابعة تذكرتي"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.side_menu
+msgid "Track Payslip Corrections"
+msgstr "متابعه تصحيح الراتب"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.side_menu
+msgid "Track Petty Requests"
+msgstr "متابعة طلبات مصروفاتى"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_my_courses_training
+#: model_terms:ir.ui.view,arch_db:ess.ess_track_training
+#: model_terms:ir.ui.view,arch_db:ess.ess_training
+msgid "Train"
+msgstr "تدريب"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_training
+msgid "Trainer"
+msgstr "المتدري"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.side_menu
+msgid "Training Request"
+msgstr "طلب تدريب"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.employee_asset_assignation
+#: model_terms:ir.ui.view,arch_db:ess.employee_mandate
+#: model_terms:ir.ui.view,arch_db:ess.ess_passenger_mandate
+#: model_terms:ir.ui.view,arch_db:ess.ess_view_asset_assignation
+#: model_terms:ir.ui.view,arch_db:ess.ess_view_courses_and_mandate
+msgid "Type"
+msgstr "النوع"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_view_asset_assignation
+msgid "Type Of Disclaimer"
+msgstr "مطلوب تسليمها عند"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_view_company_docs_req
+msgid "Upload"
+msgstr "رفع"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.side_menu
+msgid "Upload Document"
+msgstr "رفع المستند"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.side_menu
+msgid "View Documents"
+msgstr "عرض المستندات"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.side_menu
+msgid "View Leaves History"
+msgstr "اجازاتي السابقه"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_myorofile
+msgid "Visa Expire Date"
+msgstr "تاريخ انتهاء التأشيرة"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_myorofile
+msgid "Visa No"
+msgstr "رقم التأشيرة"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_contract
+#: model_terms:ir.ui.view,arch_db:ess.ess_eos
+msgid "Wage"
+msgstr "المرتب"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_myorofile
+msgid "Work Email"
+msgstr "البريد الإلكتروني للعمل"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_view_attendance
+#: model_terms:ir.ui.view,arch_db:ess.ess_view_attendance_day
+msgid "Work Hours"
+msgstr "ساعات العمل"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_myorofile
+msgid "Work Location"
+msgstr "مكان العمل"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_myorofile
+msgid "Work Mobile"
+msgstr "الهاتف المحمول للعمل"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_myorofile
+msgid "Work Permit"
+msgstr "تصريح عمل"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_myorofile
+msgid "Work Permit No"
+msgstr "رقم تصريح العمل"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_myorofile
+msgid "Work Phone"
+msgstr "هاتف العمل"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_contract
+msgid "Working Schedule"
+msgstr "جدول العمل"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_document_my_request
+#: model_terms:ir.ui.view,arch_db:ess.ess_view_company_docs_owner
+#: model_terms:ir.ui.view,arch_db:ess.ess_view_company_docs_req
+msgid "Workspace"
+msgstr "مساحة العمل"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.custody_warning_message
+msgid ""
+"You Aren't Allowed to Add This Line, Your Amount must be less Than or Equal"
+msgstr "غير مسموح لك اضافة سطر جديد والقيمة يجب ان تكون اقل من او تساوى "
+
+#. module: ess
+#: code:addons/ess/controllers/asset_assignation.py:0
+#: code:addons/ess/controllers/asset_assignation.py:0
+#, python-format
+msgid "Your Request has been Sent Successfully"
+msgstr "تم ارسال طلبك بنجاح"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_add_custody_line
+msgid "amount"
+msgstr "مبلغ"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_training
+msgid "capacity"
+msgstr "السعة"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_passenger_mandate
+msgid "course"
+msgstr "دوره"
+
+#. module: ess
+#: model:ir.model,name:ess.model_course_schedule
+msgid "course.schedule"
+msgstr ""
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_tasks
+msgid "description"
+msgstr "وصف"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_payslip_correction_track
+msgid "employee Note"
+msgstr "ملاحظه الموظف"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_training
+msgid ""
+"enroll\n"
+"                                                                    <span class=\"fa fa-long-arrow-right\"/>"
+msgstr ""
+"تسجيل\n"
+"                                                                    <span class=\"fa fa-long-arrow-right\"/>"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_passenger_mandate
+#: model_terms:ir.ui.view,arch_db:ess.ess_passenger_mandate_private
+msgid "external"
+msgstr "خارجي"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_passenger_mandate
+#: model_terms:ir.ui.view,arch_db:ess.ess_passenger_mandate_private
+msgid "internal"
+msgstr "داخلي"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_passenger_mandate
+msgid "mandate"
+msgstr "انتداب"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_letter
+msgid "note"
+msgstr "ملاحظه"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_passenger_mandate_private
+msgid "price"
+msgstr "سعر الدوره"
+
+#. module: ess
+#: model:ir.model,name:ess.model_report_de_partner_statement_de_partner_ledger_pdf_report
+msgid "report.de_partner_statement.de_partner_ledger_pdf_report"
+msgstr ""
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_view_company_docs_req
+msgid "save"
+msgstr "حفظ"
+
+#. module: ess
+#: model_terms:ir.ui.view,arch_db:ess.ess_passenger_mandate
+msgid "work_shop"
+msgstr "ورشه عمل"

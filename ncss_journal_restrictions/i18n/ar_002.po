@@ -1,0 +1,68 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* ncss_journal_restrictions
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-12-30 08:37+0000\n"
+"PO-Revision-Date: 2020-12-30 08:37+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: ncss_journal_restrictions
+#: model_terms:ir.ui.view,arch_db:ncss_journal_restrictions.view_move_form_inherit
+msgid "Accounting Approve"
+msgstr "موافقه المحاسب"
+
+#. module: ncss_journal_restrictions
+#: model:ir.model.fields.selection,name:ncss_journal_restrictions.selection__account_move__state__accounting_approve
+msgid "Accounting Approved"
+msgstr "تمت موافقه المحاسب"
+
+#. module: ncss_journal_restrictions
+#: model:ir.model.fields.selection,name:ncss_journal_restrictions.selection__account_move__state__administrative_and_financial_affairs
+#: model_terms:ir.ui.view,arch_db:ncss_journal_restrictions.view_move_form_inherit
+msgid "Administrative and Financial Affairs"
+msgstr "الشئون الاداريه والماليه"
+
+#. module: ncss_journal_restrictions
+#: model:ir.model.fields.selection,name:ncss_journal_restrictions.selection__account_move__state__cancel
+msgid "Cancelled"
+msgstr "ملغي"
+
+#. module: ncss_journal_restrictions
+#: model:ir.model.fields.selection,name:ncss_journal_restrictions.selection__account_move__state__draft
+msgid "Draft"
+msgstr "مسودة"
+
+#. module: ncss_journal_restrictions
+#: model:ir.model.fields.selection,name:ncss_journal_restrictions.selection__account_move__state__financial_auditor
+#: model_terms:ir.ui.view,arch_db:ncss_journal_restrictions.view_move_form_inherit
+msgid "Financial auditor"
+msgstr "المراقب المالي"
+
+#. module: ncss_journal_restrictions
+#: model:ir.model,name:ncss_journal_restrictions.model_account_move
+msgid "Journal Entries"
+msgstr "القيود اليومية"
+
+#. module: ncss_journal_restrictions
+#: model_terms:ir.ui.view,arch_db:ncss_journal_restrictions.view_move_form_inherit
+msgid "Post"
+msgstr "ترحيل"
+
+#. module: ncss_journal_restrictions
+#: model:ir.model.fields.selection,name:ncss_journal_restrictions.selection__account_move__state__posted
+msgid "Posted"
+msgstr "مُرحل"
+
+#. module: ncss_journal_restrictions
+#: model:ir.model.fields,field_description:ncss_journal_restrictions.field_account_move__state
+msgid "Status"
+msgstr "الحالة"

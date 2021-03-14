@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="assets_frontend1" inherit_id="web_editor.assets_frontend">            
+            <xpath expr="//link[last()]" position="after">
+                <link rel="stylesheet" type="text/scss" href="/ess/static/src/css/main.css"/>
+                <link rel="stylesheet" type="text/scss" href="/ess/static/src/css/menu.scss"/>
+                <link rel="stylesheet" type="text/scss" href="/ess/static/src/css/style.css"/>
+
+                <link rel="stylesheet" type="text/scss" href="/ess/static/src/css/styledashboard.css"/>
+                <link rel="preconnect" href="https://fonts.gstatic.com"/>
+                <link href="https://fonts.googleapis.com/css2?family=Cairo&amp;display=swap" rel="stylesheet"/>
+
+
+                <link rel="stylesheet" href="https://formden.com/static/cdn/font-awesome/4.4.0/css/font-awesome.min.css" />
+                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css"/>
+                <link rel="stylesheet" href="https://formden.com/static/cdn/bootstrap-iso.css" />
+                <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"/>
+                <link rel="stylesheet" type="text/scss" href="/ess/static/src/css/cards.css"/>
+<!--<link rel="stylesheet" type="text/scss" href="/ess/static/src/css/cards.css"/>-->
+             </xpath>
+
+            <xpath expr="//script[last()]" position="after">
+                <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+                <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
+                <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+
+                <script type="text/javascript" src="/ess/static/src/js/resume_widget.js"></script>
+                <script type="text/javascript" src="/ess/static/src/js/statment.js"></script>
+                <script type="text/javascript" src="/ess/static/src/js/main.js"></script>
+                <script type="text/javascript" src="/ess/static/src/js/dashboard.js"></script>
+                <script type="text/javascript" src="/ess/static/src/js/inspinia.js"></script>
+                <script type="text/javascript" src="/ess/static/src/js/slimscroll/jquery.slimscroll.min.js"></script>
+                <script type="text/javascript" src="/ess/static/src/js/metisMenu/jquery.metisMenu.js"></script>
+                <script type="text/javascript" src="/ess/static/src/js/click_mandate_submit_button.js"></script>
+            </xpath>
+    </template>
+
+    
+</odoo>

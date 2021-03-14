@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="ess_loan" name="ESS Loan">
+        <t t-call="portal.portal_layout">
+            <t>
+                <div class="row justify-content-between mt-4">
+
+                    <nav class="navbar-default navbar-static-side" role="navigation" style="z-index: 1;position: initial;">
+                        <t t-call="ess.side_menu"/>
+                    </nav>
+
+                    <div class="row col-10 col-md col-lg-10"> 
+                        <div class="card" style="margin: 10px;">
+                            <div class="col-lg-12">
+                                    <div class="ibox ">
+                                        <div class="row iess-title" style="text-align:left;margin-right: 20px;margin-left: 20px;">
+                                            <h3><span>Request Loan</span></h3>
+                                        </div>
+                                        <div class="ibox-content">
+                                            <div class="row">
+                                                <div class="col-lg-12" style="margin-top:10px;">
+                                                    <form action="/my/loan" method="post">
+                                                        <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+                                                        
+                                                        <div class="row o_portal_details">
+                                                            <div class="col-lg-12">
+
+                                                                    <div class="col-lg-12">
+                                                                        <div t-if="error_message" class="alert alert-danger" role="alert">
+                                                                            <t t-foreach="error_message" t-as="err"><t t-esc="err"/><br /></t>
+                                                                        </div>
+                                                                    </div>
+
+                                                                    <div class="row form-group col-lg-12">
+                                                                        <div t-attf-class="form-group #{error.get('loan_amount') and 'o_has_error' or ''} col-xl-4">
+                                                                            <label class="col-form-label" for="loan_amount">Loan Amount</label>
+                                                                            <input type="number" name="loan_amount" t-attf-class="form-control #{error.get('loan_amount') and 'is-invalid' or ''}"  required=""/>
+                                                                        </div>
+                                                                        <div t-attf-class="form-group #{error.get('installment') and 'o_has_error' or ''} col-xl-4">
+                                                                            <label class="col-form-label" for="installment">No Of Installments</label>
+                                                                            <input type="number" name="installment" t-attf-class="form-control #{error.get('installment') and 'is-invalid' or ''}" required=""/>
+                                                                        </div>
+                                                                        <div t-attf-class="form-group #{error.get('payment_date') and 'o_has_error' or ''} col-xl-4">
+                                                                            <label class="col-form-label" for="payment_date">Payment Start Date</label>
+                                                                            <input type="date" name="payment_date" t-attf-class="form-control #{error.get('payment_date') and 'is-invalid' or ''}"  required=""/>
+                                                                        </div>
+                                                                        
+                                                                    </div>
+
+                                                                    <div class="clearfix">
+                                                                        <button type="submit" class="btn btn-primary float-right" style='margin-right: 30px;'>
+                                                                            Confirm
+                                                                        </button>
+                                                                    </div> 
+
+                                                                    <!--  -->
+
+                                                                    <div t-if="loan_obj" class="ibox-content iess-p20">
+                                                                        <div class="table-responsive">
+                                                                            <table class="table header-border table-hover table-custom spacing5 ess-table">
+                                                                                <thead>
+                                                                                    <tr>
+                                                                                        <th>Name</th>
+                                                                                        <th>Loan Amount</th>
+                                                                                        <th>Total Paid Amount</th>
+                                                                                        <th>Balance Amount</th>
+                                                                                        <th>Status</th>
+                                                                                    </tr>
+                                                                                </thead>
+                                                                                <tbody>
+                                                                                    <tr t-foreach="loan_obj" t-as="loa">
+                                                                                        <td class="td"><div t-esc="loa['name']"/></td>
+                                                                                        <td class="td"><div t-esc="loa['loan_amount']"/></td>
+                                                                                        <td class="td"><div t-esc="loa['total_paid_amount']"/></td>
+                                                                                        <td class="td"><div t-esc="loa['balance_amount']"/></td>
+                                                                                        <td class="td"><div t-esc="loa['state_desc']"/></td>
+                                                                                </tr>
+                                                                                </tbody>
+                                                                            </table>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                
+
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            
+                        </div>
+
+                    </div>
+
+                    
+                    
+                </div>
+            </t>
+        </t>
+    </template>
+
+
+</odoo>

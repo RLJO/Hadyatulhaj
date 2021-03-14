@@ -1,0 +1,24 @@
+<?xml version="1.0" ?>
+<odoo>
+    <data noupdate='1'>
+		<record id="ir_seq_asset_request" model="ir.sequence">
+			<field name="name">Asset Request</field>
+			<field name="code">asset.request.sequence</field>
+			<field name="prefix">عهده عينيه - </field>
+			<field name="padding">4</field>
+			<field name="number_increment">1</field>
+			<field name="number_next_actual">1</field>
+			<field name="implementation">standard</field>
+		</record>
+
+		<record id="ir_seq_employee_asset_request" model="ir.sequence">
+			<field name="name">Employee Asset Request</field>
+			<field name="code">employee.assets.sequence</field>
+			<field name="prefix">اخلاء طرف - </field>
+			<field name="padding">4</field>
+			<field name="number_increment">1</field>
+			<field name="number_next_actual">1</field>
+			<field name="implementation">standard</field>
+		</record>
+	</data>
+</odoo>

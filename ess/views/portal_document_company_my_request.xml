@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="ess_document_my_request" name="ESS View My Requested Document">
+        <t t-call="portal.portal_layout">
+            <t>
+                <div class="row justify-content-between mt-4">
+
+                    <nav class="navbar-default navbar-static-side" role="navigation" style="z-index: 1;position: initial;">
+                        <t t-call="ess.side_menu"/>
+                    </nav>
+
+                    <div class="row col-10 col-md col-lg-10"> 
+                        <div class="col-lg-12">
+                            <div class="ibox ">
+                                <div class="row iess-title" style="text-align:left;margin-right: 20px;margin-left: 20px;">
+                                    <h3><span>My Requests Documents</span></h3>
+                                </div>
+                                <div class="ibox-content">
+                                    <div class="row">
+                                        <div class="col-lg-12" style="margin-top:10px;">
+                                           <form action="/my/document_my_request" method="post" enctype="multipart/form-data">
+                                                <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+                                                
+                                                <div class="row">
+                                                    <div class="col-lg-12">
+
+                                                            <div class="col-lg-12">
+                                                                <div t-if="error_message" class="alert alert-danger" role="alert">
+                                                                    <t t-foreach="error_message" t-as="err"><t t-esc="err"/><br /></t>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="row form-group col-lg-12">
+                                                                <div t-attf-class="form-group #{error.get('name') and 'o_has_error' or ''} col-xl-4">
+                                                                    <label class="col-form-label" for="name">Name</label>
+                                                                    <input type="text" name="name" t-attf-class="form-control #{error.get('name') and 'is-invalid' or ''}" required=""/>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="row form-group col-lg-12">
+                                                                <div t-attf-class="form-group #{error.get('owner_id') and 'o_has_error' or ''} col-xl-3">
+                                                                    <label class="col-form-label" for="owner_id">Owner</label>
+                                                                    <select name="owner_id" t-attf-class="form-control #{error.get('owner_id') and 'is-invalid' or ''}" required="">
+                                                                        <option></option>
+                                                                        <t t-foreach="uids or []" t-as="uid">
+                                                                            <option t-att-value="uid.id" >
+                                                                                <t t-esc="uid.name" />
+                                                                            </option>
+                                                                        </t>
+                                                                    </select>
+                                                                </div>
+
+                                                                <div t-attf-class="form-group #{error.get('partner_id') and 'o_has_error' or ''} col-xl-3">
+                                                                    <label class="col-form-label" for="partner_id">Contact</label>
+                                                                    <select name="partner_id" t-attf-class="form-control #{error.get('partner_id') and 'is-invalid' or ''}" required="">
+                                                                        <option></option>
+                                                                        <t t-foreach="partner_ids or []" t-as="pid">
+                                                                            <option t-att-value="pid.id" >
+                                                                                <t t-esc="pid.name" />
+                                                                            </option>
+                                                                        </t>
+                                                                    </select>
+                                                                </div>
+
+
+                                                                <div t-attf-class="form-group #{error.get('folder_id') and 'o_has_error' or ''} col-xl-3">
+                                                                    <label class="col-form-label" for="folder_id">Workspace</label>
+                                                                    <select name="folder_id" t-attf-class="form-control #{error.get('folder_id') and 'is-invalid' or ''}" required="">
+                                                                        <option></option>
+                                                                        <t t-foreach="folder_ids or []" t-as="fid">
+                                                                            <option t-att-value="fid.id" >
+                                                                                <t t-esc="fid.name" />
+                                                                            </option>
+                                                                        </t>
+                                                                    </select>
+                                                                </div>
+
+
+                                                                <div t-attf-class="form-group #{error.get('activity_type_id') and 'o_has_error' or ''} col-xl-3">
+                                                                    <label class="col-form-label" for="activity_type_id">Activity type</label>
+                                                                    <select name="activity_type_id" t-attf-class="form-control #{error.get('activity_type_id') and 'is-invalid' or ''}" required="">
+                                                                        <option></option>
+                                                                        <t t-foreach="activity_type_ids or []" t-as="activity_id">
+                                                                            <option t-att-value="activity_id.id" >
+                                                                                <t t-esc="activity_id.name" />
+                                                                            </option>
+                                                                        </t>
+                                                                    </select>
+                                                                </div>
+
+                                                                <!-- <div class="row form-group col-lg-12">
+                                                                    <div t-attf-class="form-group #{error.get('activity_date_deadline_range') and 'o_has_error' or ''} col-xl-3">
+                                                                        <label class="col-form-label" for="activity_date_deadline_range">Due Date In</label>
+                                                                        <input type="numbrr" name="activity_date_deadline_range" t-attf-class="form-control #{error.get('activity_date_deadline_range') and 'is-invalid' or ''}"/>
+                                                                    </div>
+
+                                                                    <div t-attf-class="form-group #{error.get('activity_date_deadline_range_type') and 'o_has_error' or ''} col-xl-3">
+                                                                        <label class="col-form-label" for="activity_date_deadline_range_type">Due type</label>
+                                                                        <select name="activity_date_deadline_range_type" t-attf-class="form-control #{error.get('activity_date_deadline_range_type') and 'is-invalid' or ''}">
+                                                                            <option value="days">Days</option>
+                                                                            <option value="weeks">Weeks</option>
+                                                                            <option value="months">Months</option>
+                                                                        </select>
+                                                                    </div>
+                                                                </div> -->
+                                                                
+                                                                
+                                                            </div>
+                                                            
+
+                                                            <div class="clearfix">
+                                                                <button type="submit" class="btn btn-primary float-right" style='margin-right: 30px;'>
+                                                                    Confirm
+                                                                    <span class="fa fa-long-arrow-right" />
+                                                                </button>
+                                                            </div> 
+
+                                                            <!--  -->
+
+                                                            <div class="ibox-content iess-p20">
+                                                                <div class="table-responsive">
+                                                                    <table class="table header-border table-hover table-custom spacing5 ess-table">
+                                                                        <thead>
+                                                                            <tr>
+                                                                                <th>Name</th>
+                                                                                <th>Owner</th>
+                                                                                <th>Contact</th>
+                                                                                <th>Workspace</th>
+                                                                                <th>Download</th>
+                                                                            </tr>
+                                                                        </thead>
+                                                                        <tbody t-foreach="docs_obj" t-as="doc">
+                                                                            <tr>
+                                                                                <td><div t-esc="doc['name']"/></td>
+                                                                                <td><div t-esc="doc['owner_id'].name"/></td>
+                                                                                <td><div t-esc="doc['partner_id'].name"/></td>
+                                                                                <td><div t-esc="doc['folder_id'].name"/></td>
+                                                                                <td><a t-if="doc['attachment_id']" t-att-href="'/attachment/download?attachment_id=%i' % doc['attachment_id'].id" class="fa fa-download"/></td>
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        
+
+                                                </div>
+                                            </form> 
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>    
+                </div>
+            </t>
+        </t>
+    </template>
+
+
+</odoo>

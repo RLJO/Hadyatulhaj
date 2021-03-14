@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="ess_view_appraisal" name="ESS View Appraisal">
+        <t t-call="portal.portal_layout">
+            <t>
+                <div class="row justify-content-between mt-4">
+
+                    <nav class="navbar-default navbar-static-side" role="navigation" style="z-index: 1;position: initial;">
+                        <t t-call="ess.side_menu"/>
+                    </nav>
+
+                    <div class="row col-10 col-md col-lg-10">
+                        <div class="col-lg-12">
+                            <div class="ibox ">
+                                <div class="row iess-title" style="text-align:left;margin-right: 20px;margin-left: 20px;">
+                                    <h3><span>Appraisal Report</span></h3>
+                                </div>
+                                <div class="ibox-content">
+                                    <div class="row">
+                                        <div class="col-lg-12" style="margin-top:10px;">
+                                            <form>
+                                                <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+                                                
+                                                <div class="row o_portal_details">
+                                                    <div class="col-lg-12">
+                                                        <!--  -->
+                                                        <div class="ibox-content iess-p20">
+                                                            <div class="table-responsive">
+                                                                <table class="table header-border table-hover table-custom spacing5 ess-table">
+                                                                    <thead>
+                                                                        <tr>
+                                                                            <th>Date</th>
+                                                                            <th>Subordinates</th>
+                                                                            <th>Colleagues</th>
+                                                                            <th>Final Evaluation</th>
+                                                                            <th>Status</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody t-foreach="appraisal_obj" t-as="app">
+                                                                        <tr>
+                                                                            <td><div t-esc="app['date_close']"/></td>
+                                                                            <td>
+                                                                                <t t-foreach="app['collaborators_ids']" t-as="em">
+                                                                                    <div t-esc="em.name"/>
+                                                                                </t>
+                                                                            </td>
+                                                                            <td>
+                                                                                <t t-foreach="app['colleagues_ids']" t-as="em">
+                                                                                    <div t-esc="em.name"/>
+                                                                                </t>
+                                                                            </td>
+                                                                            <td><div t-esc="app['action_plan']"/></td>
+                                                                            <td><div t-esc="app['state']"/></td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                        
+
+                                                </div>
+                                            </form>
+                                        </div>  
+                                    </div>
+                                </div>
+                            </div>
+                        </div> 
+                            
+                    </div>
+                </div>
+            </t>
+        </t>
+    </template>
+
+
+</odoo>

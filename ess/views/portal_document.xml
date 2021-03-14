@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="ess_document" name="ESS Document">
+        <t t-call="portal.portal_layout">
+            <t>
+                <div class="row justify-content-between mt-4">
+                    <nav class="navbar-default navbar-static-side" role="navigation" style="z-index: 1;position: initial;">
+                        <t t-call="ess.side_menu"/>
+                    </nav>
+                    <div class="row col-10 col-md col-lg-10"> 
+                        <div class="col-lg-12">
+                            <div class="ibox ">
+                                <div class="row iess-title" style="text-align:left;margin-right: 20px;margin-left: 20px;">
+                                    <h3><span>Upload Document</span></h3>
+                                </div>
+                                <div class="ibox-content">
+                                    <div class="row">
+                                        <div class="col-lg-12" style="margin-top:10px;">
+                                            <form action="/my/document" method="post" enctype="multipart/form-data">
+                                                <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+                                                
+                                                <div class="row o_portal_document">
+                                                    <div class="col-lg-12">
+
+                                                            <div class="col-lg-12">
+                                                                <div t-if="error_message" class="alert alert-danger" role="alert">
+                                                                    <t t-foreach="error_message" t-as="err"><t t-esc="err"/><br /></t>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="row form-group col-lg-12">
+                                                                <div t-attf-class="form-group #{error.get('name') and 'o_has_error' or ''} col-xl-4">
+                                                                    <label class="col-form-label" for="name">Document Number</label>
+                                                                    <input type="text" name="name" t-attf-class="form-control #{error.get('name') and 'is-invalid' or ''}" required=""/>
+                                                                </div>
+
+                                                                <div t-attf-class="form-group #{error.get('issue_date') and 'o_has_error' or ''} col-xl-4">
+                                                                    <label class="col-form-label" for="issue_date">Issue Date</label>
+                                                                    <input type="date" name="issue_date" t-attf-class="form-control #{error.get('issue_date') and 'is-invalid' or ''}" required=""/>
+                                                                </div>
+                                                                <div t-attf-class="form-group #{error.get('expiry_date') and 'o_has_error' or ''} col-xl-4">
+                                                                    <label class="col-form-label" for="expiry_date">Expiry Date</label>
+                                                                    <input type="date" name="expiry_date" t-attf-class="form-control #{error.get('expiry_date') and 'is-invalid' or ''}" required="" />
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="row form-group col-lg-12">
+                                                                <div t-attf-class="form-group #{error.get('document_type') and 'o_has_error' or ''} col-xl-6">
+                                                                    <label class="col-form-label" for="document_type">Document Type</label>
+                                                                    <select name="document_type" t-attf-class="form-control #{error.get('document_type') and 'is-invalid' or ''}" required="">
+                                                                        <option></option>
+                                                                        <t t-foreach="doc_type or []" t-as="type">
+                                                                            <option t-att-value="type.id" >
+                                                                                <t t-esc="type.name" />
+                                                                            </option>
+                                                                        </t>
+                                                                    </select>
+                                                                </div>
+
+                                                                <div t-attf-class="form-group #{error.get('notification_type') and 'o_has_error' or ''} col-xl-6">
+                                                                    <label class="col-form-label" for="notification_type">Notification Type</label>
+                                                                    <select name="notification_type" t-attf-class="form-control #{error.get('notification_type') and 'is-invalid' or ''}" required="">
+                                                                        <option></option>
+                                                                        <option value="single">Notification on expiry date</option>
+                                                                        <option value="multi">Notification before few days</option>
+                                                                        <option value="everyday">Everyday till expiry date</option>
+                                                                        <option value="everyday_after">Notification on and after expiry</option>
+                                                                    </select>
+                                                                </div>
+
+                                                                <div t-attf-class="form-group #{error.get('before_days') and 'o_has_error' or ''} col-xl-4">
+                                                                    <label class="col-form-label" for="before_days">Days</label>
+                                                                    <input type="number" name="before_days" t-attf-class="form-control #{error.get('before_days') and 'is-invalid' or ''}" required=""/>
+                                                                </div>
+
+                                                                <div t-attf-class="form-group #{error.get('doc_attachment_id') and 'o_has_error' or ''} col-xl-4">
+                                                                    <label class="col-form-label" for="doc_attachment_id">Attachment</label>
+                                                                    <input class="attachment" type="file" name="doc_attachment_id" value="" required=""/>
+                                                                </div>
+                                                            </div>
+                                                            
+
+                                                            <div class="clearfix">
+                                                                <button type="submit" class="btn btn-primary float-right" style='margin-right: 30px;'>
+                                                                    Confirm
+                                                                </button>
+                                                            </div> 
+
+                                                            <!--  -->
+
+                                                            <div class="ibox-content iess-p20">
+                                                                <div class="table-responsive">
+                                                                    <table class="table header-border table-hover table-custom spacing5 ess-table">
+                                                                        <thead>
+                                                                            <tr>
+                                                                                <th>Name</th>
+                                                                                <th>Document Type</th>
+                                                                                <th>Date of issue</th>
+                                                                                <th>Date of expiry</th>
+                                                                                <th>Download</th>
+                                                                            </tr>
+                                                                        </thead>
+                                                                        <tbody t-foreach="docs_obj" t-as="doc">
+                                                                            <tr>
+                                                                                <td><div t-esc="doc['name']"/></td>
+                                                                                <td><div t-esc="doc['document_type'].name"/></td>
+                                                                                <td><div t-esc="doc['issue_date']"/></td>
+                                                                                <td><div t-esc="doc['expiry_date']"/></td>
+                                                                                <td><a t-if="doc['doc_attachment_id']" t-att-href="'/attachment/download?attachment_id=%i' % doc['doc_attachment_id'].id" class="fa fa-download"/></td>
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        
+
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>   
+                    </div>
+                </div>
+            </t>
+        </t>
+    </template>
+
+
+</odoo>

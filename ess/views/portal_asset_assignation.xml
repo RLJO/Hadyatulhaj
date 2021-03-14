@@ -1,0 +1,2036 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="ess_asset_assignation" name="ESS Asset Assignation">
+        <t t-call="portal.portal_layout">
+            <t>
+                <div class="row justify-content-between mt-4">
+
+                    <nav class="navbar-default navbar-static-side" role="navigation" style="z-index: 1;position: initial;">
+                        <t t-call="ess.side_menu"/>
+                    </nav>
+
+                    <div class="row col-10 col-md col-lg-10"> 
+                        <div class="col-lg-12">
+                            <div class="ibox ">
+                                <div class="row iess-title" style="text-align:left;margin-right: 20px;margin-left: 20px;">
+                                    <h3><span>Request Asset Assignation</span></h3>
+                                </div>
+                                <div class="ibox-content">
+                                    <div class="row">
+                                        <div class="col-lg-12" style="margin-top:10px;">
+                                            <form action="/request/asset" method="post">
+                                                <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+                                                
+                                                <div class="row o_portal_expense">
+                                                    <div class="col-lg-12">
+
+<!--                                                            <div class="col-lg-12">-->
+<!--                                                                <div t-if="error_message" class="alert alert-danger" role="alert">-->
+<!--                                                                    <t t-foreach="error_message" t-as="err"><t t-esc="err"/><br /></t>-->
+<!--                                                                </div>-->
+<!--                                                            </div>-->
+
+                                                            <!-- <div class="row form-group col-lg-12">
+                                                                <div t-attf-class="form-group #{error.get('name') and 'o_has_error' or ''} col-xl-6">
+                                                                    <label class="col-form-label" for="name">Description</label>
+                                                                    <input type="text" name="name" t-attf-class="form-control #{error.get('name') and 'is-invalid' or ''}"/>
+
+                                                                </div>
+                                                            </div> -->
+
+<!--                                                            <div t-attf-class="form-group #{error.get('product_id') and 'o_has_error' or ''} col-xl-6">-->
+<!--                                                                <label class="col-form-label" for="product_id">Product</label>-->
+<!--                                                                <select name="product_id" t-attf-class="form-control #{error.get('product_id') and 'is-invalid' or ''}">-->
+<!--                                                                    <t t-foreach="product_obj or []" t-as="pro">-->
+<!--                                                                        <option t-att-value="pro.id" >-->
+<!--                                                                            <t t-esc="pro.display_name" />-->
+<!--                                                                        </option>-->
+<!--                                                                    </t>-->
+<!--                                                                </select>-->
+<!--                                                            </div>-->
+
+                                                            <div class="row form-group col-lg-12">
+                                                                <div t-attf-class="form-group col-xl-6">
+                                                                    <label class="col-form-label" for="reference">Description</label>
+                                                                    <input type="text" name="description" t-attf-class="form-control}"/>
+                                                                </div>
+
+                                                                   <div t-attf-class="form-group col-xl-6">
+                                                                    <label class="col-form-label" for="reference">Assest Request Reason</label>
+                                                                    <input type="text" name="asset_request_Reason" t-attf-class="form-control}" required=""/>
+                                                                </div>
+
+                                                                   <div t-attf-class="form-group col-xl-6">
+                                                                    <label class="col-form-label" for="reference">Start Date</label>
+                                                                    <input type="Date" name="asset_request_startDate"  id="theDate1" t-attf-class="form-control}" required=""/>
+                                                                </div>
+
+                                                                 <script>
+                                                                     document.getElementById('theDate1').value = new Date().toISOString().substring(0, 10);
+                                                                </script>
+                                                                   <div t-attf-class="form-group col-xl-6">
+                                                                    <label class="col-form-label" for="reference">Delivery Date</label>
+                                                                    <input type="Date" name="asset_request_deliveryDate" t-attf-class="form-control}" required=""/>
+                                                                </div>
+
+<!--                                                                <div t-attf-class="form-group #{error.get('date') and 'o_has_error' or ''} col-xl-3">-->
+<!--                                                                    <label class="col-form-label" for="date">Date</label>-->
+<!--                                                                    <input type="date" name="date" t-attf-class="form-control #{error.get('date') and 'is-invalid' or ''}" />-->
+<!--                                                                </div>-->
+<!--                                                                <div t-attf-class="form-group #{error.get('unit_amount') and 'o_has_error' or ''} col-xl-3">-->
+<!--                                                                    <label class="col-form-label" for="unit_amount">Price</label>-->
+<!--                                                                    <input id="unit_amount" type="number" name="unit_amount" t-attf-class="form-control #{error.get('unit_amount') and 'is-invalid' or ''}"/>-->
+<!--                                                                </div>-->
+
+<!--                                                                <div t-attf-class="form-group #{error.get('quantity') and 'o_has_error' or ''} col-xl-3">-->
+<!--                                                                    <label class="col-form-label" for="quantity">Quantity</label>-->
+<!--                                                                    <input t-att-value="1" type="number" name="quantity" t-attf-class="form-control #{error.get('quantity') and 'is-invalid' or ''}"/>-->
+<!--                                                                </div>-->
+                                                            </div>
+                                                            
+<!--                                                            <div class="row form-group col-lg-12">-->
+<!--                                                                <div t-attf-class="form-group #{error.get('payment_mode') and 'o_has_error' or ''} col-xl-6">-->
+<!--                                                                    <label class="col-form-label" for="payment_mode">Paid By</label>-->
+<!--                                                                    <select name="payment_mode" t-attf-class="form-control #{error.get('payment_mode') and 'is-invalid' or ''}">-->
+<!--                                                                        <option value="own_account">Employee (to reimburse)</option>-->
+<!--                                                                        <option value="company_account">Company</option>-->
+<!--                                                                    </select>-->
+<!--                                                                </div>-->
+<!--                                                                <div t-attf-class="form-group #{error.get('name') and 'o_has_error' or ''} col-xl-6">-->
+<!--                                                                    <label class="col-form-label" for="name">Description</label>-->
+<!--                                                                    <textarea rows="4" cols="50" name="name" t-attf-class="form-control #{error.get('name') and 'is-invalid' or ''}"/>-->
+<!--                                                                </div>-->
+<!--                                                            </div>-->
+
+                                                            <div class="clearfix">
+                                                                <button type="submit" class="btn btn-primary float-right" style='margin-right: 30px;'>
+                                                                    Create
+                                                                </button>
+                                                            </div> 
+
+                                                            <!--  -->
+<!--                                                            <div class="ibox-content iess-p20">-->
+<!--                                                                <div class="body">-->
+<!--                                                                    <ul class="nav nav-tabs3">-->
+<!--                                                                        <li class="nav-item"><a class="nav-link show ess-tab-link active" data-toggle="tab" href="#draft">To Submit</a></li>-->
+<!--                                                                        <li class="nav-item"><a class="nav-link ess-tab-link" data-toggle="tab" href="#reported">Submitted</a></li>-->
+<!--                                                                        <li class="nav-item"><a class="nav-link ess-tab-link" data-toggle="tab" href="#approved">Approved</a></li>-->
+<!--                                                                        <li class="nav-item"><a class="nav-link ess-tab-link" data-toggle="tab" href="#done">Paid</a></li>-->
+<!--                                                                        <li class="nav-item"><a class="nav-link ess-tab-link" data-toggle="tab" href="#refused">Refused</a></li>-->
+<!--                                                                    </ul>-->
+<!--                                                                    <div class="tab-content">-->
+<!--                                                                        <div class="tab-pane show active" id="draft">-->
+<!--                                                                            <div class="table-responsive">-->
+<!--                                                                                <table class="table header-border table-hover table-custom spacing5 ess-table">-->
+<!--                                                                                    <thead>-->
+<!--                                                                                        <tr>-->
+<!--                                                                                            <th>Name</th>-->
+<!--                                                                                            &lt;!&ndash; <th>Product</th> &ndash;&gt;-->
+<!--                                                                                            <th>Price</th>-->
+<!--                                                                                            <th>Quantity</th>-->
+<!--                                                                                            <th>Total</th>-->
+<!--                                                                                            <th>Date</th>-->
+<!--                                                                                            <th>Bill Reference</th>-->
+<!--                                                                                        </tr>-->
+<!--                                                                                    </thead>-->
+<!--                                                                                    <tbody t-foreach="expense_obj" t-as="ex">-->
+<!--                                                                                        <tr t-if="ex['state'] == 'draft'">-->
+<!--                                                                                            <td><div t-esc="ex['name']"/></td>-->
+<!--                                                                                            &lt;!&ndash; <td><div t-esc="ex['product_id'][0].name"/></td> &ndash;&gt;-->
+<!--                                                                                            <td><div t-esc="ex['unit_amount']"/></td>-->
+<!--                                                                                            <td><div t-esc="ex['quantity']"/></td>-->
+<!--                                                                                            <td><div t-esc="ex['total_amount']"/></td>-->
+<!--                                                                                            <td><div t-esc="ex['date']"/></td>-->
+<!--                                                                                            <td><div t-esc="ex['reference']"/></td>-->
+<!--                                                                                        </tr>-->
+<!--                                                                                    </tbody>-->
+<!--                                                                                </table>-->
+<!--                                                                            </div>-->
+<!--                                                                        </div>-->
+
+<!--                                                                        <div class="tab-pane" id="reported">-->
+
+<!--                                                                            <div class="table-responsive">-->
+<!--                                                                                <table class="table header-border table-hover table-custom spacing5 ess-table">-->
+<!--                                                                                    <thead>-->
+<!--                                                                                        <tr>-->
+<!--                                                                                            <th>Name</th>-->
+<!--                                                                                            &lt;!&ndash; <th>Product</th> &ndash;&gt;-->
+<!--                                                                                            <th>Price</th>-->
+<!--                                                                                            <th>Quantity</th>-->
+<!--                                                                                            <th>Total</th>-->
+<!--                                                                                            <th>Date</th>-->
+<!--                                                                                            <th>Bill Reference</th>-->
+<!--                                                                                        </tr>-->
+<!--                                                                                    </thead>-->
+<!--                                                                                    <tbody t-foreach="expense_obj" t-as="ex">-->
+<!--                                                                                        <tr t-if="ex['state'] == 'reported'">-->
+<!--                                                                                            <td><div t-esc="ex['name']"/></td>-->
+<!--                                                                                            &lt;!&ndash; <td><div t-esc="ex['product_id'].name"/></td> &ndash;&gt;-->
+<!--                                                                                            <td><div t-esc="ex['unit_amount']"/></td>-->
+<!--                                                                                            <td><div t-esc="ex['quantity']"/></td>-->
+<!--                                                                                            <td><div t-esc="ex['total_amount']"/></td>-->
+<!--                                                                                            <td><div t-esc="ex['date']"/></td>-->
+<!--                                                                                            <td><div t-esc="ex['reference']"/></td>-->
+<!--                                                                                        </tr>-->
+<!--                                                                                    </tbody>-->
+<!--                                                                                </table>-->
+<!--                                                                            </div>-->
+<!--                                                                        </div>-->
+
+<!--                                                                        <div class="tab-pane" id="approved">-->
+
+<!--                                                                            <div class="table-responsive">-->
+<!--                                                                                <table class="table header-border table-hover table-custom spacing5 ess-table">-->
+<!--                                                                                    <thead>-->
+<!--                                                                                        <tr>-->
+<!--                                                                                            <th>Name</th>-->
+<!--                                                                                            &lt;!&ndash; <th>Product</th> &ndash;&gt;-->
+<!--                                                                                            <th>Price</th>-->
+<!--                                                                                            <th>Quantity</th>-->
+<!--                                                                                            <th>Total</th>-->
+<!--                                                                                            <th>Date</th>-->
+<!--                                                                                            <th>Bill Reference</th>-->
+<!--                                                                                        </tr>-->
+<!--                                                                                    </thead>-->
+<!--                                                                                    <tbody t-foreach="expense_obj" t-as="ex">-->
+<!--                                                                                        <tr t-if="ex['state'] == 'approved'">-->
+<!--                                                                                            <td><div t-esc="ex['name']"/></td>-->
+<!--                                                                                            &lt;!&ndash; <td><div t-esc="ex['product_id'].name"/></td> &ndash;&gt;-->
+<!--                                                                                            <td><div t-esc="ex['unit_amount']"/></td>-->
+<!--                                                                                            <td><div t-esc="ex['quantity']"/></td>-->
+<!--                                                                                            <td><div t-esc="ex['total_amount']"/></td>-->
+<!--                                                                                            <td><div t-esc="ex['date']"/></td>-->
+<!--                                                                                            <td><div t-esc="ex['reference']"/></td>-->
+<!--                                                                                        </tr>-->
+<!--                                                                                    </tbody>-->
+<!--                                                                                </table>-->
+<!--                                                                            </div>-->
+<!--                                                                        </div>-->
+
+<!--                                                                        <div class="tab-pane" id="done">-->
+
+<!--                                                                            <div class="table-responsive">-->
+<!--                                                                                <table class="table header-border table-hover table-custom spacing5 ess-table">-->
+<!--                                                                                    <thead>-->
+<!--                                                                                        <tr>-->
+<!--                                                                                            <th>Name</th>-->
+<!--                                                                                            &lt;!&ndash; <th>Product</th> &ndash;&gt;-->
+<!--                                                                                            <th>Price</th>-->
+<!--                                                                                            <th>Quantity</th>-->
+<!--                                                                                            <th>Total</th>-->
+<!--                                                                                            <th>Date</th>-->
+<!--                                                                                            <th>Bill Reference</th>-->
+<!--                                                                                        </tr>-->
+<!--                                                                                    </thead>-->
+<!--                                                                                    <tbody t-foreach="expense_obj" t-as="ex">-->
+<!--                                                                                        <tr t-if="ex['state'] == 'done'">-->
+<!--                                                                                            <td><div t-esc="ex['name']"/></td>-->
+<!--                                                                                            &lt;!&ndash; <td><div t-esc="ex['product_id'].name"/></td> &ndash;&gt;-->
+<!--                                                                                            <td><div t-esc="ex['unit_amount']"/></td>-->
+<!--                                                                                            <td><div t-esc="ex['quantity']"/></td>-->
+<!--                                                                                            <td><div t-esc="ex['total_amount']"/></td>-->
+<!--                                                                                            <td><div t-esc="ex['date']"/></td>-->
+<!--                                                                                            <td><div t-esc="ex['reference']"/></td>-->
+<!--                                                                                        </tr>-->
+<!--                                                                                    </tbody>-->
+<!--                                                                                </table>-->
+<!--                                                                            </div>-->
+<!--                                                                        </div>-->
+
+<!--                                                                        <div class="tab-pane" id="refused">-->
+
+<!--                                                                            <div class="table-responsive">-->
+<!--                                                                                <table class="table header-border table-hover table-custom spacing5 ess-table">-->
+<!--                                                                                    <thead>-->
+<!--                                                                                        <tr>-->
+<!--                                                                                            <th>Name</th>-->
+<!--                                                                                            &lt;!&ndash; <th>Product</th> &ndash;&gt;-->
+<!--                                                                                            <th>Price</th>-->
+<!--                                                                                            <th>Quantity</th>-->
+<!--                                                                                            <th>Total</th>-->
+<!--                                                                                            <th>Date</th>-->
+<!--                                                                                            <th>Bill Reference</th>-->
+<!--                                                                                        </tr>-->
+<!--                                                                                    </thead>-->
+<!--                                                                                    <tbody t-foreach="expense_obj" t-as="ex">-->
+<!--                                                                                        <tr t-if="ex['state'] == 'refused'">-->
+<!--                                                                                            <td><div t-esc="ex['name']"/></td>-->
+<!--                                                                                            &lt;!&ndash; <td><div t-esc="ex['product_id'].name"/></td> &ndash;&gt;-->
+<!--                                                                                            <td><div t-esc="ex['unit_amount']"/></td>-->
+<!--                                                                                            <td><div t-esc="ex['quantity']"/></td>-->
+<!--                                                                                            <td><div t-esc="ex['total_amount']"/></td>-->
+<!--                                                                                            <td><div t-esc="ex['date']"/></td>-->
+<!--                                                                                            <td><div t-esc="ex['reference']"/></td>-->
+<!--                                                                                        </tr>-->
+<!--                                                                                    </tbody>-->
+<!--                                                                                </table>-->
+<!--                                                                            </div>-->
+<!--                                                                        </div>-->
+<!--                                                                    </div>-->
+<!--                                                                </div>-->
+
+<!--                                                            </div>-->
+
+                                                        </div>
+                                                        
+
+                                                </div>
+                                            </form>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                    </div>
+                    </div>
+                </div>
+            </t>
+        </t>
+    </template>
+
+
+
+    <template id="ess_view_asset_assignation2" name="ESS View Asset Assignation">
+        <t t-call="portal.portal_layout">
+            <t>
+                <div class="row justify-content-between mt-4">
+
+                    <nav class="navbar-default navbar-static-side" role="navigation" style="z-index: 1;position: initial;">
+                        <t t-call="ess.side_menu"/>
+                    </nav>
+
+                    <div class="row col-10 col-md col-lg-10">
+                        <div class="col-lg-12">
+                            <div class="ibox ">
+                                <div class="row iess-title" style="text-align:left;margin-right: 20px;margin-left: 20px;">
+                                    <h3><span>Asset Assignation</span></h3>
+                                </div>
+                                <div class="ibox-content">
+                                    <div class="row">
+                                        <div class="col-lg-12" style="margin-top:10px;">
+                                            <form action="/my/asset_assignation" method="get">
+                                                <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+
+                                                <div class="row o_portal_expense">
+                                                    <div class="col-lg-12">
+                                                            <div class="ibox-content iess-p20">
+                                                                <div class="body">
+                                                                    <ul class="nav nav-tabs3">
+                                                                        <li class="nav-item"><a class="nav-link show ess-tab-link active" data-toggle="tab" href="#all">All Asset Assignation</a></li>
+                                                                        <li class="nav-item"><a class="nav-link ess-tab-link" data-toggle="tab" href="#draft">Draft</a></li>
+                                                                        <li class="nav-item"><a class="nav-link ess-tab-link" data-toggle="tab" href="#submitted">Submitted</a></li>
+                                                                        <li class="nav-item"><a class="nav-link ess-tab-link" data-toggle="tab" href="#approved">Approved</a></li>
+                                                                        <li class="nav-item"><a class="nav-link ess-tab-link" data-toggle="tab" href="#assigned">Assigned To Me</a></li>
+                                                                        <li class="nav-item"><a class="nav-link ess-tab-link" data-toggle="tab" href="#clearance">Clearance</a></li>
+                                                                        <li class="nav-item"><a class="nav-link ess-tab-link" data-toggle="tab" href="#refused">Refused</a></li>
+                                                                    </ul>
+                                                                    <div class="tab-content">
+                                                                        <div class="tab-pane show active" id="all">
+                                                                            <div class="table-responsive">
+                                                                                <table class="table header-border table-hover table-custom spacing5 ess-table">
+                                                                                    <thead>
+                                                                                        <tr>
+                                                                                            <th>Type</th>
+                                                                                            <th>Asset</th>
+                                                                                            <th>Description</th>
+                                                                                            <th>Type Of Disclaimer</th>
+                                                                                            <th>Date</th>
+                                                                                            <th>State Of Asset When Receive</th>
+                                                                                            <th>State Of Asset When Delivery</th>
+                                                                                            <th>Date Of Disclaimer</th>
+
+                                                                                            <th>State</th>
+                                                                                        </tr>
+                                                                                    </thead>
+                                                                                    <tbody t-foreach="asset_assignation_obj" t-as="asset">
+                                                                                        <tr>
+                                                                                            <td><div t-esc="asset['type_desc']"/></td>
+                                                                                            <td><div t-esc="asset['asset_id']['name']"/></td>
+                                                                                            <td><div t-esc="asset['description']"/></td>
+                                                                                            <td><div t-esc="asset['type_of_disclaimer_desc']"/></td>
+                                                                                            <td><div t-esc="asset['date']"/></td>
+                                                                                            <td><div t-esc="asset['state_of_asset_when_receive']"/></td>
+                                                                                            <td><div t-esc="asset['state_of_asset_when_delivery']"/></td>
+                                                                                            <td><div t-esc="asset['date_of_disclaimer']"/></td>
+
+                                                                                            <td><div t-esc="asset['state_desc']"/></td>
+                                                                                        </tr>
+                                                                                    </tbody>
+                                                                                </table>
+                                                                            </div>
+                                                                        </div>
+
+                                                                        <div class="tab-pane" id="draft">
+
+                                                                            <div class="table-responsive">
+                                                                                <table class="table header-border table-hover table-custom spacing5 ess-table">
+                                                                                     <thead>
+                                                                                        <tr>
+                                                                                            <th>Type</th>
+                                                                                            <th>Asset</th>
+                                                                                            <th>Description</th>
+                                                                                            <th>Type Of Disclaimer</th>
+                                                                                            <th>Date</th>
+                                                                                            <th>State Of Asset When Receive</th>
+                                                                                            <th>State Of Asset When Delivery</th>
+                                                                                            <th>Date Of Disclaimer</th>
+                                                                                            <th>State</th>
+                                                                                        </tr>
+                                                                                    </thead>
+                                                                                     <tbody t-foreach="asset_assignation_obj" t-as="asset">
+                                                                                        <tr t-if="asset['state'] == 'draft'">
+                                                                                            <td><div t-esc="asset['type_desc']"/></td>
+                                                                                            <td><div t-esc="asset['asset_id']['name']"/></td>
+                                                                                            <td><div t-esc="asset['description']"/></td>
+                                                                                            <td><div t-esc="asset['type_of_disclaimer_desc']"/></td>
+                                                                                            <td><div t-esc="asset['date']"/></td>
+                                                                                            <td><div t-esc="asset['state_of_asset_when_receive']"/></td>
+                                                                                            <td><div t-esc="asset['state_of_asset_when_delivery']"/></td>
+                                                                                            <td><div t-esc="asset['date_of_disclaimer']"/></td>
+                                                                                            <td><div t-esc="asset['state_desc']"/></td>
+                                                                                        </tr>
+                                                                                    </tbody>
+                                                                                </table>
+                                                                            </div>
+                                                                        </div>
+
+                                                                        <div class="tab-pane" id="submitted">
+
+                                                                            <div class="table-responsive">
+                                                                                <table class="table header-border table-hover table-custom spacing5 ess-table">
+                                                                                     <thead>
+                                                                                        <tr>
+                                                                                            <th>Type</th>
+                                                                                            <th>Asset</th>
+                                                                                            <th>Description</th>
+                                                                                            <th>Type Of Disclaimer</th>
+                                                                                            <th>Date</th>
+                                                                                            <th>State Of Asset When Receive</th>
+                                                                                            <th>State Of Asset When Delivery</th>
+                                                                                            <th>Date Of Disclaimer</th>
+                                                                                            <th>State</th>
+                                                                                        </tr>
+                                                                                    </thead>
+                                                                                    <tbody t-foreach="asset_assignation_obj" t-as="asset">
+                                                                                        <tr t-if="asset['state'] == 'submit'">
+                                                                                            <td><div t-esc="asset['type_desc']" /></td>
+<!--                                                                                            <td><div t-esc="asset['type']" /></td>-->
+<!--                                                                                            <td><div t-esc="asset['type_desc']" /></td>-->
+                                                                                            <td><div t-esc="asset['asset_id']['name']"/></td>
+                                                                                            <td><div t-esc="asset['description']"/></td>
+                                                                                            <td><div t-esc="asset['type_of_disclaimer_desc']"/></td>
+                                                                                            <td><div t-esc="asset['date']"/></td>
+                                                                                            <td><div t-esc="asset['state_of_asset_when_receive']"/></td>
+                                                                                            <td><div t-esc="asset['state_of_asset_when_delivery']"/></td>
+                                                                                            <td><div t-esc="asset['date_of_disclaimer']"/></td>
+                                                                                            <td><div t-esc="asset['state_desc']" /></td>
+                                                                                        </tr>
+                                                                                    </tbody>
+                                                                                </table>
+                                                                            </div>
+                                                                        </div>
+
+                                                                        <div class="tab-pane" id="approved">
+
+                                                                            <div class="table-responsive">
+                                                                                <table class="table header-border table-hover table-custom spacing5 ess-table">
+                                                                                     <thead>
+                                                                                        <tr>
+                                                                                            <th>Type</th>
+                                                                                            <th>Asset</th>
+                                                                                            <th>Description</th>
+                                                                                            <th>Type Of Disclaimer</th>
+                                                                                            <th>Date</th>
+                                                                                            <th>State Of Asset When Receive</th>
+                                                                                            <th>State Of Asset When Delivery</th>
+                                                                                            <th>Date Of Disclaimer</th>
+                                                                                            <th>State</th>
+                                                                                        </tr>
+                                                                                    </thead>
+                                                                                    <tbody t-foreach="asset_assignation_obj" t-as="asset">
+                                                                                        <tr t-if="asset['state'] == 'approve'">
+                                                                                            <td><div t-esc="asset['type_desc']"/></td>
+                                                                                            <td><div t-esc="asset['asset_id']['name']"/></td>
+                                                                                            <td><div t-esc="asset['description']"/></td>
+                                                                                            <td><div t-esc="asset['type_of_disclaimer_desc']"/></td>
+                                                                                            <td><div t-esc="asset['date']"/></td>
+                                                                                            <td><div t-esc="asset['state_of_asset_when_receive']"/></td>
+                                                                                            <td><div t-esc="asset['state_of_asset_when_delivery']"/></td>
+                                                                                            <td><div t-esc="asset['date_of_disclaimer']"/></td>
+                                                                                            <td><div t-esc="asset['state_desc']"/></td>
+                                                                                        </tr>
+                                                                                    </tbody>
+                                                                                </table>
+                                                                            </div>
+                                                                        </div>
+
+                                                                        <div class="tab-pane" id="assigned">
+
+                                                                            <div class="table-responsive">
+                                                                                <table class="table header-border table-hover table-custom spacing5 ess-table">
+                                                                                     <thead>
+                                                                                        <tr>
+                                                                                            <th>Type</th>
+                                                                                            <th>Asset</th>
+                                                                                            <th>Description</th>
+                                                                                            <th>Type Of Disclaimer</th>
+                                                                                            <th>Date</th>
+                                                                                            <th>State Of Asset When Receive</th>
+                                                                                            <th>State Of Asset When Delivery</th>
+                                                                                            <th>Date Of Disclaimer</th>
+                                                                                            <th>State</th>
+                                                                                        </tr>
+                                                                                    </thead>
+                                                                                    <tbody t-foreach="asset_assignation_obj" t-as="asset">
+                                                                                        <tr t-if="asset['state'] == 'assigned'">
+                                                                                            <td><div t-esc="asset['type_desc']"/></td>
+                                                                                            <td><div t-esc="asset['asset_id']['name']"/></td>
+                                                                                            <td><div t-esc="asset['description']"/></td>
+                                                                                            <td><div t-esc="asset['type_of_disclaimer_desc']"/></td>
+                                                                                            <td><div t-esc="asset['date']"/></td>
+                                                                                            <td><div t-esc="asset['state_of_asset_when_receive']"/></td>
+                                                                                            <td><div t-esc="asset['state_of_asset_when_delivery']"/></td>
+                                                                                            <td><div t-esc="asset['date_of_disclaimer']"/></td>
+                                                                                            <td><div t-esc="asset['state_desc']"/></td>
+                                                                                        </tr>
+                                                                                    </tbody>
+                                                                                </table>
+                                                                            </div>
+                                                                        </div>
+
+                                                                        <div class="tab-pane" id="clearance">
+
+                                                                            <div class="table-responsive">
+                                                                                <table class="table header-border table-hover table-custom spacing5 ess-table">
+                                                                                     <thead>
+                                                                                        <tr>
+                                                                                            <th>Type</th>
+                                                                                            <th>Asset</th>
+                                                                                            <th>Description</th>
+                                                                                            <th>Type Of Disclaimer</th>
+                                                                                            <th>Date</th>
+                                                                                            <th>State Of Asset When Receive</th>
+                                                                                            <th>State Of Asset When Delivery</th>
+                                                                                            <th>Date Of Disclaimer</th>
+                                                                                            <th>State</th>
+                                                                                        </tr>
+                                                                                    </thead>
+                                                                                    <tbody t-foreach="asset_assignation_obj" t-as="asset">
+                                                                                        <tr t-if="asset['state'] == 'clearance'">
+                                                                                            <td><div t-esc="asset['type_desc']"/></td>
+                                                                                            <td><div t-esc="asset['asset_id']['name']"/></td>
+                                                                                            <td><div t-esc="asset['description']"/></td>
+                                                                                            <td><div t-esc="asset['type_of_disclaimer_desc']"/></td>
+                                                                                            <td><div t-esc="asset['date']"/></td>
+                                                                                            <td><div t-esc="asset['state_of_asset_when_receive']"/></td>
+                                                                                            <td><div t-esc="asset['state_of_asset_when_delivery']"/></td>
+                                                                                            <td><div t-esc="asset['date_of_disclaimer']"/></td>
+                                                                                            <td><div t-esc="asset['state_desc']"/></td>
+                                                                                        </tr>
+                                                                                    </tbody>
+                                                                                </table>
+                                                                            </div>
+                                                                        </div>
+
+                                                                        <div class="tab-pane" id="refused">
+
+                                                                            <div class="table-responsive">
+                                                                                <table class="table header-border table-hover table-custom spacing5 ess-table">
+                                                                                     <thead>
+                                                                                        <tr>
+                                                                                            <th>Type</th>
+                                                                                            <th>Asset</th>
+                                                                                            <th>Description</th>
+                                                                                            <th>Type Of Disclaimer</th>
+                                                                                            <th>Date</th>
+                                                                                            <th>State Of Asset When Receive</th>
+                                                                                            <th>State Of Asset When Delivery</th>
+                                                                                            <th>Date Of Disclaimer</th>
+                                                                                            <th>Refuse Reason</th>
+                                                                                            <th>State</th>
+                                                                                        </tr>
+                                                                                    </thead>
+                                                                                    <tbody t-foreach="asset_assignation_obj" t-as="asset">
+                                                                                        <tr t-if="asset['state'] == 'refuse'">
+                                                                                            <td><div t-esc="asset['type_desc']"/></td>
+                                                                                            <td><div t-esc="asset['asset_id']['name']"/></td>
+                                                                                            <td><div t-esc="asset['description']"/></td>
+                                                                                            <td><div t-esc="asset['type_of_disclaimer_desc']"/></td>
+                                                                                            <td><div t-esc="asset['date']"/></td>
+                                                                                            <td><div t-esc="asset['state_of_asset_when_receive']"/></td>
+                                                                                            <td><div t-esc="asset['state_of_asset_when_delivery']"/></td>
+                                                                                            <td><div t-esc="asset['date_of_disclaimer']"/></td>
+                                                                                            <td><div t-esc="asset['asset_request_Refuse_reason']"/></td>
+                                                                                            <td><div t-esc="asset['state_desc']"/></td>
+                                                                                        </tr>
+                                                                                    </tbody>
+                                                                                </table>
+                                                                            </div>
+                                                                        </div>
+
+                                                                    </div>
+                                                                </div>
+
+                                                            </div>
+
+                                                        </div>
+
+
+                                                </div>
+                                            </form>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                    </div>
+                    </div>
+                </div>
+            </t>
+        </t>
+    </template>
+
+
+
+    <template id="ess_custody_request" name="ESS Custody Request">
+        <t t-call="portal.portal_layout">
+            <t>
+                <div class="row justify-content-between mt-4">
+
+                    <nav class="navbar-default navbar-static-side" role="navigation" style="z-index: 1;position: initial;">
+                        <t t-call="ess.side_menu"/>
+                    </nav>
+
+                    <div class="row col-10 col-md col-lg-10">
+                        <div class="col-lg-12">
+                            <div class="ibox ">
+                                <div class="row iess-title" style="text-align:left;margin-right: 20px;margin-left: 20px;">
+                                    <h3><span>Custody Request</span></h3>
+                                </div>
+                                <div class="ibox-content">
+                                    <div class="row">
+                                        <div class="col-lg-12" style="margin-top:10px;">
+                                            <form action="/custody/request" method="post">
+                                                <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+
+                                                <div class="row o_portal_expense">
+                                                    <div class="col-lg-12">
+                                                            <div class="row form-group col-lg-12">
+                                                                <div t-attf-class="form-group col-xl-3">
+                                                                    <label class="col-form-label" for="date">Date</label>
+                                                                    <input type="date" name="date"  id="theDate"  t-attf-class="form-control" required=""/>
+                                                                </div>
+                                                                 <script>
+                                                                     document.getElementById('theDate').value = new Date().toISOString().substring(0, 10);
+                                                                </script>
+                                                                <div t-attf-class="form-group col-xl-3">
+                                                                    <label class="col-form-label" for="amount">Amount</label>
+                                                                    <input id="amount" type="number" name="amount" t-attf-class="form-control" required=""/>
+                                                                </div>
+                                                                <div t-attf-class="form-group col-xl-3">
+                                                                    <label class="col-form-label" for="description">Description</label>
+                                                                    <input type="text" name="description" t-attf-class="form-control" required=""/>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="clearfix">
+                                                                <button type="submit" class="btn btn-primary float-right" style='margin-right: 30px;'>
+                                                                    Create
+                                                                </button>
+                                                            </div>
+
+                                                        </div>
+                                                </div>
+                                            </form>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                    </div>
+                    </div>
+                </div>
+            </t>
+        </t>
+    </template>
+
+
+    <template id="ess_add_custody_line" name="ESS Add Custody Line">
+        <t t-call="portal.portal_layout">
+            <t>
+
+
+                <div class="row justify-content-between mt-4">
+
+                    <nav class="navbar-default navbar-static-side" role="navigation" style="z-index: 1;position: initial;">
+                        <t t-call="ess.side_menu"/>
+                    </nav>
+
+                    <div class="row col-10 col-md col-lg-10">
+                        <div class="col-lg-12">
+                            <div class="ibox ">
+                                <div class="row iess-title" style="text-align:left;margin-right: 20px;margin-left: 20px;">
+                                    <h3><span>Add Custody Lines</span></h3>
+                                </div>
+                                <div class="ibox-content">
+
+                                    <div class="row">
+                                         <div class="col-lg-12">
+                                                                <div t-if="error_message" class="alert alert-danger" role="alert">
+                                                                    <t t-foreach="error_message" t-as="err"><t t-esc="err"/><br /></t>
+                                                                </div>
+                                                            </div>
+                                        <div class="col-lg-12" style="margin-top:10px;">
+                                            <form action="/add_custody_line" method="post" id="FormCustodyLine" enctype="multipart/form-data">
+                                                <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+                                                <input type="hidden" name="get_id" t-att-value="request.params.get('id')"/>
+                                                <input type="hidden" name="get_remaining_amount" t-att-value="request.params.get('custody_remain')"/>
+
+                                                <div class="row o_portal_expense">
+                                                    <div class="col-lg-12">
+                                                            <div class="row form-group col-lg-12">
+                                                                <div t-attf-class="form-group col-xl-6">
+                                                                    <label class="col-form-label" for="course_place_id">Custody Description</label>
+                                                                    <select name="custody_description_id" t-attf-class="form-control">
+                                                                        <t t-foreach="custody_description_obj or []" t-as="desc">
+                                                                            <option t-att-value="desc.id" >
+                                                                                <t t-esc="desc.name" />
+                                                                            </option>
+                                                                        </t>
+                                                                    </select>
+                                                                </div>
+
+                                                                <div t-attf-class="form-group col-xl-3">
+                                                                    <label class="col-form-label" for="date">Date</label>
+                                                                    <input type="date" name="date"  id="theDate"  t-attf-class="form-control" required="" />
+
+                                                                </div>
+                                                                <script>
+                                                                     document.getElementById('theDate').value = new Date().toISOString().substring(0, 10);
+                                                                </script>
+
+                                                                <div t-attf-class="form-group col-xl-3">
+                                                                    <label class="col-form-label" for="amount">Amount</label>
+                                                                    <input id="amount" type="number" name="amount" t-attf-class="form-control" required=""/>
+                                                                </div>
+
+                                                                <div t-attf-class="form-group col-xl-3">
+                                                                    <label class="col-form-label" for="description">Description</label>
+                                                                    <input id="custody_description" type="text" name="description" t-attf-class="form-control" />
+                                                                </div>
+                                                               <div t-attf-class="form-group  col-xl-6">
+                                                                    <label class="col-form-label" for="doc_attachment_id">Attachment</label>
+                                                                    <input id="custody_attachment" class="attachment" type="file" name="doc_attachment_id" value=""  required=""/>
+                                                                </div>
+
+
+<!--                                                                   <div t-attf-class="form-group  col-xl-6">-->
+<!--                                                                    <label class="col-form-label" for="doc_attachment_id">Attachment</label>-->
+<!--                                                                    <input class="attachment" type="file" name="doc_attachment_id" value=""/>-->
+<!--                                                                </div>-->
+                                                                <div t-attf-class="form-group col-xl-3">
+                                                                    <label class="col-form-label" for="remaining_amount2">Remaining amount</label>
+<!--                                                                    <input type="text" name="description" t-attf-class="form-control"/>-->
+                                                                    <input id="remain_amount" type="text" name="remaining_amount2" readonly="readonly" t-attf-class="form-control" t-att-value="request.params.get('custody_remain')"/>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="clearfix">
+                                                                <button type="submit" class="btn btn-primary float-right" id="add_custody_button" style='margin-right: 30px;'>
+                                                                    Create
+                                                                </button>
+                                                            </div>
+
+                                                        </div>
+                                                </div>
+                                            </form>
+
+                                            <div class="tab-content">
+                                                <div class="table-responsive">
+                                                    <table class="table header-border table-hover table-bordered table-custom spacing5 ess-table">
+                                                        <thead>
+                                                            <tr>
+                                                                <th>Description</th>
+                                                                <th>Date</th>
+<!--                                                                <th>Attachment</th>-->
+                                                                <th>Custody Description</th>
+                                                                <th>amount</th>
+                                                                   <th>Download</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody t-foreach="custody_line_obj" t-as="custody">
+                                                            <tr>
+                                                                <td><div t-esc="custody['description']"/></td>
+                                                                <td><div t-esc="custody['date']"/></td>
+<!--                                                                <td><div t-esc="custody['attach_file']"/></td>-->
+                                                                <td><div t-esc="custody['custody_description_id']['name']"/></td>
+                                                                <td><div t-esc="custody['amount']"/></td>
+<!--                                                                <td>-->
+<!--                                                                    <a t-attf-href="/add/custody_line?id={{custody['id']}}&amp;custody_remain={{custody['remaining_amount']}}">Add Custody Line</a>-->
+<!--                                                                </td>-->
+
+                                                           <td><a t-if="custody['attach_invoice']" t-att-href="'/attachment/download?attachment_id=%i' % custody['attach_invoice'].id" class="fa fa-download"/></td>
+
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+
+                                        </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                    </div>
+                    </div>
+                </div>
+            </t>
+        </t>
+        <script type="text/javascript"   src="/ess/static/src/js/jquery.min.js"></script>
+        <script type="text/javascript" src="/ess/static/src/js/passenger_mandane.js"></script>
+    </template>
+
+    <template id="ess_custody_in_progress" name="ESS Custody In Progress">
+        <t t-call="portal.portal_layout">
+            <t>
+                <div class="row justify-content-between mt-4">
+
+                    <nav class="navbar-default navbar-static-side" role="navigation" style="z-index: 1;position: initial;">
+                        <t t-call="ess.side_menu"/>
+                    </nav>
+
+                    <div class="row col-10 col-md col-lg-10">
+                        <div class="col-lg-12">
+                            <div class="ibox ">
+                                <div class="row iess-title" style="text-align:left;margin-right: 20px;margin-left: 20px;">
+                                    <h3><span>Custody In Progress</span></h3>
+                                </div>
+                                <div class="ibox-content">
+                                    <div class="row">
+                                        <div class="col-lg-12" style="margin-top:10px;">
+                                            <form action="/my/custody/in_progress" method="get">
+                                                <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+
+                                                <div class="row o_portal_expense">
+                                                    <div class="col-lg-12">
+                                                            <div class="ibox-content iess-p20">
+                                                                <div class="body">
+<!--                                                                    <ul class="nav nav-tabs3">-->
+<!--                                                                        <li class="nav-item"><a class="nav-link ess-tab-link active" data-toggle="tab" href="#custody_in_progress">Custody In Progress</a></li>-->
+<!--                                                                    </ul>-->
+                                                                    <div class="tab-content">
+
+<!--                                                                        <div class="tab-pane" id="custody_in_progress">-->
+
+                                                                            <div class="table-responsive">
+                                                                                <table class="table header-border table-hover table-bordered table-custom spacing5 ess-table">
+                                                                                    <thead>
+                                                                                        <tr>
+                                                                                            <th>Date</th>
+                                                                                            <th>Amount</th>
+                                                                                            <th>Remaining Amount</th>
+                                                                                            <th>Description</th>
+                                                                                            <th>State</th>
+                                                                                            <th>Add Custody Line</th>
+                                                                                        </tr>
+                                                                                    </thead>
+                                                                                    <tbody t-foreach="custody_obj" t-as="custody">
+                                                                                        <tr t-if="custody['state'] == 'in_progress'">
+                                                                                            <td><div t-esc="custody['date']"/></td>
+                                                                                            <td><div t-esc="custody['amount']"/></td>
+                                                                                            <td><div t-esc="custody['remaining_amount']"/></td>
+                                                                                            <td><div t-esc="custody['description']"/></td>
+                                                                                            <td><div t-esc="custody['state_desc']"/></td>
+                                                                                            <td>
+                                                                                                <a t-attf-href="/add_custody_line?id={{custody['id']}}&amp;custody_remain={{custody['remaining_amount']}}">Add Custody Line</a>
+<!--                                                                                                {'params':{'id':{{custody['id']}}}}-->
+<!--                                                                                                {'params':{'id':{{custody['id']}}}}-->
+<!--                                                                                                {"params":{"id":"test"}}-->
+                                                                                            </td>
+
+                                                                                        </tr>
+                                                                                    </tbody>
+                                                                                </table>
+                                                                            </div>
+<!--                                                                        </div>-->
+
+                                                                    </div>
+                                                                </div>
+
+                                                            </div>
+
+                                                        </div>
+
+
+                                                </div>
+                                            </form>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                    </div>
+                    </div>
+                </div>
+            </t>
+        </t>
+    </template>
+
+    <template id="custody_warning_message" name="ESS Custody Warning">
+        <t t-call="portal.portal_layout">
+            <t>
+                <div class="row justify-content-between mt-4">
+
+                    <nav class="navbar-default navbar-static-side" role="navigation" style="z-index: 1;position: initial;">
+                        <t t-call="ess.side_menu"/>
+                    </nav>
+
+                    <div class="row col-10 col-md col-lg-10">
+                        <div class="col-lg-12">
+                            <div class="ibox ">
+                                <div class="row iess-title" style="text-align:left;margin-right: 20px;margin-left: 20px;">
+                                    <h3><span>Custody Warning</span></h3>
+                                </div>
+                                <div class="ibox-content">
+                                    <div class="row">
+                                        <div class="col-lg-12" style="margin-top:10px;">
+                                            <form action="/custody/warning" method="post">
+                                                <div class="row o_portal_expense">
+                                                    <div class="col-lg-12">
+                                                            <div class="row form-group col-lg-12">
+                                                                <div t-attf-class="form-group col-xl-12">
+                                                                    <span>You Aren't Allowed to Add This Line, Your Amount must be less Than or Equal <h3><t t-esc="remain_amount" /></h3></span>
+
+                                                                </div>
+                                                            </div>
+
+<!--                                                            <div class="clearfix">-->
+<!--                                                                <button type="submit" class="btn btn-primary float-right" style='margin-right: 30px;'>-->
+<!--                                                                    back-->
+<!--                                                                </button>-->
+<!--                                                            </div>-->
+
+                                                        </div>
+                                                </div>
+                                            </form>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                    </div>
+                    </div>
+                </div>
+            </t>
+        </t>
+    </template>
+
+
+    <template id="ess_view_custody" name="ESS View Custody">
+        <t t-call="portal.portal_layout">
+            <t>
+                <div class="row justify-content-between mt-4">
+
+                    <nav class="navbar-default navbar-static-side" role="navigation" style="z-index: 1;position: initial;">
+                        <t t-call="ess.side_menu"/>
+                    </nav>
+
+                    <div class="row col-10 col-md col-lg-10">
+                        <div class="col-lg-12">
+                            <div class="ibox ">
+                                <div class="row iess-title" style="text-align:left;margin-right: 20px;margin-left: 20px;">
+                                    <h3><span>Custody</span></h3>
+                                </div>
+                                <div class="ibox-content">
+                                    <div class="row">
+                                        <div class="col-lg-12" style="margin-top:10px;">
+                                            <form action="/my/custody" method="get">
+                                                <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+
+                                                <div class="row o_portal_expense">
+                                                    <div class="col-lg-12">
+                                                            <div class="ibox-content iess-p20">
+                                                                <div class="body">
+                                                                    <ul class="nav nav-tabs3">
+                                                                        <li class="nav-item"><a class="nav-link show ess-tab-link active" data-toggle="tab" href="#all">All Custody</a></li>
+<!--                                                                        <li class="nav-item"><a class="nav-link ess-tab-link" data-toggle="tab" href="#draft">Draft</a></li>-->
+<!--                                                                        <li class="nav-item"><a class="nav-link ess-tab-link" data-toggle="tab" href="#dir_manager">Direct Manager Approve</a></li>-->
+<!--                                                                        <li class="nav-item"><a class="nav-link ess-tab-link" data-toggle="tab" href="#d_manager">Department Manager Approve</a></li>-->
+<!--                                                                        <li class="nav-item"><a class="nav-link ess-tab-link" data-toggle="tab" href="#c_manager">Center Manager Approve</a></li>-->
+<!--                                                                        <li class="nav-item"><a class="nav-link ess-tab-link" data-toggle="tab" href="#accounting">Accounting Manager Approve</a></li>-->
+<!--                                                                        <li class="nav-item"><a class="nav-link ess-tab-link" data-toggle="tab" href="#paid">Paid</a></li>-->
+                                                                        <li class="nav-item"><a class="nav-link ess-tab-link" data-toggle="tab" href="#manager_approve">All Manager Approval</a></li>
+                                                                        <li class="nav-item"><a class="nav-link ess-tab-link" data-toggle="tab" href="#in_progress">In Progress</a></li>
+<!--                                                                        <li class="nav-item"><a class="nav-link ess-tab-link" data-toggle="tab" href="#liquidated">Liquidated</a></li>-->
+                                                                        <li class="nav-item"><a class="nav-link ess-tab-link" data-toggle="tab" href="#done">Done</a></li>
+                                                                        <li class="nav-item"><a class="nav-link ess-tab-link" data-toggle="tab" href="#refused">Refused</a></li>
+                                                                    </ul>
+                                                                    <div class="tab-content">
+                                                                        <div class="tab-pane show active" id="all">
+                                                                            <div class="table-responsive">
+                                                                                <table class="table header-border table-hover table-custom spacing5 ess-table">
+                                                                                    <thead>
+                                                                                        <tr>
+                                                                                            <th>Date</th>
+                                                                                            <th>Amount</th>
+                                                                                            <th>Remaining Amount</th>
+                                                                                            <th>Description</th>
+                                                                                            <th>Reason</th>
+                                                                                            <th>State</th>
+                                                                                        </tr>
+                                                                                    </thead>
+                                                                                    <tbody t-foreach="custody_obj" t-as="custody">
+                                                                                        <tr>
+                                                                                            <td><div t-esc="custody['date']"/></td>
+                                                                                            <td><div t-esc="custody['amount']"/></td>
+                                                                                            <td><div t-esc="custody['remaining_amount']"/></td>
+                                                                                            <td><div t-esc="custody['description']"/></td>
+                                                                                            <td><div t-esc="custody['reason']"/></td>
+                                                                                            <td><div t-esc="custody['state_desc']"/></td>
+                                                                                        </tr>
+                                                                                    </tbody>
+                                                                                </table>
+                                                                            </div>
+                                                                        </div>
+
+                                                                        <div class="tab-pane" id="draft">
+
+                                                                            <div class="table-responsive">
+                                                                                <table class="table header-border table-hover table-custom spacing5 ess-table">
+                                                                                    <thead>
+                                                                                        <tr>
+                                                                                            <th>Date</th>
+                                                                                            <th>Amount</th>
+                                                                                            <th>Remaining Amount</th>
+                                                                                            <th>Description</th>
+<!--                                                                                            <th>Reason</th>-->
+                                                                                            <th>State</th>
+                                                                                        </tr>
+                                                                                    </thead>
+                                                                                    <tbody t-foreach="custody_obj" t-as="custody">
+                                                                                        <tr t-if="custody['state'] == 'draft'">
+                                                                                            <td><div t-esc="custody['date']"/></td>
+                                                                                            <td><div t-esc="custody['amount']"/></td>
+                                                                                            <td><div t-esc="custody['remaining_amount']"/></td>
+                                                                                            <td><div t-esc="custody['description']"/></td>
+<!--                                                                                            <td><div t-esc="custody['reason']"/></td>-->
+                                                                                            <td><div t-esc="custody['state_desc']"/></td>
+                                                                                        </tr>
+                                                                                    </tbody>
+                                                                                </table>
+                                                                            </div>
+                                                                        </div>
+
+                                                                        <div class="tab-pane" id="manager_approve">
+
+                                                                            <div class="table-responsive">
+                                                                                <table class="table header-border table-hover table-custom spacing5 ess-table">
+                                                                                    <thead>
+                                                                                        <tr>
+                                                                                            <th>Date</th>
+                                                                                            <th>Amount</th>
+                                                                                            <th>Remaining Amount</th>
+                                                                                            <th>Description</th>
+<!--                                                                                            <th>Reason</th>-->
+                                                                                            <th>State</th>
+                                                                                        </tr>
+                                                                                    </thead>
+                                                                                    <tbody t-foreach="custody_obj" t-as="custody">
+                                                                                        <tr t-if="custody['state'] in ['direct_manager_approve','department_manager_approve','center_manager_approve','accounting_approve']">
+                                                                                            <td><div t-esc="custody['date']"/></td>
+                                                                                            <td><div t-esc="custody['amount']"/></td>
+                                                                                            <td><div t-esc="custody['remaining_amount']"/></td>
+                                                                                            <td><div t-esc="custody['description']"/></td>
+<!--                                                                                            <td><div t-esc="custody['reason']"/></td>-->
+                                                                                            <td><div t-esc="custody['state_desc']"/></td>
+                                                                                        </tr>
+                                                                                    </tbody>
+                                                                                </table>
+                                                                            </div>
+                                                                        </div>
+
+                                                                        <div class="tab-pane" id="d_manager">
+
+                                                                            <div class="table-responsive">
+                                                                                <table class="table header-border table-hover table-custom spacing5 ess-table">
+                                                                                    <thead>
+                                                                                        <tr>
+                                                                                            <th>Date</th>
+                                                                                            <th>Amount</th>
+                                                                                            <th>Remaining Amount</th>
+                                                                                            <th>Description</th>
+<!--                                                                                            <th>Reason</th>-->
+                                                                                            <th>State</th>
+                                                                                        </tr>
+                                                                                    </thead>
+                                                                                    <tbody t-foreach="custody_obj" t-as="custody">
+                                                                                        <tr t-if="custody['state'] == 'department_manager_approve'">
+                                                                                            <td><div t-esc="custody['date']"/></td>
+                                                                                            <td><div t-esc="custody['amount']"/></td>
+                                                                                            <td><div t-esc="custody['remaining_amount']"/></td>
+                                                                                            <td><div t-esc="custody['description']"/></td>
+<!--                                                                                            <td><div t-esc="custody['reason']"/></td>-->
+                                                                                            <td><div t-esc="custody['state_desc']"/></td>
+                                                                                        </tr>
+                                                                                    </tbody>
+                                                                                </table>
+                                                                            </div>
+                                                                        </div>
+
+                                                                        <div class="tab-pane" id="c_manager">
+
+                                                                            <div class="table-responsive">
+                                                                                <table class="table header-border table-hover table-custom spacing5 ess-table">
+                                                                                    <thead>
+                                                                                        <tr>
+                                                                                            <th>Date</th>
+                                                                                            <th>Amount</th>
+                                                                                            <th>Remaining Amount</th>
+                                                                                            <th>Description</th>
+<!--                                                                                            <th>Reason</th>-->
+                                                                                            <th>State</th>
+                                                                                        </tr>
+                                                                                    </thead>
+                                                                                    <tbody t-foreach="custody_obj" t-as="custody">
+                                                                                        <tr t-if="custody['state'] == 'center_manager_approve'">
+                                                                                            <td><div t-esc="custody['date']"/></td>
+                                                                                            <td><div t-esc="custody['amount']"/></td>
+                                                                                            <td><div t-esc="custody['remaining_amount']"/></td>
+                                                                                            <td><div t-esc="custody['description']"/></td>
+<!--                                                                                            <td><div t-esc="custody['reason']"/></td>-->
+                                                                                            <td><div t-esc="custody['state_desc']"/></td>
+                                                                                        </tr>
+                                                                                    </tbody>
+                                                                                </table>
+                                                                            </div>
+                                                                        </div>
+
+                                                                        <div class="tab-pane" id="accounting">
+
+                                                                            <div class="table-responsive">
+                                                                                <table class="table header-border table-hover table-custom spacing5 ess-table">
+                                                                                    <thead>
+                                                                                        <tr>
+                                                                                            <th>Date</th>
+                                                                                            <th>Amount</th>
+                                                                                            <th>Remaining Amount</th>
+                                                                                            <th>Description</th>
+<!--                                                                                            <th>Reason</th>-->
+                                                                                            <th>State</th>
+                                                                                        </tr>
+                                                                                    </thead>
+                                                                                    <tbody t-foreach="custody_obj" t-as="custody">
+                                                                                        <tr t-if="custody['state'] == 'accounting_approve'">
+                                                                                            <td><div t-esc="custody['date']"/></td>
+                                                                                            <td><div t-esc="custody['amount']"/></td>
+                                                                                            <td><div t-esc="custody['remaining_amount']"/></td>
+                                                                                            <td><div t-esc="custody['description']"/></td>
+<!--                                                                                            <td><div t-esc="custody['reason']"/></td>-->
+                                                                                            <td><div t-esc="custody['state_desc']"/></td>
+                                                                                        </tr>
+                                                                                    </tbody>
+                                                                                </table>
+                                                                            </div>
+                                                                        </div>
+
+                                                                        <div class="tab-pane" id="paid">
+
+                                                                            <div class="table-responsive">
+                                                                                <table class="table header-border table-hover table-custom spacing5 ess-table">
+                                                                                    <thead>
+                                                                                        <tr>
+                                                                                            <th>Date</th>
+                                                                                            <th>Amount</th>
+                                                                                            <th>Remaining Amount</th>
+                                                                                            <th>Description</th>
+<!--                                                                                            <th>Reason</th>-->
+                                                                                            <th>State</th>
+                                                                                        </tr>
+                                                                                    </thead>
+                                                                                    <tbody t-foreach="custody_obj" t-as="custody">
+                                                                                        <tr t-if="custody['state'] == 'paid'">
+                                                                                            <td><div t-esc="custody['date']"/></td>
+                                                                                            <td><div t-esc="custody['amount']"/></td>
+                                                                                            <td><div t-esc="custody['remaining_amount']"/></td>
+                                                                                            <td><div t-esc="custody['description']"/></td>
+<!--                                                                                            <td><div t-esc="custody['reason']"/></td>-->
+                                                                                            <td><div t-esc="custody['state_desc']"/></td>
+                                                                                        </tr>
+                                                                                    </tbody>
+                                                                                </table>
+                                                                            </div>
+                                                                        </div>
+
+                                                                        <div class="tab-pane" id="in_progress">
+
+                                                                            <div class="table-responsive">
+                                                                                <table class="table header-border table-hover table-custom spacing5 ess-table">
+                                                                                    <thead>
+                                                                                        <tr>
+                                                                                            <th>Date</th>
+                                                                                            <th>Amount</th>
+                                                                                            <th>Remaining Amount</th>
+                                                                                            <th>Description</th>
+<!--                                                                                            <th>Reason</th>-->
+                                                                                            <th>State</th>
+                                                                                        </tr>
+                                                                                    </thead>
+                                                                                    <tbody t-foreach="custody_obj" t-as="custody">
+                                                                                        <tr t-if="custody['state'] == 'in_progress'">
+                                                                                            <td><div t-esc="custody['date']"/></td>
+                                                                                            <td><div t-esc="custody['amount']"/></td>
+                                                                                            <td><div t-esc="custody['remaining_amount']"/></td>
+                                                                                            <td><div t-esc="custody['description']"/></td>
+<!--                                                                                            <td><div t-esc="custody['reason']"/></td>-->
+                                                                                            <td><div t-esc="custody['state_desc']"/></td>
+                                                                                        </tr>
+                                                                                    </tbody>
+                                                                                </table>
+                                                                            </div>
+                                                                        </div>
+
+                                                                        <div class="tab-pane" id="liquidated">
+
+                                                                            <div class="table-responsive">
+                                                                                <table class="table header-border table-hover table-custom spacing5 ess-table">
+                                                                                    <thead>
+                                                                                        <tr>
+                                                                                            <th>Date</th>
+                                                                                            <th>Amount</th>
+                                                                                            <th>Remaining Amount</th>
+                                                                                            <th>Description</th>
+<!--                                                                                            <th>Reason</th>-->
+                                                                                            <th>State</th>
+                                                                                        </tr>
+                                                                                    </thead>
+                                                                                    <tbody t-foreach="custody_obj" t-as="custody">
+                                                                                        <tr t-if="custody['state'] == 'liquidated'">
+                                                                                            <td><div t-esc="custody['date']"/></td>
+                                                                                            <td><div t-esc="custody['amount']"/></td>
+                                                                                            <td><div t-esc="custody['remaining_amount']"/></td>
+                                                                                            <td><div t-esc="custody['description']"/></td>
+<!--                                                                                            <td><div t-esc="custody['reason']"/></td>-->
+                                                                                            <td><div t-esc="custody['state_desc']"/></td>
+                                                                                        </tr>
+                                                                                    </tbody>
+                                                                                </table>
+                                                                            </div>
+                                                                        </div>
+
+                                                                        <div class="tab-pane" id="done">
+
+                                                                            <div class="table-responsive">
+                                                                                <table class="table header-border table-hover table-custom spacing5 ess-table">
+                                                                                    <thead>
+                                                                                        <tr>
+                                                                                            <th>Date</th>
+                                                                                            <th>Amount</th>
+                                                                                            <th>Remaining Amount</th>
+                                                                                            <th>Description</th>
+<!--                                                                                            <th>Reason</th>-->
+                                                                                            <th>State</th>
+                                                                                        </tr>
+                                                                                    </thead>
+                                                                                    <tbody t-foreach="custody_obj" t-as="custody">
+                                                                                        <tr t-if="custody['state'] == 'done'">
+                                                                                            <td><div t-esc="custody['date']"/></td>
+                                                                                            <td><div t-esc="custody['amount']"/></td>
+                                                                                            <td><div t-esc="custody['remaining_amount']"/></td>
+                                                                                            <td><div t-esc="custody['description']"/></td>
+<!--                                                                                            <td><div t-esc="custody['reason']"/></td>-->
+                                                                                            <td><div t-esc="custody['state_desc']"/></td>
+                                                                                        </tr>
+                                                                                    </tbody>
+                                                                                </table>
+                                                                            </div>
+                                                                        </div>
+
+                                                                        <div class="tab-pane" id="refused">
+
+                                                                            <div class="table-responsive">
+                                                                                <table class="table header-border table-hover table-custom spacing5 ess-table">
+                                                                                    <thead>
+                                                                                        <tr>
+                                                                                            <th>Date</th>
+                                                                                            <th>Amount</th>
+                                                                                            <th>Remaining Amount</th>
+                                                                                            <th>Description</th>
+                                                                                            <th>Reason</th>
+                                                                                            <th>State</th>
+                                                                                        </tr>
+                                                                                    </thead>
+                                                                                    <tbody t-foreach="custody_obj" t-as="custody">
+                                                                                        <tr t-if="custody['state'] == 'refuse'">
+                                                                                            <td><div t-esc="custody['date']"/></td>
+                                                                                            <td><div t-esc="custody['amount']"/></td>
+                                                                                            <td><div t-esc="custody['remaining_amount']"/></td>
+                                                                                            <td><div t-esc="custody['description']"/></td>
+                                                                                            <td><div t-esc="custody['reason']"/></td>
+                                                                                            <td><div t-esc="custody['state_desc']"/></td>
+                                                                                        </tr>
+                                                                                    </tbody>
+                                                                                </table>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                    </div>
+                    </div>
+                </div>
+            </t>
+        </t>
+    </template>
+
+    <template id="assets_frontend_as" inherit_id="website_sale_stock.assets_frontend">
+        <xpath expr="." position="inside">
+           <script type="text/javascript" src="/ess/static/src/js/change_passenger_mandane.js"></script>
+            <script type="text/javascript" src="/ess/static/src/js/check_notification_link.js"></script>
+       </xpath>
+    </template>
+
+    <template id="ess_passenger_mandate" name="ESS Passenger Mandate">
+        <t t-call="portal.portal_layout">
+            <t>
+                <div class="row justify-content-between mt-4">
+
+                    <nav class="navbar-default navbar-static-side" role="navigation" style="z-index: 1;position: initial;">
+                        <t t-call="ess.side_menu"/>
+                    </nav>
+
+                    <div class="row col-10 col-md col-lg-10">
+
+
+                        <div class="col-lg-12">
+                            <div class="ibox ">
+                                <div class="row iess-title" style="text-align:left;margin-right: 20px;margin-left: 20px;">
+                                    <h3><span>Mandate And Passenger</span></h3>
+                                </div>
+                                <div class="ibox-content">
+                                    <div class="row col-lg-12">
+
+                                        <div class="col-lg-12" style="margin-top:10px;">
+                                            <form action="/request/passenger_mandate" method="post"  id="contactForm2" >
+                                                <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+
+
+                                                <div class="row o_portal_expense">
+                                                  <div class="row form-group col-lg-12">
+
+                                                        <div t-attf-class="form-group col-xl-6">
+                                                                <label class="col-form-label " for="type">Type</label>
+                                                                <select name="type" t-attf-class="form-control" id="type">
+                                                                        <option t-att-value="course" >course</option>
+                                                                        <option t-att-value="mandate" >mandate</option>
+                                                                        <option t-att-value="work_shop" >work_shop</option>
+                                                                </select>
+                                                            </div>
+
+                                                        <div t-attf-class="form-group col-xl-6">
+                                                                <label class="col-form-label" for="course_type">Course Type</label>
+                                                                <select name="course_type" t-attf-class="form-control" id="course_type">
+                                                                        <option t-att-value="internal" >internal</option>
+                                                                        <option t-att-value="external" >external</option>
+<!--                                                                     <option t-att-value="private" >private</option>-->
+                                                                </select>
+                                                            </div>
+
+                                                        <div t-attf-class="form-group col-xl-6">
+                                                            <label class="col-form-label" for="course_id">Course</label>
+                                                            <select name="course_id" t-attf-class="form-control" id="course_id">
+                                                                <t t-foreach="course_obj or []" t-as="cor">
+                                                                    <option t-att-value="cor.id" >
+                                                                        <t t-esc="cor.name" />
+                                                                    </option>
+                                                                </t>
+                                                            </select>
+                                                        </div>
+
+                                                        <div t-attf-class="form-group col-xl-6">
+                                                            <label class="col-form-label" for="course_place_id">Course PLace</label>
+                                                            <select name="course_place_id" t-attf-class="form-control" id="place_id">
+                                                                <t t-foreach="course_place_obj or []" t-as="place">
+                                                                    <option t-att-value="place.id" >
+                                                                        <t t-esc="place.name" />
+                                                                    </option>
+                                                                </t>
+                                                            </select>
+                                                        </div>
+
+                                                        <div t-attf-class="form-group col-xl-6" id="start_date" style="display:none">
+                                                           <label class="col-form-label" for="start_date">Start Date</label>
+                                                            <input type="date" name="start_date"  id="start_date"  t-attf-class="form-control" required="" />
+                                                        </div>
+
+                                                        <div t-attf-class="form-group col-xl-6" id="end_date" style="display:none">
+                                                           <label class="col-form-label" for="end_date">End Date</label>
+                                                            <input type="date" name="end_date"  id="end_date"  t-attf-class="form-control" required="" />
+                                                      </div>
+
+                                                        <div t-attf-class="form-group col-xl-6">
+                                                            <label class="col-form-label" for="description">Description</label>
+                                                            <textarea rows="4" cols="50" name="description" id="description" t-attf-class="form-control"  ></textarea>
+                                                        </div>
+
+                                                        <div t-attf-class="form-group col-xl-6"  id="error_msg"  style="font-weight:bold;font-size:14px;color:green;">
+                                                </div>
+
+                                                <div class="clearfix" t-attf-class="form-group col-xl-6">
+                                                    <button type="button" class="btn btn-primary float-right" style='margin-right: 30px;' id="submit_mandate_button_id">
+                                                        Create
+                                                    </button>
+
+                                                    <button type="reset" class="btn btn-primary float-right" style='margin-right: 30px;'  >
+                                                        Reset
+                                                    </button>
+
+                                                </div>
+
+
+                                                </div>
+
+
+                                                </div>
+                                            </form>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                    </div>
+                    </div>
+                </div>
+            </t>
+        </t>
+
+        <script type="text/javascript"   src="/ess/static/src/js/jquery.min.js"></script>
+        <script type="text/javascript" src="/ess/static/src/js/passenger_mandane.js"></script>
+        <script type="text/javascript" src="/ess/static/src/js/change_passenger_mandane.js"></script>
+        <script type="text/javascript" src="/ess/static/src/js/click_mandate_submit_button.js"></script>
+
+    </template>
+
+    <template id="ess_view_courses_and_mandate" name="ESS View Passenger Mandate">
+        <t t-call="portal.portal_layout">
+            <t>
+                <div class="row justify-content-between mt-4">
+
+                    <nav class="navbar-default navbar-static-side" role="navigation" style="z-index: 1;position: initial;">
+                        <t t-call="ess.side_menu"/>
+                    </nav>
+
+                    <div class="row col-10 col-md col-lg-10">
+                        <div class="col-lg-12">
+                            <div class="ibox ">
+                                <div class="row iess-title" style="text-align:left;margin-right: 20px;margin-left: 20px;">
+                                    <h3><span>Mandate And Passenger</span></h3>
+                                </div>
+                                <div class="ibox-content">
+                                    <div class="row">
+                                        <div class="col-lg-12" style="margin-top:10px;">
+                                            <form action="/my/courses_and_mandate" method="get">
+                                                <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+                                                <div class="row">
+                                                    <div class="col-lg-12">
+                                                            <div class="ibox-content iess-p20">
+                                                                <div class="body">
+                                                                    <ul class="nav nav-tabs3">
+                                                                        <li class="nav-item"><a class="nav-link show ess-tab-link active" data-toggle="tab" href="#all">All Mandate And Passenger</a></li>
+                                                                        <li class="nav-item"><a class="nav-link ess-tab-link" data-toggle="tab" href="#draft">Draft</a></li>
+                                                                        <li class="nav-item"><a class="nav-link ess-tab-link" data-toggle="tab" href="#dir_manager">Direct Manager Approved</a></li>
+                                                                        <li class="nav-item"><a class="nav-link ess-tab-link" data-toggle="tab" href="#d_manager">Department Manager Approved</a></li>
+                                                                        <li class="nav-item"><a class="nav-link ess-tab-link" data-toggle="tab" href="#hr">Human Resources Manager Approved</a></li>
+                                                                        <li class="nav-item"><a class="nav-link ess-tab-link" data-toggle="tab" href="#accounting">Accounting Manager Approved</a></li>
+
+                                                                        <li class="nav-item"><a class="nav-link ess-tab-link" data-toggle="tab" href="#refused">Refused</a></li>
+                                                                    </ul>
+                                                                    <div class="tab-content">
+                                                                        <div class="tab-pane show active" id="all">
+                                                                            <div class="table-responsive">
+                                                                                <table class="table header-border table-hover table-custom spacing5 ess-table">
+                                                                                    <thead>
+                                                                                        <tr>
+                                                                                            <th>Type</th>
+                                                                                            <th>Course</th>
+                                                                                            <th>Course Type</th>
+                                                                                            <th>Course Place</th>
+                                                                                            <th>Description</th>
+                                                                                            <th>Course Price</th>
+                                                                                            <th>Start Date</th>
+                                                                                            <th>End Date</th>
+                                                                                            <th>Number Of Days</th>
+                                                                                            <th>Total</th>
+                                                                                            <th>Attachment File</th>
+                                                                                            <th>Attachment Ticket</th>
+                                                                                            <th>State</th>
+                                                                                        </tr>
+                                                                                    </thead>
+                                                                                    <tbody t-foreach="courses_and_mandate_obj" t-as="mandate">
+<!--                                                                                        <t t-esc="mandate['course_id']['name']" />-->
+<!--                                                                                        ['name']-->
+                                                                                        <tr>
+                                                                                            <td><div t-esc="mandate['type_desc']"/></td>
+                                                                                            <td><t t-if="mandate['course_id']"><div t-esc="mandate['course_id']['name']"/></t></td>
+                                                                                            <td><div t-esc="mandate['course_type_desc']"/></td>
+                                                                                            <td><t t-if="mandate['course_place_id']"> <div t-esc="mandate['course_place_id']['name']"/></t></td>
+                                                                                            <td><div t-esc="mandate['description']"/></td>
+                                                                                            <td><div t-esc="mandate['price']"/></td>
+                                                                                            <td><div t-esc="mandate['start_date']"/></td>
+                                                                                            <td><div t-esc="mandate['end_date']"/></td>
+                                                                                            <td><div t-esc="mandate['number_of_days']"/></td>
+                                                                                            <td><div t-esc="mandate['total']"/></td>
+<!--                                                                                            <td><a t-attf-href="/web/binary/saveas?model=mandate.passenger&amp;field=attach_file&amp;filename_field='name'&amp;id={{mandate['attach_file']}}">Download</a></td>-->
+                                                                                            <td><a t-if="mandate['attach_file']" t-att-href="'/attachment/download?attachment_id=%i' % mandate['attach_file'].id" class="fa fa-download"/></td>
+                                                                                           <td><a t-if="mandate['attach_file_ticket']" t-att-href="'/attachment/download?attachment_id=%i' % mandate['attach_file_ticket'].id" class="fa fa-download"/></td>
+                                                                                            <td><div t-esc="mandate['state_desc']"/></td>
+                                                                                        </tr>
+                                                                                    </tbody>
+                                                                                </table>
+                                                                            </div>
+                                                                        </div>
+
+                                                                        <div class="tab-pane" id="draft">
+                                                                            <div class="table-responsive">
+                                                                                <table class="table header-border table-hover table-custom spacing5 ess-table">
+                                                                                    <thead>
+                                                                                        <tr>
+                                                                                            <th>Type</th>
+                                                                                            <th>Course</th>
+                                                                                            <th>Course Type</th>
+                                                                                            <th>Course Place</th>
+                                                                                            <th>Description</th>
+                                                                                            <th>Course Price</th>
+                                                                                            <th>Start Date</th>
+                                                                                            <th>End Date</th>
+                                                                                            <th>Number Of Days</th>
+                                                                                            <th>Total</th>
+                                                                                            <th>Attachment File</th>
+                                                                                            <th>Attachment Ticket</th>
+                                                                                            <th>State</th>
+                                                                                        </tr>
+                                                                                    </thead>
+                                                                                    <tbody t-foreach="courses_and_mandate_obj" t-as="mandate">
+                                                                                        <tr t-if="mandate['state'] == 'draft'">
+                                                                                            <td><div t-esc="mandate['type_desc']"/></td>
+                                                                                            <td><t t-if="mandate['course_id']"><div t-esc="mandate['course_id']['name']"/></t></td>
+                                                                                            <td><div t-esc="mandate['course_type_desc']"/></td>
+                                                                                            <td><t t-if="mandate['course_place_id']"><div t-esc="mandate['course_place_id']['name']"/></t></td>
+                                                                                            <td><div t-esc="mandate['description']"/></td>
+                                                                                            <td><div t-esc="mandate['price']"/></td>
+                                                                                            <td><div t-esc="mandate['start_date']"/></td>
+                                                                                            <td><div t-esc="mandate['end_date']"/></td>
+                                                                                            <td><div t-esc="mandate['number_of_days']"/></td>
+                                                                                            <td><div t-esc="mandate['total']"/></td>
+                                                                                            <td><a t-if="mandate['attach_file']" t-att-href="'/attachment/download?attachment_id=%i' % mandate['attach_file'].id" class="fa fa-download"/></td>
+                                                                                           <td><a t-if="mandate['attach_file_ticket']" t-att-href="'/attachment/download?attachment_id=%i' % mandate['attach_file_ticket'].id" class="fa fa-download"/></td>
+                                                                                            <td><div t-esc="mandate['state_desc']"/></td>
+                                                                                        </tr>
+                                                                                    </tbody>
+                                                                                </table>
+                                                                            </div>
+                                                                        </div>
+
+                                                                        <div class="tab-pane" id="dir_manager">
+
+                                                                            <div class="table-responsive">
+                                                                                <table class="table header-border table-hover table-custom spacing5 ess-table">
+                                                                                    <thead>
+                                                                                        <tr>
+                                                                                            <th>Type</th>
+                                                                                            <th>Course</th>
+                                                                                            <th>Course Type</th>
+                                                                                            <th>Course Place</th>
+                                                                                            <th>Description</th>
+                                                                                            <th>Course Price</th>
+                                                                                            <th>Start Date</th>
+                                                                                            <th>End Date</th>
+                                                                                            <th>Number Of Days</th>
+                                                                                            <th>Total</th>
+                                                                                            <th>Attachment File</th>
+                                                                                            <th>Attachment Ticket</th>
+                                                                                            <th>State</th>
+                                                                                        </tr>
+                                                                                    </thead>
+                                                                                    <tbody t-foreach="courses_and_mandate_obj" t-as="mandate">
+                                                                                        <tr t-if="mandate['state'] == 'direct_manager_approve'">
+                                                                                            <td><div t-esc="mandate['type_desc']"/></td>
+                                                                                            <td><t t-if="mandate['course_id']"><div t-esc="mandate['course_id']['name']"/></t></td>
+                                                                                            <td><div t-esc="mandate['course_type_desc']"/></td>
+                                                                                            <td><div t-esc="mandate['course_place_id']['name']"/></td>
+                                                                                            <td><div t-esc="mandate['description']"/></td>
+                                                                                            <td><div t-esc="mandate['price']"/></td>
+                                                                                            <td><div t-esc="mandate['start_date']"/></td>
+                                                                                            <td><div t-esc="mandate['end_date']"/></td>
+                                                                                            <td><div t-esc="mandate['number_of_days']"/></td>
+                                                                                            <td><div t-esc="mandate['total']"/></td>
+                                                                                            <td><a t-if="mandate['attach_file']" t-att-href="'/attachment/download?attachment_id=%i' % mandate['attach_file'].id" class="fa fa-download"/></td>
+                                                                                           <td><a t-if="mandate['attach_file_ticket']" t-att-href="'/attachment/download?attachment_id=%i' % mandate['attach_file_ticket'].id" class="fa fa-download"/></td>
+                                                                                            <td><div t-esc="mandate['state_desc']"/></td>
+                                                                                        </tr>
+                                                                                    </tbody>
+                                                                                </table>
+                                                                            </div>
+                                                                        </div>
+
+                                                                        <div class="tab-pane" id="d_manager">
+
+                                                                            <div class="table-responsive">
+                                                                                <table class="table header-border table-hover table-custom spacing5 ess-table">
+                                                                                    <thead>
+                                                                                        <tr>
+                                                                                            <th>Type</th>
+                                                                                            <th>Course</th>
+                                                                                            <th>Course Type</th>
+                                                                                            <th>Course Place</th>
+                                                                                            <th>Description</th>
+                                                                                            <th>Course Price</th>
+                                                                                            <th>Start Date</th>
+                                                                                            <th>End Date</th>
+                                                                                            <th>Number Of Days</th>
+                                                                                            <th>Total</th>
+                                                                                            <th>Attachment File</th>
+                                                                                            <th>Attachment Ticket</th>
+                                                                                            <th>State</th>
+                                                                                        </tr>
+                                                                                    </thead>
+                                                                                    <tbody t-foreach="courses_and_mandate_obj" t-as="mandate">
+                                                                                        <tr t-if="mandate['state'] == 'department_manager_approve'">
+                                                                                            <td><div t-esc="mandate['type_desc']"/></td>
+                                                                                            <td><t t-if="mandate['course_id']"><div t-esc="mandate['course_id']['name']"/></t></td>
+                                                                                            <td><div t-esc="mandate['course_type_desc']"/></td>
+                                                                                            <td><div t-esc="mandate['course_place_id']['name']"/></td>
+                                                                                            <td><div t-esc="mandate['description']"/></td>
+                                                                                            <td><div t-esc="mandate['price']"/></td>
+                                                                                            <td><div t-esc="mandate['start_date']"/></td>
+                                                                                            <td><div t-esc="mandate['end_date']"/></td>
+                                                                                            <td><div t-esc="mandate['number_of_days']"/></td>
+                                                                                            <td><div t-esc="mandate['total']"/></td>
+                                                                                            <td><a t-if="mandate['attach_file']" t-att-href="'/attachment/download?attachment_id=%i' % mandate['attach_file'].id" class="fa fa-download"/></td>
+                                                                                           <td><a t-if="mandate['attach_file_ticket']" t-att-href="'/attachment/download?attachment_id=%i' % mandate['attach_file_ticket'].id" class="fa fa-download"/></td>
+                                                                                            <td><div t-esc="mandate['state_desc']"/></td>
+                                                                                        </tr>
+                                                                                    </tbody>
+                                                                                </table>
+                                                                            </div>
+                                                                        </div>
+
+                                                                        <div class="tab-pane" id="hr">
+
+                                                                            <div class="table-responsive">
+                                                                                <table class="table header-border table-hover table-custom spacing5 ess-table">
+                                                                                    <thead>
+                                                                                        <tr>
+                                                                                            <th>Type</th>
+                                                                                            <th>Course</th>
+                                                                                            <th>Course Type</th>
+                                                                                            <th>Course Place</th>
+                                                                                            <th>Description</th>
+                                                                                            <th>Course Price</th>
+                                                                                            <th>Start Date</th>
+                                                                                            <th>End Date</th>
+                                                                                            <th>Number Of Days</th>
+                                                                                            <th>Total</th>
+                                                                                            <th>State</th>
+                                                                                            <th>Attachment File</th>
+                                                                                            <th>Attachment Ticket</th>
+                                                                                        </tr>
+                                                                                    </thead>
+                                                                                    <tbody t-foreach="courses_and_mandate_obj" t-as="mandate">
+                                                                                        <tr t-if="mandate['state'] == 'accounting_approve'">
+                                                                                            <td><div t-esc="mandate['type_desc']"/></td>
+                                                                                            <td><t t-if="mandate['course_id']"><div t-esc="mandate['course_id']['name']"/></t></td>
+                                                                                            <td><div t-esc="mandate['course_type_desc']"/></td>
+                                                                                            <td><div t-esc="mandate['course_place_id']['name']"/></td>
+                                                                                            <td><div t-esc="mandate['description']"/></td>
+                                                                                            <td><div t-esc="mandate['price']"/></td>
+                                                                                            <td><div t-esc="mandate['start_date']"/></td>
+                                                                                            <td><div t-esc="mandate['end_date']"/></td>
+                                                                                            <td><div t-esc="mandate['number_of_days']"/></td>
+                                                                                            <td><div t-esc="mandate['total']"/></td>
+                                                                                            <td><div t-esc="mandate['state_desc']"/></td>
+                                                                                           <td><a t-if="mandate['attach_file']" t-att-href="'/attachment/download?attachment_id=%i' % mandate['attach_file'].id" class="fa fa-download"/></td>
+                                                                                           <td><a t-if="mandate['attach_file_ticket']" t-att-href="'/attachment/download?attachment_id=%i' % mandate['attach_file_ticket'].id" class="fa fa-download"/></td>
+
+                                                                                        </tr>
+                                                                                    </tbody>
+                                                                                </table>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="tab-pane" id="accounting">
+
+                                                                            <div class="table-responsive">
+                                                                                <table class="table header-border table-hover table-custom spacing5 ess-table">
+                                                                                    <thead>
+                                                                                        <tr>
+                                                                                            <th>Type</th>
+                                                                                            <th>Course</th>
+                                                                                            <th>Course Type</th>
+                                                                                            <th>Course Place</th>
+                                                                                            <th>Description</th>
+                                                                                            <th>Course Price</th>
+                                                                                            <th>Start Date</th>
+                                                                                            <th>End Date</th>
+                                                                                            <th>Number Of Days</th>
+                                                                                            <th>Total</th>
+                                                                                            <th>Attachment File</th>
+                                                                                            <th>Attachment Ticket</th>
+                                                                                            <th>State</th>
+                                                                                        </tr>
+                                                                                    </thead>
+                                                                                    <tbody t-foreach="courses_and_mandate_obj" t-as="mandate">
+                                                                                        <tr t-if="mandate['state'] == 'accounting_approve'">
+                                                                                            <td><div t-esc="mandate['type_desc']"/></td>
+                                                                                            <td><t t-if="mandate['course_id']"><div t-esc="mandate['course_id']['name']"/></t></td>
+                                                                                            <td><div t-esc="mandate['course_type_desc']"/></td>
+                                                                                            <td><div t-esc="mandate['course_place_id']['name']"/></td>
+                                                                                            <td><div t-esc="mandate['description']"/></td>
+                                                                                            <td><div t-esc="mandate['price']"/></td>
+                                                                                            <td><div t-esc="mandate['start_date']"/></td>
+                                                                                            <td><div t-esc="mandate['end_date']"/></td>
+                                                                                            <td><div t-esc="mandate['number_of_days']"/></td>
+                                                                                            <td><div t-esc="mandate['total']"/></td>
+                                                                                            <td><a t-if="mandate['attach_file']" t-att-href="'/attachment/download?attachment_id=%i' % mandate['attach_file'].id" class="fa fa-download"/></td>
+                                                                                            <td><a t-if="mandate['attach_file_ticket']" t-att-href="'/attachment/download?attachment_id=%i' % mandate['attach_file_ticket'].id" class="fa fa-download"/></td>
+                                                                                            <td><div t-esc="mandate['state_desc']"/></td>
+                                                                                        </tr>
+                                                                                    </tbody>
+                                                                                </table>
+                                                                            </div>
+                                                                        </div>
+
+                                                                        <div class="tab-pane" id="refused">
+
+                                                                            <div class="table-responsive">
+                                                                                <table class="table header-border table-hover table-custom spacing5 ess-table">
+                                                                                    <thead>
+                                                                                        <tr>
+                                                                                            <th>Type</th>
+                                                                                            <th>Course</th>
+                                                                                            <th>Course Type</th>
+                                                                                            <th>Course Place</th>
+                                                                                            <th>Description</th>
+                                                                                            <th>Course Price</th>
+                                                                                            <th>Start Date</th>
+                                                                                            <th>End Date</th>
+                                                                                            <th>Number Of Days</th>
+                                                                                            <th>Total</th>
+                                                                                            <th>Attachment File</th>
+                                                                                            <th>Attachment Ticket</th>
+                                                                                            <th>State</th>
+                                                                                        </tr>
+                                                                                    </thead>
+                                                                                    <tbody t-foreach="courses_and_mandate_obj" t-as="mandate">
+                                                                                        <tr t-if="mandate['state'] == 'refuse'">
+                                                                                            <td><div t-esc="mandate['type_desc']"/></td>
+                                                                                            <td><t t-if="mandate['course_id']"><div t-esc="mandate['course_id']['name']"/></t></td>
+                                                                                            <td><div t-esc="mandate['course_type_desc']"/></td>
+                                                                                            <td><div t-esc="mandate['course_place_id']['name']"/></td>
+                                                                                            <td><div t-esc="mandate['description']"/></td>
+                                                                                            <td><div t-esc="mandate['price']"/></td>
+                                                                                            <td><div t-esc="mandate['start_date']"/></td>
+                                                                                            <td><div t-esc="mandate['end_date']"/></td>
+                                                                                            <td><div t-esc="mandate['number_of_days']"/></td>
+                                                                                            <td><div t-esc="mandate['total']"/></td>
+                                                                                            <td><a t-if="mandate['attach_file']" t-att-href="'/attachment/download?attachment_id=%i' % mandate['attach_file'].id" class="fa fa-download"/></td>
+                                                                                           <td><a t-if="mandate['attach_file_ticket']" t-att-href="'/attachment/download?attachment_id=%i' % mandate['attach_file_ticket'].id" class="fa fa-download"/></td>
+                                                                                            <td><div t-esc="mandate['state_desc']"/></td>
+                                                                                        </tr>
+                                                                                    </tbody>
+                                                                                </table>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+
+                                                            </div>
+
+                                                        </div>
+
+
+                                                </div>
+                                            </form>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                    </div>
+                    </div>
+                </div>
+            </t>
+        </t>
+    </template>
+
+
+    <template id="ess_passenger_mandate_private" name="ESS Passenger Mandate private">
+        <t t-call="portal.portal_layout">
+            <t>
+                <div class="row justify-content-between mt-4">
+
+                    <nav class="navbar-default navbar-static-side" role="navigation" style="z-index: 1;position: initial;">
+                        <t t-call="ess.side_menu"/>
+                    </nav>
+
+
+
+                    <div class="row col-10 col-md col-lg-10">
+
+
+                        <div class="col-lg-12">
+                            <div class="ibox ">
+                                <div class="row iess-title" style="text-align:left;margin-right: 20px;margin-left: 20px;">
+                                    <h3><span>Mandate And Passenger Private</span></h3>
+                                </div>
+                                <div class="ibox-content">
+                                    <div class="row col-lg-12">
+
+                                        <div class="col-lg-12" style="margin-top:10px;">
+                                            <form action="/request/passenger_mandate_private" method="post"  id="contactForm1" enctype="multipart/form-data" >
+                                                <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+
+
+                                                <div class="row o_portal_expense">
+                                                  <div class="row form-group col-lg-12">
+                                                         <div t-attf-class="form-group col-xl-6" >
+                                                            <label class="col-form-label" for="name">Name</label>
+                                                                <input type="text" name="name"  t-attf-class="form-control" required="" />
+                                                         </div>
+
+<!--                                                            <div t-attf-class="form-group col-xl-6">-->
+<!--                                                                <label class="col-form-label " for="type">Type</label>-->
+<!--                                                                <select name="type" t-attf-class="form-control">-->
+<!--                                                                        <option t-att-value="course" >course</option>-->
+<!--                                                                        <option t-att-value="mandate" >mandate</option>-->
+<!--                                                                        <option t-att-value="work_shop" >work_shop</option>-->
+<!--                                                                </select>-->
+<!--                                                            </div>-->
+
+
+                                                            <div t-attf-class="form-group col-xl-6">
+                                                                <label class="col-form-label" for="type">Course Type</label>
+                                                                <select name="type" t-attf-class="form-control" id="course_type">
+                                                                        <option t-att-value="internal" >internal</option>
+                                                                        <option t-att-value="external" >external</option>
+<!--                                                                     <option t-att-value="private" >private</option>-->
+                                                                </select>
+                                                            </div>
+
+                                                         <div t-attf-class="form-group col-xl-6" >
+                                                            <label class="col-form-label" for="name">price</label>
+                                                                <input type="number" name="price"  t-attf-class="form-control" required="" />
+                                                         </div>
+
+
+<!--                                                       <div t-attf-class="form-group col-xl-6">-->
+<!--                                                            <label class="col-form-label" for="course_id">Course</label>-->
+<!--                                                            <select name="course_id" t-attf-class="form-control">-->
+<!--                                                                <t t-foreach="course_obj or []" t-as="cor">-->
+<!--                                                                    <option t-att-value="cor.id" >-->
+<!--                                                                        <t t-esc="cor.name" />-->
+<!--                                                                    </option>-->
+<!--                                                                </t>-->
+<!--                                                            </select>-->
+<!--                                                        </div>-->
+                                                      <div t-attf-class="form-group col-xl-6">
+                                                            <label class="col-form-label" for="course_place_id">Course PLace</label>
+                                                            <select name="course_place_id" t-attf-class="form-control">
+                                                                <t t-foreach="course_place_obj or []" t-as="place">
+                                                                    <option t-att-value="place.id" >
+                                                                        <t t-esc="place.name" />
+                                                                    </option>
+                                                                </t>
+                                                            </select>
+                                                        </div>
+
+
+                                                             <div t-attf-class="form-group col-xl-6" id="start_date"  >
+                                                            <label class="col-form-label" for="start_date">Start Date</label>
+                                                                <input type="date" name="start_date"  id="start_date_private"  t-attf-class="form-control" required="" />
+                                                                              </div>
+
+                                                              <div t-attf-class="form-group col-xl-6" id="end_date"  >
+                                                            <label class="col-form-label" for="end_date">End Date</label>
+                                                                <input type="date" name="end_date"  id="end_date_private"  t-attf-class="form-control" required="" />
+                                                          </div>
+
+
+                                                            <div t-attf-class="form-group col-xl-6" >
+                                                                <label class="col-form-label" for="number_of_days">No of Days</label>
+                                                                    <input type="number" name="number_of_days"  id="number_of_days" t-attf-class="form-control" required="" />
+                                                             </div>
+
+
+                                                                <div t-attf-class="form-group  col-xl-6">
+                                                                    <label class="col-form-label" for="doc_attachment_id">Attachment</label>
+                                                                    <input class="attachment" type="file" name="doc_attachment_id" value="" required=""/>
+                                                                </div>
+
+                                                        <div t-attf-class="form-group col-xl-6">
+                                                                <label class="col-form-label" for="description">Description</label>
+                                                                <textarea rows="4" cols="50" name="description" t-attf-class="form-control"  ></textarea>
+                                                        </div>
+
+                               <div t-attf-class="form-group col-xl-6"  id="error_msg"  style="font-weight:bold;font-size:14px;color:green;">
+                                  </div>
+
+<!--                               <input t-attf-class="form-group col-xl-6"   name="msg" id="msg" style="font-weight:bold;font-size:14px;color:green;">-->
+<!--                               </input>-->
+
+
+                            <div class="clearfix" t-attf-class="form-group col-xl-6">
+                                <button type="submit" class="btn btn-primary float-right" style='margin-right: 30px;' id="submit_button_id">
+                                    Create
+                                </button>
+
+                                <button type="reset" class="btn btn-primary float-right" style='margin-right: 30px;'  >
+                                    Reset
+                                </button>
+
+                            </div>
+
+
+</div>
+
+
+                                                </div>
+                                            </form>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                    </div>
+                    </div>
+                </div>
+            </t>
+        </t>
+
+<!--             <link rel="stylesheet" type="text/scss" href="/ess/static/src/css/style2.css"/>-->
+           <script type="text/javascript"   src="/ess/static/src/js/jquery.min.js"></script>
+   <script type="text/javascript" src="/ess/static/src/js/passenger_mandane.js"></script>
+    </template>
+
+
+    <template id="ess_all_notification" name="ESS View All Notification">
+        <t t-call="portal.portal_layout">
+            <t>
+                <div class="row justify-content-between mt-4">
+
+                    <nav class="navbar-default navbar-static-side" role="navigation" style="z-index: 1;position: initial;">
+                        <t t-call="ess.side_menu"/>
+                    </nav>
+
+                    <div class="row col-10 col-md col-lg-10">
+                        <div class="col-lg-12">
+                            <div class="ibox ">
+                                <div class="row iess-title" style="text-align:left;margin-right: 20px;margin-left: 20px;">
+                                    <h3><span>All Notifications</span></h3>
+                                </div>
+                                <div class="ibox-content">
+                                    <div class="row">
+                                        <div class="col-lg-12" style="margin-top:10px;">
+                                            <form action="/all/notification" method="get">
+                                                <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+
+                                                <div class="row o_portal_expense">
+                                                    <div class="col-lg-12">
+                                                            <div class="ibox-content iess-p20">
+                                                                <div class="body">
+                                                                    <ul class="nav nav-tabs3">
+                                                                        <li class="nav-item"><a class="nav-link show ess-tab-link active" data-toggle="tab" href="#all">All Notifications</a></li>
+                                                                        <li class="nav-item"><a class="nav-link ess-tab-link" data-toggle="tab" href="#unread">Unread Notifications</a></li>
+                                                                        <li class="nav-item"><a class="nav-link ess-tab-link" data-toggle="tab" href="#read">Read Notifications</a></li>
+                                                                    </ul>
+                                                                    <div class="tab-content">
+                                                                        <div class="tab-pane show active" id="all">
+                                                                            <div class="table-responsive">
+                                                                                <table class="table header-border table-hover table-custom spacing5 ess-table">
+                                                                                    <thead>
+                                                                                        <tr>
+                                                                                            <th>Title</th>
+                                                                                            <th>Notification Date</th>
+                                                                                        </tr>
+                                                                                    </thead>
+                                                                                    <tbody t-foreach="notification_obj" t-as="notify">
+                                                                                        <tr>
+                                                                                            <td><div t-esc="notify['notification_MSG']"/></td>
+                                                                                            <td><div t-esc="notify['date_start']"/></td>
+                                                                                        </tr>
+                                                                                    </tbody>
+                                                                                </table>
+                                                                            </div>
+                                                                        </div>
+
+                                                                        <div class="tab-pane" id="unread">
+                                                                            <div class="table-responsive">
+                                                                                <table class="table header-border table-hover table-custom spacing5 ess-table">
+                                                                                    <thead>
+                                                                                        <tr>
+                                                                                            <th>Title</th>
+                                                                                            <th>Notification Date</th>
+                                                                                        </tr>
+                                                                                    </thead>
+                                                                                    <tbody t-foreach="notification_obj" t-as="notify">
+                                                                                        <tr t-if="notify['is_read'] == False">
+                                                                                            <td><div t-esc="notify['notification_MSG']"/></td>
+                                                                                            <td><div t-esc="notify['date_start']"/></td>
+                                                                                        </tr>
+                                                                                    </tbody>
+                                                                                </table>
+                                                                            </div>
+                                                                        </div>
+
+                                                                        <div class="tab-pane" id="read">
+                                                                            <div class="table-responsive">
+                                                                                <table class="table header-border table-hover table-custom spacing5 ess-table">
+                                                                                    <thead>
+                                                                                        <tr>
+                                                                                            <th>Title</th>
+                                                                                            <th>Notification Date</th>
+                                                                                        </tr>
+                                                                                    </thead>
+                                                                                    <tbody t-foreach="notification_obj" t-as="notify">
+                                                                                        <tr t-if="notify['is_read']">
+                                                                                            <td><div t-esc="notify['notification_MSG']"/></td>
+                                                                                            <td><div t-esc="notify['date_start']"/></td>
+                                                                                        </tr>
+                                                                                    </tbody>
+                                                                                </table>
+                                                                            </div>
+                                                                        </div>
+
+                                                                    </div>
+                                                                </div>
+
+                                                            </div>
+
+                                                        </div>
+
+
+                                                </div>
+                                            </form>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                    </div>
+                    </div>
+                </div>
+            </t>
+        </t>
+    </template>
+
+
+
+</odoo>

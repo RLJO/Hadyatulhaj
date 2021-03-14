@@ -1,0 +1,1167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    
+    <template id="my_dashboard_link" name="Link to Dashboard portal" inherit_id="portal.frontend_layout">
+        <xpath expr="//a[@id='o_logout']" position="before">
+            <a href="/my/dashboard" role="menuitem" class="dropdown-item">My Dashboard</a>
+        </xpath>
+    </template>
+
+    <template id="ess_dashboard" name="ESS Dashboard">
+        <t t-call="portal.portal_layout">
+            <div id="wrap" class='o_portal_wrap'>
+                <div class="container mb64" >
+                    <t >
+                        <div class="row justify-content-between mt-4">
+
+                            <nav class="navbar-default navbar-static-side" role="navigation" style="z-index: 1;position: initial;">
+								<t t-call="ess.side_menu"/>
+							</nav>
+
+
+                            <div class="row col-10 col-md col-lg-10">
+                                 <t t-call="ess.employee_notification"/>
+<!-- t-if="announcement_list" -->
+                                 <t t-if="announcement_list" t-call="ess.employee_announcement"/>
+                                 <t t-if="announcement_list_public" t-call="ess.employee_announcement_public"/>
+                                 <t t-if="department_announcement_list" t-call="ess.employee_department_announcement"/>
+                                <t t-call="ess.employee_organization"/>
+                                <t t-if="leave_list" t-call="ess.employee_leaves"/>
+                                <t t-if="leave_allocation_list" t-call="ess.employee_leave_allocation"/>
+                                <t t-if="douc_obj" t-call="ess.employee_document"/>
+                                <t t-if="appraisal_list" t-call="ess.employee_appraisal"/>
+                                <t t-if="attendance_list" t-call="ess.employee_attendance"/>
+<!--                                <t t-if="announcement_list" t-call="ess.employee_announcement"/>-->
+
+                                <t t-if="douc_exp_obj" t-call="ess.employee_important_date"/>
+                                <t t-if="asset_assignation_obj" t-call="ess.employee_asset_assignation"/>
+                                <t t-if="custody_obj" t-call="ess.employee_custody"/>
+                                <t t-if="mandate_obj" t-call="ess.employee_mandate"/>
+
+
+
+                            </div>
+
+
+                        </div>
+                    </t>
+                    
+                </div>
+            </div>
+        </t>
+    </template>
+
+    <template id="side_menu" name="Employee Data">
+        <form action="/my/information" id='checkMyForm' method="post" enctype="multipart/form-data">
+            <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>                   
+		    <div class="sidebar-collapse " id="side_menu_class" style="background-color: #2f4050;">
+                <ul class="nav metismenu" id="side-menu">
+                    <li class="nav-header">
+                        <div class="dropdown profile-element">
+
+<!--                             <img class="mb-3 " t-att-src="website.image_url(partner, 'image_1920')" style="object-fit: cover; border-radius: 50%; width: 128px; height: 128px;"/>-->
+                            <img class="mb-3 emp_img oe_avatar"
+                                 t-att-src="website.image_url(partner, 'image_1920')"
+                                 style="object-fit: cover; border-radius: 50%; width: 150px; height: 150px;  margin-left: auto;    margin-right: auto; "/>
+
+<!--							&lt;!&ndash; <span t-field="employee.image_1920"-->
+<!--                                  t-options='{"class":"oe_avatar", "widget": "image", "style": "object-fit: cover; border-radius: 50%; width: 100%; height: 170px;"}'/> &ndash;&gt;-->
+<!--                            <a data-toggle="dropdown" class="dropdown-toggle" href="#">-->
+<!--                                <span class="block m-t-xs font-bold" t-field="employee.name" />-->
+<!--                                <span class="text-muted text-xs block" style="color: #8095a8 !important;" t-field="employee.department_id"> <b class="caret"></b> </span>-->
+<!--                            </a>-->
+
+
+
+
+<!--                            <ul class="dropdown-menu animated fadeInRight m-t-xs">-->
+<!--                                <li>-->
+<!--                                    <input type="file" class="d-none input-edit-pic" name="image_1920" accept="image/*"/>-->
+
+<!--                                    <button onclick="form.submit()" type="submit" class="d-none btn btn-primary upload-btn float-right" style='margin-right: 30px;'>-->
+<!--                                        Confirm-->
+<!--                                    </button>-->
+<!--                                    <a class="dropdown-item edit-pic" href="#">Change Picture -->
+<!--                                        -->
+<!--                                    </a>-->
+<!--                                </li>-->
+<!--                                <li><a class="dropdown-item" href="#">Update Basic Info</a></li>-->
+<!--                                <li><a class="dropdown-item" href="/my/myProfile">View Profile</a></li>-->
+<!--                                <li><a class="dropdown-item" href="/my/view_document">View Personal Docs</a></li>-->
+<!--                                <li><a class="dropdown-item" href="/my/myEducational">View Educational Info</a></li>-->
+<!--                                <li><a class="dropdown-item" href="/my/myExperians">View My Experians</a></li>-->
+<!--                                <li><a class="dropdown-item" href="/my/myskills">View My Skills</a></li>-->
+<!--                                <li><a class="dropdown-item" href="/my/contracts">View Contract History</a></li>-->
+<!--                                <li class="dropdown-divider"></li>-->
+<!--                                &lt;!&ndash; <li><a class="dropdown-item" href="login.html">Logout</a></li> &ndash;&gt;-->
+<!--                            </ul>-->
+
+
+
+							<!-- <div class="contact-box-footer">
+								<div class="m-t-xs btn-group">
+									<a href=""  class="btn btn-xs btn-white"><i class="fa fa-phone"></i> Call </a>
+									<a href=""  class="btn btn-xs btn-white"><i class="fa fa-envelope"></i> Email</a>
+									<a href=""  class="btn btn-xs btn-white"><i class="fa fa-user-plus"></i> Follow</a>
+								</div>
+							</div> -->
+							
+							<!-- <ul class="list-unstyled m-t-md" style="color:#fff;">
+								<li>
+									<span class="fa fa-envelope m-r-xs"></span>
+									<label t-field="employee.work_email"/>
+								</li>
+								<li>
+									<span class="fa fa-phone m-r-xs"></span>
+									<label t-field="employee.work_phone"/>
+								</li>
+							</ul> -->
+                        </div>
+                        <div class="logo-element">
+                            TeleNoc
+                        </div>
+                    </li>
+					<li style="" class="sid_dashboard"><a href="/my/dashboard"><i class="fa fa-th-large"></i> <span class="nav-label">Home</span></a></li>
+					
+					<li t-if="holidays">
+                        <a href="#"><i class="fa fa-diamond"></i> <span class="nav-label">All Notifications</span> <span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li><a href="/all/notification">All Notifications</a></li>
+                        </ul>
+                    </li>
+
+
+                    <li t-if="holidays">
+                        <a href="#"><i class="fa fa-diamond"></i> <span class="nav-label">Leaves</span> <span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+
+                            <li><a href="/my/leaves">Apply Leave</a></li>
+<!--                            <li><a href="/my/short_leaves">Short Leave Request</a></li>-->
+<!--                            <li><a href="/my/allocation">Leave Allocation Request</a></li>-->
+                            <li><a href="/my/track_leaves">Track Leaves Requests</a></li>
+                            <li><a href="/my/leaves_balance">Leave Balance Summary</a></li>
+                            <li><a href="/my/history_leaves">View Leaves History</a></li>
+                        </ul>
+                    </li>
+
+                    <li t-if="loan">
+                        <a href="#"><i class="fa fa-handshake-o"></i> <span class="nav-label">Loans</span> <span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li class="sid_req_loan"><a href="/my/loan">Request Loan</a></li>
+                            <li><a href="/my/track_loan">Track Loan Requests</a></li>
+                            <li><a href="/my/installments_loan">Loan Installments Summary</a></li>
+                            <li><a href="/my/loan_report">Loans Report</a></li>
+                        </ul>
+                    </li>
+
+                    <li t-if="documents">
+<!--                    <li t-if="documents55">-->
+                        <a href="#"><i class="fa fa-file-text-o"></i> <span class="nav-label">Personal Docs</span> <span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li><a href="/my/document">Upload Document</a></li>
+                            <li><a href="/my/view_document">View Documents</a></li>
+                        </ul>
+                    </li>
+
+                    <li t-if="company_documents">
+<!--                    <li t-if="company_documents55">-->
+                        <a href="#"><i class="fa fa-file-text-o"></i> <span class="nav-label">Company Docs</span> <span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li><a href="/my/view_my_company_document">Ownered</a></li>
+                            <li><a href="/my/view_my_company_requested_document">Requested</a></li>
+                            <li><a href="/my/document_my_request">My Requests</a></li>
+                        </ul>
+                    </li>
+
+<!--                    <li t-if="True">-->
+                    <li t-if="True">
+                        <a href="#"><i class="fa fa-th-large"></i> <span class="nav-label">Atteandance</span> <span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li><a href="/my/attendance">Attendance</a></li>
+                            <li><a href="/my/dayattendance">Daily Attendance</a></li>
+<!--                            <li><a href="#">Time Off Report</a></li>-->
+<!--                            <li><a href="#">Time Off Adjustment</a></li>-->
+                        </ul>
+                    </li>
+
+                    <li t-if="payslip">
+<!--                    <li t-if="payslip">-->
+                        <a href="#"><i class="fa fa-th-large"></i> <span class="nav-label">Payroll</span> <span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li><a href="/my/payslip">My Payslips</a></li>
+                            <li t-if="hr_payslip_correction"><a href="/my/payslip_correction_request">Payslip Correction Request</a></li>
+                            <li t-if="hr_payslip_correction"><a href="/my/payslip_correction_track">Track Payslip Corrections</a></li>
+                            <li><a href="/my/eos">EOS Calculator</a></li>
+                            <li><a href="/my/statement">Financial Report</a></li>
+                            <li><a href="#">Financial Correction Request</a></li>
+                            <li><a href="#">Track Financial Corrections</a></li>
+                        </ul>
+                    </li>
+
+<!--                    <li t-if="training">-->
+                    <li t-if="training55">
+                        <a href="#"><i class="fa fa-th-large"></i> <span class="nav-label">Training Management</span> <span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li><a href="/my/training">Training Request</a></li>
+                            <li><a href="/my/track_training#">Track My Requests</a></li>
+                            <li><a href="/my/my_courses_training">My Courses</a></li>
+                        </ul>
+                    </li>
+
+                    <li t-if="True">
+<!--                    <li t-if="True">-->
+                        <a href="#"><i class="fa fa-th-large"></i> <span class="nav-label">Appraisal</span> <span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li><a href="/my/request_appraisal">Request for Appraisal</a></li>
+                            <li><a href="/my/track_appraisal">Track Appraisal Requests</a></li>
+                            <li><a href="/my/appraisal">Appraisal Report</a></li>
+                        </ul>
+                    </li>
+
+<!--                    <li t-if="letter">-->
+                    <li t-if="letter55">
+                        <a href="#"><i class="fa fa-pencil-square-o"></i> <span class="nav-label">Letters &amp; Certificates</span> <span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li><a href="/my/letter">Request a Document</a></li>
+                            <li><a href="/my/track_letter">Track Document Requests</a></li>
+                            <li><a href="#">Manage Documents</a></li>
+                        </ul>
+                    </li>
+
+<!--                    <li t-if="True">-->
+                    <li t-if="True55">
+                        <a href="#"><i class="fa fa-pencil-square-o"></i> <span class="nav-label">Intranet Requests &amp; Communication</span> <span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li><a href="#">Create Ticket</a></li>
+                            <li><a href="#">Track My Tickets</a></li>
+                            <li><a href="#">Followup Requests</a></li>
+                        </ul>
+                    </li>
+
+<!--                    <li t-if="av_project">-->
+                    <li t-if="av_project55">
+                        <a href="#"><i class="fa fa-pencil-square-o"></i> <span class="nav-label">Tasks &amp; Projects</span> <span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li><a href="/my/view_tasks">My Tasks</a></li>
+                            <li><a href="#">Manage Taskss</a></li>
+                            <li><a href="#">Team Tasks</a></li>
+                            <li><a href="#">Notes</a></li>
+                            <li><a href="#">Calendar</a></li>
+                        </ul>
+                    </li>
+
+<!--                    <li t-if="pettycash">-->
+                    <li t-if="pettycash55">
+                        <a href="#"><i class="fa fa-fa-money"></i> <span class="nav-label">Petty Cash</span> <span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li><a href="/my/pettycash">Request Petty Cash</a></li>
+                            <li><a href="track_pettycash">Track Petty Requests</a></li>
+                            <li><a href="#">Petty Cash Report</a></li>
+                            <li><a href="#">Petty Ledger Report</a></li>
+                        </ul>
+                    </li>
+
+                    <li t-if="expense">
+                        <a href="#"><i class="fa fa-money"></i> <span class="nav-label">Expenses</span> <span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li><a href="/my/expense">Register Expense</a></li>
+                            <li><a href="/my/track_expense">Track Expense Approvals</a></li>
+                        </ul>
+                    </li>
+<!--magdy-->
+                    <li t-if="assets_assignation">
+                        <a href="#"><i class="fa fa-money"></i> <span class="nav-label">Asset Assignation</span> <span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li><a href="/request/asset">Request Asset</a></li>
+                            <li><a href="/my/asset_assignation">Asset Assigned To Me</a></li>
+                        </ul>
+                    </li>
+
+                    <li t-if="custody">
+                        <a href="#"><i class="fa fa-money"></i> <span class="nav-label">Custody</span> <span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li><a href="/custody/request">Custody Request</a></li>
+                            <li><a href="/my/custody/in_progress">Custody In Progress</a></li>
+                            <li><a href="/my/custody">My Custody</a></li>
+                        </ul>
+                    </li>
+
+                    <li t-if="mandate1">
+                        <a href="#"><i class="fa fa-money"></i> <span class="nav-label">Passenger And Mandate</span> <span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li><a href="/request/passenger_mandate">Passenger And Mandate</a></li>
+                            <li><a href="/request/passenger_mandate_private">Create Private Course</a></li>
+                            <li><a href="/my/courses_and_mandate">My Passenger And Mandate</a></li>
+                        </ul>
+                    </li>
+
+                    <li t-if="announcement">
+                        <a href="#"><i class="fa fa-diamond"></i> <span class="nav-label">Announcements &amp; Events</span> <span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+
+                            <li><a href="/my/announcement">My Annoncement</a></li>
+
+                        </ul>
+                    </li>
+
+
+
+<!--magdy-->
+<!--                    <li><a href="/my/network"><i class="fa fa-th-large"></i> <span class="nav-label">Employees Network Directory</span></a></li>-->
+
+
+                </ul>
+            </div>
+     </form>
+    </template>
+    
+    <template id="employee_data" name="Employee Data">
+        <div class="col-4" style="margin-top: 50px;">
+            <h4 style="text-align: center;">Basic Info</h4>
+            <hr class="mt-1 mb-0"/>
+            <div class="card" style="width: 100%;">
+                <div class="container_table">
+                    <table class="table">
+                        <tbody class="tbody">
+                            <tr class="tr">
+                                <td class="td"><i class="fa fa-user-md"/></td>
+                                <td class="td"><div t-field="employee.name"/></td>
+                            </tr>
+                            <tr class="tr">
+                                <td class="td"><i class="fa fa-phone"/></td>
+                                <td class="td"><div t-field="employee.work_phone"/></td>
+                            </tr>
+                            <tr class="tr">
+                                <td class="td"><i class="fa fa-envelope"/></td>
+                                <td class="td"><div t-field="employee.work_email"/></td>
+                            </tr>
+                            <tr class="tr">
+                                <td class="td"><i class="fa fa-building"/></td>
+                                <td class="td"><div t-field="employee.department_id"/></td>
+                            </tr>
+                            <tr class="tr">
+                                <td class="td"><i class="fa fa-cogs"/></td>
+                                <td class="td"><div t-field="employee.job_id"/></td>
+                            </tr>
+                            <tr class="tr">
+                                <td class="td"><i class="fa fa-suitcase"/></td>
+                                <td class="td"><div t-field="employee.work_location"/></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </template>
+
+    <template id="employee_document">
+
+        <div class="col-lg-4">
+
+			<div class="ibox carddash">
+
+                <div class="row iess-title">
+					<h3><span>My Documents</span></h3>
+				</div>
+				<div class="ibox-content iess-p20 ">
+                    <div>
+                    <div class="table-responsive">
+                        <table class="table header-border table-hover table-custom spacing5 ess-table">
+                            <thead>
+                                <tr>
+                                    <th>Name</th>
+                                    <th><a class="fa fa-download"/></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr t-if="dou.doc_attachment_id" t-foreach="douc_obj" t-as="dou">
+                                    <td><div t-field="dou.doc_attachment_id.name"/></td>
+                                    <td><a t-att-href="'/attachment/download?attachment_id=%i' % dou.doc_attachment_id.id" class="fa fa-download"/></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                        </div>
+				</div>
+			</div>
+		</div>
+
+       
+    </template>
+
+    <template id="employee_organization">
+        <div class="col-lg-4">
+			<div class="ibox carddash">
+				<div class="row iess-title">
+					<h3><span>Organization Chart</span></h3>
+				</div>
+				<div class="ibox-content iess-p20">
+					<div>
+
+                        <div class="feed-activity-list">
+							<div class="feed-element" t-if="employee.parent_id">
+<!--                                <span t-field="employee.parent_id.image_1920" -->
+<!--                                    t-options='{"widget": "image", "class":"rounded-circle float-left"}'/>-->
+
+                                <div class="media-body">
+                                    <strong  t-field="employee.parent_id.name"  />
+                                    <br/>
+                                    <small class="text-muted" t-field="employee.parent_id.job_id"  />
+                                </div>
+                            </div>
+
+                            <div class="feed-element">
+<!--                                <span t-field="employee.image_1920" -->
+<!--                                    t-options='{"widget": "image", "class":"rounded-circle float-left", "style":"border: 2px solid #00A09D;box-shadow: inset 0 0 0 2px white;"}'/>-->
+
+                                <div class="media-body">
+                                    <strong  t-field="employee.name"  />
+                                    <br/>
+                                    <small  class="text-muted" t-field="employee.job_id"  />
+                                </div>
+                            </div>
+
+                            <t  t-foreach="employee.child_ids" t-as="lea">
+								<div class="feed-element">
+									<span t-field="lea.image_1920"  t-options='{"widget": "image","class":"rounded-circle float-left"}' />
+									<div class="media-body">
+										<strong  t-field="lea.name"  />
+										<br/>
+										<small class="text-muted" t-field="lea.job_id"  />
+									</div>
+								</div>
+							</t>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+    </template>
+
+    <template id="employee_important_date">
+
+        <div class="col-lg-4">
+			<div class="ibox carddash">
+				<div class="row iess-title">
+					<h3><span>Important Dates</span></h3>
+				</div>
+				<div class="ibox-content iess-p20">
+                    <div class="table-responsive">
+                        <table class="table header-border table-hover table-custom spacing5 ess-table">
+                            <thead>
+                                <tr>
+                                    <th>Description</th>
+                                    <th>Date</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr t-foreach="douc_exp_obj" t-as="dou">
+                                    <td t-if="dou.expiry_date"><div t-field="dou.name"/></td>
+                                    <td t-if="dou.expiry_date"><div t-field="dou.expiry_date"/></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+				</div>
+			</div>
+		</div>
+    </template>
+
+    <template id="employee_leave_allocation">
+
+        <div class="col-lg-4">
+			<div class="ibox carddash">
+				<div class="row iess-title">
+					<h3><span>My Balance</span></h3>
+				</div>
+				<div class="ibox-content iess-p20">
+                    <div class="table-responsive">
+                        <table class="table header-border table-hover table-custom spacing5 ess-table">
+                            <thead>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Days</th>
+                                </tr>
+                            </thead>
+                            <tbody t-foreach="leave_allocation_list" t-as="lea">
+                                <tr>
+                                    <td><div t-esc="lea['name']"/></td>
+                                    <td><span class="badge badge-primary"><span t-esc="lea['value']"/> <span t-esc="lea['unit']"/></span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+				</div>
+			</div>
+		</div>
+
+    </template>
+
+    <template id="employee_appraisal">
+        <div class="col-lg-4">
+			<div class="ibox carddash">
+				<div class="row iess-title">
+					<h3><span>My Appraisal</span></h3>
+				</div>
+				<div class="ibox-content iess-p20">
+                    <div class="table-responsive">
+                        <table class="table header-border table-hover table-custom spacing5 ess-table">
+                            <thead>
+                                <tr>
+                                    <th>Date</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody t-foreach="appraisal_list" t-as="app">
+                                <tr class="tr">
+                                    <td><div t-esc="app['date']"/></td>
+                                    <td><span t-esc="app['state']"/></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+				</div>
+			</div>
+		</div>
+    </template>
+
+
+    <template id="employee_announcement">
+        <div class="col-lg-4">
+			<div class="ibox carddash">
+				<div class="row iess-title">
+					<h3><span>All Announcement</span></h3>
+				</div>
+				<div class="ibox-content iess-p20">
+                    <div class="table-responsive">
+                        <table class="table header-border table-hover table-custom spacing5 ess-table public_announcement_selector">
+                            <thead>
+                                <tr>
+                                    <th>Code No</th>
+                                    <th>Title</th>
+<!--                                    <th>Description</th>-->
+                                    <th>Date Start</th>
+                                    <th>Date End</th>
+                                     <th><a class="fa fa-tasks"/></th>
+                                </tr>
+                            </thead>
+                            <tbody t-foreach="announcement_list" t-as="ann">
+                                <t t-if="ann['is_read']">
+                                    <tr>
+                                        <td>
+                                            <a t-att-href="'#%s' % ann['id']" class="visitedlink">
+                                                <span t-att-id="'announcement%s' % ann['id']" style="color:black;" t-esc="ann['code']"/>
+                                            </a>
+                                        </td>
+
+                                        <td>
+                                            <a t-att-href="'#%s' % ann['id']" class="visitedlink">
+                                                <span t-att-id="'announcement%s' % ann['id']" style="color:black;" t-esc="ann['title']"/>
+                                            </a>
+                                        </td>
+<!--                                        <td>-->
+<!--                                            <a t-att-href="'#%s' % ann['id']" class="visitedlink">-->
+<!--                                                <span t-att-id="'announcement%s' % ann['id']" style="color:black;" t-raw="ann['announcement']"/>-->
+<!--                                            </a>-->
+
+<!--                                        </td>-->
+                                        <td>
+                                            <a t-att-href="'#%s' % ann['id']" class="visitedlink">
+                                                <span t-att-id="'announcement%s' % ann['id']" style="color:black;" t-esc="ann['date_start']"/>
+                                            </a>
+
+                                        </td>
+                                        <td>
+                                            <a t-att-href="'#%s' % ann['id']" class="visitedlink">
+                                                <span t-att-id="'announcement%s' % ann['id']" style="color:black;" t-esc="ann['date_end']"/>
+                                            </a>
+
+                                        </td>
+                                        <td  t-if="ann['attachment_id']" style="color:green;">
+                                            <a t-att-id="'announcement%s' % ann['id']" style="color:black;" t-att-href="'/attachment/download?attachment_id=%i' % ann['attachment_id'].id" class="fa fa-download"/>
+                                        </td>
+                                    </tr>
+                                </t>
+                                <t t-else="">
+                                    <tr>
+                                        <td>
+                                            <a t-att-href="'#%s' % ann['id']" class="visitedlink">
+                                                <span t-att-id="'announcement%s' % ann['id']"  style="color:red;" t-esc="ann['code']"/>
+                                            </a>
+                                        </td>
+
+                                        <td>
+                                            <a t-att-href="'#%s' % ann['id']" class="visitedlink">
+                                                <span t-att-id="'announcement%s' % ann['id']" style="color:red;" t-esc="ann['title']"/>
+                                            </a>
+                                        </td>
+<!--                                        <td>-->
+<!--                                            <a t-att-href="'#%s' % ann['id']" class="visitedlink">-->
+<!--                                                <span t-att-id="'announcement%s' % ann['id']"  style="color:red;" t-raw="ann['announcement']"/>-->
+<!--                                            </a>-->
+
+<!--                                        </td>-->
+                                        <td>
+                                            <a t-att-href="'#%s' % ann['id']" class="visitedlink">
+                                                <span t-att-id="'announcement%s' % ann['id']" style="color:red;" t-esc="ann['date_start']"/>
+                                            </a>
+
+                                        </td>
+                                        <td>
+                                            <a t-att-href="'#%s' % ann['id']" class="visitedlink">
+                                                <span t-att-id="'announcement%s' % ann['id']" style="color:red;" t-esc="ann['date_end']"/>
+                                            </a>
+
+                                        </td>
+                                        <td  t-if="ann['attachment_id']" style="color:green;">
+                                            <a t-att-id="'announcement%s' % ann['id']"  style="color:red;" t-att-href="'/attachment/download?attachment_id=%i' % ann['attachment_id'].id" class="fa fa-download"/>
+                                        </td>
+                                    </tr>
+                                </t>
+                            </tbody>
+                        </table>
+                    </div>
+				</div>
+			</div>
+		</div>
+    </template>
+
+   <template id="employee_announcement_public">
+        <div class="col-lg-4">
+			<div class="ibox carddash">
+				<div class="row iess-title">
+					<h3><span>Public Announcement</span></h3>
+				</div>
+				<div class="ibox-content iess-p20">
+                    <div class="table-responsive">
+                        <table class="table header-border table-hover table-custom spacing5 ess-table announcement_selector">
+                            <thead>
+                                <tr>
+                                    <th>Code No</th>
+                                    <th>Title</th>
+<!--                                    <th>Description</th>-->
+                                    <th>Date Start</th>
+                                    <th>Date End</th>
+                                    <th> <i class="fa fa-tasks"/></th>
+                                </tr>
+                            </thead>
+                            <tbody t-foreach="announcement_list_public" t-as="ann">
+
+                                <t t-if="ann['is_read']">
+                                    <tr>
+                                        <td>
+                                            <a t-att-href="'#%s' % ann['id']" class="visitedlink">
+                                                <span t-att-id="'announcement%s' % ann['id']" style="color:black;" t-esc="ann['code']"/>
+                                            </a>
+                                        </td>
+
+                                        <td>
+                                            <a t-att-href="'#%s' % ann['id']" class="visitedlink">
+                                                <span t-att-id="'announcement%s' % ann['id']" style="color:black;" t-esc="ann['title']"/>
+                                            </a>
+                                        </td>
+<!--                                        <td>-->
+<!--                                            <a t-att-href="'#%s' % ann['id']" class="visitedlink">-->
+<!--                                                <span t-att-id="'announcement%s' % ann['id']" style="color:black;" t-raw="ann['announcement']"/>-->
+<!--                                            </a>-->
+
+<!--                                        </td>-->
+                                        <td>
+                                            <a t-att-href="'#%s' % ann['id']" class="visitedlink">
+                                                <span t-att-id="'announcement%s' % ann['id']" style="color:black;" t-esc="ann['date_start']"/>
+                                            </a>
+
+                                        </td>
+                                        <td>
+                                            <a t-att-href="'#%s' % ann['id']" class="visitedlink">
+                                                <span t-att-id="'announcement%s' % ann['id']" style="color:black;" t-esc="ann['date_end']"/>
+                                            </a>
+
+                                        </td>
+                                        <td  t-if="ann['attachment_id']">
+                                            <a t-att-id="'announcement%s' % ann['id']" style="color:black;" t-att-href="'/attachment/download?attachment_id=%i' % ann['attachment_id'].id" class="fa fa-download"/>
+                                        </td>
+
+                                    </tr>
+                                </t>
+
+                                <t t-else="">
+                                    <tr>
+                                        <td>
+                                            <a t-att-href="'#%s' % ann['id']" class="visitedlink">
+                                                <span t-att-id="'announcement%s' % ann['id']" style="color:red;" t-esc="ann['code']"/>
+                                            </a>
+                                        </td>
+
+                                        <td>
+                                            <a t-att-href="'#%s' % ann['id']" class="visitedlink">
+                                                <span t-att-id="'announcement%s' % ann['id']" style="color:red;" t-esc="ann['title']"/>
+                                            </a>
+                                        </td>
+<!--                                        <td>-->
+<!--                                            <a t-att-href="'#%s' % ann['id']" class="visitedlink">-->
+<!--                                                <span t-att-id="'announcement%s' % ann['id']" style="color:red;" t-raw="ann['announcement']"/>-->
+<!--                                            </a>-->
+
+<!--                                        </td>-->
+                                        <td>
+                                            <a t-att-href="'#%s' % ann['id']" class="visitedlink">
+                                                <span t-att-id="'announcement%s' % ann['id']" style="color:red;" t-esc="ann['date_start']"/>
+                                            </a>
+
+                                        </td>
+                                        <td>
+                                            <a t-att-href="'#%s' % ann['id']" class="visitedlink">
+                                                <span t-att-id="'announcement%s' % ann['id']" style="color:red;" t-esc="ann['date_end']"/>
+                                            </a>
+
+                                        </td>
+                                        <td  t-if="ann['attachment_id']">
+                                            <a t-att-id="'announcement%s' % ann['id']" style="color:red;" t-att-href="'/attachment/download?attachment_id=%i' % ann['attachment_id'].id" class="fa fa-download"/>
+                                        </td>
+
+                                    </tr>
+                                </t>
+                            </tbody>
+                        </table>
+                    </div>
+				</div>
+			</div>
+		</div>
+    </template>
+
+
+   <template id="employee_department_announcement">
+        <div class="col-lg-4">
+			<div class="ibox carddash">
+				<div class="row iess-title">
+					<h3><span>Department Announcement</span></h3>
+				</div>
+				<div class="ibox-content iess-p20">
+                    <div class="table-responsive">
+                        <table class="table header-border table-hover table-custom spacing5 ess-table announcement_selector">
+                            <thead>
+                                <tr>
+                                    <th>Code No</th>
+                                    <th>Title</th>
+<!--                                    <th>Description</th>-->
+                                    <th>Date Start</th>
+                                    <th>Date End</th>
+                                    <th> <i class="fa fa-tasks"/></th>
+                                </tr>
+                            </thead>
+                            <tbody t-foreach="department_announcement_list" t-as="ann">
+
+                                <t t-if="ann['is_read']">
+                                    <tr>
+                                        <td>
+                                            <a t-att-href="'#%s' % ann['id']" class="visitedlink">
+                                                <span t-att-id="'announcement%s' % ann['id']" style="color:black;" t-esc="ann['code']"/>
+                                            </a>
+                                        </td>
+
+                                        <td>
+                                            <a t-att-href="'#%s' % ann['id']" class="visitedlink">
+                                                <span t-att-id="'announcement%s' % ann['id']" style="color:black;" t-esc="ann['title']"/>
+                                            </a>
+                                        </td>
+<!--                                        <td>-->
+<!--                                            <a t-att-href="'#%s' % ann['id']" class="visitedlink">-->
+<!--                                                <span t-att-id="'announcement%s' % ann['id']" style="color:black;" t-raw="ann['announcement']"/>-->
+<!--                                            </a>-->
+
+<!--                                        </td>-->
+                                        <td>
+                                            <a t-att-href="'#%s' % ann['id']" class="visitedlink">
+                                                <span t-att-id="'announcement%s' % ann['id']" style="color:black;" t-esc="ann['date_start']"/>
+                                            </a>
+
+                                        </td>
+                                        <td>
+                                            <a t-att-href="'#%s' % ann['id']" class="visitedlink">
+                                                <span t-att-id="'announcement%s' % ann['id']" style="color:black;" t-esc="ann['date_end']"/>
+                                            </a>
+
+                                        </td>
+                                        <td  t-if="ann['attachment_id']">
+                                            <a t-att-id="'announcement%s' % ann['id']" style="color:black;" t-att-href="'/attachment/download?attachment_id=%i' % ann['attachment_id'].id" class="fa fa-download"/>
+                                        </td>
+
+                                    </tr>
+                                </t>
+
+                                <t t-else="">
+                                    <tr>
+                                        <td>
+                                            <a t-att-href="'#%s' % ann['id']" class="visitedlink">
+                                                <span t-att-id="'announcement%s' % ann['id']" style="color:red;" t-esc="ann['code']"/>
+                                            </a>
+                                        </td>
+
+                                        <td>
+                                            <a t-att-href="'#%s' % ann['id']" class="visitedlink">
+                                                <span t-att-id="'announcement%s' % ann['id']" style="color:red;" t-esc="ann['title']"/>
+                                            </a>
+                                        </td>
+                                        <td>
+                                            <a t-att-href="'#%s' % ann['id']" class="visitedlink">
+                                                <span t-att-id="'announcement%s' % ann['id']" style="color:red;" t-raw="ann['announcement']"/>
+                                            </a>
+
+                                        </td>
+                                        <td>
+                                            <a t-att-href="'#%s' % ann['id']" class="visitedlink">
+                                                <span t-att-id="'announcement%s' % ann['id']" style="color:red;" t-esc="ann['date_start']"/>
+                                            </a>
+
+                                        </td>
+                                        <td>
+                                            <a t-att-href="'#%s' % ann['id']" class="visitedlink">
+                                                <span t-att-id="'announcement%s' % ann['id']" style="color:red;" t-esc="ann['date_end']"/>
+                                            </a>
+
+                                        </td>
+                                        <td  t-if="ann['attachment_id']">
+                                            <a t-att-id="'announcement%s' % ann['id']" style="color:red;" t-att-href="'/attachment/download?attachment_id=%i' % ann['attachment_id'].id" class="fa fa-download"/>
+                                        </td>
+
+                                    </tr>
+                                </t>
+                            </tbody>
+                        </table>
+                    </div>
+				</div>
+			</div>
+		</div>
+    </template>
+
+    <template id="employee_notification">
+        <div class="col-lg-4">
+			<div class="ibox carddash">
+				<div class="row iess-title">
+					<h3><span>All Notification</span></h3>
+				</div>
+				<div class="ibox-content iess-p20">
+                    <div class="table-responsive">
+                        <table class="table header-border table-hover table-custom spacing5 ess-table newselector">
+                            <thead>
+                                <tr>
+                                    <th>Title</th>
+                                </tr>
+                            </thead>
+
+                            <tbody t-foreach="notification_list" t-as="ann">
+                                <tr t-if="ann['is_read'] == False">
+                                    <t>
+                                        <td>
+                                             <a t-att-href="'#%s' % ann['id']" class="visitedlink" >
+                                                    <span t-att-id="'notify%s' % ann['id']" style="color:red;" t-att-data-value="ann['id']" t-esc="ann['title']" class="check_notification"/>
+<!--                                                    <span  t-att-id="'notify%s' % ann['id']" style="color:black;" t-att-data-value="ann['id']" t-esc="ann['title']" class="check_notification"/>-->
+                                             </a>
+                                         </td>
+                                    </t>
+<!--                                    <t t-else="">-->
+<!--                                        <td>-->
+<!--                                             <a t-att-href="'#%s' % ann['id']" class="visitedlink">-->
+<!--                                                    <span t-att-id="'notify%s' % ann['id']" style="color:red;" t-att-data-value="ann['id']" t-esc="ann['title']" class="check_notification"/>-->
+<!--                                             </a>-->
+<!--                                        </td>-->
+<!--                                    </t>-->
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+				</div>
+			</div>
+		</div>
+    </template>
+
+    <template id="employee_attendance">
+        <div class="col-lg-4">
+			<div class="ibox carddash">
+				<div class="row iess-title">
+					<h3><span>Time Office</span></h3>
+				</div>
+				<div class="ibox-content iess-p20">
+                    <div class="table-responsive">
+                        <table class="table header-border table-hover table-custom spacing5 ess-table">
+                            <thead>
+                                <tr>
+                                    <th>Date</th>
+                                    <th>In</th>
+                                    <th>Out</th>
+                                </tr>
+                            </thead>
+                            <tbody t-foreach="attendance_list" t-as="att">
+                                <tr>
+                                    <td><div t-esc="att['date']"/></td>
+                                    <td><span t-esc="att['in']"/></td>
+                                    <td><span t-esc="att['out']"/></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+				</div>
+			</div>
+		</div>
+
+        
+    </template>
+
+    <template id="employee_leaves">
+
+        <div class="col-lg-4">
+			<div class="ibox carddash">
+				<div class="row iess-title">
+					<h3><span>Time Off</span></h3>
+				</div>
+				<div class="ibox-content iess-p20">
+					<div class="body">
+                                <ul class="nav nav-tabs3">
+                                    <li class="nav-item"><a class="nav-link show ess-tab-link" data-toggle="tab" href="#My-Requser">My Requser</a></li>
+                                    <li class="nav-item"><a class="nav-link ess-tab-link active" data-toggle="tab" href="#My-Approval">My Approval</a></li>
+                                </ul>
+                                <div class="tab-content">
+                                    <div class="tab-pane show" id="My-Requser">
+                                        <div class="table-responsive">
+                                            <table class="table header-border table-hover table-custom spacing5 ess-table">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Name</th>
+                                                        <th>Days</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody t-foreach="leave_list" t-as="lea">
+                                                    <tr t-if="lea['state'] != 'validate'">
+                                                        <td><div t-esc="lea['name']"/></td>
+                                                        <td><div class="badge badge-primary" t-esc="lea['number_of_days']"/></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane active" id="My-Approval">
+
+                                        <div class="table-responsive">
+                                            <table class="table header-border table-hover table-custom spacing5 ess-table">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Name</th>
+                                                        <th>Days</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody t-foreach="leave_list" t-as="lea">
+                                                    <tr t-if="lea['state'] == 'validate'">
+                                                        <td><div t-esc="lea['name']"/></td>
+                                                        <td><div class="badge badge-primary" t-esc="lea['number_of_days']"/></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+				</div>
+			</div>
+		</div>
+
+        
+    </template>
+
+    <template id="employee_asset_assignation">
+
+        <div class="col-lg-4">
+			<div class="ibox carddash">
+       <div class="row iess-title">
+					<h3><span>My Newest Assignations</span></h3>
+				</div>
+				<div class="ibox-content iess-p20">
+                    <div class="table-responsive">
+                        <table class="table header-border table-hover table-custom spacing5 ess-table asset_visited">
+                            <thead>
+                                <tr>
+                                    <th>Order Number</th>
+                                    <th>Type</th>
+                                    <th>Asset</th>
+                                    <th>Description</th>
+                                    <th>State</th>
+                                </tr>
+                            </thead>
+                            <tbody t-foreach="asset_assignation_obj" t-as="ass">
+                                <tr>
+                                    <td>
+<!--                                        <div t-esc="ass['name']"/>-->
+                                        <a t-att-href="'#%s' % ass['id']" class="asset_visited_link">
+                                            <span t-att-id="'asset%s' % ass['id']" style="color:black;" t-esc="ass['name']"/>
+                                        </a>
+                                    </td>
+                                    <td>
+<!--                                        <div t-esc="ass['type_desc']"/>-->
+                                        <a t-att-href="'#%s' % ass['id']" class="asset_visited_link">
+                                            <span t-att-id="'asset%s' % ass['id']" style="color:black;" t-esc="ass['type_desc']"/>
+                                        </a>
+                                    </td>
+                                    <td>
+<!--                                        <div t-esc="ass['asset_id']"/>-->
+                                        <a t-att-href="'#%s' % ass['id']" class="asset_visited_link">
+                                            <span t-att-id="'asset%s' % ass['id']" style="color:black;" t-esc="ass['asset_id']"/>
+                                        </a>
+                                    </td>
+                                    <td>
+<!--                                        <div t-esc="ass['description']"/>-->
+                                        <a t-att-href="'#%s' % ass['id']" class="asset_visited_link">
+                                            <span t-att-id="'asset%s' % ass['id']" style="color:black;" t-esc="ass['description']"/>
+                                        </a>
+                                    </td>
+                                    <td>
+<!--                                        <div t-esc="ass['state_desc']"/>-->
+                                        <a t-att-href="'#%s' % ass['id']" class="asset_visited_link">
+                                            <span t-att-id="'asset%s' % ass['id']" style="color:black;" t-esc="ass['state_desc']"/>
+                                        </a>
+                                    </td>
+<!--                                    <td>-->
+<!--                                        <span class="badge badge-primary">-->
+<!--                                        <span t-esc="lea['value']"/> -->
+<!--                                        <span t-esc="lea['unit']"/></span>-->
+<!--                                    </td>-->
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+				</div>
+			</div>
+		</div>
+
+    </template>
+
+    <template id="employee_custody">
+
+        <div class="col-lg-4">
+			<div class="ibox carddash">
+				<div class="row iess-title">
+					<h3><span>My Newest Custody</span></h3>
+				</div>
+				<div class="ibox-content iess-p20">
+                    <div class="table-responsive">
+                        <table class="table header-border table-hover table-custom spacing5 ess-table custody_visited">
+                            <thead>
+                                <tr>
+                                    <th>Order Number</th>
+                                    <th>Date</th>
+                                    <th>Amount</th>
+                                    <th>Remaining Amount</th>
+                                    <th>State</th>
+                                </tr>
+                            </thead>
+                            <tbody t-foreach="custody_obj" t-as="custody">
+                                <tr>
+                                    <td>
+<!--                                        <div t-esc="custody['name']"/>-->
+                                        <a t-att-href="'#%s' % custody['id']" class="custody_visited_link">
+                                            <span t-att-id="'custody%s' % custody['id']" style="color:black;" t-esc="custody['name']"/>
+                                        </a>
+                                    </td>
+                                    <td>
+<!--                                        <div t-esc="custody['date']"/>-->
+                                        <a t-att-href="'#%s' % custody['id']" class="custody_visited_link">
+                                            <span t-att-id="'custody%s' % custody['id']" style="color:black;" t-esc="custody['date']"/>
+                                        </a>
+                                    </td>
+                                    <td>
+<!--                                        <div t-esc="custody['amount']"/>-->
+                                        <a t-att-href="'#%s' % custody['id']" class="custody_visited_link">
+                                            <span t-att-id="'custody%s' % custody['id']" style="color:black;" t-esc="custody['amount']"/>
+                                        </a>
+                                    </td>
+                                    <td>
+<!--                                        <div t-esc="custody['remaining_amount']"/>-->
+                                        <a t-att-href="'#%s' % custody['id']" class="custody_visited_link">
+                                            <span t-att-id="'custody%s' % custody['id']" style="color:black;" t-esc="custody['remaining_amount']"/>
+                                        </a>
+                                    </td>
+                                    <td>
+<!--                                        <div t-esc="custody['state_desc']"/>-->
+                                        <a t-att-href="'#%s' % custody['id']" class="custody_visited_link">
+                                            <span t-att-id="'custody%s' % custody['id']" style="color:black;" t-esc="custody['state_desc']"/>
+                                        </a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+				</div>
+			</div>
+		</div>
+
+    </template>
+
+    <template id="employee_mandate">
+        <div class="col-lg-4">
+			<div class="ibox carddash">
+				<div class="row iess-title">
+					<h3><span>My Newest Mandate</span></h3>
+				</div>
+				<div class="ibox-content iess-p20">
+                    <div class="table-responsive">
+                        <table class="table header-border table-hover table-custom spacing5 ess-table mandate_visited">
+                            <thead>
+                                <tr>
+                                    <th>Order Number</th>
+                                    <th>Type</th>
+                                    <th>Course</th>
+                                    <th>Course Type</th>
+                                    <th>Number Of Days</th>
+                                    <th>State</th>
+                                </tr>
+                            </thead>
+                            <tbody t-foreach="mandate_obj" t-as="mandate">
+                                <tr>
+                                    <td>
+<!--                                        <div t-esc="mandate['name']"/>-->
+                                        <a t-att-href="'#%s' % mandate['id']" class="mandate_visited_link">
+                                            <span t-att-id="'mandate%s' % mandate['id']" style="color:black;" t-esc="mandate['name']"/>
+                                        </a>
+                                    </td>
+                                    <td>
+<!--                                        <div t-esc="mandate['type_desc']"/>-->
+                                        <a t-att-href="'#%s' % mandate['id']" class="mandate_visited_link">
+                                            <span t-att-id="'mandate%s' % mandate['id']" style="color:black;" t-esc="mandate['type_desc']"/>
+                                        </a>
+                                    </td>
+                                    <td>
+<!--                                        <div t-esc="mandate['course_id']"/>-->
+                                        <a t-att-href="'#%s' % mandate['id']" class="mandate_visited_link">
+                                            <span t-att-id="'mandate%s' % mandate['id']" style="color:black;" t-esc="mandate['course_id']"/>
+                                        </a>
+                                    </td>
+                                    <td>
+<!--                                        <div t-esc="mandate['course_type_desc']"/>-->
+                                        <a t-att-href="'#%s' % mandate['id']" class="mandate_visited_link">
+                                            <span t-att-id="'mandate%s' % mandate['id']" style="color:black;" t-esc="mandate['course_type_desc']"/>
+                                        </a>
+                                    </td>
+                                    <td>
+<!--                                        <div t-esc="mandate['number_of_days']"/>-->
+                                        <a t-att-href="'#%s' % mandate['id']" class="mandate_visited_link">
+                                            <span t-att-id="'mandate%s' % mandate['id']" style="color:black;" t-esc="mandate['number_of_days']"/>
+                                        </a>
+                                    </td>
+                                    <td>
+<!--                                        <div t-esc="mandate['state_desc']"/>-->
+                                        <a t-att-href="'#%s' % mandate['id']" class="mandate_visited_link">
+                                            <span t-att-id="'mandate%s' % mandate['id']" style="color:black;" t-esc="mandate['state_desc']"/>
+                                        </a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+				</div>
+			</div>
+		</div>
+
+    </template>
+
+</odoo>

@@ -1,0 +1,2 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+eos_configured_fields,eos_configured_fields,model_eos_configured_fields,,1,1,1,1

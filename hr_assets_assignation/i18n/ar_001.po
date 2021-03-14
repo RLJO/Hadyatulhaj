@@ -1,0 +1,1082 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* hr_assets_assignation
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-11-23 05:35+0000\n"
+"PO-Revision-Date: 2020-11-23 05:35+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: hr_assets_assignation
+#: model_terms:ir.ui.view,arch_db:hr_assets_assignation.department_clearance_report_template
+#: model_terms:ir.ui.view,arch_db:hr_assets_assignation.employee_assets_report_template
+msgid "<strong>الموافق تاريخ </strong>"
+msgstr ""
+
+#. module: hr_assets_assignation
+#: model_terms:ir.ui.view,arch_db:hr_assets_assignation.department_clearance_report_template
+#: model_terms:ir.ui.view,arch_db:hr_assets_assignation.employee_assets_report_template
+msgid "<strong>انه في يوم </strong>"
+msgstr ""
+
+#. module: hr_assets_assignation
+#: model:ir.model.fields,field_description:hr_assets_assignation.field_asset_account_request__message_needaction
+#: model:ir.model.fields,field_description:hr_assets_assignation.field_department_clearance__message_needaction
+#: model:ir.model.fields,field_description:hr_assets_assignation.field_department_clearance_line__message_needaction
+#: model:ir.model.fields,field_description:hr_assets_assignation.field_employee_asset_line__message_needaction
+#: model:ir.model.fields,field_description:hr_assets_assignation.field_employee_assets__message_needaction
+msgid "Action Needed"
+msgstr "إجراء مطلوب"
+
+#. module: hr_assets_assignation
+#: model:ir.model.fields,field_description:hr_assets_assignation.field_asset_account_request__activity_ids
+#: model:ir.model.fields,field_description:hr_assets_assignation.field_department_clearance__activity_ids
+#: model:ir.model.fields,field_description:hr_assets_assignation.field_department_clearance_line__activity_ids
+#: model:ir.model.fields,field_description:hr_assets_assignation.field_employee_asset_line__activity_ids
+#: model:ir.model.fields,field_description:hr_assets_assignation.field_employee_assets__activity_ids
+msgid "Activities"
+msgstr "الأنشطة"
+
+#. module: hr_assets_assignation
+#: model:ir.model.fields,field_description:hr_assets_assignation.field_asset_account_request__activity_exception_decoration
+#: model:ir.model.fields,field_description:hr_assets_assignation.field_department_clearance__activity_exception_decoration
+#: model:ir.model.fields,field_description:hr_assets_assignation.field_department_clearance_line__activity_exception_decoration
+#: model:ir.model.fields,field_description:hr_assets_assignation.field_employee_asset_line__activity_exception_decoration
+#: model:ir.model.fields,field_description:hr_assets_assignation.field_employee_assets__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr "زخرفة استثناء النشاط"
+
+#. module: hr_assets_assignation
+#: model:ir.model.fields,field_description:hr_assets_assignation.field_asset_account_request__activity_state
+#: model:ir.model.fields,field_description:hr_assets_assignation.field_department_clearance__activity_state
+#: model:ir.model.fields,field_description:hr_assets_assignation.field_department_clearance_line__activity_state
+#: model:ir.model.fields,field_description:hr_assets_assignation.field_employee_asset_line__activity_state
+#: model:ir.model.fields,field_description:hr_assets_assignation.field_employee_assets__activity_state
+msgid "Activity State"
+msgstr "حالة النشاط"
+
+#. module: hr_assets_assignation
+#: model:ir.actions.act_window,name:hr_assets_assignation.create_reason_wizard
+#: model_terms:ir.ui.view,arch_db:hr_assets_assignation.create_reason_form
+msgid "Add Reason"
+msgstr "إضافة سبب"
+
+#. module: hr_assets_assignation
+#: model_terms:ir.ui.view,arch_db:hr_assets_assignation.asset_account_request_form
+msgid "Approve"
+msgstr "موافقه"
+
+#. module: hr_assets_assignation
+#: model:res.groups,name:hr_assets_assignation.asset_assignation_approve_button
+#: model:res.groups,name:hr_assets_assignation.employee_asset_approve_button
+msgid "Approve Button"
+msgstr "زر ارسال الطلب"
+
+#. module: hr_assets_assignation
+#: model:ir.model.fields,field_description:hr_assets_assignation.field_employee_asset_line__asset_id
+#: model:ir.model.fields.selection,name:hr_assets_assignation.selection__asset_account_request__type__asset
+#: model:ir.model.fields.selection,name:hr_assets_assignation.selection__employee_asset_line__type__asset
+#: model_terms:ir.ui.view,arch_db:hr_assets_assignation.employee_assets_report_template
+msgid "Asset"
+msgstr "اصل"
+
+#. module: hr_assets_assignation
+#: model_terms:ir.ui.view,arch_db:hr_assets_assignation.asset_account_request_kanban
+msgid "Asset :"
+msgstr "العهده :"
+
+#. module: hr_assets_assignation
+#: model:ir.model.fields,field_description:hr_assets_assignation.field_employee_assets__asset_account_ids
+msgid "Asset Account"
+msgstr "حساب العهده"
+
+#. module: hr_assets_assignation
+#: model:ir.module.category,name:hr_assets_assignation.asset_assignation_security_category
+msgid "Asset Assignation"
+msgstr "العهد العينيه"
+
+#. module: hr_assets_assignation
+#: model:ir.ui.menu,name:hr_assets_assignation.waiting_asset_assignation_approve_action_menu1
+msgid "Asset Assignation Waiting Approve Menu"
+msgstr "في انتظار الموافقه علي الطلب"
+
+#. module: hr_assets_assignation
+#: model:ir.model.fields,field_description:hr_assets_assignation.field_asset_account_request__asset_id
+msgid "Asset Name"
+msgstr "الاصول العينيه"
+
+#. module: hr_assets_assignation
+#: model:ir.model.fields,field_description:hr_assets_assignation.field_asset_account_request__asset_request_Reason
+msgid "Asset Request Reason"
+msgstr "سبب طلب العهده"
+
+#. module: hr_assets_assignation
+#: model:ir.model.fields,field_description:hr_assets_assignation.field_asset_account_request__asset_request_startDate
+msgid "Asset Request Startdate"
+msgstr "تاريخ طلب العهده"
+
+
+#. module: hr_assets_assignation
+#: model:ir.model.fields,field_description:hr_assets_assignation.field_asset_account_request__asset_request_deliveryDate
+msgid "Asset Request Deliverydate"
+msgstr "تاريخ نهاية الاستخدام"
+
+#. module: hr_assets_assignation
+#: model:ir.model.fields,field_description:hr_assets_assignation.field_asset_account_request__asset_request_description
+msgid "Asset Request Description"
+msgstr "وصف الاصل المطلوب"
+
+
+
+
+#. module: hr_assets_assignation
+#: model:res.groups,name:hr_assets_assignation.asset_submitted_action_menu
+msgid "Asset Submitted Menu"
+msgstr "قائمه ارسال الطلب"
+
+#. module: hr_assets_assignation
+#: model:ir.model,name:hr_assets_assignation.model_account_asset
+msgid "Asset/Revenue Recognition"
+msgstr "إثبات الأصل/الربح"
+
+#. module: hr_assets_assignation
+#: model_terms:ir.ui.view,arch_db:hr_assets_assignation.employee_assets_form
+msgid "Assets"
+msgstr "العهد"
+
+#. module: hr_assets_assignation
+#: model:ir.actions.act_window,name:hr_assets_assignation.asset_account_request_action
+#: model:ir.ui.menu,name:hr_assets_assignation.asset_account_request_child_menu
+msgid "Assets Assignation"
+msgstr "العهد العينيه"
+
+#. module: hr_assets_assignation
+#: model:ir.ui.menu,name:hr_assets_assignation.asset_account_request_action_menu
+msgid "Assets Assignation Request"
+msgstr "طلب عهده"
+
+#. module: hr_assets_assignation
+#: model_terms:ir.ui.view,arch_db:hr_assets_assignation.asset_account_request_form
+msgid "Assign To Employee"
+msgstr "اسنادها للموظف"
+
+#. module: hr_assets_assignation
+#: model:res.groups,name:hr_assets_assignation.asset_assignation_assign_to_employee_button
+msgid "Assign To Employee Button"
+msgstr "زر الاسناد الي موظف"
+
+#. module: hr_assets_assignation
+#: model:ir.model.fields,field_description:hr_assets_assignation.field_employee_asset_line__date
+#: model_terms:ir.ui.view,arch_db:hr_assets_assignation.employee_assets_report_template
+msgid "Assignation Date"
+msgstr "تاريخ اسنادها للموظف"
+
+#. module: hr_assets_assignation
+#: model_terms:ir.ui.view,arch_db:hr_assets_assignation.fleet_vehicle_employee_log_view_list
+msgid "Assignation Logs"
+msgstr "سجلات الإسناد"
+
+#. module: hr_assets_assignation
+#: model:ir.model.fields.selection,name:hr_assets_assignation.selection__asset_account_request__state__assigned
+msgid "Assigned"
+msgstr "تم اسنادها لموظف"
+
+#. module: hr_assets_assignation
+#: model:ir.model.fields.selection,name:hr_assets_assignation.selection__asset_account_request__type_of_disclaimer__at_specific_date
+msgid "At Specific Date"
+msgstr "عند تاريخ محدد"
+
+#. module: hr_assets_assignation
+#: model:ir.model.fields,field_description:hr_assets_assignation.field_asset_account_request__message_attachment_count
+#: model:ir.model.fields,field_description:hr_assets_assignation.field_department_clearance__message_attachment_count
+#: model:ir.model.fields,field_description:hr_assets_assignation.field_department_clearance_line__message_attachment_count
+#: model:ir.model.fields,field_description:hr_assets_assignation.field_employee_asset_line__message_attachment_count
+#: model:ir.model.fields,field_description:hr_assets_assignation.field_employee_assets__message_attachment_count
+msgid "Attachment Count"
+msgstr "عدد المرفقات"
+
+#. module: hr_assets_assignation
+#: model:ir.model.fields.selection,name:hr_assets_assignation.selection__asset_account_request__type_of_disclaimer__both
+#: model:ir.model.fields.selection,name:hr_assets_assignation.selection__employee_asset_line__type_of_disclaimer__both
+#: model:ir.model.fields.selection,name:hr_assets_assignation.selection__employee_assets__type_of_disclaimer__both
+msgid "Both"
+msgstr "الاتنين معا"
+
+#. module: hr_assets_assignation
+#: model_terms:ir.ui.view,arch_db:hr_assets_assignation.create_reason_form
+msgid "Cancel"
+msgstr "إلغاء"
+
+#. module: hr_assets_assignation
+#: model:ir.model.fields,field_description:hr_assets_assignation.field_asset_account_request__is_car
+msgid "Car"
+msgstr ""
+
+#. module: hr_assets_assignation
+#: code:addons/hr_assets_assignation/models/asset_account_request.py:0
+#: model:ir.model.fields,field_description:hr_assets_assignation.field_account_asset__car_ids
+#, python-format
+msgid "Cars "
+msgstr ""
+
+#. module: hr_assets_assignation
+#: model:res.groups,name:hr_assets_assignation.asset_assignation_center_manager
+#: model:res.groups,name:hr_assets_assignation.employee_asset_center_manager
+msgid "Center Manager"
+msgstr "مدير المركز"
+
+#. module: hr_assets_assignation
+#: model:ir.ui.menu,name:hr_assets_assignation.asset_account_request_root
+msgid "Clearance"
+msgstr "العهد العينيه"
+
+#. module: hr_assets_assignation
+#: model:res.groups,name:hr_assets_assignation.asset_assignation_clearance_button
+msgid "Clearance Button"
+msgstr "زر اخلاء لطرف"
+
+#. module: hr_assets_assignation
+#: model:ir.model.fields,field_description:hr_assets_assignation.field_department_clearance_line__date
+msgid "Clearance Date"
+msgstr "تاريخ الملاحظه"
+
+#. module: hr_assets_assignation
+#: model:ir.actions.act_window,name:hr_assets_assignation.employee_clearance_done_action
+#: model:ir.actions.act_window,name:hr_assets_assignation.waiting_approve_on_clearance_action
+#: model:ir.ui.menu,name:hr_assets_assignation.clearance_done_action_menu
+msgid "Clearance Done"
+msgstr "تم اخلاء الطرف"
+
+#. module: hr_assets_assignation
+#: model:res.groups,name:hr_assets_assignation.clearance_done_menu
+#: model:res.groups,name:hr_assets_assignation.employee_asset_clearance_done_menu
+msgid "Clearance Done Menu"
+msgstr "قائمه تم انشاء الطلب وجارى الارسال"
+
+#. module: hr_assets_assignation
+#: model_terms:ir.ui.view,arch_db:hr_assets_assignation.asset_account_request_form
+#: model_terms:ir.ui.view,arch_db:hr_assets_assignation.employee_assets_form
+msgid "Clearance From Employee"
+msgstr "اخلاء الطرف"
+
+#. module: hr_assets_assignation
+#: model:res.groups,name:hr_assets_assignation.employee_asset_clearance_from_employee_button
+msgid "Clearance From Employee Button"
+msgstr "زر اخلاء  الطرف للموظف"
+
+#. module: hr_assets_assignation
+#: model:ir.model.fields,field_description:hr_assets_assignation.field_asset_account_request__is_disclaimer
+#: model:ir.model.fields,field_description:hr_assets_assignation.field_employee_asset_line__is_disclaimer
+msgid "Cleared"
+msgstr "تم اخلاء الطرف"
+
+#. module: hr_assets_assignation
+#: model:ir.model.fields,field_description:hr_assets_assignation.field_asset_account_request__color
+#: model:ir.model.fields,field_description:hr_assets_assignation.field_employee_assets__color
+msgid "Color"
+msgstr "اللون"
+
+#. module: hr_assets_assignation
+#: model_terms:ir.ui.view,arch_db:hr_assets_assignation.create_reason_form
+msgid "Create Reason"
+msgstr ""
+
+#. module: hr_assets_assignation
+#: model:ir.model.fields,field_description:hr_assets_assignation.field_assests_wizard__create_uid
+#: model:ir.model.fields,field_description:hr_assets_assignation.field_asset_account_request__create_uid
+#: model:ir.model.fields,field_description:hr_assets_assignation.field_department_clearance__create_uid
+#: model:ir.model.fields,field_description:hr_assets_assignation.field_department_clearance_line__create_uid
+#: model:ir.model.fields,field_description:hr_assets_assignation.field_employee_asset_line__create_uid
+#: model:ir.model.fields,field_description:hr_assets_assignation.field_employee_assets__create_uid
+#: model:ir.model.fields,field_description:hr_assets_assignation.field_fleet_vehicle_employee_log__create_uid
+msgid "Created by"
+msgstr "أنشئ بواسطة"
+
+#. module: hr_assets_assignation
+#: model:ir.model.fields,field_description:hr_assets_assignation.field_assests_wizard__create_date
+#: model:ir.model.fields,field_description:hr_assets_assignation.field_asset_account_request__create_date
+#: model:ir.model.fields,field_description:hr_assets_assignation.field_department_clearance__create_date
+#: model:ir.model.fields,field_description:hr_assets_assignation.field_department_clearance_line__create_date
+#: model:ir.model.fields,field_description:hr_assets_assignation.field_employee_asset_line__create_date
+#: model:ir.model.fields,field_description:hr_assets_assignation.field_employee_assets__create_date
+#: model:ir.model.fields,field_description:hr_assets_assignation.field_fleet_vehicle_employee_log__create_date
+msgid "Created on"
+msgstr "أنشئ في"
+
+#. module: hr_assets_assignation
+#: model:ir.model.fields,field_description:hr_assets_assignation.field_employee_asset_line__custody_request_id
+msgid "Custody Request"
+msgstr "طلب عهده"
+
+#. module: hr_assets_assignation
+#: model:ir.model.fields,field_description:hr_assets_assignation.field_asset_account_request__date
+#: model_terms:ir.ui.view,arch_db:hr_assets_assignation.department_clearance_report_template
+msgid "Date"
+msgstr "التاريخ"
+
+#. module: hr_assets_assignation
+#: model_terms:ir.ui.view,arch_db:hr_assets_assignation.asset_account_request_kanban
+msgid "Date :"
+msgstr "التاريخ :"
+
+#. module: hr_assets_assignation
+#: model:ir.model.fields,field_description:hr_assets_assignation.field_asset_account_request__date_of_asset_delivery
+msgid "Date Of Asset Delivery"
+msgstr "تاريخ تسليم الاصل"
+
+#. module: hr_assets_assignation
+#: model:ir.model.fields,field_description:hr_assets_assignation.field_asset_account_request__date_of_disclaimer
+#: model:ir.model.fields,field_description:hr_assets_assignation.field_employee_asset_line__date_of_disclaimer
+msgid "Date Of Clearance"
+msgstr "تاريخ اخلاءالطرف"
+
+#. module: hr_assets_assignation
+#: model:ir.actions.act_window,name:hr_assets_assignation.department_clearance_action
+#: model:ir.model.fields,field_description:hr_assets_assignation.field_department_clearance_line__department_clearance_id
+#: model:ir.ui.menu,name:hr_assets_assignation.department_clearance_menu
+msgid "Department Clearance"
+msgstr "اخلاء طرف من الاقسام"
+
+#. module: hr_assets_assignation
+#: model:ir.model.fields,field_description:hr_assets_assignation.field_department_clearance__department_clearance_line_ids
+msgid "Department Clearance Line"
+msgstr "الملاحظات"
+
+#. module: hr_assets_assignation
+#: model:ir.actions.report,name:hr_assets_assignation.department_clearance_report
+msgid "Department Clearance Report"
+msgstr "طباعه اخلاء الطرف للاقسام"
+
+#. module: hr_assets_assignation
+#: model_terms:ir.ui.view,arch_db:hr_assets_assignation.department_clearance_form
+msgid "Department Lines"
+msgstr "الملاحظات"
+
+#. module: hr_assets_assignation
+#: model:ir.model.fields,field_description:hr_assets_assignation.field_department_clearance_line__department_manager_id
+#: model_terms:ir.ui.view,arch_db:hr_assets_assignation.department_clearance_report_template
+#: model:res.groups,name:hr_assets_assignation.asset_assignation_department_manager
+#: model:res.groups,name:hr_assets_assignation.employee_asset_department_manager
+msgid "Department Manager"
+msgstr "مدير القسم"
+
+#. module: hr_assets_assignation
+#: model:ir.model.fields,field_description:hr_assets_assignation.field_department_clearance_line__department_id
+#: model_terms:ir.ui.view,arch_db:hr_assets_assignation.department_clearance_report_template
+msgid "Department Name"
+msgstr "القسم"
+
+#. module: hr_assets_assignation
+#: model:ir.model.fields,field_description:hr_assets_assignation.field_asset_account_request__description
+#: model:ir.model.fields,field_description:hr_assets_assignation.field_employee_asset_line__description
+#: model:ir.model.fields,field_description:hr_assets_assignation.field_employee_assets__description
+#: model_terms:ir.ui.view,arch_db:hr_assets_assignation.employee_assets_report_template
+msgid "Description"
+msgstr "الوصف"
+
+#. module: hr_assets_assignation
+#: model:res.groups,name:hr_assets_assignation.asset_assignation_direct_manager
+#: model:res.groups,name:hr_assets_assignation.employee_asset_direct_manager
+msgid "Direct Manager"
+msgstr "مدير مباشر"
+
+#. module: hr_assets_assignation
+#: model:ir.model.fields,field_description:hr_assets_assignation.field_assests_wizard__display_name
+#: model:ir.model.fields,field_description:hr_assets_assignation.field_asset_account_request__display_name
+#: model:ir.model.fields,field_description:hr_assets_assignation.field_department_clearance__display_name
+#: model:ir.model.fields,field_description:hr_assets_assignation.field_department_clearance_line__display_name
+#: model:ir.model.fields,field_description:hr_assets_assignation.field_employee_asset_line__display_name
+#: model:ir.model.fields,field_description:hr_assets_assignation.field_employee_assets__display_name
+#: model:ir.model.fields,field_description:hr_assets_assignation.field_fleet_vehicle_employee_log__display_name
+msgid "Display Name"
+msgstr "الاسم المعروض"
+
+#. module: hr_assets_assignation
+#: model:res.groups,name:hr_assets_assignation.employee_asset_done_button
+msgid "Done Button"
+msgstr "زر انهاء اخلاء الطرف"
+
+#. module: hr_assets_assignation
+#: model:ir.model.fields.selection,name:hr_assets_assignation.selection__asset_account_request__state__draft
+#: model:ir.model.fields.selection,name:hr_assets_assignation.selection__employee_assets__state__draft
+msgid "Draft"
+msgstr "جديده"
+
+
+#. module: hr_assets_assignation
+#: model:ir.model.fields,field_description:hr_assets_assignation.field_fleet_vehicle_employee_log__driver_id
+msgid "Driver"
+msgstr "السائق"
+
+#. module: hr_assets_assignation
+#: model:ir.model,name:hr_assets_assignation.model_fleet_vehicle_employee_log
+msgid "Drivers history on a vehicle"
+msgstr "سجل السائق على مركبة"
+
+#. module: hr_assets_assignation
+#: model:ir.model.fields,field_description:hr_assets_assignation.field_asset_account_request__employee_id
+#: model:ir.model.fields,field_description:hr_assets_assignation.field_department_clearance__employee_id
+#: model:ir.model.fields,field_description:hr_assets_assignation.field_employee_asset_line__employee_id
+#: model:ir.model.fields,field_description:hr_assets_assignation.field_employee_assets__employee_id
+#: model_terms:ir.ui.view,arch_db:hr_assets_assignation.employee_assets_report_template
+#: model:res.groups,name:hr_assets_assignation.asset_assignation_user
+#: model:res.groups,name:hr_assets_assignation.employee_asset_user
+msgid "Employee"
+msgstr "الموظف"
+
+#. module: hr_assets_assignation
+#: model:ir.model.fields,field_description:hr_assets_assignation.field_asset_account_request__employee_asset_id
+#: model:ir.model.fields,field_description:hr_assets_assignation.field_employee_asset_line__employee_asset_id
+msgid "Employee Asset"
+msgstr "عهد الموظف"
+
+#. module: hr_assets_assignation
+#: model:ir.module.category,name:hr_assets_assignation.employee_asset_security_category
+msgid "Employee Asset Clearance"
+msgstr "اخلاء طرف اصول الموظف"
+
+#. module: hr_assets_assignation
+#: model:ir.actions.act_window,name:hr_assets_assignation.employee_assets_action
+#: model:ir.actions.report,name:hr_assets_assignation.employee_assets_report
+msgid "Employee Assets"
+msgstr "عهد الموظف"
+
+#. module: hr_assets_assignation
+#: model:ir.ui.menu,name:hr_assets_assignation.employee_assets_action_menu
+#: model:ir.ui.menu,name:hr_assets_assignation.employee_assets_menu
+msgid "Employee Assets Disclaimer"
+msgstr "اخلاء طرف اصول الموظف"
+
+#. module: hr_assets_assignation
+#: model:ir.actions.act_window,name:hr_assets_assignation.waiting_approve_action
+#: model:ir.ui.menu,name:hr_assets_assignation.employee_assets_waiting_approve_menu
+msgid "Employee Assets Waiting Approve"
+msgstr "تم ارسال الطلب وفي انتظار الموافقه علي اخلاء الطرف"
+
+#. module: hr_assets_assignation
+#: model:ir.actions.act_window,name:hr_assets_assignation.clearance_employee_done_action
+#: model:ir.ui.menu,name:hr_assets_assignation.clearance_employee_done_menu
+msgid "Employee Assets Waiting Sent Request"
+msgstr "تم انشاء الطلب وجارى الارسال"
+
+#. module: hr_assets_assignation
+#: code:addons/hr_assets_assignation/models/asset_account_request.py:0
+#: code:addons/hr_assets_assignation/models/asset_account_request.py:0
+#: model:ir.model.fields,field_description:hr_assets_assignation.field_asset_account_request__car_employee_have
+#: model:ir.model.fields,field_description:hr_assets_assignation.field_asset_account_request__log_id_employee
+#, python-format
+msgid "Employee Car"
+msgstr ""
+
+#. module: hr_assets_assignation
+#: model_terms:ir.ui.view,arch_db:hr_assets_assignation.view_form_inherited_employee
+msgid "Employee History"
+msgstr ""
+
+#. module: hr_assets_assignation
+#: model:ir.model.fields,field_description:hr_assets_assignation.field_fleet_vehicle__history_count_emp
+msgid "Employees History Count"
+msgstr ""
+
+#. module: hr_assets_assignation
+#: model:ir.model.fields,field_description:hr_assets_assignation.field_fleet_vehicle_employee_log__date_end
+msgid "End Date"
+msgstr "تاريخ الانتهاء"
+
+#. module: hr_assets_assignation
+#: model:ir.model.fields.selection,name:hr_assets_assignation.selection__asset_account_request__type_of_disclaimer__final
+#: model:ir.model.fields.selection,name:hr_assets_assignation.selection__employee_asset_line__type_of_disclaimer__final
+#: model:ir.model.fields.selection,name:hr_assets_assignation.selection__employee_assets__type_of_disclaimer__final
+msgid "Final"
+msgstr "خروج نهائي"
+
+#. module: hr_assets_assignation
+#: model:ir.model.fields,field_description:hr_assets_assignation.field_asset_account_request__message_follower_ids
+#: model:ir.model.fields,field_description:hr_assets_assignation.field_department_clearance__message_follower_ids
+#: model:ir.model.fields,field_description:hr_assets_assignation.field_department_clearance_line__message_follower_ids
+#: model:ir.model.fields,field_description:hr_assets_assignation.field_employee_asset_line__message_follower_ids
+#: model:ir.model.fields,field_description:hr_assets_assignation.field_employee_assets__message_follower_ids
+msgid "Followers"
+msgstr "المتابعون"
+
+#. module: hr_assets_assignation
+#: model:ir.model.fields,field_description:hr_assets_assignation.field_asset_account_request__message_channel_ids
+#: model:ir.model.fields,field_description:hr_assets_assignation.field_department_clearance__message_channel_ids
+#: model:ir.model.fields,field_description:hr_assets_assignation.field_department_clearance_line__message_channel_ids
+#: model:ir.model.fields,field_description:hr_assets_assignation.field_employee_asset_line__message_channel_ids
+#: model:ir.model.fields,field_description:hr_assets_assignation.field_employee_assets__message_channel_ids
+msgid "Followers (Channels)"
+msgstr "المتابعون (القنوات)"
+
+#. module: hr_assets_assignation
+#: model:ir.model.fields,field_description:hr_assets_assignation.field_asset_account_request__message_partner_ids
+#: model:ir.model.fields,field_description:hr_assets_assignation.field_department_clearance__message_partner_ids
+#: model:ir.model.fields,field_description:hr_assets_assignation.field_department_clearance_line__message_partner_ids
+#: model:ir.model.fields,field_description:hr_assets_assignation.field_employee_asset_line__message_partner_ids
+#: model:ir.model.fields,field_description:hr_assets_assignation.field_employee_assets__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "المتابعون (الشركاء)"
+
+#. module: hr_assets_assignation
+#: model:ir.model.fields,field_description:hr_assets_assignation.field_assests_wizard__id
+#: model:ir.model.fields,field_description:hr_assets_assignation.field_asset_account_request__id
+#: model:ir.model.fields,field_description:hr_assets_assignation.field_department_clearance__id
+#: model:ir.model.fields,field_description:hr_assets_assignation.field_department_clearance_line__id
+#: model:ir.model.fields,field_description:hr_assets_assignation.field_employee_asset_line__id
+#: model:ir.model.fields,field_description:hr_assets_assignation.field_employee_assets__id
+#: model:ir.model.fields,field_description:hr_assets_assignation.field_fleet_vehicle_employee_log__id
+msgid "ID"
+msgstr "المُعرف"
+
+#. module: hr_assets_assignation
+#: model:ir.model.fields,field_description:hr_assets_assignation.field_asset_account_request__activity_exception_icon
+#: model:ir.model.fields,field_description:hr_assets_assignation.field_department_clearance__activity_exception_icon
+#: model:ir.model.fields,field_description:hr_assets_assignation.field_department_clearance_line__activity_exception_icon
+#: model:ir.model.fields,field_description:hr_assets_assignation.field_employee_asset_line__activity_exception_icon
+#: model:ir.model.fields,field_description:hr_assets_assignation.field_employee_assets__activity_exception_icon
+msgid "Icon"
+msgstr "الأيقونة"
+
+#. module: hr_assets_assignation
+#: model:ir.model.fields,help:hr_assets_assignation.field_asset_account_request__activity_exception_icon
+#: model:ir.model.fields,help:hr_assets_assignation.field_department_clearance__activity_exception_icon
+#: model:ir.model.fields,help:hr_assets_assignation.field_department_clearance_line__activity_exception_icon
+#: model:ir.model.fields,help:hr_assets_assignation.field_employee_asset_line__activity_exception_icon
+#: model:ir.model.fields,help:hr_assets_assignation.field_employee_assets__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr "الأيقونة للإشارة إلى استثناء النشاط"
+
+#. module: hr_assets_assignation
+#: model:ir.model.fields,help:hr_assets_assignation.field_asset_account_request__message_needaction
+#: model:ir.model.fields,help:hr_assets_assignation.field_asset_account_request__message_unread
+#: model:ir.model.fields,help:hr_assets_assignation.field_department_clearance__message_needaction
+#: model:ir.model.fields,help:hr_assets_assignation.field_department_clearance__message_unread
+#: model:ir.model.fields,help:hr_assets_assignation.field_department_clearance_line__message_needaction
+#: model:ir.model.fields,help:hr_assets_assignation.field_department_clearance_line__message_unread
+#: model:ir.model.fields,help:hr_assets_assignation.field_employee_asset_line__message_needaction
+#: model:ir.model.fields,help:hr_assets_assignation.field_employee_asset_line__message_unread
+#: model:ir.model.fields,help:hr_assets_assignation.field_employee_assets__message_needaction
+#: model:ir.model.fields,help:hr_assets_assignation.field_employee_assets__message_unread
+msgid "If checked, new messages require your attention."
+msgstr "إذا كان محددًا، فهناك رسائل جديدة تحتاج لرؤيتها."
+
+#. module: hr_assets_assignation
+#: model:ir.model.fields,help:hr_assets_assignation.field_asset_account_request__message_has_error
+#: model:ir.model.fields,help:hr_assets_assignation.field_asset_account_request__message_has_sms_error
+#: model:ir.model.fields,help:hr_assets_assignation.field_department_clearance__message_has_error
+#: model:ir.model.fields,help:hr_assets_assignation.field_department_clearance__message_has_sms_error
+#: model:ir.model.fields,help:hr_assets_assignation.field_department_clearance_line__message_has_error
+#: model:ir.model.fields,help:hr_assets_assignation.field_department_clearance_line__message_has_sms_error
+#: model:ir.model.fields,help:hr_assets_assignation.field_employee_asset_line__message_has_error
+#: model:ir.model.fields,help:hr_assets_assignation.field_employee_asset_line__message_has_sms_error
+#: model:ir.model.fields,help:hr_assets_assignation.field_employee_assets__message_has_error
+#: model:ir.model.fields,help:hr_assets_assignation.field_employee_assets__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr "إذا كان محددًا، فقد حدث خطأ في تسليم بعض الرسائل."
+
+#. module: hr_assets_assignation
+#: model:ir.model.fields.selection,name:hr_assets_assignation.selection__asset_account_request__state__approve
+msgid "In progress"
+msgstr "تم الموافقه علي الطلب"
+
+#. module: hr_assets_assignation
+#: model:ir.model.fields,field_description:hr_assets_assignation.field_department_clearance_line__is_department_manager
+msgid "Is Department Manager"
+msgstr "اقسام تحت ادارتي"
+
+#. module: hr_assets_assignation
+#: model:ir.model.fields,field_description:hr_assets_assignation.field_asset_account_request__message_is_follower
+#: model:ir.model.fields,field_description:hr_assets_assignation.field_department_clearance__message_is_follower
+#: model:ir.model.fields,field_description:hr_assets_assignation.field_department_clearance_line__message_is_follower
+#: model:ir.model.fields,field_description:hr_assets_assignation.field_employee_asset_line__message_is_follower
+#: model:ir.model.fields,field_description:hr_assets_assignation.field_employee_assets__message_is_follower
+msgid "Is Follower"
+msgstr "متابع"
+
+#. module: hr_assets_assignation
+#: model:ir.model.fields,field_description:hr_assets_assignation.field_fleet_vehicle__is_take_by_employee
+msgid "Is Taken"
+msgstr ""
+
+#. module: hr_assets_assignation
+#: model:ir.model.fields,field_description:hr_assets_assignation.field_assests_wizard____last_update
+#: model:ir.model.fields,field_description:hr_assets_assignation.field_asset_account_request____last_update
+#: model:ir.model.fields,field_description:hr_assets_assignation.field_department_clearance____last_update
+#: model:ir.model.fields,field_description:hr_assets_assignation.field_department_clearance_line____last_update
+#: model:ir.model.fields,field_description:hr_assets_assignation.field_employee_asset_line____last_update
+#: model:ir.model.fields,field_description:hr_assets_assignation.field_employee_assets____last_update
+#: model:ir.model.fields,field_description:hr_assets_assignation.field_fleet_vehicle_employee_log____last_update
+msgid "Last Modified on"
+msgstr "آخر تعديل في"
+
+#. module: hr_assets_assignation
+#: model:ir.model.fields,field_description:hr_assets_assignation.field_assests_wizard__write_uid
+#: model:ir.model.fields,field_description:hr_assets_assignation.field_asset_account_request__write_uid
+#: model:ir.model.fields,field_description:hr_assets_assignation.field_department_clearance__write_uid
+#: model:ir.model.fields,field_description:hr_assets_assignation.field_department_clearance_line__write_uid
+#: model:ir.model.fields,field_description:hr_assets_assignation.field_employee_asset_line__write_uid
+#: model:ir.model.fields,field_description:hr_assets_assignation.field_employee_assets__write_uid
+#: model:ir.model.fields,field_description:hr_assets_assignation.field_fleet_vehicle_employee_log__write_uid
+msgid "Last Updated by"
+msgstr "آخر تحديث بواسطة"
+
+#. module: hr_assets_assignation
+#: model:ir.model.fields,field_description:hr_assets_assignation.field_assests_wizard__write_date
+#: model:ir.model.fields,field_description:hr_assets_assignation.field_asset_account_request__write_date
+#: model:ir.model.fields,field_description:hr_assets_assignation.field_department_clearance__write_date
+#: model:ir.model.fields,field_description:hr_assets_assignation.field_department_clearance_line__write_date
+#: model:ir.model.fields,field_description:hr_assets_assignation.field_employee_asset_line__write_date
+#: model:ir.model.fields,field_description:hr_assets_assignation.field_employee_assets__write_date
+#: model:ir.model.fields,field_description:hr_assets_assignation.field_fleet_vehicle_employee_log__write_date
+msgid "Last Updated on"
+msgstr "آخر تحديث في"
+
+#. module: hr_assets_assignation
+#: model:ir.model.fields,field_description:hr_assets_assignation.field_asset_account_request__message_main_attachment_id
+#: model:ir.model.fields,field_description:hr_assets_assignation.field_department_clearance__message_main_attachment_id
+#: model:ir.model.fields,field_description:hr_assets_assignation.field_department_clearance_line__message_main_attachment_id
+#: model:ir.model.fields,field_description:hr_assets_assignation.field_employee_asset_line__message_main_attachment_id
+#: model:ir.model.fields,field_description:hr_assets_assignation.field_employee_assets__message_main_attachment_id
+msgid "Main Attachment"
+msgstr "المرفق الرئيسي"
+
+#. module: hr_assets_assignation
+#: model:ir.model.fields,field_description:hr_assets_assignation.field_asset_account_request__message_has_error
+#: model:ir.model.fields,field_description:hr_assets_assignation.field_department_clearance__message_has_error
+#: model:ir.model.fields,field_description:hr_assets_assignation.field_department_clearance_line__message_has_error
+#: model:ir.model.fields,field_description:hr_assets_assignation.field_employee_asset_line__message_has_error
+#: model:ir.model.fields,field_description:hr_assets_assignation.field_employee_assets__message_has_error
+msgid "Message Delivery error"
+msgstr "خطأ في تسليم الرسائل"
+
+#. module: hr_assets_assignation
+#: model:ir.model.fields,field_description:hr_assets_assignation.field_asset_account_request__message_ids
+#: model:ir.model.fields,field_description:hr_assets_assignation.field_department_clearance__message_ids
+#: model:ir.model.fields,field_description:hr_assets_assignation.field_department_clearance_line__message_ids
+#: model:ir.model.fields,field_description:hr_assets_assignation.field_employee_asset_line__message_ids
+#: model:ir.model.fields,field_description:hr_assets_assignation.field_employee_assets__message_ids
+msgid "Messages"
+msgstr "الرسائل"
+
+#. module: hr_assets_assignation
+#: model:ir.model.fields,field_description:hr_assets_assignation.field_asset_account_request__activity_date_deadline
+#: model:ir.model.fields,field_description:hr_assets_assignation.field_department_clearance__activity_date_deadline
+#: model:ir.model.fields,field_description:hr_assets_assignation.field_department_clearance_line__activity_date_deadline
+#: model:ir.model.fields,field_description:hr_assets_assignation.field_employee_asset_line__activity_date_deadline
+#: model:ir.model.fields,field_description:hr_assets_assignation.field_employee_assets__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "الموعد النهائي للنشاط التالي"
+
+#. module: hr_assets_assignation
+#: model:ir.model.fields,field_description:hr_assets_assignation.field_asset_account_request__activity_summary
+#: model:ir.model.fields,field_description:hr_assets_assignation.field_department_clearance__activity_summary
+#: model:ir.model.fields,field_description:hr_assets_assignation.field_department_clearance_line__activity_summary
+#: model:ir.model.fields,field_description:hr_assets_assignation.field_employee_asset_line__activity_summary
+#: model:ir.model.fields,field_description:hr_assets_assignation.field_employee_assets__activity_summary
+msgid "Next Activity Summary"
+msgstr "ملخص النشاط التالي"
+
+#. module: hr_assets_assignation
+#: model:ir.model.fields,field_description:hr_assets_assignation.field_asset_account_request__activity_type_id
+#: model:ir.model.fields,field_description:hr_assets_assignation.field_department_clearance__activity_type_id
+#: model:ir.model.fields,field_description:hr_assets_assignation.field_department_clearance_line__activity_type_id
+#: model:ir.model.fields,field_description:hr_assets_assignation.field_employee_asset_line__activity_type_id
+#: model:ir.model.fields,field_description:hr_assets_assignation.field_employee_assets__activity_type_id
+msgid "Next Activity Type"
+msgstr "نوع النشاط التالي"
+
+#. module: hr_assets_assignation
+#: model:ir.model.fields.selection,name:hr_assets_assignation.selection__asset_account_request__type__non_asset
+#: model:ir.model.fields.selection,name:hr_assets_assignation.selection__employee_asset_line__type__non_asset
+msgid "Non Asset"
+msgstr "ليست اصل"
+
+#. module: hr_assets_assignation
+#: model:ir.model.fields,field_description:hr_assets_assignation.field_department_clearance_line__notes
+#: model_terms:ir.ui.view,arch_db:hr_assets_assignation.department_clearance_report_template
+msgid "Notes"
+msgstr "ملاحظات الاقسام"
+
+#. module: hr_assets_assignation
+#: model:ir.model.fields,field_description:hr_assets_assignation.field_asset_account_request__message_needaction_counter
+#: model:ir.model.fields,field_description:hr_assets_assignation.field_department_clearance__message_needaction_counter
+#: model:ir.model.fields,field_description:hr_assets_assignation.field_department_clearance_line__message_needaction_counter
+#: model:ir.model.fields,field_description:hr_assets_assignation.field_employee_asset_line__message_needaction_counter
+#: model:ir.model.fields,field_description:hr_assets_assignation.field_employee_assets__message_needaction_counter
+msgid "Number of Actions"
+msgstr "عدد الإجراءات"
+
+#. module: hr_assets_assignation
+#: model:ir.model.fields,field_description:hr_assets_assignation.field_asset_account_request__message_has_error_counter
+#: model:ir.model.fields,field_description:hr_assets_assignation.field_department_clearance__message_has_error_counter
+#: model:ir.model.fields,field_description:hr_assets_assignation.field_department_clearance_line__message_has_error_counter
+#: model:ir.model.fields,field_description:hr_assets_assignation.field_employee_asset_line__message_has_error_counter
+#: model:ir.model.fields,field_description:hr_assets_assignation.field_employee_assets__message_has_error_counter
+msgid "Number of errors"
+msgstr "عدد الاخطاء"
+
+#. module: hr_assets_assignation
+#: model:ir.model.fields,help:hr_assets_assignation.field_asset_account_request__message_needaction_counter
+#: model:ir.model.fields,help:hr_assets_assignation.field_department_clearance__message_needaction_counter
+#: model:ir.model.fields,help:hr_assets_assignation.field_department_clearance_line__message_needaction_counter
+#: model:ir.model.fields,help:hr_assets_assignation.field_employee_asset_line__message_needaction_counter
+#: model:ir.model.fields,help:hr_assets_assignation.field_employee_assets__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr "عدد الرسائل التي تتطلب إجراء"
+
+#. module: hr_assets_assignation
+#: model:ir.model.fields,help:hr_assets_assignation.field_asset_account_request__message_has_error_counter
+#: model:ir.model.fields,help:hr_assets_assignation.field_department_clearance__message_has_error_counter
+#: model:ir.model.fields,help:hr_assets_assignation.field_department_clearance_line__message_has_error_counter
+#: model:ir.model.fields,help:hr_assets_assignation.field_employee_asset_line__message_has_error_counter
+#: model:ir.model.fields,help:hr_assets_assignation.field_employee_assets__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "عدد الرسائل الحادث بها خطأ في التسليم"
+
+#. module: hr_assets_assignation
+#: model:ir.model.fields,help:hr_assets_assignation.field_asset_account_request__message_unread_counter
+#: model:ir.model.fields,help:hr_assets_assignation.field_department_clearance__message_unread_counter
+#: model:ir.model.fields,help:hr_assets_assignation.field_department_clearance_line__message_unread_counter
+#: model:ir.model.fields,help:hr_assets_assignation.field_employee_asset_line__message_unread_counter
+#: model:ir.model.fields,help:hr_assets_assignation.field_employee_assets__message_unread_counter
+msgid "Number of unread messages"
+msgstr "عدد الرسائل الجديدة"
+
+#. module: hr_assets_assignation
+#: code:addons/hr_assets_assignation/wizards/wizard.py:0
+#: model:ir.model.fields,field_description:hr_assets_assignation.field_assests_wizard__Reason
+#, python-format
+msgid "Reason Refuse"
+msgstr "سبب الرفض"
+
+#. module: hr_assets_assignation
+#: model_terms:ir.ui.view,arch_db:hr_assets_assignation.asset_account_request_form
+msgid "Refuse"
+msgstr "رفض"
+
+#. module: hr_assets_assignation
+#: model:ir.model.fields,field_description:hr_assets_assignation.field_asset_account_request__refuse_boolean
+msgid "Refuse Boolean"
+msgstr ""
+
+#. module: hr_assets_assignation
+#: model:res.groups,name:hr_assets_assignation.asset_assignation_refuse_button
+msgid "Refuse Button"
+msgstr "زر الرفض"
+
+#. module: hr_assets_assignation
+#: model:ir.model.fields,field_description:hr_assets_assignation.field_asset_account_request__asset_request_Refuse_reason
+msgid "Refuse Reason"
+msgstr "سبب الرفض"
+
+#. module: hr_assets_assignation
+#: model:ir.model.fields.selection,name:hr_assets_assignation.selection__asset_account_request__state__refuse
+msgid "Refused"
+msgstr "مرفوض"
+
+#. module: hr_assets_assignation
+#: model:ir.model.fields.selection,name:hr_assets_assignation.selection__employee_assets__state__first_approve
+msgid "Request Sent"
+msgstr "تم ارسال الطلب"
+
+#. module: hr_assets_assignation
+#: model:ir.model.fields,field_description:hr_assets_assignation.field_asset_account_request__activity_user_id
+#: model:ir.model.fields,field_description:hr_assets_assignation.field_department_clearance__activity_user_id
+#: model:ir.model.fields,field_description:hr_assets_assignation.field_department_clearance_line__activity_user_id
+#: model:ir.model.fields,field_description:hr_assets_assignation.field_employee_asset_line__activity_user_id
+#: model:ir.model.fields,field_description:hr_assets_assignation.field_employee_assets__activity_user_id
+msgid "Responsible User"
+msgstr "المستخدم المسؤول"
+
+#. module: hr_assets_assignation
+#: model:ir.model.fields,field_description:hr_assets_assignation.field_asset_account_request__message_has_sms_error
+#: model:ir.model.fields,field_description:hr_assets_assignation.field_department_clearance__message_has_sms_error
+#: model:ir.model.fields,field_description:hr_assets_assignation.field_department_clearance_line__message_has_sms_error
+#: model:ir.model.fields,field_description:hr_assets_assignation.field_employee_asset_line__message_has_sms_error
+#: model:ir.model.fields,field_description:hr_assets_assignation.field_employee_assets__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr "خطأ في تسليم الرسائل القصيرة"
+
+#. module: hr_assets_assignation
+#: model_terms:ir.ui.view,arch_db:hr_assets_assignation.employee_assets_form
+msgid "Send Request"
+msgstr "ارسال الطلب"
+
+#. module: hr_assets_assignation
+#: model_terms:ir.ui.view,arch_db:hr_assets_assignation.asset_account_request_form
+#: model_terms:ir.ui.view,arch_db:hr_assets_assignation.employee_assets_form
+msgid "Set To Draft"
+msgstr "اعاده كجديده"
+
+#. module: hr_assets_assignation
+#: model:res.groups,name:hr_assets_assignation.asset_assignation_set_to_draft_button
+#: model:res.groups,name:hr_assets_assignation.employee_asset_set_to_draft_button
+msgid "Set To Draft Button"
+msgstr "زر اعاده كجديده"
+
+#. module: hr_assets_assignation
+#: model:ir.model.fields,field_description:hr_assets_assignation.field_department_clearance_line__signature
+#: model_terms:ir.ui.view,arch_db:hr_assets_assignation.department_clearance_report_template
+#: model_terms:ir.ui.view,arch_db:hr_assets_assignation.employee_assets_report_template
+msgid "Signature"
+msgstr "التوقيع"
+
+#. module: hr_assets_assignation
+#: model:ir.model.fields,field_description:hr_assets_assignation.field_fleet_vehicle_employee_log__date_start
+msgid "Start Date"
+msgstr "تاريخ البداية"
+
+#. module: hr_assets_assignation
+#: model:ir.model.fields,field_description:hr_assets_assignation.field_asset_account_request__state
+#: model:ir.model.fields,field_description:hr_assets_assignation.field_employee_assets__state
+msgid "State"
+msgstr "الحاله"
+
+#. module: hr_assets_assignation
+#: model_terms:ir.ui.view,arch_db:hr_assets_assignation.employee_assets_kanban
+msgid "State :"
+msgstr "الحاله :"
+
+#. module: hr_assets_assignation
+#: model:ir.model.fields,field_description:hr_assets_assignation.field_asset_account_request__state_of_asset_when_delivery
+#: model:ir.model.fields,field_description:hr_assets_assignation.field_fleet_vehicle_employee_log__state_of_asset_when_delivery
+msgid "State Of Asset When Delivery"
+msgstr "حاله العهده عند التسليم"
+
+#. module: hr_assets_assignation
+#: model:ir.model.fields,field_description:hr_assets_assignation.field_asset_account_request__state_of_asset_when_receive
+#: model:ir.model.fields,field_description:hr_assets_assignation.field_fleet_vehicle_employee_log__state_of_asset_when_receive
+msgid "State Of Asset When Receive"
+msgstr "حاله العهده عند الاستلام"
+
+#. module: hr_assets_assignation
+#: model:ir.model.fields,help:hr_assets_assignation.field_asset_account_request__activity_state
+#: model:ir.model.fields,help:hr_assets_assignation.field_department_clearance__activity_state
+#: model:ir.model.fields,help:hr_assets_assignation.field_department_clearance_line__activity_state
+#: model:ir.model.fields,help:hr_assets_assignation.field_employee_asset_line__activity_state
+#: model:ir.model.fields,help:hr_assets_assignation.field_employee_assets__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+"الحالة على أساس الأنشطة\n"
+"المتأخرة: تاريخ الاستحقاق مر\n"
+"اليوم: تاريخ النشاط هو اليوم\n"
+"المخطط: الأنشطة المستقبلية."
+
+#. module: hr_assets_assignation
+#: model_terms:ir.ui.view,arch_db:hr_assets_assignation.asset_account_request_form
+msgid "Submit"
+msgstr "ارسال الطلب"
+
+#. module: hr_assets_assignation
+#: model:ir.model.fields.selection,name:hr_assets_assignation.selection__asset_account_request__state__submit
+msgid "Submitted"
+msgstr "تم الارسال"
+
+#. module: hr_assets_assignation
+#: model:ir.actions.act_window,name:hr_assets_assignation.asset_submitted_action
+msgid "Submitted Action"
+msgstr "جاري ارسال الطلب"
+
+#. module: hr_assets_assignation
+#: model:ir.ui.menu,name:hr_assets_assignation.submitted_action_menu
+msgid "Submitted Menu"
+msgstr "جارى ارسال الطلب"
+
+#. module: hr_assets_assignation
+#: model:ir.model.fields,field_description:hr_assets_assignation.field_asset_account_request__type
+#: model:ir.model.fields,field_description:hr_assets_assignation.field_employee_asset_line__type
+#: model_terms:ir.ui.view,arch_db:hr_assets_assignation.employee_assets_report_template
+msgid "Type"
+msgstr "النوع"
+
+#. module: hr_assets_assignation
+#: model_terms:ir.ui.view,arch_db:hr_assets_assignation.asset_account_request_kanban
+msgid "Type :"
+msgstr "النوع :"
+
+#. module: hr_assets_assignation
+#: model:ir.model.fields,field_description:hr_assets_assignation.field_asset_account_request__type_of_disclaimer
+#: model:ir.model.fields,field_description:hr_assets_assignation.field_employee_asset_line__type_of_disclaimer
+#: model:ir.model.fields,field_description:hr_assets_assignation.field_employee_assets__type_of_disclaimer
+msgid "Type Of Disclaimer"
+msgstr "مطلوب تسليمها عند"
+
+#. module: hr_assets_assignation
+#: model_terms:ir.ui.view,arch_db:hr_assets_assignation.employee_assets_kanban
+msgid "Type Of Disclaimer :"
+msgstr "مطلوب تسليمها عند :"
+
+#. module: hr_assets_assignation
+#: model:ir.model.fields,help:hr_assets_assignation.field_asset_account_request__activity_exception_decoration
+#: model:ir.model.fields,help:hr_assets_assignation.field_department_clearance__activity_exception_decoration
+#: model:ir.model.fields,help:hr_assets_assignation.field_department_clearance_line__activity_exception_decoration
+#: model:ir.model.fields,help:hr_assets_assignation.field_employee_asset_line__activity_exception_decoration
+#: model:ir.model.fields,help:hr_assets_assignation.field_employee_assets__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr "نوع النشاط الاستثنائي المسجل."
+
+#. module: hr_assets_assignation
+#: model:ir.model.fields,field_description:hr_assets_assignation.field_asset_account_request__message_unread
+#: model:ir.model.fields,field_description:hr_assets_assignation.field_department_clearance__message_unread
+#: model:ir.model.fields,field_description:hr_assets_assignation.field_department_clearance_line__message_unread
+#: model:ir.model.fields,field_description:hr_assets_assignation.field_employee_asset_line__message_unread
+#: model:ir.model.fields,field_description:hr_assets_assignation.field_employee_assets__message_unread
+msgid "Unread Messages"
+msgstr "الرسائل الجديدة"
+
+#. module: hr_assets_assignation
+#: model:ir.model.fields,field_description:hr_assets_assignation.field_asset_account_request__message_unread_counter
+#: model:ir.model.fields,field_description:hr_assets_assignation.field_department_clearance__message_unread_counter
+#: model:ir.model.fields,field_description:hr_assets_assignation.field_department_clearance_line__message_unread_counter
+#: model:ir.model.fields,field_description:hr_assets_assignation.field_employee_asset_line__message_unread_counter
+#: model:ir.model.fields,field_description:hr_assets_assignation.field_employee_assets__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr "عدد الرسائل الجديدة"
+
+#. module: hr_assets_assignation
+#: model:ir.model.fields.selection,name:hr_assets_assignation.selection__asset_account_request__type_of_disclaimer__vacation
+#: model:ir.model.fields.selection,name:hr_assets_assignation.selection__employee_asset_line__type_of_disclaimer__vacation
+#: model:ir.model.fields.selection,name:hr_assets_assignation.selection__employee_assets__type_of_disclaimer__vacation
+msgid "Vacation"
+msgstr "اجازه"
+
+#. module: hr_assets_assignation
+#: model:ir.model,name:hr_assets_assignation.model_fleet_vehicle
+#: model:ir.model.fields,field_description:hr_assets_assignation.field_fleet_vehicle_employee_log__vehicle_id
+msgid "Vehicle"
+msgstr "المركبة"
+
+#. module: hr_assets_assignation
+#: model:ir.actions.act_window,name:hr_assets_assignation.waiting_asset_assignation_approve_action
+msgid "Waiting Approve Action"
+msgstr "في انتظار الموافقه علي الطلب"
+
+#. module: hr_assets_assignation
+#: model:res.groups,name:hr_assets_assignation.employee_asset_waiting_approve_menu
+#: model:res.groups,name:hr_assets_assignation.waiting_asset_assignation_approve_action_menu
+msgid "Waiting Approve Menu"
+msgstr "قائمه تم ارسال الطلب وفي انتظار الموافقه علي اخلاء الطرف"
+
+#. module: hr_assets_assignation
+#: model:ir.ui.menu,name:hr_assets_assignation.waiting_approve_on_clearance_menu
+msgid "Waiting Approve On Clearance"
+msgstr "تم اخلاء الطرف"
+
+#. module: hr_assets_assignation
+#: model:res.groups,name:hr_assets_assignation.employee_asset_waiting_approve_on_clearance_menu
+msgid "Waiting Approve On Clearance Menu"
+msgstr "قائمه تم اخلاء الطرف"
+
+#. module: hr_assets_assignation
+#: model:ir.actions.act_window,name:hr_assets_assignation.waiting_assign_to_employee_action
+#: model:ir.ui.menu,name:hr_assets_assignation.waiting_assignation_action_menu
+msgid "Waiting Assignation To Employee"
+msgstr "تم الموافقه علي الطلب وجارى اسناد العهده للموظف"
+
+#. module: hr_assets_assignation
+#: model:res.groups,name:hr_assets_assignation.waiting_assignation_to_employee_menu
+msgid "Waiting Assignation To Employee Menu"
+msgstr "قائمه تم الموافقه علي الطلب وجارى اسناد العهده للموظف"
+
+#. module: hr_assets_assignation
+#: model:ir.actions.act_window,name:hr_assets_assignation.waiting_employee_clearance_action
+#: model:ir.ui.menu,name:hr_assets_assignation.waiting_clearance_action_menu
+msgid "Waiting For Clearance"
+msgstr "العهد لدى الموظفين"
+
+#. module: hr_assets_assignation
+#: model:res.groups,name:hr_assets_assignation.waiting_for_clearance_menu
+msgid "Waiting For Clearance Menu"
+msgstr "قائمه العهد لدى الموظفين"
+
+#. module: hr_assets_assignation
+#: model:ir.model.fields,field_description:hr_assets_assignation.field_asset_account_request__website_message_ids
+#: model:ir.model.fields,field_description:hr_assets_assignation.field_department_clearance__website_message_ids
+#: model:ir.model.fields,field_description:hr_assets_assignation.field_department_clearance_line__website_message_ids
+#: model:ir.model.fields,field_description:hr_assets_assignation.field_employee_asset_line__website_message_ids
+#: model:ir.model.fields,field_description:hr_assets_assignation.field_employee_assets__website_message_ids
+msgid "Website Messages"
+msgstr "رسائل الموقع"
+
+#. module: hr_assets_assignation
+#: model:ir.model.fields,help:hr_assets_assignation.field_asset_account_request__website_message_ids
+#: model:ir.model.fields,help:hr_assets_assignation.field_department_clearance__website_message_ids
+#: model:ir.model.fields,help:hr_assets_assignation.field_department_clearance_line__website_message_ids
+#: model:ir.model.fields,help:hr_assets_assignation.field_employee_asset_line__website_message_ids
+#: model:ir.model.fields,help:hr_assets_assignation.field_employee_assets__website_message_ids
+msgid "Website communication history"
+msgstr "سجل تواصل الموقع"
+
+#. module: hr_assets_assignation
+#: model:ir.model,name:hr_assets_assignation.model_assests_wizard
+msgid "Wizard: Reason of refuse Request"
+msgstr ""
+
+#. module: hr_assets_assignation
+#: code:addons/hr_assets_assignation/models/asset_account_request.py:0
+#, python-format
+msgid "You Must Select At Least One Asset To Approve"
+msgstr "يجب اختيار علي الاقل واحده من العهد للموافقه وارسال الطلب"
+
+#. module: hr_assets_assignation
+#: model:ir.model,name:hr_assets_assignation.model_asset_account_request
+msgid "asset.account.request"
+msgstr "العهد العينية"
+
+#. module: hr_assets_assignation
+#: model:ir.model.fields.selection,name:hr_assets_assignation.selection__asset_account_request__state__clearance
+#: model:ir.model.fields.selection,name:hr_assets_assignation.selection__employee_assets__state__clearance
+msgid "clearance"
+msgstr "تم اخلاء الطرف"
+
+#. module: hr_assets_assignation
+#: model:ir.model,name:hr_assets_assignation.model_department_clearance
+msgid "department.clearance"
+msgstr ""
+
+#. module: hr_assets_assignation
+#: model:ir.model,name:hr_assets_assignation.model_department_clearance_line
+msgid "department.clearance.line"
+msgstr ""
+
+#. module: hr_assets_assignation
+#: model:ir.model,name:hr_assets_assignation.model_employee_asset_line
+msgid "employee.asset.line"
+msgstr ""
+
+#. module: hr_assets_assignation
+#: model:ir.model,name:hr_assets_assignation.model_employee_assets
+msgid "employee.assets"
+msgstr ""
+
+#. module: hr_assets_assignation
+#: model_terms:ir.ui.view,arch_db:hr_assets_assignation.department_clearance_report_template
+msgid "تم تسليم عهد الموظف"
+msgstr ""
+
+#. module: hr_assets_assignation
+#: model_terms:ir.ui.view,arch_db:hr_assets_assignation.employee_assets_report_template
+msgid "تم تسليم عهده الموظف"
+msgstr ""
+
+#. module: hr_assets_assignation
+#: model_terms:ir.ui.view,arch_db:hr_assets_assignation.employee_assets_report_template
+msgid "واخلاء طرفه"
+msgstr ""
+
+#. module: hr_assets_assignation
+#: model_terms:ir.ui.view,arch_db:hr_assets_assignation.department_clearance_report_template
+msgid "واخلاء طرفه وهذا اقرار من جميع الاقسام علي ذلك"
+msgstr ""

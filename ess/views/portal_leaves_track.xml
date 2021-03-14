@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="ess_track_leaves" name="ESS Track Leaves">
+        <t t-call="portal.portal_layout">
+            <t>
+                <div class="row justify-content-between mt-4">
+
+                    <nav class="navbar-default navbar-static-side" role="navigation" style="z-index: 1;position: initial;">
+                        <t t-call="ess.side_menu"/>
+                    </nav>
+
+                    <div class="row col-10 col-md col-lg-10"> 
+						<div class="col-lg-12">
+							<div class="ibox ">
+								<div class="row iess-title" style="text-align:left;margin-right: 20px;margin-left: 20px;">
+									<h3><span>Track Leaves Requests</span></h3>
+								</div>
+								<div class="ibox-content">
+									<div class="row">
+										<div class="col-lg-12">
+											<div class="ibox ">
+												<div class="ibox-content iess-p20">
+													<div class="table-responsive">
+														<table class="table header-border table-hover table-custom spacing5 ess-table">
+															<thead>
+																<tr>
+																	<th>Name</th>
+																	<th>Days</th>
+																	<th>Status</th>
+																</tr>
+															</thead>
+															<tbody t-foreach="leave_list" t-as="lea">
+																<tr>
+																	<td><div t-esc="lea['name']"/></td>
+																	<td><div t-esc="lea['number_of_days']"/></td>
+																	<td><div t-esc="lea['state_desc']"/></td>
+																</tr>
+															</tbody>
+														</table>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+                    </div>
+                </div>
+            </t>  
+        </t>
+    </template>
+
+
+</odoo>

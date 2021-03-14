@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+
+    <!--    Administration Form-->
+    <record id="hr_employee_appraisal_form" model="ir.ui.view">
+        <field name="name">hr.employee.appraisal.form</field>
+        <field name="model">hr.employee.appraisal</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <button type="object" name="action_complete_appraisal" class="oe_highlight"
+                            string="Complete Appraisal" states="draft"
+                    />
+                    <field name="state" widget="statusbar" statusbar_visible="draft,completed"/>
+                </header>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="employee_id" />
+                            <field name="manager_id" readonly="1"/>
+<!--                            <field name="appraisal_id" readonly="1"/>-->
+                        </group>
+                        <group>
+                            <field name="total_deserve_appraisal" />
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Treatment Information" name="Treatment Information" >
+                            <field name="appraisal_item_ids">
+                                <tree editable="bottom" >
+                                    <field name="appraisal_criteria_id"/>
+                                    <field name="max_limit" sum="total"/>
+                                    <field name="deserved_degree" sum="total"/>
+                                    <field name="appraisal_level"/>
+<!--                                    <field name="appraisal_level_id"/>-->
+                                </tree>
+                            </field>
+                        </page>
+                        <page string="Strong And Weak Points" name="Strong And Weak Points">
+                            <field name="strong_weak_point_ids">
+                                <tree editable="bottom">
+                                    <field name="strong_points"/>
+                                    <field name="weak_points"/>
+                                </tree>
+                            </field>
+                        </page>
+                        <page string="Appraisal Manager Recommendations" name="Appraisal Manager Recommendations">
+                            <field name="appraisal_manager_recommendations_ids">
+                                <tree editable="bottom">
+                                    <field name="appraisal_recommendation_id"/>
+                                    <field name="approve_recommendation"/>
+                                    <field name="disagree_recommendation"/>
+                                </tree>
+                            </field>
+                        </page>
+
+                    </notebook>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" widget="mail_followers"/>
+                    <field name="activity_ids" widget="mail_activity"/>
+                    <field name="message_ids" widget="mail_thread"/>
+                </div>
+            </form>
+        </field>
+    </record>
+
+    <record id="hr_employee_appraisal_tree" model="ir.ui.view">
+        <field name="name">hr.employee.appraisal.tree</field>
+        <field name="model">hr.employee.appraisal</field>
+        <field name="arch" type="xml">
+            <tree string="">
+                <field name="employee_id" />
+                <field name="manager_id" />
+                <field name="total_deserve_appraisal" />
+                <field name="state" />
+            </tree>
+        </field>
+    </record>
+
+    <record id="hr_employee_appraisal_action" model="ir.actions.act_window">
+        <field name="name">Employee Appraisal</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">hr.employee.appraisal</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!--    Administration Form-->
+
+    <menuitem id="hr_employee_appraisal_root_menu"
+              name="Employee Appraisal Main Menu"
+              parent="hr_appraisal.menu_hr_appraisal_root"
+              sequence="4"
+    />
+
+    <menuitem id="hr_employee_appraisal_child_menu"
+              name="Employee Appraisal Menu"
+              action="hr_employee_appraisal_action"
+              parent="hr_employee_appraisal_root_menu"
+              sequence="2"
+    />
+
+</odoo>

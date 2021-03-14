@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="ess_eos" name="ESS End Of Service">
+        <t t-call="portal.portal_layout">
+            <t>
+                <div class="row justify-content-between mt-4">
+                    <nav class="navbar-default navbar-static-side" role="navigation" style="z-index: 1;position: initial;">
+                        <t t-call="ess.side_menu"/>
+                    </nav>
+                    <div class="row col-10 col-md col-lg-10"> 
+                        <div class="col-lg-12">
+                            <div class="ibox ">
+                                <div class="row iess-title" style="text-align:left;margin-right: 20px;margin-left: 20px;">
+                                    <h3><span>EOS Calculator</span></h3>
+                                </div>
+                                <div class="ibox-content">
+                                    <div class="row">
+                                        <div class="col-lg-12" style="margin-top:10px;">
+                                            <form action="/my/eos" method="post" enctype="multipart/form-data">
+                                                <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+                                                
+                                                <div class="row o_portal_document">
+                                                    <div class="col-lg-12">
+
+                                                            <div class="col-lg-12">
+                                                                <div t-if="error_message" class="alert alert-danger" role="alert">
+                                                                    <t t-foreach="error_message" t-as="err"><t t-esc="err"/><br /></t>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="row form-group col-lg-12">
+                                                                <div t-attf-class="form-group #{error.get('date') and 'o_has_error' or ''} col-xl-4">
+                                                                    <label class="col-form-label" for="date">Last Work Date</label>
+                                                                    <input type="date" name="date" t-attf-class="form-control #{error.get('date') and 'is-invalid' or ''}" required=""/>
+                                                                </div>
+                                                                <div t-attf-class="form-group #{error.get('type') and 'o_has_error' or ''} col-xl-6">
+                                                                    <label class="col-form-label" for="type">Contact End Type</label>
+                                                                    <select name="type" t-attf-class="form-control #{error.get('type') and 'is-invalid' or ''}">
+                                                                        <option value="end_period">End of Contract Period</option>
+                                                                        <option value="immediate_resignation">Immediate resignation</option>
+                                                                        <option value="resignation_after_month">Resignation After Month</option>
+                                                                        <option value="law_80">Law 80</option>
+                                                                        <option value="law_77_by_employee">Law 77 By Employee</option>
+                                                                        <option value="law_77_by_company">Law 77 By Company</option>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="clearfix">
+                                                                <button type="submit" class="btn btn-primary float-right" style='margin-right: 30px;'>
+                                                                    Confirm
+                                                                </button>
+                                                            </div> 
+
+                                                            <!--  -->
+
+                                                            <div t-if="eos_value" class="row form-group col-lg-12">
+                                                                <div class="col-lg-6">
+                                                                    <div class="table-responsive">
+                                                                        <table class="table header-border table-hover table-custom spacing5 ess-table">
+                                                                            <tbody>
+                                                                                <tr>
+                                                                                    <td>Total Years Before Five Years</td>
+                                                                                    <td style="text-align:left"><div t-esc="'{0:,.2f}'.format(eos_value['total_days_before'])"/></td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td>Total Years After Five Years</td>
+                                                                                    <td style="text-align:left"><div t-esc="eos_value['total_days_after']"/></td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td>Deserve First Period</td>
+                                                                                    <td style="text-align:left"><div t-esc="'{0:,.2f}'.format(eos_value['net_period_before_5year'])"/></td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td>Deserve Second Period</td>
+                                                                                    <td style="text-align:left"><div t-esc="eos_value['net_period_after_5year']"/></td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td>Wage</td>
+                                                                                    <td style="text-align:left"><div t-esc="eos_value['wage']"/></td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="col-lg-6">
+                                                                    <div class="table-responsive">
+                                                                        <table class="table header-border table-hover table-custom spacing5 ess-table">
+                                                                            <tbody>
+                                                                                <tr>
+                                                                                    <td>Join Date</td>
+                                                                                    <td style="text-align:left"><div t-esc="eos_value['join_date']"/></td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td>Number of Days From Join Date</td>
+                                                                                    <td style="text-align:left"><div t-esc="eos_value['number_of_days_from_join_date']"/></td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td>Total Unpaid Days</td>
+                                                                                    <td style="text-align:left"><div t-esc="eos_value['total_unpaid_days']"/></td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td>Net Period</td>
+                                                                                    <td style="text-align:left"><div t-esc="eos_value['net_period']"/></td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td>Final Deserving</td>
+                                                                                    <td style="text-align:left"><div t-esc="'{0:,.2f}'.format(eos_value['final_deserving'])"/></td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td>Deserving</td>
+                                                                                    <td style="text-align:left"><div t-esc="'{0:,.2f}'.format(eos_value['deserving'])"/></td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </div>
+                                                                </div>
+                                                                                
+                                                            </div>
+                                                        </div>
+                                                        
+
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>   
+                    </div>
+                </div>
+            </t>
+        </t>
+    </template>
+
+
+</odoo>

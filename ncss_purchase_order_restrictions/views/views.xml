@@ -1,0 +1,82 @@
+<odoo>
+    <data>
+
+        <record id="purchase_order_form_inherit" model="ir.ui.view">
+            <field name="name">purchase.order.form</field>
+            <field name="model">purchase.order</field>
+            <field name="inherit_id" ref="purchase.purchase_order_form"/>
+            <field name="arch" type="xml">
+<!--                <xpath expr="//button[@name='action_post']" position="before">-->
+<!--                    <button name="action_accounting_approve" string="Accounting Approve"-->
+<!--                            class="oe_highlight" type="object"-->
+<!--                            groups="ncss_journal_restrictions.journal_restriction_accounting"-->
+<!--                            attrs="{'invisible': ['|', ('type', '!=', 'entry'), ('state', '!=', 'draft')]}"-->
+<!--                    />-->
+<!--                    <button name="action_financial_affairs" string="Administrative and Financial Affairs"-->
+<!--                            class="oe_highlight" type="object"-->
+<!--                            groups="ncss_journal_restrictions.administrative_and_financial_affairs"-->
+<!--                            attrs="{'invisible': ['|', ('type', '!=', 'entry'), ('state', '!=', 'Accounting Approve')]}"-->
+<!--                    />-->
+<!--                    <button name="action_financial_auditor" string="Financial auditor"-->
+<!--                            class="oe_highlight" type="object"-->
+<!--                            groups="ncss_journal_restrictions.financial_auditor"-->
+<!--                            attrs="{'invisible': ['|', ('type', '!=', 'entry'), ('state', '!=', 'Administrative and Financial Affairs')]}"-->
+<!--                    />-->
+<!--                </xpath>-->
+<!--                <xpath expr="//button[@name='action_post']" position="replace">-->
+<!--                    <button name="action_post" string="Post" class="oe_highlight"-->
+<!--                            type="object" groups="ncss_journal_restrictions.general_director"-->
+<!--                            attrs="{'invisible': [('state', '!=', 'Financial auditor'),'|',('type', '=', 'entry'),('state', '!=', 'draft')]}"/>-->
+<!--                </xpath>-->
+
+                <xpath expr="//button[@name='button_confirm']" position="before">
+
+                    <button name="action_accounting_approve" string="Accounting Approve"
+                            class="oe_highlight" type="object"
+                            groups="ncss_purchase_order_restrictions.purchase_order_restriction_accounting"
+                            states="draft,sent,to approve"
+                    />
+                    <button name="action_financial_affairs" string="Administrative and Financial Affairs"
+                            class="oe_highlight" type="object"
+                            groups="ncss_purchase_order_restrictions.purchase_order_administrative_and_financial_affairs"
+                            states="Accounting Approve"
+                    />
+                    <button name="action_financial_auditor" string="Financial auditor"
+                            class="oe_highlight" type="object"
+                            groups="ncss_purchase_order_restrictions.purchase_order_financial_auditor"
+                            states="Administrative and Financial Affairs"
+                    />
+                </xpath>
+
+                <xpath expr="//button[@name='button_confirm'][1]" position="replace">
+                    <button name="button_confirm" type="object"
+                            string="Confirm Order" class="oe_highlight"
+                            id="bid_confirm"
+                            groups="ncss_purchase_order_restrictions.purchase_order_general_director"
+                            attrs="{'invisible':[('state','not in',['Financial auditor'])]}"/>
+                </xpath>
+
+                <xpath expr="//button[@name='button_confirm'][2]" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+
+<!--                <xpath expr="//button[@name='button_confirm'][2]" position="replace">-->
+<!--                    <button name="button_confirm" type="object"-->
+<!--                            string="Confirm Order" id="draft_confirm"-->
+<!--                            groups="ncss_purchase_order_restrictions.purchase_order_general_director"-->
+<!--                            attrs="{'invisible':[('state','not in',['Financial auditor'])]}"-->
+<!--                    />-->
+<!--                </xpath>-->
+
+                <xpath expr="//button[@name='button_cancel']" position="attributes">
+                    <attribute name="states">draft,to approve,sent,Accounting Approve,Administrative and Financial Affairs,Financial auditor,purchase</attribute>
+                </xpath>
+
+            </field>
+        </record>
+
+    </data>
+</odoo>
+
+
+

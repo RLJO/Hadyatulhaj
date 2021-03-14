@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="ess_announcement" name="ESS Announcement">
+        <t t-call="portal.portal_layout">
+            <t>
+                <div class="row justify-content-between mt-4">
+
+                    <nav class="navbar-default navbar-static-side" role="navigation" style="z-index: 1;position: initial;">
+                        <t t-call="ess.side_menu"/>
+                    </nav>
+
+                    <div class="row col-10 col-md col-lg-10"> 
+                        <div class="col-lg-12">
+                            <div class="ibox ">
+                                <div class="row iess-title" style="text-align:left;margin-right: 20px;margin-left: 20px;">
+                                    <h3><span>My Announcements</span></h3>
+                                </div>
+                                <div class="ibox-content">
+                                    <div class="row">
+                                        <div class="col-lg-12" style="margin-top:10px;">
+                                            <form>
+                                                <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+                                                
+                                                <div class="row">
+                                                    <div class="col-lg-12">
+                                                            <!--  -->
+                                                            <div class="ibox-content iess-p20">
+                                                                <div class="body">
+                                                                    <ul class="nav nav-tabs3">
+<!--                                                                        <li class="nav-item"><a class="nav-link show ess-tab-link active" data-toggle="tab" href="#all">All</a></li>-->
+                                                                        <li class="nav-item"><a class="nav-link show ess-tab-link active" data-toggle="tab" href="#all">Public Announcement</a></li>
+                                                                        <li class="nav-item"><a class="nav-link ess-tab-link" data-toggle="tab" id="by_employee2" href="#by_employee">By Employee</a></li>
+                                                                        <li class="nav-item"><a class="nav-link ess-tab-link" data-toggle="tab" id="by_department2" href="#by_department">By Department</a></li>
+                                                                        <li class="nav-item"><a class="nav-link ess-tab-link" data-toggle="tab" id="by_job_position2"  href="#by_job_position">By Job Position</a></li>
+                                                                    </ul>
+                                                                    <div class="tab-content">
+                                                                        <div class="tab-pane active show" id="all">
+                                                                            <div class="table-responsive">
+                                                                                <table class="table header-border table-hover table-custom spacing5 ess-table">
+                                                                                    <thead>
+                                                                                        <tr>
+                                                                                            <th>Code</th>
+                                                                                            <th>Title</th>
+                                                                                            <th>Description</th>
+                                                                                            <th>Start Date</th>
+                                                                                            <th>End Date</th>
+                                                                                            <th>Requested Date</th>
+                                                                                            <th>Attachment</th>
+                                                                                        </tr>
+                                                                                    </thead>
+                                                                                    <tbody t-foreach="announcement_obj" t-as="ann">
+                                                                                        <tr>
+                                                                                            <td><div t-esc="ann['name']"/></td>
+                                                                                            <td><div t-esc="ann['announcement_reason']"/></td>
+                                                                                            <td><span t-raw="ann['announcement']"/></td>
+                                                                                            <td><div t-esc="ann['date_start']"/></td>
+                                                                                            <td><div t-esc="ann['date_end']"/></td>
+                                                                                            <td><div t-esc="ann['requested_date']"/></td>
+                                                                                            <td><a t-if="ann['attachment_id']" t-att-href="'/attachment/download?attachment_id=%i' % ann['attachment_id'].id" class="fa fa-download"/></td>
+                                                                                        </tr>
+                                                                                    </tbody>
+                                                                                </table>
+                                                                            </div>
+                                                                        </div>
+
+                                                                        <div class="tab-pane" id="by_employee">
+
+                                                                            <div class="table-responsive">
+                                                                                <table class="table header-border table-hover table-custom spacing5 ess-table">
+                                                                                    <thead>
+                                                                                        <tr>
+                                                                                            <th>Code</th>
+                                                                                            <th>Title</th>
+                                                                                            <th>Description</th>
+                                                                                            <th>Start Date</th>
+                                                                                            <th>End Date</th>
+                                                                                            <th>Requested Date</th>
+                                                                                            <th>Attachment</th>
+                                                                                        </tr>
+                                                                                    </thead>
+                                                                                    <tbody t-foreach="announcement_by_employee_obj" t-as="ann">
+                                                                                        <tr>
+                                                                                            <td><div t-esc="ann['name']"/></td>
+                                                                                            <td><div t-esc="ann['announcement_reason']"/></td>
+                                                                                            <td><span t-raw="ann['announcement']"/></td>
+                                                                                            <td><div t-esc="ann['date_start']"/></td>
+                                                                                            <td><div t-esc="ann['date_end']"/></td>
+                                                                                            <td><div t-esc="ann['requested_date']"/></td>
+                                                                                            <td><a t-if="ann['attachment_id']" t-att-href="'/attachment/download?attachment_id=%i' % ann['attachment_id'].id" class="fa fa-download"/></td>
+                                                                                        </tr>
+                                                                                    </tbody>
+                                                                                </table>
+                                                                            </div>
+                                                                        </div>
+
+                                                                        <div class="tab-pane" id="by_department">
+
+                                                                            <div class="table-responsive">
+                                                                                <table class="table header-border table-hover table-custom spacing5 ess-table">
+                                                                                    <thead>
+                                                                                        <tr>
+                                                                                            <th>Code</th>
+                                                                                            <th>Title</th>
+                                                                                            <th>Description</th>
+                                                                                            <th>Start Date</th>
+                                                                                            <th>End Date</th>
+                                                                                            <th>Requested Date</th>
+                                                                                            <th>Attachment</th>
+                                                                                        </tr>
+                                                                                    </thead>
+                                                                                    <tbody t-foreach="announcement_by_department_obj" t-as="ann">
+                                                                                        <tr>
+                                                                                            <td><div t-esc="ann['name']"/></td>
+                                                                                            <td><div t-esc="ann['announcement_reason']"/></td>
+                                                                                            <td><span t-raw="ann['announcement']"/></td>
+                                                                                            <td><div t-esc="ann['date_start']"/></td>
+                                                                                            <td><div t-esc="ann['date_end']"/></td>
+                                                                                            <td><div t-esc="ann['requested_date']"/></td>
+                                                                                            <td><a t-if="ann['attachment_id']" t-att-href="'/attachment/download?attachment_id=%i' % ann['attachment_id'].id" class="fa fa-download"/></td>
+                                                                                        </tr>
+                                                                                    </tbody>
+                                                                                </table>
+                                                                            </div>
+                                                                        </div>
+
+                                                                        <div class="tab-pane" id="by_job_position">
+
+                                                                            <div class="table-responsive">
+                                                                                <table class="table header-border table-hover table-custom spacing5 ess-table">
+                                                                                    <thead>
+                                                                                        <tr>
+                                                                                            <th>Code</th>
+                                                                                            <th>Title</th>
+                                                                                            <th>Description</th>
+                                                                                            <th>Start Date</th>
+                                                                                            <th>End Date</th>
+                                                                                            <th>Requested Date</th>
+                                                                                            <th>Attachment</th>
+                                                                                        </tr>
+                                                                                    </thead>
+                                                                                    <tbody t-foreach="announcement_by_job_obj" t-as="ann">
+                                                                                        <tr>
+                                                                                            <td><div t-esc="ann['name']"/></td>
+                                                                                            <td><div t-esc="ann['announcement_reason']"/></td>
+                                                                                            <td><span t-raw="ann['announcement']"/></td>
+                                                                                            <td><div t-esc="ann['date_start']"/></td>
+                                                                                            <td><div t-esc="ann['date_end']"/></td>
+                                                                                            <td><div t-esc="ann['requested_date']"/></td>
+                                                                                            <td><a t-if="ann['attachment_id']" t-att-href="'/attachment/download?attachment_id=%i' % ann['attachment_id'].id" class="fa fa-download"/></td>
+                                                                                        </tr>
+                                                                                    </tbody>
+                                                                                </table>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+
+                                                            </div>
+
+                                                        </div>
+                                                        
+
+                                                </div>
+                                            </form>
+                                        </div>          
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </t>
+        </t>
+    </template>
+
+
+</odoo>

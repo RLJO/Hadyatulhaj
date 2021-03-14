@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="purchase_order_form_inherit" model="ir.ui.view" >
+        <field name="name">purchase.order</field>
+        <field name="model">purchase.order</field>
+        <field name="inherit_id" ref="purchase.purchase_order_form"/>
+        <field name="arch" type="xml">
+
+            <xpath expr="//page[@name='purchase_delivery_invoice']" position="inside">
+                <separator string="Purchase Level Approval" />
+                <group>
+                    <group string="Level One">
+                        <field name="first_note"
+                                attrs="{'invisible':[('state','not in',['waiting approve1','refuse1'])],
+                                'readonly':[('state','in',['refuse1','refuse2'])]}"/>
+                        <field name="approved_by1_id" readonly="1"
+                                attrs="{'invisible':[('state','in',['refuse2','refuse1'])]}"/>
+                        <field name="level_one_approved_date" readonly="1"
+                                attrs="{'invisible':[('state','in',['refuse2','refuse1'])]}"/>
+                    </group>
+                    <group string="Level Two">
+                        <field name="second_note"
+                                attrs="{'invisible':[('state','not in',['waiting approve2','refuse2'])],
+                                'readonly':[('state','in',['refuse1','refuse2'])]}"/>
+                        <field name="approved_by2_id" readonly="1"
+                                attrs="{'invisible':[('state','in',['refuse2','refuse1'])]}"/>
+                        <field name="level_two_approved_date" readonly="1"
+                                attrs="{'invisible':[('state','in',['refuse2','refuse1'])]}"/>
+                    </group>
+
+                    <group string="Level Three">
+                        <field name="third_note"
+                                attrs="{'invisible':[('state','not in',['waiting approve3','refuse3'])],
+                                'readonly':[('state','in',['refuse1','refuse2','refuse3'])]}"/>
+                        <field name="approved_by3_id" readonly="1"
+                                attrs="{'invisible':[('state','in',['refuse3','refuse2','refuse1'])]}"/>
+                        <field name="level_third_approved_date" readonly="1"
+                                attrs="{'invisible':[('state','in',['refuse3','refuse2','refuse1'])]}"/>
+                    </group>
+                </group>
+
+                <group invisible="1">
+                    <field name="is_confirm"/>
+                    <field name="is_request_approve"/>
+                    <field name="is_level1_approve"/>
+                    <field name="is_level2_approve"/>
+                    <field name="is_level3_approve"/>
+                    <field name="is_level_approve"/>
+                    <field name="level_one_amount"/>
+                    <field name="level_two_amount"/>
+                    <field name="level_three_amount"/>
+                </group>
+            </xpath>
+
+            <xpath expr="//button[@name='button_confirm']" position="before">
+                <button name="request_approval" string="Request Approval" type="object" class="oe_highlight"
+                        attrs="{'invisible':[('is_request_approve','=',False)]}"/>
+
+
+                <button name="request_special_approval" string="Request Special Approve" type="object" class="oe_highlight"
+                        groups="ncss_purchase_level_approval.group_request_special_approve"
+                        states="refuse2"/>
+                <button name="special_approve_action" string="Special Approve" type="object" class="oe_highlight"
+                        groups="ncss_purchase_level_approval.group_special_approve"
+                        states="waiting special approve"/>
+
+
+
+                <button name="request_approval1" string="First Approve" type="object" class="oe_highlight"
+                        groups="ncss_purchase_level_approval.group_purchase_first_approval"
+                        attrs="{'invisible':[('is_level1_approve','=',False)]}"/>
+                <button name="request_approval2" string="Second Approval" type="object" class="oe_highlight"
+                        groups="ncss_purchase_level_approval.group_purchase_second_approval"
+                        attrs="{'invisible':[('is_level2_approve','=',False)]}"/>
+                <button name="request_approval3" string="Third Approval" type="object" class="oe_highlight"
+                        groups="ncss_purchase_level_approval.group_purchase_third_approval"
+                        attrs="{'invisible':[('is_level3_approve','=',False)]}"/>
+                <button name="refuse_to_approve" string="Refuse" type="object" class="oe_highlight"
+                        attrs="{'invisible':[('state','not in',['waiting approve1','waiting approve2','waiting approve3'])]}"/>
+            </xpath>
+
+            <xpath expr="//button[@name='button_confirm'][1]" position="replace">
+<!--                states="sent" -->
+                <button name="button_confirm" type="object"
+                        string="Confirm Order" class="oe_highlight"
+                        id="bid_confirm"
+                        groups="ncss_purchase_level_approval.group_button_confirm"
+                        attrs="{'invisible':[('state','not in',['sent','approve'])]}"/>
+            </xpath>
+            <xpath expr="//button[@name='button_confirm'][2]" position="replace">
+                <button name="button_confirm" type="object"
+                        string="Confirm Order" id="draft_confirm"
+                        groups="ncss_purchase_level_approval.group_button_confirm"
+                attrs="{'invisible':['|',('state','in',['sent','to approve','done','cancel','purchase','waiting approve1','waiting approve2','waiting approve3']),('is_confirm','=',True)]}"/>
+            </xpath>
+
+            <xpath expr="//button[@name='button_draft']" position="attributes">
+                <attribute name="states">cancel,refuse1,refuse2,refuse3</attribute>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

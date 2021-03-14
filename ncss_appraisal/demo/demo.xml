@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo >
+
+    <!--    demo data appraisal_criteria-->
+    <record id="appraisal_criteria1" model="appraisal.criteria">
+        <field name="name">توافر المهارات القيادية</field>
+        <field name="max_limit">30</field>
+        <field name="is_default">1</field>
+    </record>
+    <record id="appraisal_criteria2" model="appraisal.criteria">
+        <field name="name">القدرات العلمية</field>
+        <field name="max_limit">30</field>
+        <field name="is_default">1</field>
+    </record>
+    <record id="appraisal_criteria3" model="appraisal.criteria">
+        <field name="name">المهارات الشخصية</field>
+        <field name="max_limit">20</field>
+        <field name="is_default">1</field>
+    </record>
+    <record id="appraisal_criteria4" model="appraisal.criteria">
+        <field name="name">الجودة والتنظيم في العمل</field>
+        <field name="max_limit">20</field>
+        <field name="is_default">1</field>
+    </record>
+    <record id="appraisal_criteria5" model="appraisal.criteria">
+        <field name="name">التعاون والتنسيق</field>
+        <field name="max_limit">15</field>
+        <field name="is_default">1</field>
+    </record>
+    <record id="appraisal_criteria6" model="appraisal.criteria">
+        <field name="name">ارتباطه وعلاقته بالمركز</field>
+        <field name="max_limit">15</field>
+        <field name="is_default">1</field>
+    </record>
+    <record id="appraisal_criteria7" model="appraisal.criteria">
+        <field name="name">المزايا الشخصية</field>
+        <field name="max_limit">10</field>
+        <field name="is_default">1</field>
+    </record>
+    <record id="appraisal_criteria8" model="appraisal.criteria">
+        <field name="name">الانضباط</field>
+        <field name="max_limit">10</field>
+        <field name="is_default">1</field>
+    </record>
+
+    <!--    demo data appraisal_criteria-->
+
+    <!--    demo data appraisal_criteria-->
+    <record id="appraisal_recommendations1" model="appraisal.recommendations">
+        <field name="name">نوصي بزيادة سنوية</field>
+        <field name="is_default">1</field>
+    </record>
+
+    <record id="appraisal_recommendations2" model="appraisal.recommendations">
+        <field name="name">يبقى على وضعه الحالي</field>
+        <field name="is_default">1</field>
+    </record>
+
+    <record id="appraisal_recommendations3" model="appraisal.recommendations">
+        <field name="name">يعاد تقييم الموظف بعد شهر</field>
+        <field name="is_default">1</field>
+    </record>
+
+    <record id="appraisal_recommendations4" model="appraisal.recommendations">
+        <field name="name">لا يجدد عقدة ( مع ذكر السبب )</field>
+        <field name="is_default">1</field>
+    </record>
+
+    <!--    demo data appraisal_criteria-->
+</odoo>

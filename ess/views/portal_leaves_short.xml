@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="ess_short_leaves" name="ESS Short Leaves">
+        <t t-call="portal.portal_layout">
+            <t>
+                <div class="row justify-content-between mt-4">
+
+                    <nav class="navbar-default navbar-static-side" role="navigation" style="z-index: 1;position: initial;">
+                        <t t-call="ess.side_menu"/>
+                    </nav>
+
+                    <div class="row col-10 col-md col-lg-10"> 
+
+                            <div class="col-lg-12">
+								<div class="ibox ">
+									<div class="row iess-title" style="text-align:left;margin-right: 20px;margin-left: 20px;">
+										<h3><span>Short Leave Request</span></h3>
+									</div>
+									<div class="ibox-content">
+										<div class="row">
+											<div class="col-lg-12" style="margin-top:10px;">
+												<form action="/my/short_leaves" method="post">
+													<input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+													<div t-if="error_message" class="alert alert-danger" role="alert">
+														<t t-foreach="error_message" t-as="err"><t t-esc="err"/><br /></t>
+													</div>
+													<div class="row">
+														<div t-attf-class="form-group #{error.get('holiday_status_id') and 'o_has_error' or ''} col-xl-6">
+															<label>Time Off Type</label>
+																<select name="holiday_status_id" t-attf-class="form-control #{error.get('holiday_status_id') and 'is-invalid' or ''}" required="">
+																	<t t-foreach="leave_type or []" t-as="type">
+																		<option t-att-value="type.id" >
+																			<t t-esc="type.name_get()[0][1]" />
+																		</option>
+																	</t>
+																</select>
+														</div>
+													</div>
+													<div class="row">
+														<div t-attf-class="form-group #{error.get('date_from') and 'o_has_error' or ''} col-xl-4">
+															<label class="col-form-label" for="date_from">From</label>
+															<input type="date" name="date_from" t-attf-class="form-control #{error.get('date_from') and 'is-invalid' or ''}"  required=""/>
+														</div>
+														<div t-attf-class="form-group #{error.get('date_to') and 'o_has_error' or ''} col-xl-4">
+															<label class="col-form-label" for="date_to">To</label>
+															<input type="date" name="date_to" t-attf-class="form-control #{error.get('date_to') and 'is-invalid' or ''}"  required=""/>
+														</div>
+														<div t-attf-class="form-group #{error.get('number_of_days_display') and 'o_has_error' or ''} col-xl-4">
+															<label class="col-form-label" for="number_of_days_display">Duration</label>
+															<input type="number" name="number_of_days_display" t-attf-class="form-control #{error.get('number_of_days_display') and 'is-invalid' or ''}" required=""/>
+														</div>
+													</div>
+													<div class="row">
+                                                        <div t-attf-class="form-group #{error.get('name') and 'o_has_error' or ''} col-xl-6">
+                                                            <label class="col-form-label" for="name">Description</label>
+                                                            <textarea rows="4" cols="50" name="name" t-attf-class="form-control #{error.get('name') and 'is-invalid' or ''}"/>
+                                                        </div>
+                                                    </div>
+													<div>
+														<button class="btn btn-primary float-right m-t-n-xs" type="submit"><strong>Confirm</strong></button>
+													</div>
+												</form>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+                       
+                    </div>
+
+                    
+                    
+                </div>
+            </t>  
+        </t>
+    </template>
+
+
+</odoo>

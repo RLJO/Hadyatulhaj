@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+    <data noupdate="0">
+
+        <!--        Asset Assignation-->
+        <record id="asset_assignation_security_category" model="ir.module.category">
+            <field name="name">Asset Assignation</field>
+        </record>
+
+        <record id="asset_assignation_user" model="res.groups">
+            <field name="name">Employee</field>
+            <field name="category_id" ref="asset_assignation_security_category"/>
+            <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+        </record>
+
+        <record id="asset_assignation_direct_manager" model="res.groups">
+            <field name="name">Direct Manager</field>
+            <field name="category_id" ref="asset_assignation_security_category"/>
+            <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+        </record>
+
+        <record id="asset_assignation_department_manager" model="res.groups">
+            <field name="name">Department Manager</field>
+            <field name="category_id" ref="asset_assignation_security_category"/>
+            <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+        </record>
+
+        <record id="asset_assignation_center_manager" model="res.groups">
+            <field name="name">Center Manager</field>
+            <field name="category_id" ref="asset_assignation_security_category"/>
+            <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+        </record>
+
+        <!--        Asset Assignation form-->
+
+        <!--        asset_assignation buttons-->
+
+        <record id="asset_assignation_approve_button" model="res.groups">
+            <field name="name">Approve Button</field>
+            <field name="category_id" ref="asset_assignation_security_category"/>
+            <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+        </record>
+
+        <record id="asset_assignation_refuse_button" model="res.groups">
+            <field name="name">Refuse Button</field>
+            <field name="category_id" ref="asset_assignation_security_category"/>
+            <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+        </record>
+
+        <record id="asset_assignation_assign_to_employee_button" model="res.groups">
+            <field name="name">Assign To Employee Button</field>
+            <field name="category_id" ref="asset_assignation_security_category"/>
+            <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+        </record>
+
+        <record id="asset_assignation_clearance_button" model="res.groups">
+            <field name="name">Clearance Button</field>
+            <field name="category_id" ref="asset_assignation_security_category"/>
+            <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+        </record>
+
+        <record id="asset_assignation_set_to_draft_button" model="res.groups">
+            <field name="name">Set To Draft Button</field>
+            <field name="category_id" ref="asset_assignation_security_category"/>
+            <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+        </record>
+
+        <!--        asset_assignation buttons-->
+
+        <!--        asset_assignation menu-->
+        <record id="waiting_assignation_to_employee_menu" model="res.groups">
+            <field name="name">Waiting Assignation To Employee Menu</field>
+            <field name="category_id" ref="asset_assignation_security_category"/>
+            <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+        </record>
+
+        <record id="waiting_for_clearance_menu" model="res.groups">
+            <field name="name">Waiting For Clearance Menu</field>
+            <field name="category_id" ref="asset_assignation_security_category"/>
+            <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+        </record>
+
+        <record id="clearance_done_menu" model="res.groups">
+            <field name="name">Clearance Done Menu</field>
+            <field name="category_id" ref="asset_assignation_security_category"/>
+            <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+        </record>
+
+        <record id="asset_submitted_action_menu" model="res.groups">
+            <field name="name">Asset Submitted Menu</field>
+            <field name="category_id" ref="asset_assignation_security_category"/>
+            <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+        </record>
+
+        <record id="waiting_asset_assignation_approve_action_menu" model="res.groups">
+            <field name="name">Waiting Approve Menu</field>
+            <field name="category_id" ref="asset_assignation_security_category"/>
+            <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+        </record>
+
+        <!--        asset_assignation menu-->
+
+
+
+
+        <!--        Employee Asset Form-->
+        <record id="employee_asset_security_category" model="ir.module.category">
+            <field name="name">Employee Asset Clearance</field>
+        </record>
+
+
+        <record id="employee_asset_user" model="res.groups">
+            <field name="name">Employee</field>
+            <field name="category_id" ref="employee_asset_security_category"/>
+            <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+        </record>
+
+        <record id="employee_asset_direct_manager" model="res.groups">
+            <field name="name">Direct Manager</field>
+            <field name="category_id" ref="employee_asset_security_category"/>
+            <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+        </record>
+
+        <record id="employee_asset_department_manager" model="res.groups">
+            <field name="name">Department Manager</field>
+            <field name="category_id" ref="employee_asset_security_category"/>
+            <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+        </record>
+
+        <record id="employee_asset_center_manager" model="res.groups">
+            <field name="name">Center Manager</field>
+            <field name="category_id" ref="employee_asset_security_category"/>
+            <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+        </record>
+
+        <!--        Asset Assignation form-->
+
+
+        <!--        asset_assignation buttons-->
+
+        <record id="employee_asset_approve_button" model="res.groups">
+            <field name="name">Approve Button</field>
+            <field name="category_id" ref="employee_asset_security_category"/>
+            <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+        </record>
+
+        <record id="employee_asset_clearance_from_employee_button" model="res.groups">
+            <field name="name">Clearance From Employee Button</field>
+            <field name="category_id" ref="employee_asset_security_category"/>
+            <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+        </record>
+
+        <record id="employee_asset_done_button" model="res.groups">
+            <field name="name">Done Button</field>
+            <field name="category_id" ref="employee_asset_security_category"/>
+            <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+        </record>
+
+        <record id="employee_asset_set_to_draft_button" model="res.groups">
+            <field name="name">Set To Draft Button</field>
+            <field name="category_id" ref="employee_asset_security_category"/>
+            <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+        </record>
+
+        <!--        asset_assignation buttons-->
+
+        <!--        asset_assignation menu-->
+        <record id="employee_asset_waiting_approve_menu" model="res.groups">
+            <field name="name">Waiting Approve Menu</field>
+            <field name="category_id" ref="employee_asset_security_category"/>
+            <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+        </record>
+
+        <record id="employee_asset_waiting_approve_on_clearance_menu" model="res.groups">
+            <field name="name">Waiting Approve On Clearance Menu</field>
+            <field name="category_id" ref="employee_asset_security_category"/>
+            <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+        </record>
+
+        <record id="employee_asset_clearance_done_menu" model="res.groups">
+            <field name="name">Clearance Done Menu</field>
+            <field name="category_id" ref="employee_asset_security_category"/>
+            <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+        </record>
+        <!--        asset_assignation menu-->
+
+
+</data>
+</odoo>
+

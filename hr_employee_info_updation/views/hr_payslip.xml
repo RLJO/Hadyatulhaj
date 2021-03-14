@@ -1,0 +1,84 @@
+<odoo>
+<data>
+
+        <record id="view_hr_appraisal_form_inherit" model="ir.ui.view">
+            <field name="name">hr.appraisal</field>
+            <field name="model">hr.appraisal</field>
+            <field name="inherit_id" ref="hr_appraisal.view_hr_appraisal_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//notebook" position="inside">
+                    <page string="Government Information">
+                        <group>
+                            <group>
+                                <field name="start_date"/>
+                                <field name="appraisal_d"/>
+                                <field name="appraisal_type_code"/>
+                                <field name="rating_result" widget="priority"/>
+                                <field name="rating_code" widget="priority"/>
+                            </group>
+                            <group>
+                            <field name="sub_agency_id" />
+                            <field name="employee_number" />
+                            <field name="personal_identifier" />
+                            <field name="national_id"/>
+                            <field name="iqama_no"/>
+                        </group>
+                        </group>
+                    </page>
+                </xpath>
+
+            </field>
+        </record>
+
+        <record id="hr_leave_view_form_manager_approve_inherit" model="ir.ui.view">
+            <field name="name">hr.leave</field>
+            <field name="model">hr.leave</field>
+            <field name="inherit_id" ref="hr_holidays.hr_leave_view_form_manager_approve"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='name']" position="after">
+                    <field name="sub_agency_id" />
+                    <field name="employee_number" />
+                    <field name="personal_identifier" />
+                    <field name="national_id"/>
+                    <field name="iqama_no"/>
+                    <field name="vacation_code"/>
+                    <field name="decision_number"/>
+                    <field name="decision_date"/>
+                </xpath>
+
+            </field>
+        </record>
+
+        <record id="view_hr_payslip_form_inherit" model="ir.ui.view">
+            <field name="name">hr.payslip</field>
+            <field name="model">hr.payslip</field>
+            <field name="inherit_id" ref="hr_payroll.view_hr_payslip_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//notebook" position="inside">
+                    <page string="Government Information">
+                        <group>
+                            <group string="Employee Info">
+                                <field name="sub_agency_id" />
+                                <field name="employee_number" />
+                                <field name="personal_identifier" />
+                                <field name="national_id"/>
+                                <field name="iqama_no"/>
+                            </group>
+                            <group string="Employee Job Info">
+                                <field name="rank_code" />
+                                <field name="step_id" />
+                                <field name="step_date" />
+                                <field name="consolidation_set_id" />
+                                <field name="consolidation_set_description" />
+                                <field name="element_code" />
+                                <field name="element_classification" />
+                            </group>
+                        </group>
+                    </page>
+                </xpath>
+
+            </field>
+        </record>
+
+</data>
+</odoo>

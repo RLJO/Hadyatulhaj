@@ -1,0 +1,1235 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* ncss_administrative_communications
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-09-02 10:13+0000\n"
+"PO-Revision-Date: 2020-09-02 10:13+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: ncss_administrative_communications
+#: model_terms:ir.ui.view,arch_db:ncss_administrative_communications.administrative_communication_report
+msgid "<span>Attached BY</span>"
+msgstr "احيلت بواسطه"
+
+#. module: ncss_administrative_communications
+#: model_terms:ir.ui.view,arch_db:ncss_administrative_communications.administrative_communication_report
+msgid "<span>Date And Time</span>"
+msgstr "وقت الحاله"
+
+#. module: ncss_administrative_communications
+#: model_terms:ir.ui.view,arch_db:ncss_administrative_communications.administrative_communication_report
+msgid "<span>Destination</span>"
+msgstr "الجهه الاخري"
+
+#. module: ncss_administrative_communications
+#: model_terms:ir.ui.view,arch_db:ncss_administrative_communications.administrative_communication_report
+msgid "<span>Notes</span>"
+msgstr "ملاحظات"
+
+#. module: ncss_administrative_communications
+#: model_terms:ir.ui.view,arch_db:ncss_administrative_communications.administrative_communication_report
+msgid "<span>Receipt BY</span>"
+msgstr "احيلت الي"
+
+#. module: ncss_administrative_communications
+#: model_terms:ir.ui.view,arch_db:ncss_administrative_communications.administrative_communication_report
+msgid "<span>Sender Type</span>"
+msgstr "نوع المرسل"
+
+#. module: ncss_administrative_communications
+#: model_terms:ir.ui.view,arch_db:ncss_administrative_communications.administrative_communication_report
+msgid "<span>Source</span>"
+msgstr "مصدرها"
+
+#. module: ncss_administrative_communications
+#: model_terms:ir.ui.view,arch_db:ncss_administrative_communications.administrative_communication_report
+msgid "<strong>Attachments:</strong>"
+msgstr "المرفقات"
+
+#. module: ncss_administrative_communications
+#: model_terms:ir.ui.view,arch_db:ncss_administrative_communications.administrative_communication_report
+msgid "<strong>Category Name:</strong>"
+msgstr "اسم التصنيف"
+
+#. module: ncss_administrative_communications
+#: model_terms:ir.ui.view,arch_db:ncss_administrative_communications.administrative_communication_report
+msgid "<strong>Category:</strong>"
+msgstr "التصنيف"
+
+#. module: ncss_administrative_communications
+#: model_terms:ir.ui.view,arch_db:ncss_administrative_communications.administrative_communication_report
+msgid "<strong>File Number:</strong>"
+msgstr "رقم الملف"
+
+#. module: ncss_administrative_communications
+#: model_terms:ir.ui.view,arch_db:ncss_administrative_communications.administrative_communication_report
+msgid "<strong>Hijri Date:</strong>"
+msgstr "التاريخ الهجري"
+
+#. module: ncss_administrative_communications
+#: model_terms:ir.ui.view,arch_db:ncss_administrative_communications.administrative_communication_report
+msgid "<strong>Name:</strong>"
+msgstr "الاسم"
+
+#. module: ncss_administrative_communications
+#: model_terms:ir.ui.view,arch_db:ncss_administrative_communications.administrative_communication_report
+msgid "<strong>Reference Number:</strong>"
+msgstr "رقم المرجع"
+
+#. module: ncss_administrative_communications
+#: model_terms:ir.ui.view,arch_db:ncss_administrative_communications.administrative_communication_report
+msgid "<strong>Sender Type:</strong>"
+msgstr "نوع المرسل"
+
+#. module: ncss_administrative_communications
+#: model_terms:ir.ui.view,arch_db:ncss_administrative_communications.administrative_communication_report
+msgid "<strong>Source:</strong>"
+msgstr "مصدرها"
+
+#. module: ncss_administrative_communications
+#: model_terms:ir.ui.view,arch_db:ncss_administrative_communications.administrative_communication_report
+msgid "<strong>State:</strong>"
+msgstr "الحاله"
+
+#. module: ncss_administrative_communications
+#: model_terms:ir.ui.view,arch_db:ncss_administrative_communications.administrative_communication_report
+msgid "<strong>Transaction Date:</strong>"
+msgstr "تاريخ المعامله"
+
+#. module: ncss_administrative_communications
+#: model_terms:ir.ui.view,arch_db:ncss_administrative_communications.administrative_communication_report
+msgid "<strong>Transactions Number:</strong>"
+msgstr "رقم المعامله"
+
+#. module: ncss_administrative_communications
+#: model_terms:ir.ui.view,arch_db:ncss_administrative_communications.administrative_communication_report
+msgid "<strong>Transfer Date:</strong>"
+msgstr "تاريخها"
+
+#. module: ncss_administrative_communications
+#: model_terms:ir.ui.view,arch_db:ncss_administrative_communications.administrative_communication_report
+msgid "<strong>Transfer Number:</strong>"
+msgstr "رقمها"
+
+#. module: ncss_administrative_communications
+#: model_terms:ir.ui.view,arch_db:ncss_administrative_communications.administrative_communication_report
+msgid "<strong>Transfer To:</strong>"
+msgstr "احيلت الي"
+
+#. module: ncss_administrative_communications
+#: model_terms:ir.ui.view,arch_db:ncss_administrative_communications.administrative_communication_report
+msgid "<strong>Treatment Type:</strong>"
+msgstr "نوع المعامله"
+
+#. module: ncss_administrative_communications
+#: model_terms:ir.ui.view,arch_db:ncss_administrative_communications.administrative_communication_report
+msgid "<strong>Year:</strong>"
+msgstr "السنه"
+
+#. module: ncss_administrative_communications
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication__message_needaction
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_category__message_needaction
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_contact__message_needaction
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_contact_line__message_needaction
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_management__message_needaction
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_procedures__message_needaction
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_sender__message_needaction
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_source__message_needaction
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_years__message_needaction
+msgid "Action Needed"
+msgstr "اتخاذ القرار"
+
+#. module: ncss_administrative_communications
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication__activity_ids
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_category__activity_ids
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_contact__activity_ids
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_contact_line__activity_ids
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_management__activity_ids
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_procedures__activity_ids
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_sender__activity_ids
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_source__activity_ids
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_years__activity_ids
+msgid "Activities"
+msgstr "الانشطه"
+
+#. module: ncss_administrative_communications
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication__activity_exception_decoration
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_category__activity_exception_decoration
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_contact__activity_exception_decoration
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_contact_line__activity_exception_decoration
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_management__activity_exception_decoration
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_procedures__activity_exception_decoration
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_sender__activity_exception_decoration
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_source__activity_exception_decoration
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_years__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr ""
+
+#. module: ncss_administrative_communications
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication__activity_state
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_category__activity_state
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_contact__activity_state
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_contact_line__activity_state
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_management__activity_state
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_procedures__activity_state
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_sender__activity_state
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_source__activity_state
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_years__activity_state
+msgid "Activity State"
+msgstr ""
+
+#. module: ncss_administrative_communications
+#: model:ir.actions.act_window,name:ncss_administrative_communications.administrative_communication_action
+#: model:ir.actions.report,name:ncss_administrative_communications.report_administrative_communication
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_attachments__administrative_communication_id
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_line__administrative_communication_id
+#: model:ir.ui.menu,name:ncss_administrative_communications.administrative_communication_child
+#: model:ir.ui.menu,name:ncss_administrative_communications.administrative_communication_menu
+#: model:ir.ui.menu,name:ncss_administrative_communications.administrative_communication_root
+#: model_terms:ir.ui.view,arch_db:ncss_administrative_communications.res_users_form_inherit
+msgid "Administrative Communication"
+msgstr "الاتصالات الاداريه"
+
+#. module: ncss_administrative_communications
+#: model:ir.actions.act_window,name:ncss_administrative_communications.administrative_communication_category_action
+msgid "Administrative Communication Category"
+msgstr "تصنيفات الاتصالات الاداريه"
+
+#. module: ncss_administrative_communications
+#: model:ir.actions.act_window,name:ncss_administrative_communications.administrative_communication_contact_action
+msgid "Administrative Communication Contact"
+msgstr "العملاء"
+
+#. module: ncss_administrative_communications
+#: model:ir.ui.menu,name:ncss_administrative_communications.administrative_communication_line_child
+#: model:ir.ui.menu,name:ncss_administrative_communications.administrative_communication_line_menu
+msgid "Administrative Communication Line"
+msgstr "الاحالات"
+
+#. module: ncss_administrative_communications
+#: model:ir.actions.act_window,name:ncss_administrative_communications.administrative_communication_management_action
+msgid "Administrative Communication Management"
+msgstr "الادارات"
+
+#. module: ncss_administrative_communications
+#: model:ir.actions.act_window,name:ncss_administrative_communications.administrative_communication_procedures_action
+msgid "Administrative Communication Procedures"
+msgstr "الاجراءات"
+
+#. module: ncss_administrative_communications
+#: model:ir.actions.act_window,name:ncss_administrative_communications.administrative_communication_sender_action
+msgid "Administrative Communication Sender"
+msgstr "المرسل"
+
+#. module: ncss_administrative_communications
+#: model:ir.actions.act_window,name:ncss_administrative_communications.administrative_communication_source_action
+msgid "Administrative Communication Source"
+msgstr "المصدر"
+
+#. module: ncss_administrative_communications
+#: model:ir.actions.act_window,name:ncss_administrative_communications.administrative_communication_years_action
+msgid "Administrative Communication Years"
+msgstr "السنوات"
+
+#. module: ncss_administrative_communications
+#: model:ir.actions.act_window,name:ncss_administrative_communications.administrative_communication_line_action
+msgid "Administrative Line"
+msgstr "الاحالات"
+
+#. module: ncss_administrative_communications
+#: model:ir.actions.server,name:ncss_administrative_communications.administrative_communication_server_action
+msgid "Administrative Server Action"
+msgstr ""
+
+#. module: ncss_administrative_communications
+#: model:res.groups,name:ncss_administrative_communications.ncss_allow_edit_transaction_date
+msgid "Allow To Edit Date"
+msgstr "الموافقه لتعديل تاريخ المعامله"
+
+#. module: ncss_administrative_communications
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication__allow_transfer_date
+msgid "Allow Transfer Date"
+msgstr "السماح بتعديل تاريخ المعامله"
+
+#. module: ncss_administrative_communications
+#: model_terms:ir.ui.view,arch_db:ncss_administrative_communications.administrative_communication_wizard
+msgid "Assign"
+msgstr "احاله"
+
+#. module: ncss_administrative_communications
+#: model_terms:ir.ui.view,arch_db:ncss_administrative_communications.administrative_communication_form
+msgid "Assign To"
+msgstr "احاله الي"
+
+#. module: ncss_administrative_communications
+#: model_terms:ir.ui.view,arch_db:ncss_administrative_communications.administrative_communication_form
+msgid "Assign To Department"
+msgstr "احاله الي قسم"
+
+#. module: ncss_administrative_communications
+#: model_terms:ir.ui.view,arch_db:ncss_administrative_communications.administrative_communication_form
+msgid "Assign To Employee"
+msgstr "احاله الى موظف"
+
+#. module: ncss_administrative_communications
+#: model:ir.ui.menu,name:ncss_administrative_communications.administrative_communication_server_action_menu
+msgid "Assigned To Me"
+msgstr "المعاملات المسنده الي"
+
+#. module: ncss_administrative_communications
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_line__attached_by_id
+#: model_terms:ir.ui.view,arch_db:ncss_administrative_communications.administrative_communication_line_form
+#: model_terms:ir.ui.view,arch_db:ncss_administrative_communications.administrative_communication_line_tree
+msgid "Attached By"
+msgstr "احيلت بواسطه"
+
+#. module: ncss_administrative_communications
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication__message_attachment_count
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_category__message_attachment_count
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_contact__message_attachment_count
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_contact_line__message_attachment_count
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_management__message_attachment_count
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_procedures__message_attachment_count
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_sender__message_attachment_count
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_source__message_attachment_count
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_years__message_attachment_count
+msgid "Attachment Count"
+msgstr "عدد المرفقات"
+
+#. module: ncss_administrative_communications
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication__attachments
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_attachments__attachments
+#: model_terms:ir.ui.view,arch_db:ncss_administrative_communications.administrative_communication_form
+msgid "Attachments"
+msgstr "المرفقات"
+
+#. module: ncss_administrative_communications
+#: model_terms:ir.ui.view,arch_db:ncss_administrative_communications.administrative_communication_wizard
+msgid "Cancel"
+msgstr "الغاء"
+
+#. module: ncss_administrative_communications
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication__Category
+msgid "Category"
+msgstr "التصنيف"
+
+#. module: ncss_administrative_communications
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication__category_name
+msgid "Category Name"
+msgstr "اسم التصنيف"
+
+#. module: ncss_administrative_communications
+#: model:ir.model.fields.selection,name:ncss_administrative_communications.selection__administrative_communication_wizard__position__center_manager
+#: model:ir.model.fields.selection,name:ncss_administrative_communications.selection__res_users__position__center_manager
+msgid "Center Manager"
+msgstr "مدير الاقسام"
+
+#. module: ncss_administrative_communications
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_category__code
+msgid "Code"
+msgstr "رقم"
+
+#. module: ncss_administrative_communications
+#: model:ir.ui.menu,name:ncss_administrative_communications.administrative_communication_configuration
+msgid "Configuration"
+msgstr "الاعدادات"
+
+#. module: ncss_administrative_communications
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication__contact_id
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_contact_line__contact_id
+msgid "Contact"
+msgstr "العملاء"
+
+#. module: ncss_administrative_communications
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_management__contact_line_ids
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_source__contact_line_ids
+msgid "Contact Line"
+msgstr "العملاء"
+
+#. module: ncss_administrative_communications
+#: model:ir.ui.menu,name:ncss_administrative_communications.administrative_communication_config_contact
+msgid "Contacts"
+msgstr "العملاء"
+
+#. module: ncss_administrative_communications
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication__create_uid
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_attachments__create_uid
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_category__create_uid
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_contact__create_uid
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_contact_line__create_uid
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_line__create_uid
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_management__create_uid
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_procedures__create_uid
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_sender__create_uid
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_source__create_uid
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_wizard__create_uid
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_years__create_uid
+msgid "Created by"
+msgstr "انشأ بواسطه"
+
+#. module: ncss_administrative_communications
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication__create_date
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_attachments__create_date
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_category__create_date
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_contact__create_date
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_contact_line__create_date
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_line__create_date
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_management__create_date
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_procedures__create_date
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_sender__create_date
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_source__create_date
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_wizard__create_date
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_years__create_date
+msgid "Created on"
+msgstr "انشأ في"
+
+#. module: ncss_administrative_communications
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication__hijri_date
+msgid "Date"
+msgstr "تاريخ"
+
+#. module: ncss_administrative_communications
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_line__date_and_time
+msgid "Date And Time"
+msgstr "وقت الحاله"
+
+#. module: ncss_administrative_communications
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_wizard__department_id
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_res_users__department_id
+msgid "Department"
+msgstr "القسم"
+
+#. module: ncss_administrative_communications
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_attachments__description
+msgid "Description"
+msgstr "الوصف"
+
+#. module: ncss_administrative_communications
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication__destination_id
+msgid "Destination"
+msgstr "الجهه الاخري"
+
+#. module: ncss_administrative_communications
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication__display_name
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_attachments__display_name
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_category__display_name
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_contact__display_name
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_contact_line__display_name
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_line__display_name
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_management__display_name
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_procedures__display_name
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_sender__display_name
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_source__display_name
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_wizard__display_name
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_years__display_name
+msgid "Display Name"
+msgstr "الاسم"
+
+#. module: ncss_administrative_communications
+#: model:ir.model.fields.selection,name:ncss_administrative_communications.selection__administrative_communication__state__done
+#: model_terms:ir.ui.view,arch_db:ncss_administrative_communications.administrative_communication_form
+msgid "Done"
+msgstr "تمت"
+
+#. module: ncss_administrative_communications
+#: model:ir.model.fields.selection,name:ncss_administrative_communications.selection__administrative_communication__state__draft
+msgid "Draft"
+msgstr "جديده"
+
+#. module: ncss_administrative_communications
+#: model:ir.model.fields.selection,name:ncss_administrative_communications.selection__administrative_communication__post_type__electronic
+msgid "Electronic"
+msgstr "الكتروني"
+
+#. module: ncss_administrative_communications
+#: model:ir.model.fields.selection,name:ncss_administrative_communications.selection__administrative_communication__post_type__fax
+#: model:ir.model.fields.selection,name:ncss_administrative_communications.selection__administrative_communication__way_of_send__fax
+msgid "Fax"
+msgstr "فاكس"
+
+#. module: ncss_administrative_communications
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication__file_number
+msgid "File Number"
+msgstr "رقم الملف"
+
+#. module: ncss_administrative_communications
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication__message_follower_ids
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_category__message_follower_ids
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_contact__message_follower_ids
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_contact_line__message_follower_ids
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_management__message_follower_ids
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_procedures__message_follower_ids
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_sender__message_follower_ids
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_source__message_follower_ids
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_years__message_follower_ids
+msgid "Followers"
+msgstr "المتابعين"
+
+#. module: ncss_administrative_communications
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication__message_channel_ids
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_category__message_channel_ids
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_contact__message_channel_ids
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_contact_line__message_channel_ids
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_management__message_channel_ids
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_procedures__message_channel_ids
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_sender__message_channel_ids
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_source__message_channel_ids
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_years__message_channel_ids
+msgid "Followers (Channels)"
+msgstr ""
+
+#. module: ncss_administrative_communications
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication__message_partner_ids
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_category__message_partner_ids
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_contact__message_partner_ids
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_contact_line__message_partner_ids
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_management__message_partner_ids
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_procedures__message_partner_ids
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_sender__message_partner_ids
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_source__message_partner_ids
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_years__message_partner_ids
+msgid "Followers (Partners)"
+msgstr ""
+
+#. module: ncss_administrative_communications
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication__id
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_attachments__id
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_category__id
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_contact__id
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_contact_line__id
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_line__id
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_management__id
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_procedures__id
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_sender__id
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_source__id
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_wizard__id
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_years__id
+msgid "ID"
+msgstr ""
+
+#. module: ncss_administrative_communications
+#: model:ir.actions.act_window,name:ncss_administrative_communications.administrative_communication_in_action
+#: model:ir.ui.menu,name:ncss_administrative_communications.administrative_communication_in_child
+msgid "IN"
+msgstr "الوارد"
+
+#. module: ncss_administrative_communications
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication__activity_exception_icon
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_category__activity_exception_icon
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_contact__activity_exception_icon
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_contact_line__activity_exception_icon
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_management__activity_exception_icon
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_procedures__activity_exception_icon
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_sender__activity_exception_icon
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_source__activity_exception_icon
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_years__activity_exception_icon
+msgid "Icon"
+msgstr ""
+
+#. module: ncss_administrative_communications
+#: model:ir.model.fields,help:ncss_administrative_communications.field_administrative_communication__activity_exception_icon
+#: model:ir.model.fields,help:ncss_administrative_communications.field_administrative_communication_category__activity_exception_icon
+#: model:ir.model.fields,help:ncss_administrative_communications.field_administrative_communication_contact__activity_exception_icon
+#: model:ir.model.fields,help:ncss_administrative_communications.field_administrative_communication_contact_line__activity_exception_icon
+#: model:ir.model.fields,help:ncss_administrative_communications.field_administrative_communication_management__activity_exception_icon
+#: model:ir.model.fields,help:ncss_administrative_communications.field_administrative_communication_procedures__activity_exception_icon
+#: model:ir.model.fields,help:ncss_administrative_communications.field_administrative_communication_sender__activity_exception_icon
+#: model:ir.model.fields,help:ncss_administrative_communications.field_administrative_communication_source__activity_exception_icon
+#: model:ir.model.fields,help:ncss_administrative_communications.field_administrative_communication_years__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr ""
+
+#. module: ncss_administrative_communications
+#: model:ir.model.fields,help:ncss_administrative_communications.field_administrative_communication__message_needaction
+#: model:ir.model.fields,help:ncss_administrative_communications.field_administrative_communication__message_unread
+#: model:ir.model.fields,help:ncss_administrative_communications.field_administrative_communication_category__message_needaction
+#: model:ir.model.fields,help:ncss_administrative_communications.field_administrative_communication_category__message_unread
+#: model:ir.model.fields,help:ncss_administrative_communications.field_administrative_communication_contact__message_needaction
+#: model:ir.model.fields,help:ncss_administrative_communications.field_administrative_communication_contact__message_unread
+#: model:ir.model.fields,help:ncss_administrative_communications.field_administrative_communication_contact_line__message_needaction
+#: model:ir.model.fields,help:ncss_administrative_communications.field_administrative_communication_contact_line__message_unread
+#: model:ir.model.fields,help:ncss_administrative_communications.field_administrative_communication_management__message_needaction
+#: model:ir.model.fields,help:ncss_administrative_communications.field_administrative_communication_management__message_unread
+#: model:ir.model.fields,help:ncss_administrative_communications.field_administrative_communication_procedures__message_needaction
+#: model:ir.model.fields,help:ncss_administrative_communications.field_administrative_communication_procedures__message_unread
+#: model:ir.model.fields,help:ncss_administrative_communications.field_administrative_communication_sender__message_needaction
+#: model:ir.model.fields,help:ncss_administrative_communications.field_administrative_communication_sender__message_unread
+#: model:ir.model.fields,help:ncss_administrative_communications.field_administrative_communication_source__message_needaction
+#: model:ir.model.fields,help:ncss_administrative_communications.field_administrative_communication_source__message_unread
+#: model:ir.model.fields,help:ncss_administrative_communications.field_administrative_communication_years__message_needaction
+#: model:ir.model.fields,help:ncss_administrative_communications.field_administrative_communication_years__message_unread
+msgid "If checked, new messages require your attention."
+msgstr ""
+
+#. module: ncss_administrative_communications
+#: model:ir.model.fields,help:ncss_administrative_communications.field_administrative_communication__message_has_error
+#: model:ir.model.fields,help:ncss_administrative_communications.field_administrative_communication_category__message_has_error
+#: model:ir.model.fields,help:ncss_administrative_communications.field_administrative_communication_contact__message_has_error
+#: model:ir.model.fields,help:ncss_administrative_communications.field_administrative_communication_contact_line__message_has_error
+#: model:ir.model.fields,help:ncss_administrative_communications.field_administrative_communication_management__message_has_error
+#: model:ir.model.fields,help:ncss_administrative_communications.field_administrative_communication_procedures__message_has_error
+#: model:ir.model.fields,help:ncss_administrative_communications.field_administrative_communication_sender__message_has_error
+#: model:ir.model.fields,help:ncss_administrative_communications.field_administrative_communication_source__message_has_error
+#: model:ir.model.fields,help:ncss_administrative_communications.field_administrative_communication_years__message_has_error
+msgid "If checked, some messages have a delivery error."
+msgstr ""
+
+#. module: ncss_administrative_communications
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication__administrative_communication_in_id
+#: model:ir.model.fields.selection,name:ncss_administrative_communications.selection__administrative_communication__treatment_type__in
+msgid "Incoming"
+msgstr "الوارد"
+
+#. module: ncss_administrative_communications
+#: model:ir.actions.act_window,name:ncss_administrative_communications.administrative_communication_internal_action
+#: model:ir.model.fields.selection,name:ncss_administrative_communications.selection__administrative_communication__treatment_type__internal
+#: model:ir.ui.menu,name:ncss_administrative_communications.administrative_communication_internal_child
+msgid "Internal"
+msgstr "داخلي"
+
+#. module: ncss_administrative_communications
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication__message_is_follower
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_category__message_is_follower
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_contact__message_is_follower
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_contact_line__message_is_follower
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_management__message_is_follower
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_procedures__message_is_follower
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_sender__message_is_follower
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_source__message_is_follower
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_years__message_is_follower
+msgid "Is Follower"
+msgstr ""
+
+#. module: ncss_administrative_communications
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication____last_update
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_attachments____last_update
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_category____last_update
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_contact____last_update
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_contact_line____last_update
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_line____last_update
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_management____last_update
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_procedures____last_update
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_sender____last_update
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_source____last_update
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_wizard____last_update
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_years____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: ncss_administrative_communications
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication__write_uid
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_attachments__write_uid
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_category__write_uid
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_contact__write_uid
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_contact_line__write_uid
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_line__write_uid
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_management__write_uid
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_procedures__write_uid
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_sender__write_uid
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_source__write_uid
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_wizard__write_uid
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_years__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: ncss_administrative_communications
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication__write_date
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_attachments__write_date
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_category__write_date
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_contact__write_date
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_contact_line__write_date
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_line__write_date
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_management__write_date
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_procedures__write_date
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_sender__write_date
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_source__write_date
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_wizard__write_date
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_years__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: ncss_administrative_communications
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication__message_main_attachment_id
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_category__message_main_attachment_id
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_contact__message_main_attachment_id
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_contact_line__message_main_attachment_id
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_management__message_main_attachment_id
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_procedures__message_main_attachment_id
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_sender__message_main_attachment_id
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_source__message_main_attachment_id
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_years__message_main_attachment_id
+msgid "Main Attachment"
+msgstr ""
+
+#. module: ncss_administrative_communications
+#: model:ir.ui.menu,name:ncss_administrative_communications.administrative_communication_config_management
+msgid "Management"
+msgstr "الاداره"
+
+#. module: ncss_administrative_communications
+#: model:ir.model.fields.selection,name:ncss_administrative_communications.selection__administrative_communication_wizard__position__department_manager
+#: model:ir.model.fields.selection,name:ncss_administrative_communications.selection__res_users__position__department_manager
+msgid "Manager"
+msgstr "المدير"
+
+#. module: ncss_administrative_communications
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication__message_has_error
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_category__message_has_error
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_contact__message_has_error
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_contact_line__message_has_error
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_management__message_has_error
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_procedures__message_has_error
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_sender__message_has_error
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_source__message_has_error
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_years__message_has_error
+msgid "Message Delivery error"
+msgstr ""
+
+#. module: ncss_administrative_communications
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication__message_ids
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_category__message_ids
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_contact__message_ids
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_contact_line__message_ids
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_management__message_ids
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_procedures__message_ids
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_sender__message_ids
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_source__message_ids
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_years__message_ids
+msgid "Messages"
+msgstr ""
+
+#. module: ncss_administrative_communications
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_category__name
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_contact__name
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_contact_line__name
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_management__name
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_procedures__name
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_sender__name
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_source__name
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_years__name
+#: model_terms:ir.ui.view,arch_db:ncss_administrative_communications.administrative_communication_line_form
+#: model_terms:ir.ui.view,arch_db:ncss_administrative_communications.administrative_communication_line_tree
+msgid "Name"
+msgstr "مسلسل المعامله"
+
+#. module: ncss_administrative_communications
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication__nature_of_transaction
+msgid "Nature Of Transaction"
+msgstr "طبيعه المعامله"
+
+#. module: ncss_administrative_communications
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication__activity_date_deadline
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_category__activity_date_deadline
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_contact__activity_date_deadline
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_contact_line__activity_date_deadline
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_management__activity_date_deadline
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_procedures__activity_date_deadline
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_sender__activity_date_deadline
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_source__activity_date_deadline
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_years__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr ""
+
+#. module: ncss_administrative_communications
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication__activity_summary
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_category__activity_summary
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_contact__activity_summary
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_contact_line__activity_summary
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_management__activity_summary
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_procedures__activity_summary
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_sender__activity_summary
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_source__activity_summary
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_years__activity_summary
+msgid "Next Activity Summary"
+msgstr ""
+
+#. module: ncss_administrative_communications
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication__activity_type_id
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_category__activity_type_id
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_contact__activity_type_id
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_contact_line__activity_type_id
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_management__activity_type_id
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_procedures__activity_type_id
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_sender__activity_type_id
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_source__activity_type_id
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_years__activity_type_id
+msgid "Next Activity Type"
+msgstr ""
+
+#. module: ncss_administrative_communications
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication__notes
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_line__notes
+msgid "Notes"
+msgstr "ملاحظات"
+
+#. module: ncss_administrative_communications
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication__message_needaction_counter
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_category__message_needaction_counter
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_contact__message_needaction_counter
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_contact_line__message_needaction_counter
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_management__message_needaction_counter
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_procedures__message_needaction_counter
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_sender__message_needaction_counter
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_source__message_needaction_counter
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_years__message_needaction_counter
+msgid "Number of Actions"
+msgstr ""
+
+#. module: ncss_administrative_communications
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication__message_has_error_counter
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_category__message_has_error_counter
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_contact__message_has_error_counter
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_contact_line__message_has_error_counter
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_management__message_has_error_counter
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_procedures__message_has_error_counter
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_sender__message_has_error_counter
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_source__message_has_error_counter
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_years__message_has_error_counter
+msgid "Number of errors"
+msgstr ""
+
+#. module: ncss_administrative_communications
+#: model:ir.model.fields,help:ncss_administrative_communications.field_administrative_communication__message_needaction_counter
+#: model:ir.model.fields,help:ncss_administrative_communications.field_administrative_communication_category__message_needaction_counter
+#: model:ir.model.fields,help:ncss_administrative_communications.field_administrative_communication_contact__message_needaction_counter
+#: model:ir.model.fields,help:ncss_administrative_communications.field_administrative_communication_contact_line__message_needaction_counter
+#: model:ir.model.fields,help:ncss_administrative_communications.field_administrative_communication_management__message_needaction_counter
+#: model:ir.model.fields,help:ncss_administrative_communications.field_administrative_communication_procedures__message_needaction_counter
+#: model:ir.model.fields,help:ncss_administrative_communications.field_administrative_communication_sender__message_needaction_counter
+#: model:ir.model.fields,help:ncss_administrative_communications.field_administrative_communication_source__message_needaction_counter
+#: model:ir.model.fields,help:ncss_administrative_communications.field_administrative_communication_years__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr ""
+
+#. module: ncss_administrative_communications
+#: model:ir.model.fields,help:ncss_administrative_communications.field_administrative_communication__message_has_error_counter
+#: model:ir.model.fields,help:ncss_administrative_communications.field_administrative_communication_category__message_has_error_counter
+#: model:ir.model.fields,help:ncss_administrative_communications.field_administrative_communication_contact__message_has_error_counter
+#: model:ir.model.fields,help:ncss_administrative_communications.field_administrative_communication_contact_line__message_has_error_counter
+#: model:ir.model.fields,help:ncss_administrative_communications.field_administrative_communication_management__message_has_error_counter
+#: model:ir.model.fields,help:ncss_administrative_communications.field_administrative_communication_procedures__message_has_error_counter
+#: model:ir.model.fields,help:ncss_administrative_communications.field_administrative_communication_sender__message_has_error_counter
+#: model:ir.model.fields,help:ncss_administrative_communications.field_administrative_communication_source__message_has_error_counter
+#: model:ir.model.fields,help:ncss_administrative_communications.field_administrative_communication_years__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr ""
+
+#. module: ncss_administrative_communications
+#: model:ir.model.fields,help:ncss_administrative_communications.field_administrative_communication__message_unread_counter
+#: model:ir.model.fields,help:ncss_administrative_communications.field_administrative_communication_category__message_unread_counter
+#: model:ir.model.fields,help:ncss_administrative_communications.field_administrative_communication_contact__message_unread_counter
+#: model:ir.model.fields,help:ncss_administrative_communications.field_administrative_communication_contact_line__message_unread_counter
+#: model:ir.model.fields,help:ncss_administrative_communications.field_administrative_communication_management__message_unread_counter
+#: model:ir.model.fields,help:ncss_administrative_communications.field_administrative_communication_procedures__message_unread_counter
+#: model:ir.model.fields,help:ncss_administrative_communications.field_administrative_communication_sender__message_unread_counter
+#: model:ir.model.fields,help:ncss_administrative_communications.field_administrative_communication_source__message_unread_counter
+#: model:ir.model.fields,help:ncss_administrative_communications.field_administrative_communication_years__message_unread_counter
+msgid "Number of unread messages"
+msgstr ""
+
+#. module: ncss_administrative_communications
+#: model:ir.ui.menu,name:ncss_administrative_communications.administrative_communication_out_child
+msgid "OUT"
+msgstr "الصادر"
+
+#. module: ncss_administrative_communications
+#: model_terms:ir.ui.view,arch_db:ncss_administrative_communications.administrative_communication_form
+msgid "Other Information"
+msgstr "معلومات اخري"
+
+#. module: ncss_administrative_communications
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication__administrative_communication_out_id
+#: model:ir.model.fields.selection,name:ncss_administrative_communications.selection__administrative_communication__treatment_type__out
+msgid "Outgoing"
+msgstr "الصادر"
+
+#. module: ncss_administrative_communications
+#: model:ir.model.fields.selection,name:ncss_administrative_communications.selection__administrative_communication__state__outgoing
+msgid "Outgoing Sent"
+msgstr "بريد صادر"
+
+#. module: ncss_administrative_communications
+#: model_terms:ir.ui.view,arch_db:ncss_administrative_communications.administrative_communication_form
+msgid "Outgoing Treatment"
+msgstr "معامله صادره"
+
+#. module: ncss_administrative_communications
+#: model:ir.model.fields.selection,name:ncss_administrative_communications.selection__administrative_communication__post_type__paper
+msgid "Paper"
+msgstr "ورقي"
+
+#. module: ncss_administrative_communications
+#: model:ir.model.fields.selection,name:ncss_administrative_communications.selection__administrative_communication__nature_of_transaction__personal
+msgid "Personal"
+msgstr "شخصي"
+
+#. module: ncss_administrative_communications
+#: code:addons/ncss_administrative_communications/models/administrative_communications.py:0
+#, python-format
+msgid "Please Add The Department."
+msgstr "من فضلك اضف القسم"
+
+#. module: ncss_administrative_communications
+#: code:addons/ncss_administrative_communications/models/administrative_communications.py:0
+#, python-format
+msgid "Please Add The Specialized Employee."
+msgstr "من فضلك اضف الموظف المختص"
+
+#. module: ncss_administrative_communications
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_wizard__position
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_res_users__position
+msgid "Position"
+msgstr "المنصب الوظيفي"
+
+#. module: ncss_administrative_communications
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication__post_type
+msgid "Post Type"
+msgstr "نوع البريد"
+
+#. module: ncss_administrative_communications
+#: model:ir.actions.report,name:ncss_administrative_communications.barcode_report
+msgid "Print Barcode"
+msgstr "طباعه باركود"
+
+#. module: ncss_administrative_communications
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_line__procedure_id
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_wizard__procedure_id
+msgid "Procedure"
+msgstr "الاجراء اللازم"
+
+#. module: ncss_administrative_communications
+#: model:ir.ui.menu,name:ncss_administrative_communications.administrative_communication_config_procedures
+msgid "Procedures"
+msgstr "الاجراءات"
+
+#. module: ncss_administrative_communications
+#: model:ir.model.fields.selection,name:ncss_administrative_communications.selection__administrative_communication__nature_of_transaction__public
+msgid "Public"
+msgstr "عام"
+
+#. module: ncss_administrative_communications
+#: model_terms:ir.ui.view,arch_db:ncss_administrative_communications.administrative_communication_line_form
+#: model_terms:ir.ui.view,arch_db:ncss_administrative_communications.administrative_communication_line_tree
+msgid "Receipt"
+msgstr "احيلت الي"
+
+#. module: ncss_administrative_communications
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication__transfer_date
+msgid "Receipt Date"
+msgstr "تاريخ الاستلام"
+
+#. module: ncss_administrative_communications
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_line__receipt_notes
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_wizard__receipt_notes
+msgid "Receipt Notes"
+msgstr "ملاحظات المستلم"
+
+#. module: ncss_administrative_communications
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_line__recipient_by_id
+msgid "Recipient By"
+msgstr "احيلت الي"
+
+#. module: ncss_administrative_communications
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication__reference_number
+msgid "Reference Number"
+msgstr "رقم المرجع"
+
+#. module: ncss_administrative_communications
+#: model:ir.model.fields.selection,name:ncss_administrative_communications.selection__administrative_communication_wizard__position__regular
+#: model:ir.model.fields.selection,name:ncss_administrative_communications.selection__res_users__position__regular
+msgid "Regular"
+msgstr "عادى"
+
+#. module: ncss_administrative_communications
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication__activity_user_id
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_category__activity_user_id
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_contact__activity_user_id
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_contact_line__activity_user_id
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_management__activity_user_id
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_procedures__activity_user_id
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_sender__activity_user_id
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_source__activity_user_id
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_years__activity_user_id
+msgid "Responsible User"
+msgstr "الشخص المسئول"
+
+#. module: ncss_administrative_communications
+#: model:ir.model.fields.selection,name:ncss_administrative_communications.selection__administrative_communication__nature_of_transaction__secret
+msgid "Secret"
+msgstr "سرى"
+
+#. module: ncss_administrative_communications
+#: model:ir.ui.menu,name:ncss_administrative_communications.administrative_communication_config_sender
+msgid "Sender"
+msgstr "المرسل"
+
+#. module: ncss_administrative_communications
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_line__sender_notes
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_wizard__sender_notes
+msgid "Sender Notes"
+msgstr "ملاحظات المرسل"
+
+#. module: ncss_administrative_communications
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication__sender_type
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_line__sender_type
+msgid "Sender Type"
+msgstr "نوع المرسل"
+
+#. module: ncss_administrative_communications
+#: model:ir.model.fields.selection,name:ncss_administrative_communications.selection__administrative_communication__state__assigned
+msgid "Sent To Employee"
+msgstr "احيلت الي الموظف"
+
+#. module: ncss_administrative_communications
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication__sequence
+msgid "Sequence"
+msgstr "مسلسل"
+
+#. module: ncss_administrative_communications
+#: model_terms:ir.ui.view,arch_db:ncss_administrative_communications.administrative_communication_form
+msgid "Set To Draft"
+msgstr "اعادتها كمعامله جديده"
+
+#. module: ncss_administrative_communications
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication__source_id
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_contact_line__source_id
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_line__source_id
+#: model:ir.ui.menu,name:ncss_administrative_communications.administrative_communication_config_source
+msgid "Source"
+msgstr "مصدرها"
+
+#. module: ncss_administrative_communications
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication__state
+msgid "State"
+msgstr "الحاله"
+
+#. module: ncss_administrative_communications
+#: model:ir.model.fields,help:ncss_administrative_communications.field_administrative_communication__activity_state
+#: model:ir.model.fields,help:ncss_administrative_communications.field_administrative_communication_category__activity_state
+#: model:ir.model.fields,help:ncss_administrative_communications.field_administrative_communication_contact__activity_state
+#: model:ir.model.fields,help:ncss_administrative_communications.field_administrative_communication_contact_line__activity_state
+#: model:ir.model.fields,help:ncss_administrative_communications.field_administrative_communication_management__activity_state
+#: model:ir.model.fields,help:ncss_administrative_communications.field_administrative_communication_procedures__activity_state
+#: model:ir.model.fields,help:ncss_administrative_communications.field_administrative_communication_sender__activity_state
+#: model:ir.model.fields,help:ncss_administrative_communications.field_administrative_communication_source__activity_state
+#: model:ir.model.fields,help:ncss_administrative_communications.field_administrative_communication_years__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+
+#. module: ncss_administrative_communications
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication__subject
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_line__subject
+msgid "Subject"
+msgstr "الموضوع"
+
+#. module: ncss_administrative_communications
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication__transaction_attachment_line_ids
+msgid "Transaction Attachment Line"
+msgstr "مرفقات المعامله"
+
+#. module: ncss_administrative_communications
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication__transaction_date
+msgid "Transaction Date"
+msgstr "تاريخ المعامله"
+
+#. module: ncss_administrative_communications
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication__transaction_line_ids
+msgid "Transaction Line"
+msgstr "الاحالات"
+
+#. module: ncss_administrative_communications
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication__transactions_number
+msgid "Transactions Number"
+msgstr "رقم المعامله"
+
+#. module: ncss_administrative_communications
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication__transfer_number
+msgid "Transfer Number"
+msgstr "رقم المعامله"
+
+#. module: ncss_administrative_communications
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication__transfer_to_id
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_contact_line__transfer_to_id
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_line__transfer_to_id
+msgid "Transfer To"
+msgstr "القسم المحال اليه"
+
+#. module: ncss_administrative_communications
+#: model_terms:ir.ui.view,arch_db:ncss_administrative_communications.administrative_communication_form
+msgid "Treatment Information"
+msgstr "احالات المعامله"
+
+#. module: ncss_administrative_communications
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication__treatment_type
+msgid "Treatment Type"
+msgstr "نوع المعامله"
+
+#. module: ncss_administrative_communications
+#: model:ir.model.fields,help:ncss_administrative_communications.field_administrative_communication__activity_exception_decoration
+#: model:ir.model.fields,help:ncss_administrative_communications.field_administrative_communication_category__activity_exception_decoration
+#: model:ir.model.fields,help:ncss_administrative_communications.field_administrative_communication_contact__activity_exception_decoration
+#: model:ir.model.fields,help:ncss_administrative_communications.field_administrative_communication_contact_line__activity_exception_decoration
+#: model:ir.model.fields,help:ncss_administrative_communications.field_administrative_communication_management__activity_exception_decoration
+#: model:ir.model.fields,help:ncss_administrative_communications.field_administrative_communication_procedures__activity_exception_decoration
+#: model:ir.model.fields,help:ncss_administrative_communications.field_administrative_communication_sender__activity_exception_decoration
+#: model:ir.model.fields,help:ncss_administrative_communications.field_administrative_communication_source__activity_exception_decoration
+#: model:ir.model.fields,help:ncss_administrative_communications.field_administrative_communication_years__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr ""
+
+#. module: ncss_administrative_communications
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication__message_unread
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_category__message_unread
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_contact__message_unread
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_contact_line__message_unread
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_management__message_unread
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_procedures__message_unread
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_sender__message_unread
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_source__message_unread
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_years__message_unread
+msgid "Unread Messages"
+msgstr ""
+
+#. module: ncss_administrative_communications
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication__message_unread_counter
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_category__message_unread_counter
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_contact__message_unread_counter
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_contact_line__message_unread_counter
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_management__message_unread_counter
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_procedures__message_unread_counter
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_sender__message_unread_counter
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_source__message_unread_counter
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_years__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr ""
+
+#. module: ncss_administrative_communications
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication__user_id
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_line__user_id
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_wizard__user_id
+msgid "User"
+msgstr "احيلت الي"
+
+#. module: ncss_administrative_communications
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication_line__user_attached_id
+msgid "User Attached"
+msgstr "احيلت بواسطه"
+
+#. module: ncss_administrative_communications
+#: model:ir.model,name:ncss_administrative_communications.model_res_users
+msgid "Users"
+msgstr "المستخدمون"
+
+#. module: ncss_administrative_communications
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication__way_of_send
+msgid "Way Of Send"
+msgstr "اسلوب الارسال"
+
+#. module: ncss_administrative_communications
+#: model:ir.model.fields,field_description:ncss_administrative_communications.field_administrative_communication__years
+msgid "Years"
+msgstr "السنه"
+
+#. module: ncss_administrative_communications
+#: model:ir.model,name:ncss_administrative_communications.model_administrative_communication
+msgid "administrative.communication"
+msgstr "المعاملات"
+
+#. module: ncss_administrative_communications
+#: model:ir.model,name:ncss_administrative_communications.model_administrative_communication_attachments
+msgid "administrative.communication.attachments"
+msgstr "مرفقات المعاملات"
+
+#. module: ncss_administrative_communications
+#: model:ir.model,name:ncss_administrative_communications.model_administrative_communication_category
+msgid "administrative.communication.category"
+msgstr "تصنيف المعاملات"
+
+#. module: ncss_administrative_communications
+#: model:ir.model,name:ncss_administrative_communications.model_administrative_communication_contact
+msgid "administrative.communication.contact"
+msgstr "عملاء المعاملات"
+
+#. module: ncss_administrative_communications
+#: model:ir.model,name:ncss_administrative_communications.model_administrative_communication_contact_line
+msgid "administrative.communication.contact.line"
+msgstr "عملاء المعاملات"
+
+#. module: ncss_administrative_communications
+#: model:ir.model,name:ncss_administrative_communications.model_administrative_communication_line
+msgid "administrative.communication.line"
+msgstr ""
+
+#. module: ncss_administrative_communications
+#: model:ir.model,name:ncss_administrative_communications.model_administrative_communication_management
+msgid "administrative.communication.management"
+msgstr "ادارات المعاملات"
+
+#. module: ncss_administrative_communications
+#: model:ir.model,name:ncss_administrative_communications.model_administrative_communication_procedures
+msgid "administrative.communication.procedures"
+msgstr "اجراءات المعاملات"
+
+#. module: ncss_administrative_communications
+#: model:ir.model,name:ncss_administrative_communications.model_administrative_communication_sender
+msgid "administrative.communication.sender"
+msgstr "مرسلين المعاملات"
+
+#. module: ncss_administrative_communications
+#: model:ir.model,name:ncss_administrative_communications.model_administrative_communication_source
+msgid "administrative.communication.source"
+msgstr "مصدر المعاملات"
+
+#. module: ncss_administrative_communications
+#: model:ir.model,name:ncss_administrative_communications.model_administrative_communication_wizard
+msgid "administrative.communication.wizard"
+msgstr "احاله المعامله للشخص المسئول"
+
+#. module: ncss_administrative_communications
+#: model:ir.model,name:ncss_administrative_communications.model_administrative_communication_years
+msgid "administrative.communication.years"
+msgstr ""
+
+#. module: ncss_administrative_communications
+#: model_terms:ir.ui.view,arch_db:ncss_administrative_communications.administrative_communication_management_form
+#: model_terms:ir.ui.view,arch_db:ncss_administrative_communications.administrative_communication_source_form
+msgid "contacts"
+msgstr "العملاء"
+
+#. module: ncss_administrative_communications
+#: model:ir.model.fields.selection,name:ncss_administrative_communications.selection__administrative_communication__way_of_send__email
+msgid "email"
+msgstr "بريد الالكتروني"
+
+#. module: ncss_administrative_communications
+#: model:ir.model.fields.selection,name:ncss_administrative_communications.selection__administrative_communication__way_of_send__manual
+msgid "manual"
+msgstr "مناوله"
+
+#. module: ncss_administrative_communications
+#: model:ir.model.fields.selection,name:ncss_administrative_communications.selection__administrative_communication__way_of_send__post
+msgid "post"
+msgstr "بريد ممتاز"
+
+#. module: ncss_administrative_communications
+#: model:ir.model.fields.selection,name:ncss_administrative_communications.selection__administrative_communication__state__reviewed
+msgid "sent to department"
+msgstr "احيلت الي القسم"
+
+#. module: ncss_administrative_communications
+#: model:ir.actions.act_window,name:ncss_administrative_communications.administrative_communication_out_action
+msgid "ِOUT"
+msgstr "خارجي"

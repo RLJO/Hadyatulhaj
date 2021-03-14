@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="ess_my_courses_training" name="ESS My Courses">
+        <t t-call="portal.portal_layout">
+            <div class="row justify-content-between mt-4">
+
+                <nav class="navbar-default navbar-static-side" role="navigation" style="z-index: 1;position: initial;">
+                    <t t-call="ess.side_menu"/>
+                </nav>
+
+                <div class="row col-10 col-md col-lg-10"> 
+                    <div class="col-lg-12">
+                        <div class="ibox ">
+                            <div class="row iess-title" style="text-align:left;margin-right: 20px;margin-left: 20px;">
+                                <h3><span>My Courses</span></h3>
+                            </div>
+                            <div class="ibox-content">
+                                <div class="row">
+                                    <div class="col-lg-12" style="margin-top:10px;">
+                                        <div class="row">
+                                            <div class="col-lg-12">
+                                                <div class="ibox-content iess-p20">
+                                                    <div class="table-responsive">
+                                                        <table class="table header-border table-hover table-custom spacing5 ess-table">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th>Course</th>
+                                                                    <th>Duration</th>
+                                                                    <th>From</th>
+                                                                    <th>To</th>
+                                                                    <th>Capacity</th>
+                                                                    <th>Price</th>
+                                                                    <th>Train</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody t-foreach="training_list" t-as="tran_obj">
+                                                                <tr>
+                                                                    <td><div t-esc="tran_obj['course']"/></td>
+                                                                    <td><div t-esc="tran_obj['duration']"/></td>
+                                                                    <td><div t-esc="tran_obj['f_date']"/></td>
+                                                                    <td><div t-esc="tran_obj['to_date']"/></td>
+                                                                    <td><div t-esc="tran_obj['capacity']"/></td>
+                                                                    <td><div t-esc="tran_obj['price']"/></td>
+                                                                    <td><div t-esc="tran_obj['trainer_id']"/></td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </t>
+    </template>
+
+
+</odoo>

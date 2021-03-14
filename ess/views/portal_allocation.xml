@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="ess_allocation" name="ESS Allocation">
+        <t t-call="portal.portal_layout">
+            <t >
+                <div class="row justify-content-between mt-4">
+
+                    <nav class="navbar-default navbar-static-side" role="navigation" style="z-index: 1;position: initial;">
+                        <t t-call="ess.side_menu"/>
+                    </nav>
+
+                    <div class="row col-10 col-md col-lg-10"> 
+
+                        <div class="col-lg-12">
+                            <div class="ibox ">
+                                <div class="row iess-title" style="text-align:left;margin-right: 20px;margin-left: 20px;">
+                                    <h3><span>Leave Allocation Request</span></h3>
+                                </div>
+                                <div class="ibox-content">
+                                    <div class="row">
+                                        <div class="col-lg-12" style="margin-top:10px;">
+                                                <form action="/my/allocation" method="post">
+                                                <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+                                                
+                                                <div class="row o_portal_details">
+                                                    <div class="col-lg-12">
+
+                                                            <div class="col-lg-12">
+                                                                <div t-if="error_message" class="alert alert-danger" role="alert">
+                                                                    <t t-foreach="error_message" t-as="err"><t t-esc="err"/><br /></t>
+                                                                </div>
+                                                            </div>
+
+                                                            
+
+                                                            <div class="row form-group col-lg-12">
+
+                                                                <div t-attf-class="form-group #{error.get('holiday_status_id') and 'o_has_error' or ''} col-xl-6">
+                                                                    <label class="col-form-label" for="holiday_status_id">Time Off Type</label>
+                                                                    <select name="holiday_status_id" t-attf-class="form-control #{error.get('holiday_status_id') and 'is-invalid' or ''}">
+                                                                        <t t-foreach="leave_type or []" t-as="type">
+                                                                            <option t-att-value="type.id" >
+                                                                                <t t-esc="type.name_get()[0][1]" />
+                                                                            </option>
+                                                                        </t>
+                                                                    </select>
+                                                                </div>
+                                                                <div t-attf-class="form-group #{error.get('name') and 'o_has_error' or ''} col-xl-4">
+                                                                    <label class="col-form-label" for="name">Description</label>
+                                                                    <input type="text" name="name" t-attf-class="form-control #{error.get('name') and 'is-invalid' or ''}" required=""/>
+                                                                </div>
+                                                                <div t-attf-class="form-group #{error.get('duration') and 'o_has_error' or ''} col-xl-2">
+                                                                    <label class="col-form-label" for="duration">Duration</label>
+                                                                    <input type="number" name="duration" t-attf-class="form-control #{error.get('duration') and 'is-invalid' or ''}" required=""/>
+                                                                </div>
+                                                            </div>
+                                                            
+                                                            <div class="row form-group col-lg-12">
+                                                                <div t-attf-class="form-group #{error.get('notes') and 'o_has_error' or ''} col-xl-6">
+                                                                    <label class="col-form-label" for="notes">Notes</label>
+                                                                    <textarea rows="4" cols="50" name="notes" t-attf-class="form-control #{error.get('notes') and 'is-invalid' or ''}"/>
+                                                                </div>
+                                                            </div>
+
+                                                        <div class="clearfix">
+                                                                <button type="submit" class="btn btn-primary float-right" style='margin-right: 30px;'>
+                                                                    Confirm
+                                                                </button>
+                                                            </div> 
+
+                                                            <!--  -->
+
+                                                            <div class="ibox-content iess-p20">
+                                                                <div class="table-responsive">
+                                                                    <table class="table header-border table-hover table-custom spacing5 ess-table">
+                                                                        <thead>
+                                                                            <tr>
+                                                                                <th>Name</th>
+                                                                                <th>Days</th>
+                                                                                <th>Last Allocation Date</th>
+                                                                                <th>Allocated Until</th>
+                                                                                <th>Expiry Date</th>
+                                                                                <th>Available From</th>
+                                                                                <th>Status</th>
+                                                                            </tr>
+                                                                        </thead>
+                                                                        <tbody t-foreach="allocation_list" t-as="lea">
+                                                                            <tr>
+                                                                                <td><div t-esc="lea['name']"/></td>
+                                                                                <td><div t-esc="lea['number_of_days']"/></td>
+                                                                                <td><div t-esc="lea['last_allocation_date']"/></td>
+                                                                                <td><div t-esc="lea['allocated_until']"/></td>
+                                                                                <td><div t-esc="lea['expiry_date']"/></td>
+                                                                                <td><div t-esc="lea['available_from']"/></td>
+                                                                                <td><div t-esc="lea['state']"/></td>
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </div>
+                                                            </div>
+
+                                                        </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    
+                    
+                </div>
+            </t>
+        </t>
+    </template>
+
+
+</odoo>

@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="ess_view_attendance" name="ESS View Attendance">
+        <t t-call="portal.portal_layout">
+            <t>
+                <div class="row justify-content-between mt-4">
+
+                    <nav class="navbar-default navbar-static-side" role="navigation" style="z-index: 1;position: initial;">
+                        <t t-call="ess.side_menu"/>
+                    </nav>
+
+                    <div class="row col-10 col-md col-lg-10"> 
+                        <div class="col-lg-12">
+                            <div class="ibox ">
+
+
+
+                                <div class="row iess-title" style="text-align:left;margin-right: 20px;margin-left: 20px;">
+
+                                    <h3><span>Daily Attendance</span></h3>
+                                </div>
+
+                                <div class="ibox-content">
+     <div class="col-lg-12">
+      <h2 class="heading">Attendance</h2>
+    </div>
+
+
+  <div class="row">
+    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+      <div class="dashboard-stat red"  >
+        <div class="visual">
+          <i class="fa fa-usd"></i>
+        </div>
+        <div class="details">
+          <div class="number">
+            <span t-esc="today_late" > </span>
+          </div>
+          <div class="desc">Today Late</div>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+      <div class="dashboard-stat blue" >
+        <div class="visual">
+          <i class="fa fa-bar-chart-o"></i>
+        </div>
+        <div class="details">
+          <div class="number">
+            <span t-esc="month_Absence" > </span>
+          </div>
+          <div class="desc">Month Absent</div>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+      <div class="dashboard-stat hoki"  >
+        <div class="visual">
+          <i class="fa fa-credit-card"></i>
+        </div>
+        <div class="details">
+          <div class="number">
+            <span t-esc="Att_percent"> %</span>
+          </div>
+          <div class="desc">Attendance Percentage</div>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+      <div class="dashboard-stat purple" >
+        <div class="visual">
+          <i class="fa fa-comments"></i>
+        </div>
+        <div class="details">
+          <div class="number">
+            <span t-esc="month_late"> </span>
+          </div>
+          <div class="desc">Month Late</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+                                 </div>
+                                <div class="ibox-content">
+                                    <div class="row">
+                                        <div class="col-lg-12" style="margin-top:10px;">
+                                            <form>
+                                                <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+                                                
+                                                <div class="row o_portal_details">
+                                                    <div class="col-lg-12">
+                                                        <!--  -->
+                                                        <div class="ibox-content iess-p20">
+                                                            <div class="table-responsive">
+                                                                <table class="table header-border table-hover table-custom spacing5 ess-table">
+                                                                    <thead>
+                                                                        <tr>
+                                                                            <th>Date</th>
+                                                                            <th>In</th>
+                                                                            <th>Out</th>
+                                                                            <th>Work Hours</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody t-foreach="attendance_list" t-as="att">
+                                                                        <tr>
+                                                                            <td><div t-esc="att['date']"/></td>
+                                                                            <td><span t-esc="att['in']"/></td>
+                                                                            <td><span t-esc="att['out']"/></td>
+                                                                            <td><span t-esc="att['worked_hours']"/></td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                        
+
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                            
+                    </div>
+                </div>
+            </t>
+        </t>
+        <link rel="stylesheet" type="text/scss" href="/ess/static/src/css/styles.css"/>
+          <script type="text/javascript" src="/ess/static/src/js/scripts.js"></script>
+    </template>
+    <template id="ess_view_attendance_day" name="ESS View Attendance">
+        <t t-call="portal.portal_layout">
+            <t>
+
+                <div class="row justify-content-between mt-4">
+
+                    <nav class="navbar-default navbar-static-side" role="navigation" style="z-index: 1;position: initial;">
+                        <t t-call="ess.side_menu"/>
+                    </nav>
+
+                    <div class="row col-10 col-md col-lg-10">
+                        <div class="col-lg-12">
+                            <div class="ibox ">
+
+
+
+                                <div class="row iess-title" style="text-align:left;margin-right: 20px;margin-left: 20px;">
+
+                                    <h3><span>Daily Attendance</span></h3>
+                                </div>
+
+                                <div class="ibox-content">
+     <div class="col-lg-12">
+      <h2 class="heading">Attendance</h2>
+    </div>
+
+<div class="bootstrap-iso" style="max-width:100%;">
+ <div class="container-fluid">
+<div class="row">
+   <div class="col-md-6 col-sm-6 col-xs-12">
+    <form  action="/my/dayattendance" method="post" class="form-horizontal"  >
+         <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+
+     <div class="form-group ">
+
+      <div class="col-sm-10">
+       <div class="input-group">
+        <div class="input-group-addon">
+            From
+         <i class="fa fa-calendar">
+         </i>
+        </div>
+        <input class="form-control" id="sdate" name="startdate" placeholder="MM/DD/YYYY" type="date" required=""/>
+            <script>
+            document.getElementById('sdate').value = new Date().toISOString().substring(0, 10);
+               </script>
+         <div class="input-group-addon" style="background-color:#ffffff;">
+          <span> To  </span>  <i class="fa fa-calendar">
+         </i>
+        </div>
+		<input class="form-control" id="edate" name="enddate" placeholder="MM/DD/YYYY" type="Date" required=""/>
+        <div class="input-group-addon">
+           <button class="btn btn-primary btn-rounded " name="submit" type="submit">
+               <i class="fa fa-search"></i>
+       </button>
+        </div>
+       </div>
+
+      </div>
+     </div>
+
+    </form>
+   </div>
+  </div>
+ </div>
+</div>
+
+
+  </div>
+                                <div class="ibox-content">
+                                    <div class="row">
+                                        <div class="col-lg-12" style="margin-top:10px;">
+                                            <form>
+                                                <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+
+                                                <div class="row o_portal_details">
+                                                    <div class="col-lg-12">
+                                                        <!--  -->
+                                                        <div class="ibox-content iess-p20">
+                                                            <div class="table-responsive">
+                                                                <table class="table header-border table-hover table-custom spacing5 ess-table">
+                                                                    <thead  >
+                                                                        <tr style="background-image: linear-gradient(to right, #ff8177 0%, #ff867a 0%, #ff8c7f 21%, #f99185 52%, #cf556c 78%, #b12a5b 100%); border-top-color: transparent;color: #fff;" >
+                                                                            <th>Date</th>
+                                                                            <th>In</th>
+                                                                            <th>Out</th>
+                                                                            <th>Work Hours</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody t-foreach="attendance_list" t-as="att">
+                                                                        <tr>
+                                                                            <td  ><div t-esc="att['date']"/></td>
+                                                                            <td><span t-esc="att['in']"/></td>
+                                                                            <td><span t-esc="att['out']"/></td>
+                                                                            <td><span t-esc="att['worked_hours']"/></td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </t>
+        </t>
+        <link rel="stylesheet" type="text/scss" href="/ess/static/src/css/styles.css"/>
+          <script type="text/javascript" src="/ess/static/src/js/scripts.js"></script>
+    </template>
+
+
+</odoo>

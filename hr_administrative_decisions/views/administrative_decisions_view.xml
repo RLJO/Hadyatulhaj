@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="hr_administrative_decisions_form" model="ir.ui.view">
+        <field name="name">hr.administrative.decisions.form</field>
+        <field name="model">hr.administrative.decisions</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <button string="Set To Draft"
+                            name="action_draft"
+                            states="second_approve"
+                            type="object" class="oe_highlight"/>
+                    <button string="First Approve"
+                            name="action_first_approve"
+                            states="draft"
+                            type="object" class="oe_highlight"/>
+                    <button string="Second Approve"
+                            name="action_second_approve"
+                            states="first_approve"
+                            type="object" class="oe_highlight"/>
+                    <field name="state" widget="statusbar"/>
+                </header>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="employee_id" attrs="{'readonly': [('state','!=','draft')]}"/>
+                            <field name="decision_type_id" attrs="{'readonly': [('state','!=','draft')]}"/>
+                        </group>
+                        <group>
+                            <field name="date" attrs="{'readonly': [('state','!=','draft')]}"/>
+                        </group>
+                        <group>
+                            <field name="description" />
+                        </group>
+                    </group>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" widget="mail_followers" groups="base.group_user"/>
+                    <field name="activity_ids" widget="mail_activity"/>
+                    <field name="message_ids" widget="mail_thread"/>
+                </div>
+            </form>
+        </field>
+    </record>
+
+    <record id="hr_administrative_decisions_tree" model="ir.ui.view">
+        <field name="name">hr.administrative.decisions</field>
+        <field name="model">hr.administrative.decisions</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="employee_id"/>
+                <field name="decision_type_id"/>
+                <field name="date"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="administrative_decisions_type_form" model="ir.ui.view">
+        <field name="name">administrative.decisions.type.form</field>
+        <field name="model">administrative.decisions.type</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                            <field name="name" />
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="administrative_decisions_type_tree" model="ir.ui.view">
+        <field name="name">administrative.decisions.type</field>
+        <field name="model">administrative.decisions.type</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="hr_administrative_decisions_action" model="ir.actions.act_window">
+        <field name="name">Administrative Decisions</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">hr.administrative.decisions</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <record id="administrative_decisions_type_action" model="ir.actions.act_window">
+        <field name="name">Administrative Decisions Type</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">administrative.decisions.type</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="administrative_decisions_menu"
+              name="Decisions Management"
+              parent="hr.menu_hr_root"
+              sequence="4"/>
+    <menuitem id="hr_administrative_decisions_menu"
+              name="Administrative Decisions"
+              parent="administrative_decisions_menu"
+              action="hr_administrative_decisions_action"/>
+    <menuitem id="hr_administrative_decisions_type_menu"
+              name="Administrative Decisions Type"
+              parent="administrative_decisions_menu"
+              action="administrative_decisions_type_action"/>
+
+</odoo>

@@ -1,0 +1,695 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* hr_annual_leave_allocation
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-02-28 08:26+0000\n"
+"PO-Revision-Date: 2021-02-28 08:26+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: hr_annual_leave_allocation
+#: model_terms:ir.ui.view,arch_db:hr_annual_leave_allocation.allocation_config_settings_form_view
+msgid "<span class=\"o_form_label\">Annual Allocation</span>"
+msgstr ""
+
+#. module: hr_annual_leave_allocation
+#: model_terms:ir.ui.view,arch_db:hr_annual_leave_allocation.view_end_of_service_award_form
+msgid "<span>Days</span>"
+msgstr "<span>ايام</span>"
+
+#. module: hr_annual_leave_allocation
+#: model_terms:ir.ui.view,arch_db:hr_annual_leave_allocation.view_end_of_service_award_form
+msgid "<span>Year</span>"
+msgstr "<span>سنه</span>"
+
+#. module: hr_annual_leave_allocation
+#: model_terms:ir.ui.view,arch_db:hr_annual_leave_allocation.view_end_of_service_award_form
+msgid "<span>day</span>"
+msgstr "<span>يوم</span>"
+
+#. module: hr_annual_leave_allocation
+#: model_terms:ir.ui.view,arch_db:hr_annual_leave_allocation.eos_report_template
+msgid "<strong>الموافق تاريخ </strong>"
+msgstr ""
+
+#. module: hr_annual_leave_allocation
+#: model_terms:ir.ui.view,arch_db:hr_annual_leave_allocation.eos_report_template
+msgid "<strong>انه في يوم </strong>"
+msgstr ""
+
+#. module: hr_annual_leave_allocation
+#: model:ir.model.fields,field_description:hr_annual_leave_allocation.field_end_of_service_award__message_needaction
+msgid "Action Needed"
+msgstr ""
+
+#. module: hr_annual_leave_allocation
+#: model:ir.model.fields,field_description:hr_annual_leave_allocation.field_end_of_service_award__activity_ids
+msgid "Activities"
+msgstr ""
+
+#. module: hr_annual_leave_allocation
+#: model:ir.model.fields,field_description:hr_annual_leave_allocation.field_end_of_service_award__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr ""
+
+#. module: hr_annual_leave_allocation
+#: model:ir.model.fields,field_description:hr_annual_leave_allocation.field_end_of_service_award__activity_state
+msgid "Activity State"
+msgstr ""
+
+#. module: hr_annual_leave_allocation
+#: model:ir.model.fields.selection,name:hr_annual_leave_allocation.selection__res_company__unpaid_type__add
+#: model:ir.model.fields.selection,name:hr_annual_leave_allocation.selection__res_config_settings__unpaid_type__add
+msgid "Add"
+msgstr "اضافه"
+
+#. module: hr_annual_leave_allocation
+#: model:ir.model.fields,field_description:hr_annual_leave_allocation.field_hr_leave_allocation__allocated_until
+msgid "Allocated Until"
+msgstr ""
+
+#. module: hr_annual_leave_allocation
+#: model:ir.model.fields,field_description:hr_annual_leave_allocation.field_hr_employee__allocation_ids
+#: model_terms:ir.ui.view,arch_db:hr_annual_leave_allocation.allocation_config_settings_form_view
+msgid "Allocation"
+msgstr ""
+
+#. module: hr_annual_leave_allocation
+#: model:ir.model.fields,field_description:hr_annual_leave_allocation.field_res_company__allocation_type
+#: model:ir.model.fields,field_description:hr_annual_leave_allocation.field_res_config_settings__allocation_type
+msgid "Allocation Type"
+msgstr ""
+
+#. module: hr_annual_leave_allocation
+#: model:ir.actions.server,name:hr_annual_leave_allocation.employee_annual_allocation_ir_actions_server
+#: model:ir.cron,cron_name:hr_annual_leave_allocation.employee_annual_allocation
+#: model:ir.cron,name:hr_annual_leave_allocation.employee_annual_allocation
+#: model_terms:ir.ui.view,arch_db:hr_annual_leave_allocation.view_employee_form_inherit
+msgid "Annual Allocation"
+msgstr ""
+
+#. module: hr_annual_leave_allocation
+#: model:ir.model.fields,field_description:hr_annual_leave_allocation.field_res_config_settings__leave_type_id
+msgid "Annual Leave"
+msgstr ""
+
+#. module: hr_annual_leave_allocation
+#: model_terms:ir.ui.view,arch_db:hr_annual_leave_allocation.view_end_of_service_award_form
+msgid "Approve"
+msgstr "موافقه"
+
+#. module: hr_annual_leave_allocation
+#: model:ir.model.fields.selection,name:hr_annual_leave_allocation.selection__end_of_service_award__state__approved
+msgid "Approved"
+msgstr "تمت الموافقه"
+
+#. module: hr_annual_leave_allocation
+#: model:ir.model.fields,field_description:hr_annual_leave_allocation.field_end_of_service_award__message_attachment_count
+msgid "Attachment Count"
+msgstr ""
+
+#. module: hr_annual_leave_allocation
+#: model:ir.model.fields,field_description:hr_annual_leave_allocation.field_hr_leave_allocation__available_from
+msgid "Available From"
+msgstr ""
+
+#. module: hr_annual_leave_allocation
+#: model:ir.model.fields.selection,name:hr_annual_leave_allocation.selection__hr_contract__state__cancel
+msgid "Cancelled"
+msgstr "ملغي"
+
+#. module: hr_annual_leave_allocation
+#: model:ir.model,name:hr_annual_leave_allocation.model_res_company
+msgid "Companies"
+msgstr "الشركات"
+
+#. module: hr_annual_leave_allocation
+#: model:ir.model.fields,field_description:hr_annual_leave_allocation.field_res_config_settings__company_id
+msgid "Company"
+msgstr "الشركة"
+
+#. module: hr_annual_leave_allocation
+#: model:ir.model,name:hr_annual_leave_allocation.model_res_config_settings
+msgid "Config Settings"
+msgstr "ضبط الإعدادات"
+
+#. module: hr_annual_leave_allocation
+#: model:ir.model.fields,field_description:hr_annual_leave_allocation.field_end_of_service_award__contact_end_type
+msgid "Contact End Type"
+msgstr "طريقه انهاء التعاقد"
+
+#. module: hr_annual_leave_allocation
+#: model:ir.model.fields,field_description:hr_annual_leave_allocation.field_end_of_service_award__contract_id
+msgid "Contract"
+msgstr "العقد"
+
+#. module: hr_annual_leave_allocation
+#: model:ir.model.fields,field_description:hr_annual_leave_allocation.field_hr_contract__contract_period
+msgid "Contract Period"
+msgstr "مده العقد"
+
+#. module: hr_annual_leave_allocation
+#: model:ir.model.fields,field_description:hr_annual_leave_allocation.field_end_of_service_award__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: hr_annual_leave_allocation
+#: model:ir.model.fields,field_description:hr_annual_leave_allocation.field_end_of_service_award__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: hr_annual_leave_allocation
+#: model:ir.model.fields,help:hr_annual_leave_allocation.field_end_of_service_award__contract_id
+msgid "Current contract of the employee"
+msgstr ""
+
+#. module: hr_annual_leave_allocation
+#: model:ir.model.fields.selection,name:hr_annual_leave_allocation.selection__res_company__allocation_type__daily
+#: model:ir.model.fields.selection,name:hr_annual_leave_allocation.selection__res_config_settings__allocation_type__daily
+msgid "Daily"
+msgstr ""
+
+#. module: hr_annual_leave_allocation
+#: model:ir.model.fields,field_description:hr_annual_leave_allocation.field_end_of_service_award__net_period_before_5year
+#: model:ir.model.fields,field_description:hr_annual_leave_allocation.field_res_company__deserve_first_period
+#: model:ir.model.fields,field_description:hr_annual_leave_allocation.field_res_config_settings__deserve_first_period
+#: model_terms:ir.ui.view,arch_db:hr_annual_leave_allocation.eos_report_template
+msgid "Deserve First Period"
+msgstr "مستحق الفتره الاولي"
+
+#. module: hr_annual_leave_allocation
+#: model:ir.model.fields,field_description:hr_annual_leave_allocation.field_end_of_service_award__net_period_after_5year
+#: model:ir.model.fields,field_description:hr_annual_leave_allocation.field_res_company__deserve_second_period
+#: model:ir.model.fields,field_description:hr_annual_leave_allocation.field_res_config_settings__deserve_second_period
+#: model_terms:ir.ui.view,arch_db:hr_annual_leave_allocation.eos_report_template
+msgid "Deserve Second Period"
+msgstr "مستحق الفتره الثانيه"
+
+#. module: hr_annual_leave_allocation
+#: model:ir.model.fields,field_description:hr_annual_leave_allocation.field_hr_contract__deserved_leave
+msgid "Deserved Leave"
+msgstr ""
+
+#. module: hr_annual_leave_allocation
+#: model:ir.model.fields,field_description:hr_annual_leave_allocation.field_end_of_service_award__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: hr_annual_leave_allocation
+#: model:ir.model.fields.selection,name:hr_annual_leave_allocation.selection__end_of_service_award__state__draft
+msgid "Draft"
+msgstr "جديده"
+
+#. module: hr_annual_leave_allocation
+#: model:ir.model,name:hr_annual_leave_allocation.model_hr_employee
+#: model:ir.model.fields,field_description:hr_annual_leave_allocation.field_end_of_service_award__employee_id
+msgid "Employee"
+msgstr "الموظف"
+
+#. module: hr_annual_leave_allocation
+#: model:ir.model,name:hr_annual_leave_allocation.model_hr_contract
+msgid "Employee Contract"
+msgstr ""
+
+#. module: hr_annual_leave_allocation
+#: model:ir.model.fields.selection,name:hr_annual_leave_allocation.selection__end_of_service_award__contact_end_type__end_period
+#: model_terms:ir.ui.view,arch_db:hr_annual_leave_allocation.eos_report_template
+msgid "End of Contract Period"
+msgstr "انتهاء مده العقد "
+
+#. module: hr_annual_leave_allocation
+#: model:ir.actions.act_window,name:hr_annual_leave_allocation.end_of_service_award_action
+#: model:ir.model,name:hr_annual_leave_allocation.model_end_of_service_award
+#: model:ir.ui.menu,name:hr_annual_leave_allocation.end_of_service_award_menu
+msgid "End of Service Award"
+msgstr "مكافأه نهايه الخدمه"
+
+#. module: hr_annual_leave_allocation
+#: model:ir.model.fields,field_description:hr_annual_leave_allocation.field_end_of_service_award__eos_computation_dependency
+msgid "Eos Computation Dependency"
+msgstr "حساب نهايه الخدمه"
+
+#. module: hr_annual_leave_allocation
+#: model:ir.model.fields.selection,name:hr_annual_leave_allocation.selection__hr_contract__state__close
+msgid "Expired"
+msgstr "منتهي الصلاحية"
+
+#. module: hr_annual_leave_allocation
+#: model:ir.model.fields,field_description:hr_annual_leave_allocation.field_hr_leave_allocation__expiry_date
+msgid "Expiry Date"
+msgstr "تاريخ الانتهاء"
+
+#. module: hr_annual_leave_allocation
+#: model:ir.model.fields,field_description:hr_annual_leave_allocation.field_end_of_service_award__final_deserving
+#: model_terms:ir.ui.view,arch_db:hr_annual_leave_allocation.eos_report_template
+msgid "Final Deserving"
+msgstr "المستحق النهائى"
+
+#. module: hr_annual_leave_allocation
+#: model:ir.model.fields,field_description:hr_annual_leave_allocation.field_res_company__first_period
+#: model:ir.model.fields,field_description:hr_annual_leave_allocation.field_res_config_settings__first_period
+msgid "First Period"
+msgstr "الفتره الاولي"
+
+#. module: hr_annual_leave_allocation
+#: model:ir.model.fields,field_description:hr_annual_leave_allocation.field_end_of_service_award__first_period_days
+#: model_terms:ir.ui.view,arch_db:hr_annual_leave_allocation.eos_report_template
+msgid "First Period Days"
+msgstr "ايام الفتره الاولي"
+
+#. module: hr_annual_leave_allocation
+#: model:ir.model.fields,field_description:hr_annual_leave_allocation.field_end_of_service_award__message_follower_ids
+msgid "Followers"
+msgstr ""
+
+#. module: hr_annual_leave_allocation
+#: model:ir.model.fields,field_description:hr_annual_leave_allocation.field_end_of_service_award__message_channel_ids
+msgid "Followers (Channels)"
+msgstr ""
+
+#. module: hr_annual_leave_allocation
+#: model:ir.model.fields,field_description:hr_annual_leave_allocation.field_end_of_service_award__message_partner_ids
+msgid "Followers (Partners)"
+msgstr ""
+
+#. module: hr_annual_leave_allocation
+#: model:ir.model.fields,field_description:hr_annual_leave_allocation.field_end_of_service_award__id
+msgid "ID"
+msgstr ""
+
+#. module: hr_annual_leave_allocation
+#: model:ir.model.fields,field_description:hr_annual_leave_allocation.field_end_of_service_award__activity_exception_icon
+msgid "Icon"
+msgstr ""
+
+#. module: hr_annual_leave_allocation
+#: model:ir.model.fields,help:hr_annual_leave_allocation.field_end_of_service_award__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr ""
+
+#. module: hr_annual_leave_allocation
+#: model:ir.model.fields,help:hr_annual_leave_allocation.field_end_of_service_award__message_needaction
+#: model:ir.model.fields,help:hr_annual_leave_allocation.field_end_of_service_award__message_unread
+msgid "If checked, new messages require your attention."
+msgstr ""
+
+#. module: hr_annual_leave_allocation
+#: model:ir.model.fields,help:hr_annual_leave_allocation.field_end_of_service_award__message_has_error
+#: model:ir.model.fields,help:hr_annual_leave_allocation.field_end_of_service_award__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr ""
+
+#. module: hr_annual_leave_allocation
+#: model:ir.model.fields.selection,name:hr_annual_leave_allocation.selection__res_company__unpaid_type__ignore
+#: model:ir.model.fields.selection,name:hr_annual_leave_allocation.selection__res_config_settings__unpaid_type__ignore
+msgid "Ignore"
+msgstr ""
+
+#. module: hr_annual_leave_allocation
+#: model:ir.model.fields.selection,name:hr_annual_leave_allocation.selection__end_of_service_award__contact_end_type__immediate_resignation
+#: model_terms:ir.ui.view,arch_db:hr_annual_leave_allocation.eos_report_template
+msgid "Immediate resignation"
+msgstr "استقالة فورية"
+
+#. module: hr_annual_leave_allocation
+#: model:ir.model.fields,field_description:hr_annual_leave_allocation.field_end_of_service_award__message_is_follower
+msgid "Is Follower"
+msgstr ""
+
+#. module: hr_annual_leave_allocation
+#: model:ir.model.fields,field_description:hr_annual_leave_allocation.field_end_of_service_award__join_date
+#: model:ir.model.fields,field_description:hr_annual_leave_allocation.field_hr_employee__join_date
+#: model_terms:ir.ui.view,arch_db:hr_annual_leave_allocation.eos_report_template
+msgid "Join Date"
+msgstr "تاريخ الانضمام للعمل"
+
+#. module: hr_annual_leave_allocation
+#: model:ir.model.fields,field_description:hr_annual_leave_allocation.field_hr_employee__last_allocation_date
+#: model:ir.model.fields,field_description:hr_annual_leave_allocation.field_hr_leave_allocation__last_allocation_date
+msgid "Last Allocation Date"
+msgstr ""
+
+#. module: hr_annual_leave_allocation
+#: model:ir.model.fields,field_description:hr_annual_leave_allocation.field_end_of_service_award____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: hr_annual_leave_allocation
+#: model:ir.model.fields,field_description:hr_annual_leave_allocation.field_end_of_service_award__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: hr_annual_leave_allocation
+#: model:ir.model.fields,field_description:hr_annual_leave_allocation.field_end_of_service_award__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: hr_annual_leave_allocation
+#: model:ir.model.fields,field_description:hr_annual_leave_allocation.field_end_of_service_award__last_work_date
+#: model_terms:ir.ui.view,arch_db:hr_annual_leave_allocation.eos_report_template
+msgid "Last Work Date"
+msgstr "تاريخ اخر عمل"
+
+#. module: hr_annual_leave_allocation
+#: model:ir.model.fields.selection,name:hr_annual_leave_allocation.selection__end_of_service_award__contact_end_type__law_77_by_company
+#: model_terms:ir.ui.view,arch_db:hr_annual_leave_allocation.eos_report_template
+msgid "Law 77 By Company"
+msgstr "قانون 77 للشركه"
+
+#. module: hr_annual_leave_allocation
+#: model:ir.model.fields.selection,name:hr_annual_leave_allocation.selection__end_of_service_award__contact_end_type__law_77_by_employee
+#: model_terms:ir.ui.view,arch_db:hr_annual_leave_allocation.eos_report_template
+msgid "Law 77 By Employee"
+msgstr "قانون 77 للموظف"
+
+#. module: hr_annual_leave_allocation
+#: model:ir.model.fields.selection,name:hr_annual_leave_allocation.selection__end_of_service_award__contact_end_type__law_80
+#: model_terms:ir.ui.view,arch_db:hr_annual_leave_allocation.eos_report_template
+msgid "Law 80"
+msgstr "قانون 80"
+
+#. module: hr_annual_leave_allocation
+#: model:ir.model.fields,field_description:hr_annual_leave_allocation.field_res_company__leave_id
+msgid "Leave"
+msgstr ""
+
+#. module: hr_annual_leave_allocation
+#: model:ir.model.fields,field_description:hr_annual_leave_allocation.field_res_company__leave_type_id
+msgid "Leave Type"
+msgstr ""
+
+#. module: hr_annual_leave_allocation
+#: model:ir.model.fields,field_description:hr_annual_leave_allocation.field_end_of_service_award__message_main_attachment_id
+msgid "Main Attachment"
+msgstr ""
+
+#. module: hr_annual_leave_allocation
+#: model:ir.model.fields,field_description:hr_annual_leave_allocation.field_end_of_service_award__message_has_error
+msgid "Message Delivery error"
+msgstr ""
+
+#. module: hr_annual_leave_allocation
+#: model:ir.model.fields,field_description:hr_annual_leave_allocation.field_end_of_service_award__message_ids
+msgid "Messages"
+msgstr ""
+
+#. module: hr_annual_leave_allocation
+#: model:ir.model.fields.selection,name:hr_annual_leave_allocation.selection__res_company__allocation_type__monthly
+#: model:ir.model.fields.selection,name:hr_annual_leave_allocation.selection__res_config_settings__allocation_type__monthly
+msgid "Monthly"
+msgstr ""
+
+#. module: hr_annual_leave_allocation
+#: model:ir.model.fields,field_description:hr_annual_leave_allocation.field_end_of_service_award__net_first_period
+#: model_terms:ir.ui.view,arch_db:hr_annual_leave_allocation.eos_report_template
+msgid "Net First Period"
+msgstr "صافي الفتره الاولي"
+
+#. module: hr_annual_leave_allocation
+#: model:ir.model.fields,field_description:hr_annual_leave_allocation.field_end_of_service_award__net_period
+#: model_terms:ir.ui.view,arch_db:hr_annual_leave_allocation.eos_report_template
+msgid "Net Period"
+msgstr "صافي الفتره"
+
+#. module: hr_annual_leave_allocation
+#: model:ir.model.fields,field_description:hr_annual_leave_allocation.field_end_of_service_award__net_second_period
+#: model_terms:ir.ui.view,arch_db:hr_annual_leave_allocation.eos_report_template
+msgid "Net Second Period"
+msgstr "صافي الفتره الثانيه"
+
+#. module: hr_annual_leave_allocation
+#: model:ir.model.fields.selection,name:hr_annual_leave_allocation.selection__hr_contract__state__draft
+msgid "New"
+msgstr "جديد"
+
+#. module: hr_annual_leave_allocation
+#: model:ir.model.fields,field_description:hr_annual_leave_allocation.field_end_of_service_award__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr ""
+
+#. module: hr_annual_leave_allocation
+#: model:ir.model.fields,field_description:hr_annual_leave_allocation.field_end_of_service_award__activity_summary
+msgid "Next Activity Summary"
+msgstr ""
+
+#. module: hr_annual_leave_allocation
+#: model:ir.model.fields,field_description:hr_annual_leave_allocation.field_end_of_service_award__activity_type_id
+msgid "Next Activity Type"
+msgstr ""
+
+#. module: hr_annual_leave_allocation
+#: model:ir.model.fields,field_description:hr_annual_leave_allocation.field_res_company__next_call
+#: model:ir.model.fields,field_description:hr_annual_leave_allocation.field_res_config_settings__next_call
+msgid "Next Call"
+msgstr ""
+
+#. module: hr_annual_leave_allocation
+#: model:ir.model.fields,field_description:hr_annual_leave_allocation.field_res_company__no_of_days_per_year
+#: model:ir.model.fields,field_description:hr_annual_leave_allocation.field_res_config_settings__no_of_days_per_year
+msgid "No Of Days Per Year"
+msgstr ""
+
+#. module: hr_annual_leave_allocation
+#: model:ir.model.fields,field_description:hr_annual_leave_allocation.field_end_of_service_award__message_needaction_counter
+msgid "Number of Actions"
+msgstr ""
+
+#. module: hr_annual_leave_allocation
+#: model:ir.model.fields,field_description:hr_annual_leave_allocation.field_end_of_service_award__number_of_days_from_join_date
+#: model_terms:ir.ui.view,arch_db:hr_annual_leave_allocation.eos_report_template
+msgid "Number of Days From Join Date"
+msgstr "عدد الايام من تاريخ الانضمام للعمل"
+
+#. module: hr_annual_leave_allocation
+#: model:ir.model.fields,field_description:hr_annual_leave_allocation.field_end_of_service_award__message_has_error_counter
+msgid "Number of errors"
+msgstr ""
+
+#. module: hr_annual_leave_allocation
+#: model:ir.model.fields,help:hr_annual_leave_allocation.field_end_of_service_award__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr ""
+
+#. module: hr_annual_leave_allocation
+#: model:ir.model.fields,help:hr_annual_leave_allocation.field_end_of_service_award__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr ""
+
+#. module: hr_annual_leave_allocation
+#: model:ir.model.fields,help:hr_annual_leave_allocation.field_end_of_service_award__message_unread_counter
+msgid "Number of unread messages"
+msgstr ""
+
+#. module: hr_annual_leave_allocation
+#: model:ir.model.fields.selection,name:hr_annual_leave_allocation.selection__hr_contract__contract_period__one_year
+#: model:ir.model.fields.selection,name:hr_annual_leave_allocation.selection__hr_contract__deserved_leave__one_year
+msgid "One Year"
+msgstr "عام"
+
+#. module: hr_annual_leave_allocation
+#: model:ir.model.fields.selection,name:hr_annual_leave_allocation.selection__hr_contract__state__partial_stop
+msgid "Partial Stop"
+msgstr ""
+
+#. module: hr_annual_leave_allocation
+#: model:ir.actions.report,name:hr_annual_leave_allocation.eos_report
+msgid "Print EOS"
+msgstr "طباعه تقرير نهايه الخدمه"
+
+#. module: hr_annual_leave_allocation
+#: model:ir.model.fields,field_description:hr_annual_leave_allocation.field_hr_employee__working_date
+msgid "Rejoin Date"
+msgstr "تاريخ العوده للعمل"
+
+#. module: hr_annual_leave_allocation
+#: model:ir.model.fields.selection,name:hr_annual_leave_allocation.selection__end_of_service_award__contact_end_type__resignation_after_month
+#: model_terms:ir.ui.view,arch_db:hr_annual_leave_allocation.eos_report_template
+msgid "Resignation After Month"
+msgstr "استقاله بعد شهر"
+
+#. module: hr_annual_leave_allocation
+#: model:ir.model.fields,field_description:hr_annual_leave_allocation.field_end_of_service_award__activity_user_id
+msgid "Responsible User"
+msgstr ""
+
+#. module: hr_annual_leave_allocation
+#: model:ir.model.fields.selection,name:hr_annual_leave_allocation.selection__hr_contract__state__open
+msgid "Running"
+msgstr "جاري"
+
+#. module: hr_annual_leave_allocation
+#: model:ir.model.fields,field_description:hr_annual_leave_allocation.field_end_of_service_award__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr ""
+
+#. module: hr_annual_leave_allocation
+#: model:ir.model.fields,field_description:hr_annual_leave_allocation.field_res_company__second_period
+#: model:ir.model.fields,field_description:hr_annual_leave_allocation.field_res_config_settings__second_period
+msgid "Second Period"
+msgstr "الفتره الثانيه"
+
+#. module: hr_annual_leave_allocation
+#: model:ir.model.fields,field_description:hr_annual_leave_allocation.field_end_of_service_award__second_period_days
+#: model_terms:ir.ui.view,arch_db:hr_annual_leave_allocation.eos_report_template
+msgid "Second Period Days"
+msgstr "ايام الفتره الثانيه"
+
+#. module: hr_annual_leave_allocation
+#: model:ir.actions.act_window,name:hr_annual_leave_allocation.allocation_configuration_action2
+#: model:ir.ui.menu,name:hr_annual_leave_allocation.menu_allocation_settings
+msgid "Settings"
+msgstr "الاعدادات"
+
+#. module: hr_annual_leave_allocation
+#: model:ir.model.fields,field_description:hr_annual_leave_allocation.field_end_of_service_award__state
+#: model:ir.model.fields,field_description:hr_annual_leave_allocation.field_hr_contract__state
+msgid "Status"
+msgstr "الحالة"
+
+#. module: hr_annual_leave_allocation
+#: model:ir.model.fields,help:hr_annual_leave_allocation.field_end_of_service_award__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+
+#. module: hr_annual_leave_allocation
+#: model:ir.model.fields,help:hr_annual_leave_allocation.field_hr_contract__state
+msgid "Status of the contract"
+msgstr "حالة العقد"
+
+#. module: hr_annual_leave_allocation
+#: model:ir.model,name:hr_annual_leave_allocation.model_hr_leave
+msgid "Time Off"
+msgstr "الاجازات"
+
+#. module: hr_annual_leave_allocation
+#: model:ir.model,name:hr_annual_leave_allocation.model_hr_leave_allocation
+msgid "Time Off Allocation"
+msgstr ""
+
+#. module: hr_annual_leave_allocation
+#: model:ir.model,name:hr_annual_leave_allocation.model_hr_leave_type
+msgid "Time Off Type"
+msgstr ""
+
+#. module: hr_annual_leave_allocation
+#: model:ir.model.fields,field_description:hr_annual_leave_allocation.field_end_of_service_award__total_deserve
+#: model_terms:ir.ui.view,arch_db:hr_annual_leave_allocation.eos_report_template
+msgid "Total Deserve"
+msgstr "اجمالي المستحق"
+
+#. module: hr_annual_leave_allocation
+#: model:ir.model.fields,field_description:hr_annual_leave_allocation.field_end_of_service_award__total_deserved_per_contract_end_type
+#: model_terms:ir.ui.view,arch_db:hr_annual_leave_allocation.eos_report_template
+msgid "Total Deserved Per Contract End Type"
+msgstr "اجمالي المستحق وفقا لانهاء التعاقد"
+
+#. module: hr_annual_leave_allocation
+#: model:ir.model.fields,field_description:hr_annual_leave_allocation.field_end_of_service_award__total_unpaid_days
+#: model_terms:ir.ui.view,arch_db:hr_annual_leave_allocation.eos_report_template
+msgid "Total Unpaid Days First Period"
+msgstr "اجمالي الايام الغير مدفوعه للفتره الاولي"
+
+#. module: hr_annual_leave_allocation
+#: model:ir.model.fields,field_description:hr_annual_leave_allocation.field_end_of_service_award__total_unpaid_days_second_period
+#: model_terms:ir.ui.view,arch_db:hr_annual_leave_allocation.eos_report_template
+msgid "Total Unpaid Days Second Period"
+msgstr "اجمالي الايام الغير مدفوعه للفتره الثانيه"
+
+#. module: hr_annual_leave_allocation
+#: model:ir.model.fields,field_description:hr_annual_leave_allocation.field_end_of_service_award__total_days_after
+msgid "Total Years After Five Years"
+msgstr "اجمالي السنوات بعد خمس سنوات"
+
+#. module: hr_annual_leave_allocation
+#: model:ir.model.fields,field_description:hr_annual_leave_allocation.field_end_of_service_award__total_days_before
+msgid "Total Years Before Five Years"
+msgstr "اجمالي السنوات قبل خمس سنوات"
+
+#. module: hr_annual_leave_allocation
+#: model:ir.model.fields.selection,name:hr_annual_leave_allocation.selection__hr_contract__contract_period__two_year
+#: model:ir.model.fields.selection,name:hr_annual_leave_allocation.selection__hr_contract__deserved_leave__two_year
+msgid "Two Year"
+msgstr "عامين"
+
+#. module: hr_annual_leave_allocation
+#: model:ir.model.fields,help:hr_annual_leave_allocation.field_end_of_service_award__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr ""
+
+#. module: hr_annual_leave_allocation
+#: model:ir.model.fields,field_description:hr_annual_leave_allocation.field_res_config_settings__leave_id
+msgid "Unpaid Leave"
+msgstr "اجازات غير مدفوعه"
+
+#. module: hr_annual_leave_allocation
+#: model:ir.model.fields,field_description:hr_annual_leave_allocation.field_res_company__unpaid_type
+#: model:ir.model.fields,field_description:hr_annual_leave_allocation.field_res_config_settings__unpaid_type
+msgid "Unpaid Type"
+msgstr ""
+
+#. module: hr_annual_leave_allocation
+#: model:ir.model.fields,field_description:hr_annual_leave_allocation.field_end_of_service_award__message_unread
+msgid "Unread Messages"
+msgstr ""
+
+#. module: hr_annual_leave_allocation
+#: model:ir.model.fields,field_description:hr_annual_leave_allocation.field_end_of_service_award__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr ""
+
+#. module: hr_annual_leave_allocation
+#: model:ir.model.fields,field_description:hr_annual_leave_allocation.field_end_of_service_award__website_message_ids
+msgid "Website Messages"
+msgstr ""
+
+#. module: hr_annual_leave_allocation
+#: model:ir.model.fields,help:hr_annual_leave_allocation.field_end_of_service_award__website_message_ids
+msgid "Website communication history"
+msgstr ""
+
+#. module: hr_annual_leave_allocation
+#: model:ir.model.fields.selection,name:hr_annual_leave_allocation.selection__res_company__allocation_type__yearly
+#: model:ir.model.fields.selection,name:hr_annual_leave_allocation.selection__res_config_settings__allocation_type__yearly
+msgid "Yearly"
+msgstr "سنويا"
+
+#. module: hr_annual_leave_allocation
+#: code:addons/hr_annual_leave_allocation/models/hr_employee.py:0
+#: code:addons/hr_annual_leave_allocation/models/hr_employee.py:0
+#, python-format
+msgid "You Aren't Allowed To Make This Leave You Can Make Between %s and %s"
+msgstr ""
+
+#. module: hr_annual_leave_allocation
+#: code:addons/hr_annual_leave_allocation/models/end_of_service_award.py:0
+#, python-format
+msgid "You Can Not Delete a Request Which Is Not Draft."
+msgstr ""
+
+#. module: hr_annual_leave_allocation
+#: code:addons/hr_annual_leave_allocation/models/hr_employee.py:0
+#, python-format
+msgid "You are not allowed to delete This record!!"
+msgstr ""
+
+#. module: hr_annual_leave_allocation
+#: model_terms:ir.ui.view,arch_db:hr_annual_leave_allocation.eos_report_template
+msgid "contract end type"
+msgstr "نوع انهاء التعاقد"
+
+#. module: hr_annual_leave_allocation
+#: model_terms:ir.ui.view,arch_db:hr_annual_leave_allocation.eos_report_template
+msgid "تم حساب مكافاه نهايه خدمه الموظف"
+msgstr ""

@@ -1,0 +1,127 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* print_journal_entires
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-01-17 13:58+0000\n"
+"PO-Revision-Date: 2021-01-17 13:58+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: print_journal_entires
+#: model_terms:ir.ui.view,arch_db:print_journal_entires.journal_entries_report_id
+msgid "5555555555555"
+msgstr ""
+
+#. module: print_journal_entires
+#: model_terms:ir.ui.view,arch_db:print_journal_entires.journal_entries_report_id
+msgid ""
+"<span style=\"text-align: center;border: 1px solid black;background-"
+"color:#b6b3b7;\">الشئون الاداريه والماليه</span><br/>"
+msgstr ""
+
+#. module: print_journal_entires
+#: model_terms:ir.ui.view,arch_db:print_journal_entires.journal_entries_report_id
+msgid ""
+"<span style=\"text-align: center;border: 1px solid black;background-"
+"color:#b6b3b7;\">المحاسب</span><br/>"
+msgstr ""
+
+#. module: print_journal_entires
+#: model_terms:ir.ui.view,arch_db:print_journal_entires.journal_entries_report_id
+msgid ""
+"<span style=\"text-align: center;border: 1px solid black;background-"
+"color:#b6b3b7;\">المدير العام</span><br/>"
+msgstr ""
+
+#. module: print_journal_entires
+#: model_terms:ir.ui.view,arch_db:print_journal_entires.journal_entries_report_id
+msgid ""
+"<span style=\"text-align: center;border: 1px solid black;background-"
+"color:#b6b3b7;\">المراقب المالي</span><br/>"
+msgstr ""
+
+#. module: print_journal_entires
+#: model_terms:ir.ui.view,arch_db:print_journal_entires.journal_entries_report_id
+msgid "<span>التاريخ</span><br/>"
+msgstr ""
+
+#. module: print_journal_entires
+#: model_terms:ir.ui.view,arch_db:print_journal_entires.journal_entries_report_id
+msgid ""
+"<span>سند صرف</span><br/>\n"
+"\t\t\t\t\t\t\t\t\t\t<span>رقم امر الصرف</span>"
+msgstr ""
+
+#. module: print_journal_entires
+#: model_terms:ir.ui.view,arch_db:print_journal_entires.journal_entries_report_id
+msgid "Account Name"
+msgstr "اسم الحســـــــــــاب"
+
+#. module: print_journal_entires
+#: model_terms:ir.ui.view,arch_db:print_journal_entires.journal_entries_report_id
+msgid "Account Number"
+msgstr "حساب رقم"
+
+#. module: print_journal_entires
+#: model_terms:ir.ui.view,arch_db:print_journal_entires.journal_entries_report_id
+msgid "Credit"
+msgstr "دائن"
+
+#. module: print_journal_entires
+#: model_terms:ir.ui.view,arch_db:print_journal_entires.journal_entries_report_id
+msgid "Debit"
+msgstr "مدين"
+
+#. module: print_journal_entires
+#: model:ir.actions.report,name:print_journal_entires.journal_entries_moce_print_id
+#: model:ir.model,name:print_journal_entires.model_account_move
+msgid "Journal Entries"
+msgstr "القيود اليومية"
+
+#. module: print_journal_entires
+#: model_terms:ir.ui.view,arch_db:print_journal_entires.journal_entries_report_id
+msgid "Page: <span class=\"page\"/> / <span class=\"topage\"/>"
+msgstr ""
+
+#. module: print_journal_entires
+#: model_terms:ir.ui.view,arch_db:print_journal_entires.journal_entries_report_id
+msgid "أ.احمدبن سعدابوعباه"
+msgstr ""
+
+#. module: print_journal_entires
+#: model_terms:ir.ui.view,arch_db:print_journal_entires.journal_entries_report_id
+msgid "أ.د.سامي بن عبدالعزيزالدامغ"
+msgstr ""
+
+#. module: print_journal_entires
+#: model_terms:ir.ui.view,arch_db:print_journal_entires.journal_entries_report_id
+msgid "أ.عبدالعزيزبن ثابت العسكر"
+msgstr ""
+
+#. module: print_journal_entires
+#: model_terms:ir.ui.view,arch_db:print_journal_entires.journal_entries_report_id
+msgid "أ.عمادبن احمدالقرعاوى"
+msgstr ""
+
+#. module: print_journal_entires
+#: model_terms:ir.ui.view,arch_db:print_journal_entires.journal_entries_report_id
+msgid "اسم صاحب الاستحقاق"
+msgstr ""
+
+#. module: print_journal_entires
+#: model_terms:ir.ui.view,arch_db:print_journal_entires.journal_entries_report_id
+msgid "الإجمالـــــــــي"
+msgstr ""
+
+#. module: print_journal_entires
+#: model_terms:ir.ui.view,arch_db:print_journal_entires.journal_entries_report_id
+msgid "البيان"
+msgstr ""

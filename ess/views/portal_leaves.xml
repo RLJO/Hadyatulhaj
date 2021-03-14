@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="ess_leaves" name="ESS Leaves">
+        <t t-call="portal.portal_layout">
+            <t>
+                <div class="row justify-content-between mt-4">
+
+                    <nav class="navbar-default navbar-static-side" role="navigation" style="z-index: 1;position: initial;">
+                        <t t-call="ess.side_menu"/>
+                    </nav>
+
+                    <div class="row col-10 col-md col-lg-10"> 
+
+                            <div class="col-lg-12">
+								<div class="ibox ">
+									<div class="row iess-title" style="text-align:left;margin-right: 20px;margin-left: 20px;">
+										<h3><span>Apply Leave</span></h3>
+									</div>
+									 <div>
+
+
+
+
+
+
+
+            </div>
+									<div class="ibox-content">
+
+										<div class="row">
+
+											<div class="col-lg-12" style="margin-top:10px;">
+												<form action="/my/leaves" method="post">
+													<input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+													<div t-if="error_message" class="alert alert-danger" role="alert">
+														<t t-foreach="error_message" t-as="err"><t t-esc="err"/><br /></t>
+													</div>
+													<div t-if="message" class="alert alert-success" role="alert">
+														<t t-foreach="message" t-as="err"><t t-esc="err"/><br /></t>
+													</div>
+													<div class="row">
+														<div t-attf-class="form-group #{error.get('holiday_status_id') and 'o_has_error' or ''} col-xl-6">
+															<label>Time Off Type</label>
+																<select name="holiday_status_id" t-attf-class="form-control #{error.get('holiday_status_id') and 'is-invalid' or ''}" required="">
+																	<t t-foreach="leave_type or []" t-as="type">
+																		<option t-att-value="type.id" >
+																			<t t-esc="type.name_get()[0][1]" />
+																		</option>
+																	</t>
+																</select>
+														</div>
+													</div>
+													<div class="row">
+														<div t-attf-class="form-group #{error.get('date_from') and 'o_has_error' or ''} col-xl-4">
+															<label class="col-form-label" for="date_from">From</label>
+															<input type="date" id="start_date_leave" name="date_from" t-attf-class="form-control #{error.get('date_from') and 'is-invalid' or ''}" required=""/>
+														</div>
+														<div t-attf-class="form-group #{error.get('date_to') and 'o_has_error' or ''} col-xl-4">
+															<label class="col-form-label" for="date_to">To</label>
+															<input type="date"  id="end_date_leave" name="date_to" t-attf-class="form-control #{error.get('date_to') and 'is-invalid' or ''}" required=""/>
+														</div>
+														<div t-attf-class="form-group #{error.get('number_of_days_display') and 'o_has_error' or ''} col-xl-4">
+															<label class="col-form-label" for="number_of_days_display">Duration</label>
+															<input type="number" id="number_of_days_leave" name="number_of_days_display" t-attf-class="form-control #{error.get('number_of_days_display') and 'is-invalid' or ''}"  required=""/>
+														</div>
+
+
+                             <script type="text/javascript" src="/ess/static/src/js/myleaves.js"></script>
+
+
+													</div>
+													<div class="row">
+                                                        <div t-attf-class="form-group #{error.get('name') and 'o_has_error' or ''} col-xl-6">
+                                                            <label class="col-form-label" for="name">Description</label>
+                                                            <textarea rows="4" cols="50" name="name" t-attf-class="form-control #{error.get('name') and 'is-invalid' or ''}"/>
+                                                        </div>
+                                                    </div>
+													<div>
+														<button class="btn btn-primary float-right m-t-n-xs" type="submit"><strong>Confirm</strong></button>
+													</div>
+												</form>
+											</div>
+			 <div>
+
+
+            </div>
+											<div class="col-lg-12">
+												<div class="ibox ">
+                                                    <div class="ibox-content iess-p20">
+                                                        <div class="table-responsive">
+                                                            <table class="table header-border table-hover table-custom spacing5 ess-table">
+                                                                <thead>
+                                                                    <tr>
+                                                                        <th>Name</th>
+                                                                        <th>Days</th>
+                                                                        <th>Status</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody t-foreach="leave_list" t-as="lea">
+                                                                    <tr>
+                                                                        <td><div t-esc="lea['name']"/></td>
+                                                                        <td><div t-esc="lea['number_of_days']"/></td>
+                                                                        <td><div t-esc="lea['state_desc']"/></td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+                       
+                    </div>
+
+                    
+                    
+                </div>
+            </t>  
+        </t>
+    </template>
+
+
+</odoo>

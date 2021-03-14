@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="ess_request_appraisal" name="ESS Request for Appraisal">
+        <t t-call="portal.portal_layout">
+            <t>
+                <div class="row justify-content-between mt-4">
+
+                    <nav class="navbar-default navbar-static-side" role="navigation" style="z-index: 1;position: initial;">
+                        <t t-call="ess.side_menu"/>
+                    </nav>
+
+                    <div class="row col-10 col-md col-lg-10"> 
+                        <div class="col-lg-12">
+                            <div class="ibox ">
+                                <div class="row iess-title" style="text-align:left;margin-right: 20px;margin-left: 20px;">
+                                    <h3><span>Request for Appraisal</span></h3>
+                                </div>
+                                <div class="ibox-content">
+                                    <div class="row">
+                                        <div class="col-lg-12" style="margin-top:10px;">
+                                            <form action="/my/request_appraisal" method="post">
+                                                <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+                                                
+                                                <div class="row o_portal_details">
+                                                    <div class="col-lg-12">
+
+                                                            <div class="col-lg-12">
+                                                                <div t-if="error_message" class="alert alert-danger" role="alert">
+                                                                    <t t-foreach="error_message" t-as="err"><t t-esc="err"/><br /></t>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="row form-group col-lg-12">
+                                                                <div t-attf-class="form-group #{error.get('letter_employee_idtype_id') and 'o_has_error' or ''} col-xl-4">
+                                                                    <label class="col-form-label" for="employee_id">Recipient</label>
+                                                                    <select name="employee_id" t-attf-class="form-control #{error.get('employee_id') and 'is-invalid' or ''}" required="">
+                                                                        <t t-foreach="employee.child_ids or []" t-as="child">
+                                                                            <option t-att-value="child.id" >
+                                                                                <t t-esc="child.name" />
+                                                                            </option>
+                                                                        </t>
+                                                                    </select>
+                                                                </div>
+
+                                                                <div t-attf-class="form-group #{error.get('subject') and 'o_has_error' or ''} col-xl-4">
+                                                                    <label class="col-form-label" for="subject">Subject</label>
+                                                                    <input type="text" name="subject" t-attf-class="form-control #{error.get('subject') and 'is-invalid' or ''}" required=""/>
+                                                                </div>
+
+                                                                <div t-attf-class="form-group #{error.get('date_close') and 'o_has_error' or ''} col-xl-4">
+                                                                    <label class="col-form-label" for="date_close">Desired Deadline</label>
+                                                                    <input type="date" name="date_close" t-attf-class="form-control #{error.get('date_close') and 'is-invalid' or ''}" required=""/>
+                                                                </div>
+                                                            </div>
+                                                            
+                                                            <div class="clearfix">
+                                                                <button type="submit" class="btn btn-primary float-right" style='margin-right: 30px;'>
+                                                                    Confirm
+                                                                </button>
+                                                            </div> 
+                                                        </div>
+                                                        
+
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                            
+                    </div>
+                </div>
+            </t>
+        </t>
+    </template>
+
+
+</odoo>

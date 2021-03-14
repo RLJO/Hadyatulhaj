@@ -1,0 +1,136 @@
+<odoo>
+<data>
+    <record id="letter_letter_form_view" model="ir.ui.view" >
+        <field name="name">letter.letter</field>
+        <field name="model">letter.letter</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="model_id" required="1"/>
+                        <field name="model" required="1"/>
+                    </group>
+
+
+                    <group>
+                        <field name="name" required="1"/>
+                    </group>
+                    <group>
+                        <field name="template_id" />
+                    </group>
+
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" widget="mail_followers"/>
+                    <field name="activity_ids" widget="mail_activity"/>
+                    <field name="message_ids" widget="mail_thread"/>
+                </div>
+            </form>
+        </field>
+    </record>
+
+    <record id="letter_letter_tree" model="ir.ui.view">
+        <field name="name">letter.letter</field>
+        <field name="model">letter.letter</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name" string="Letter Name"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="letter_template_action" model="ir.actions.act_window">
+        <field name="name">Letter Templates</field>
+        <field name="res_model">letter.letter</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <record id="request_letter_form_view" model="ir.ui.view" >
+        <field name="name">letter.request</field>
+        <field name="model">letter.request</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <button name="action_draft"
+                            string="set to Draft"
+                            type="object"
+                            states="Cancel"
+                            class="oe_heighlight"
+                    />
+                    <button name="action_approve"
+                            string="Approve"
+                            type="object"
+                            states="Draft"
+                            class="oe_heighlight" />
+                    <button name="action_cancel"
+                            string="cancel"
+                            type="object"
+                            states="Approve"
+                            class="oe_heighlight" />
+                    <field name="state" widget="statusbar" statusbar_visible="Draft,Approve,Cancel"/>
+                </header>
+
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name"/>
+                            <field name="Date"/>
+                            <field name="request_id"/>
+                        </group>
+                        <group>
+                            <field name="letter_type_id" />
+                            <field name="employee_id" />
+                        </group>
+                        <group>
+                            <field name="note" />
+                        </group>
+                    </group>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" widget="mail_followers"/>
+                    <field name="activity_ids" widget="mail_activity"/>
+                    <field name="message_ids" widget="mail_thread"/>
+                </div>
+            </form>
+        </field>
+    </record>
+
+    <record id="request_letter_tree" model="ir.ui.view">
+        <field name="name">letter.request</field>
+        <field name="model">letter.request</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="request_id"/>
+                <field name="Date"/>
+                <field name="letter_type_id"/>
+                <field name="employee_id"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="request_letter_action" model="ir.actions.act_window">
+        <field name="name">RequestLetter</field>
+        <field name="res_model">letter.request</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="letter_service_root"
+              name="Letters"
+              parent="hr.menu_hr_root"
+    />
+    <menuitem id="request_letter_menu"
+              name="Letter Template"
+              action="letter_template_action"
+              parent="letter_service_root"
+    />
+    <menuitem id="service_template_menu"
+              name="Request Letter"
+              action="request_letter_action"
+              parent="letter_service_root"
+    />
+
+</data>
+</odoo>

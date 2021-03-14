@@ -1,0 +1,393 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* hr_employee_letter
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-12-29 15:18+0000\n"
+"PO-Revision-Date: 2020-12-29 15:18+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: hr_employee_letter
+#: model:ir.model.fields,field_description:hr_employee_letter.field_letter_letter__message_needaction
+#: model:ir.model.fields,field_description:hr_employee_letter.field_letter_request__message_needaction
+msgid "Action Needed"
+msgstr "إجراء مطلوب"
+
+#. module: hr_employee_letter
+#: model:ir.model.fields,field_description:hr_employee_letter.field_letter_letter__activity_ids
+#: model:ir.model.fields,field_description:hr_employee_letter.field_letter_request__activity_ids
+msgid "Activities"
+msgstr "الأنشطة"
+
+#. module: hr_employee_letter
+#: model:ir.model.fields,field_description:hr_employee_letter.field_letter_letter__activity_exception_decoration
+#: model:ir.model.fields,field_description:hr_employee_letter.field_letter_request__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr "زخرفة استثناء النشاط"
+
+#. module: hr_employee_letter
+#: model:ir.model.fields,field_description:hr_employee_letter.field_letter_letter__activity_state
+#: model:ir.model.fields,field_description:hr_employee_letter.field_letter_request__activity_state
+msgid "Activity State"
+msgstr "حالة النشاط"
+
+#. module: hr_employee_letter
+#: model:ir.model.fields,field_description:hr_employee_letter.field_letter_letter__model_id
+msgid "Applies to"
+msgstr "تنطبق على"
+
+#. module: hr_employee_letter
+#: model:ir.model.fields,field_description:hr_employee_letter.field_letter_request__employee_id
+msgid "Approval"
+msgstr "موافقة"
+
+#. module: hr_employee_letter
+#: model:ir.model.fields.selection,name:hr_employee_letter.selection__letter_request__state__approve
+#: model_terms:ir.ui.view,arch_db:hr_employee_letter.request_letter_form_view
+msgid "Approve"
+msgstr "موافقه"
+
+#. module: hr_employee_letter
+#: model:ir.model.fields,field_description:hr_employee_letter.field_letter_letter__message_attachment_count
+#: model:ir.model.fields,field_description:hr_employee_letter.field_letter_request__message_attachment_count
+msgid "Attachment Count"
+msgstr "عدد المرفقات"
+
+#. module: hr_employee_letter
+#: model:ir.model.fields.selection,name:hr_employee_letter.selection__letter_request__state__cancel
+msgid "Cancel"
+msgstr "إلغاء"
+
+#. module: hr_employee_letter
+#: model:ir.model.fields,field_description:hr_employee_letter.field_letter_letter__create_uid
+#: model:ir.model.fields,field_description:hr_employee_letter.field_letter_request__create_uid
+msgid "Created by"
+msgstr "أنشئ بواسطة"
+
+#. module: hr_employee_letter
+#: model:ir.model.fields,field_description:hr_employee_letter.field_letter_letter__create_date
+#: model:ir.model.fields,field_description:hr_employee_letter.field_letter_request__create_date
+msgid "Created on"
+msgstr "أنشئ في"
+
+#. module: hr_employee_letter
+#: model:ir.model.fields,field_description:hr_employee_letter.field_letter_request__Date
+msgid "Date"
+msgstr "التاريخ"
+
+#. module: hr_employee_letter
+#: model:ir.model.fields,field_description:hr_employee_letter.field_letter_letter__display_name
+#: model:ir.model.fields,field_description:hr_employee_letter.field_letter_request__display_name
+#: model:ir.model.fields,field_description:hr_employee_letter.field_report_hr_employee_letter_letter_report_template__display_name
+msgid "Display Name"
+msgstr "الاسم المعروض"
+
+#. module: hr_employee_letter
+#: model:ir.model.fields.selection,name:hr_employee_letter.selection__letter_request__state__draft
+msgid "Draft"
+msgstr "مسودة"
+
+#. module: hr_employee_letter
+#: model:ir.model.fields,field_description:hr_employee_letter.field_letter_letter__message_follower_ids
+#: model:ir.model.fields,field_description:hr_employee_letter.field_letter_request__message_follower_ids
+msgid "Followers"
+msgstr "المتابعون"
+
+#. module: hr_employee_letter
+#: model:ir.model.fields,field_description:hr_employee_letter.field_letter_letter__message_channel_ids
+#: model:ir.model.fields,field_description:hr_employee_letter.field_letter_request__message_channel_ids
+msgid "Followers (Channels)"
+msgstr "المتابعون (القنوات)"
+
+#. module: hr_employee_letter
+#: model:ir.model.fields,field_description:hr_employee_letter.field_letter_letter__message_partner_ids
+#: model:ir.model.fields,field_description:hr_employee_letter.field_letter_request__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "المتابعون (الشركاء)"
+
+#. module: hr_employee_letter
+#: model:ir.model.fields,field_description:hr_employee_letter.field_letter_letter__id
+#: model:ir.model.fields,field_description:hr_employee_letter.field_letter_request__id
+#: model:ir.model.fields,field_description:hr_employee_letter.field_report_hr_employee_letter_letter_report_template__id
+msgid "ID"
+msgstr "المُعرف"
+
+#. module: hr_employee_letter
+#: model:ir.model.fields,field_description:hr_employee_letter.field_letter_letter__activity_exception_icon
+#: model:ir.model.fields,field_description:hr_employee_letter.field_letter_request__activity_exception_icon
+msgid "Icon"
+msgstr "الأيقونة"
+
+#. module: hr_employee_letter
+#: model:ir.model.fields,help:hr_employee_letter.field_letter_letter__activity_exception_icon
+#: model:ir.model.fields,help:hr_employee_letter.field_letter_request__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr "الأيقونة للإشارة إلى استثناء النشاط"
+
+#. module: hr_employee_letter
+#: model:ir.model.fields,help:hr_employee_letter.field_letter_letter__message_needaction
+#: model:ir.model.fields,help:hr_employee_letter.field_letter_letter__message_unread
+#: model:ir.model.fields,help:hr_employee_letter.field_letter_request__message_needaction
+#: model:ir.model.fields,help:hr_employee_letter.field_letter_request__message_unread
+msgid "If checked, new messages require your attention."
+msgstr "إذا كان محددًا، فهناك رسائل جديدة تحتاج لرؤيتها."
+
+#. module: hr_employee_letter
+#: model:ir.model.fields,help:hr_employee_letter.field_letter_letter__message_has_error
+#: model:ir.model.fields,help:hr_employee_letter.field_letter_letter__message_has_sms_error
+#: model:ir.model.fields,help:hr_employee_letter.field_letter_request__message_has_error
+#: model:ir.model.fields,help:hr_employee_letter.field_letter_request__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr "إذا كان محددًا، فقد حدث خطأ في تسليم بعض الرسائل."
+
+#. module: hr_employee_letter
+#: model:ir.model.fields,field_description:hr_employee_letter.field_letter_letter__message_is_follower
+#: model:ir.model.fields,field_description:hr_employee_letter.field_letter_request__message_is_follower
+msgid "Is Follower"
+msgstr "متابع"
+
+#. module: hr_employee_letter
+#: model:ir.model.fields,field_description:hr_employee_letter.field_letter_letter____last_update
+#: model:ir.model.fields,field_description:hr_employee_letter.field_letter_request____last_update
+#: model:ir.model.fields,field_description:hr_employee_letter.field_report_hr_employee_letter_letter_report_template____last_update
+msgid "Last Modified on"
+msgstr "آخر تعديل في"
+
+#. module: hr_employee_letter
+#: model:ir.model.fields,field_description:hr_employee_letter.field_letter_letter__write_uid
+#: model:ir.model.fields,field_description:hr_employee_letter.field_letter_request__write_uid
+msgid "Last Updated by"
+msgstr "آخر تحديث بواسطة"
+
+#. module: hr_employee_letter
+#: model:ir.model.fields,field_description:hr_employee_letter.field_letter_letter__write_date
+#: model:ir.model.fields,field_description:hr_employee_letter.field_letter_request__write_date
+msgid "Last Updated on"
+msgstr "آخر تحديث في"
+
+#. module: hr_employee_letter
+#: model_terms:ir.ui.view,arch_db:hr_employee_letter.letter_letter_tree
+msgid "Letter Name"
+msgstr "اسم الخطاب"
+
+#. module: hr_employee_letter
+#: model:ir.actions.report,name:hr_employee_letter.letter_report_id
+#: model:ir.model,name:hr_employee_letter.model_report_hr_employee_letter_letter_report_template
+msgid "Letter Report"
+msgstr "تقرير الخطاب"
+
+#. module: hr_employee_letter
+#: model:ir.ui.menu,name:hr_employee_letter.request_letter_menu
+msgid "Letter Template"
+msgstr "طلبات الخطابات"
+
+#. module: hr_employee_letter
+#: model:ir.actions.act_window,name:hr_employee_letter.letter_template_action
+msgid "Letter Templates"
+msgstr "طلب خطاب"
+
+#. module: hr_employee_letter
+#: model:ir.model.fields,field_description:hr_employee_letter.field_letter_request__letter_type_id
+msgid "Letter Type"
+msgstr "نوع الخطاب"
+
+#. module: hr_employee_letter
+#: model:ir.ui.menu,name:hr_employee_letter.letter_service_root
+msgid "Letters"
+msgstr "الخطابات"
+
+#. module: hr_employee_letter
+#: model:ir.model.fields,field_description:hr_employee_letter.field_letter_letter__message_main_attachment_id
+#: model:ir.model.fields,field_description:hr_employee_letter.field_letter_request__message_main_attachment_id
+msgid "Main Attachment"
+msgstr "المرفق الرئيسي"
+
+#. module: hr_employee_letter
+#: model:ir.model.fields,field_description:hr_employee_letter.field_letter_letter__message_has_error
+#: model:ir.model.fields,field_description:hr_employee_letter.field_letter_request__message_has_error
+msgid "Message Delivery error"
+msgstr "خطأ في تسليم الرسائل"
+
+#. module: hr_employee_letter
+#: model:ir.model.fields,field_description:hr_employee_letter.field_letter_letter__message_ids
+#: model:ir.model.fields,field_description:hr_employee_letter.field_letter_request__message_ids
+msgid "Messages"
+msgstr "الرسائل"
+
+#. module: hr_employee_letter
+#: model:ir.model.fields,field_description:hr_employee_letter.field_letter_letter__name
+#: model:ir.model.fields,field_description:hr_employee_letter.field_letter_request__name
+msgid "Name"
+msgstr "الاسم"
+
+#. module: hr_employee_letter
+#: model:ir.model.fields,field_description:hr_employee_letter.field_letter_letter__activity_date_deadline
+#: model:ir.model.fields,field_description:hr_employee_letter.field_letter_request__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "الموعد النهائي للنشاط التالي"
+
+#. module: hr_employee_letter
+#: model:ir.model.fields,field_description:hr_employee_letter.field_letter_letter__activity_summary
+#: model:ir.model.fields,field_description:hr_employee_letter.field_letter_request__activity_summary
+msgid "Next Activity Summary"
+msgstr "ملخص النشاط التالي"
+
+#. module: hr_employee_letter
+#: model:ir.model.fields,field_description:hr_employee_letter.field_letter_letter__activity_type_id
+#: model:ir.model.fields,field_description:hr_employee_letter.field_letter_request__activity_type_id
+msgid "Next Activity Type"
+msgstr "نوع النشاط التالي"
+
+#. module: hr_employee_letter
+#: model:ir.model.fields,field_description:hr_employee_letter.field_letter_request__note
+msgid "Note"
+msgstr "الملاحظات"
+
+#. module: hr_employee_letter
+#: model:ir.model.fields,field_description:hr_employee_letter.field_letter_letter__message_needaction_counter
+#: model:ir.model.fields,field_description:hr_employee_letter.field_letter_request__message_needaction_counter
+msgid "Number of Actions"
+msgstr "عدد الإجراءات"
+
+#. module: hr_employee_letter
+#: model:ir.model.fields,field_description:hr_employee_letter.field_letter_letter__message_has_error_counter
+#: model:ir.model.fields,field_description:hr_employee_letter.field_letter_request__message_has_error_counter
+msgid "Number of errors"
+msgstr "عدد الاخطاء"
+
+#. module: hr_employee_letter
+#: model:ir.model.fields,help:hr_employee_letter.field_letter_letter__message_needaction_counter
+#: model:ir.model.fields,help:hr_employee_letter.field_letter_request__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr "عدد الرسائل التي تتطلب إجراء"
+
+#. module: hr_employee_letter
+#: model:ir.model.fields,help:hr_employee_letter.field_letter_letter__message_has_error_counter
+#: model:ir.model.fields,help:hr_employee_letter.field_letter_request__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "عدد الرسائل الحادث بها خطأ في التسليم"
+
+#. module: hr_employee_letter
+#: model:ir.model.fields,help:hr_employee_letter.field_letter_letter__message_unread_counter
+#: model:ir.model.fields,help:hr_employee_letter.field_letter_request__message_unread_counter
+msgid "Number of unread messages"
+msgstr "عدد الرسائل الجديدة"
+
+#. module: hr_employee_letter
+#: model:ir.model.fields,field_description:hr_employee_letter.field_letter_letter__model
+msgid "Related Document Model"
+msgstr "كائن المستند المرتبط"
+
+#. module: hr_employee_letter
+#: model:ir.ui.menu,name:hr_employee_letter.service_template_menu
+msgid "Request Letter"
+msgstr "طلب خطاب"
+
+#. module: hr_employee_letter
+#: model:ir.actions.act_window,name:hr_employee_letter.request_letter_action
+msgid "RequestLetter"
+msgstr "طلب خطاب"
+
+#. module: hr_employee_letter
+#: model:ir.model.fields,field_description:hr_employee_letter.field_letter_request__request_id
+msgid "Requester"
+msgstr "مقدم الطلب"
+
+#. module: hr_employee_letter
+#: model:ir.model.fields,field_description:hr_employee_letter.field_letter_letter__activity_user_id
+#: model:ir.model.fields,field_description:hr_employee_letter.field_letter_request__activity_user_id
+msgid "Responsible User"
+msgstr "المستخدم المسؤول"
+
+#. module: hr_employee_letter
+#: model:ir.model.fields,field_description:hr_employee_letter.field_letter_letter__message_has_sms_error
+#: model:ir.model.fields,field_description:hr_employee_letter.field_letter_request__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr "خطأ في تسليم الرسائل القصيرة"
+
+#. module: hr_employee_letter
+#: model:ir.model.fields,field_description:hr_employee_letter.field_letter_request__state
+msgid "State"
+msgstr "الحاله"
+
+#. module: hr_employee_letter
+#: model:ir.model.fields,help:hr_employee_letter.field_letter_letter__activity_state
+#: model:ir.model.fields,help:hr_employee_letter.field_letter_request__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+"الحالة على أساس الأنشطة\n"
+"المتأخرة: تاريخ الاستحقاق مر\n"
+"اليوم: تاريخ النشاط هو اليوم\n"
+"المخطط: الأنشطة المستقبلية."
+
+#. module: hr_employee_letter
+#: model:ir.model.fields,field_description:hr_employee_letter.field_letter_letter__template_id
+msgid "Template"
+msgstr "قالب"
+
+#. module: hr_employee_letter
+#: model:ir.model.fields,help:hr_employee_letter.field_letter_letter__model_id
+msgid "The type of document this template can be used with"
+msgstr "نوع المستندات التي يمكن استخدام هذا القالب معها"
+
+#. module: hr_employee_letter
+#: model:ir.model.fields,help:hr_employee_letter.field_letter_letter__activity_exception_decoration
+#: model:ir.model.fields,help:hr_employee_letter.field_letter_request__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr "نوع النشاط الاستثنائي المسجل."
+
+#. module: hr_employee_letter
+#: model:ir.model.fields,field_description:hr_employee_letter.field_letter_letter__message_unread
+#: model:ir.model.fields,field_description:hr_employee_letter.field_letter_request__message_unread
+msgid "Unread Messages"
+msgstr "الرسائل الجديدة"
+
+#. module: hr_employee_letter
+#: model:ir.model.fields,field_description:hr_employee_letter.field_letter_letter__message_unread_counter
+#: model:ir.model.fields,field_description:hr_employee_letter.field_letter_request__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr "عدد الرسائل الجديدة"
+
+#. module: hr_employee_letter
+#: model:ir.model.fields,field_description:hr_employee_letter.field_letter_letter__website_message_ids
+#: model:ir.model.fields,field_description:hr_employee_letter.field_letter_request__website_message_ids
+msgid "Website Messages"
+msgstr "رسائل الموقع"
+
+#. module: hr_employee_letter
+#: model:ir.model.fields,help:hr_employee_letter.field_letter_letter__website_message_ids
+#: model:ir.model.fields,help:hr_employee_letter.field_letter_request__website_message_ids
+msgid "Website communication history"
+msgstr "سجل تواصل الموقع"
+
+#. module: hr_employee_letter
+#: model_terms:ir.ui.view,arch_db:hr_employee_letter.request_letter_form_view
+msgid "cancel"
+msgstr "الغاء"
+
+#. module: hr_employee_letter
+#: model:ir.model,name:hr_employee_letter.model_letter_letter
+msgid "letter.letter"
+msgstr ""
+
+#. module: hr_employee_letter
+#: model:ir.model,name:hr_employee_letter.model_letter_request
+msgid "letter.request"
+msgstr ""
+
+#. module: hr_employee_letter
+#: model_terms:ir.ui.view,arch_db:hr_employee_letter.request_letter_form_view
+msgid "set to Draft"
+msgstr "اعاده كمبدئيه"

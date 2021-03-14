@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <report
+        id="eos_report"
+        string="Print EOS"
+        model="end.of.service.award"
+        report_type="qweb-pdf"
+        name="hr_annual_leave_allocation.eos_report_template"
+        file="hr_annual_leave_allocation.eos_report_template"/>
+
+    <template id="eos_report_template">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="o">
+                <t t-call="web.external_layout">
+                <t t-call="web.address_layout"/>
+                    <br/>
+                    <br/>
+                    <div class="page" style="dir:rtl;">
+<!--                            <p style="text-align:center;">انه فى يوم الاثنين الموافق</p>-->
+                        <p style="text-align:center;">
+                            <strong>انه في يوم </strong>
+                            <strong>
+                                <t t-set="date" t-value="datetime.datetime.now().strftime('%Y-%m-%d')"/>
+                                (<span t-esc="o.get_day_name_from_date(date)" />)
+                            </strong>
+                            <strong>الموافق تاريخ </strong><strong><span t-esc="date" /></strong>
+                        </p>
+                        <p style="text-align:center;">
+                            <strong>
+                            <span t-esc="o.employee_id.name" />
+                            تم حساب مكافاه نهايه خدمه الموظف
+                            </strong>
+                        </p>
+
+
+<!--                            <p>-->
+<!--                                <strong>انه في يوم </strong>-->
+<!--                                <strong>-->
+<!--                                    <t t-set="date" t-value="datetime.datetime.now().strftime('%Y-%m-%d')"/>-->
+<!--                                    (<span t-esc="o.get_day_name_from_date(date)" />)-->
+<!--                                </strong>-->
+<!--                                <strong>الموافق تاريخ </strong><strong><span t-esc="date" /></strong>-->
+<!--                                <strong>تم حساب مكافاه نهايه خدمه الموظف</strong>-->
+<!--                                <strong><span t-esc="o.employee_id.name" /></strong>-->
+<!--                            </p>-->
+
+
+                            <table class="table table-condensed" style="text-align:center;border: 2px solid black !important;">
+                                <tr style="text-align:center;border: 2px solid black !important;">
+                                    <td style="text-align:center;border: 2px solid black !important;">
+                                        <t t-if="o.contact_end_type == 'end_period'">
+                                            End of Contract Period
+                                        </t>
+                                        <t t-if="o.contact_end_type == 'immediate_resignation'">
+                                            Immediate resignation
+                                        </t>
+                                        <t t-if="o.contact_end_type == 'resignation_after_month'">
+                                            Resignation After Month
+                                        </t>
+                                        <t t-if="o.contact_end_type == 'law_80'">
+                                            Law 80
+                                        </t>
+                                        <t t-if="o.contact_end_type == 'law_77_by_employee'">
+                                            Law 77 By Employee
+                                        </t>
+                                        <t t-if="o.contact_end_type == 'law_77_by_company'">
+                                            Law 77 By Company
+                                        </t>
+
+                                    </td>
+                                    <td style="text-align:center;border: 2px solid black !important;">contract end type</td>
+                                </tr>
+                                <tr style="text-align:center;border: 2px solid black !important;">
+                                    <td style="text-align:center;border: 2px solid black !important;"><span t-esc="o.net_period_before_5year" /></td>
+                                    <td style="text-align:center;border: 2px solid black !important;">Deserve First Period</td>
+                                </tr>
+                                <tr style="text-align:center;border: 2px solid black !important;">
+                                    <td style="text-align:center;border: 2px solid black !important;"><span t-esc="o.net_period_after_5year" /></td>
+                                    <td style="text-align:center;border: 2px solid black !important;">Deserve Second Period</td>
+                                </tr>
+                                <tr style="text-align:center;border: 2px solid black !important;">
+                                    <td style="text-align:center;border: 2px solid black !important;"><span t-esc="o.total_deserve" /></td>
+                                    <td style="text-align:center;border: 2px solid black !important;">Total Deserve</td>
+                                </tr>
+                                <tr style="text-align:center;border: 2px solid black !important;">
+                                    <td style="text-align:center;border: 2px solid black !important;"><span t-esc="o.total_deserved_per_contract_end_type" /></td>
+                                    <td style="text-align:center;border: 2px solid black !important;">Total Deserved Per Contract End Type</td>
+                                </tr>
+                                <tr style="text-align:center;border: 2px solid black !important;">
+                                    <td style="text-align:center;border: 2px solid black !important;"><span t-esc="o.last_work_date" /></td>
+                                    <td style="text-align:center;border: 2px solid black !important;">Last Work Date</td>
+                                </tr>
+                                <tr style="text-align:center;border: 2px solid black !important;">
+                                    <td style="text-align:center;border: 2px solid black !important;"><span t-esc="o.join_date" /></td>
+                                    <td style="text-align:center;border: 2px solid black !important;">Join Date</td>
+                                </tr>
+                                <tr style="text-align:center;border: 2px solid black !important;">
+                                    <td style="text-align:center;border: 2px solid black !important;"><span t-esc="o.number_of_days_from_join_date" /></td>
+                                    <td style="text-align:center;border: 2px solid black !important;">Number of Days From Join Date</td>
+                                </tr>
+                                <tr style="text-align:center;border: 2px solid black !important;">
+                                    <td style="text-align:center;border: 2px solid black !important;"><span t-esc="o.first_period_days" /></td>
+                                    <td style="text-align:center;border: 2px solid black !important;">First Period Days</td>
+                                </tr>
+                                <tr style="text-align:center;border: 2px solid black !important;">
+                                    <td style="text-align:center;border: 2px solid black !important;"><span t-esc="o.second_period_days" /></td>
+                                    <td style="text-align:center;border: 2px solid black !important;">Second Period Days</td>
+                                </tr>
+                                <tr style="text-align:center;border: 2px solid black !important;">
+                                    <td style="text-align:center;border: 2px solid black !important;"><span t-esc="o.total_unpaid_days" /></td>
+                                    <td style="text-align:center;border: 2px solid black !important;">Total Unpaid Days First Period</td>
+                                </tr>
+                                <tr style="text-align:center;border: 2px solid black !important;">
+                                    <td style="text-align:center;border: 2px solid black !important;"><span t-esc="o.total_unpaid_days_second_period" /></td>
+                                    <td style="text-align:center;border: 2px solid black !important;">Total Unpaid Days Second Period</td>
+                                </tr>
+                                <tr style="text-align:center;border: 2px solid black !important;">
+                                    <td style="text-align:center;border: 2px solid black !important;"><span t-esc="o.net_first_period" /></td>
+                                    <td style="text-align:center;border: 2px solid black !important;">Net First Period</td>
+                                </tr>
+                                <tr style="text-align:center;border: 2px solid black !important;">
+                                    <td style="text-align:center;border: 2px solid black !important;"><span t-esc="o.net_second_period" /></td>
+                                    <td style="text-align:center;border: 2px solid black !important;">Net Second Period</td>
+                                </tr>
+                                <tr style="text-align:center;border: 2px solid black !important;">
+                                    <td style="text-align:center;border: 2px solid black !important;"><span t-esc="o.net_period" /></td>
+                                    <td style="text-align:center;border: 2px solid black !important;">Net Period</td>
+                                </tr>
+
+                                <tr style="text-align:center;border: 2px solid black !important;">
+                                    <td style="text-align:center;border: 2px solid black !important;"><span t-esc="o.final_deserving" /></td>
+                                    <td style="text-align:center;border: 2px solid black !important;">Final Deserving</td>
+                                </tr>
+
+<!--                                <tr style="text-align:center;border: 2px solid black !important;">-->
+<!--                                    <td style="text-align:center;border: 2px solid black !important;"><span t-esc="o.eos_computation_dependency" /></td>-->
+<!--                                    <td style="text-align:center;border: 2px solid black !important;">Eos Computation Dependency</td>-->
+<!--                                </tr>-->
+
+
+                            </table>
+<!--                        </div>-->
+                    </div>
+                </t>
+            </t>
+        </t>
+    </template>
+
+</odoo>

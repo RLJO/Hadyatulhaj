@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <report
+        id="department_clearance_report"
+        string="Department Clearance Report"
+        model="department.clearance"
+        report_type="qweb-pdf"
+        name="hr_assets_assignation.department_clearance_report_template"
+        file="hr_assets_assignation.department_clearance_report_template"/>
+
+    <template id="department_clearance_report_template">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="o">
+                <t t-call="web.external_layout">
+                <t t-call="web.address_layout"/>
+                    <br/>
+                    <br/>
+                    <div class="page" style="dir:rtl;">
+                        <p style="text-align:center;">
+                            <strong>انه في يوم </strong>
+                            <strong>
+                                <t t-set="date" t-value="datetime.datetime.now().strftime('%Y-%m-%d')"/>
+                                (<span t-esc="o.get_day_name_from_date(date)" />)
+                            </strong>
+                            <strong>الموافق تاريخ </strong><strong><span t-esc="date" /></strong>
+                        </p>
+                        <p style="text-align:center;">
+                            <strong>
+                            واخلاء طرفه وهذا اقرار من جميع الاقسام علي ذلك <span t-esc="o.employee_id.name" />تم تسليم عهد الموظف
+                            </strong>
+                        </p>
+                            <table class="table" style="width:100% !important;text-align:center;border: 2px solid black !important;">
+                                <tr style="text-align:center;border: 2px solid black !important;">
+                                    <td style="width:15% !important;text-align:center;border: 2px solid black !important;">Department Name</td>
+                                    <td style="width:15% !important;text-align:center;border: 2px solid black !important;">Department Manager</td>
+                                    <td style="width:40% !important;text-align:center;border: 2px solid black !important;">Notes</td>
+                                    <td style="width:20% !important;text-align:center;border: 2px solid black !important;">Date</td>
+                                    <td style="width:10% !important;text-align:center;border: 2px solid black !important;">Signature</td>
+                                </tr>
+                                <t t-foreach="o.department_clearance_line_ids" t-as="department">
+                                    <tr style="text-align:center;border: 2px solid black !important;">
+                                        <td style="width:15% !important;text-align:center;border: 2px solid black !important;">
+                                            <span t-esc="department.department_id.name" />
+                                        </td>
+                                        <td style="width:15% !important;text-align:center;border: 2px solid black !important;">
+                                            <span t-esc="department.department_manager_id.name" />
+                                        </td>
+                                        <td style="width:50% !important;text-align:center;border: 2px solid black !important;">
+                                            <span t-esc="department.notes" />
+                                        </td>
+                                        <td style="width:10% !important;text-align:center;border: 2px solid black !important;">
+                                            <span t-esc="department.date" />
+                                        </td>
+                                        <td style="width:10% !important;text-align:center;border: 2px solid black !important;">
+
+                                        </td>
+                                    </tr>
+                                </t>
+
+                            </table>
+                    </div>
+                </t>
+            </t>
+        </t>
+    </template>
+
+</odoo>

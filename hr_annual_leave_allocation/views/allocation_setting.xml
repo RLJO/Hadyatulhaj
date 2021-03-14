@@ -1,0 +1,126 @@
+<odoo>
+    <data>
+
+        <record id="view_company_form_view_inherit" model="ir.ui.view" >
+            <field name="name">res.company</field>
+            <field name="model">res.company</field>
+            <field name="inherit_id" ref="base.view_company_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='website']" position="after">
+                    <field name="no_of_days_per_year" />
+                    <field name="allocation_type" />
+                    <field name="leave_type_id" />
+                    <field name="unpaid_type" />
+                    <field name="leave_id" />
+                    <field name="first_period" />
+                    <field name="deserve_first_period" />
+                    <field name="second_period" />
+                    <field name="deserve_second_period" />
+                    <field name="next_call" />
+                </xpath>
+            </field>
+        </record>
+
+        <record id="allocation_config_settings_form_view" model="ir.ui.view" >
+            <field name="name">res.config.settings</field>
+            <field name="model">res.config.settings</field>
+            <field name="inherit_id" ref="base.res_config_settings_view_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//div[hasclass('settings')]" position="inside">
+
+                    <div class="app_settings_block" data-string="Allocation" string="Allocation" data-key="hr_annual_leave_allocation">
+                        <h2>Allocation</h2>
+                        <div class="row mt16 o_settings_container" id="hr_annual_leave_allocation_localization">
+                            <div class="col-lg-6 col-12 o_setting_box">
+                                <div class="o_setting_right_pane">
+                                    <span class="o_form_label">Annual Allocation</span>
+<!--                                    <div class="text-muted">-->
+<!--                                        Payroll rules that apply to your country-->
+<!--                                    </div>-->
+                                    <div class="mt8" id="localization_text">
+                                        <group>
+                                            <field name="no_of_days_per_year" />
+                                            <field name="leave_type_id" />
+                                            <field name="allocation_type" />
+                                            <field name="next_call" />
+                                            <field name="unpaid_type" />
+                                            <field name="leave_id" />
+                                            <field name="first_period" />
+                                            <field name="deserve_first_period" />
+                                            <field name="second_period" invisible="1"/>
+                                            <field name="deserve_second_period" />
+                                        </group>
+                                    </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+<!--                    <group>-->
+<!--                        <field name="no_of_days_per_year" />-->
+<!--                        <field name="allocation_type" />-->
+<!--                        <field name="leave_type_id" />-->
+<!--                        <field name="unpaid_type" />-->
+<!--                        <field name="first_period" />-->
+<!--                        <field name="deserve_first_period" />-->
+<!--                        <field name="second_period" />-->
+<!--                        <field name="deserve_second_period" />-->
+<!--                    </group>-->
+                </xpath>
+<!--                <form>-->
+<!--                    <sheet>-->
+<!--                        <group>-->
+<!--                            <field name="no_of_days_per_year" />-->
+<!--                            <field name="allocation_type" />-->
+<!--                            <field name="leave_type_id" />-->
+<!--                            <field name="unpaid_type" />-->
+<!--                            <field name="first_period" />-->
+<!--                            <field name="deserve_first_period" />-->
+<!--                            <field name="second_period" />-->
+<!--                            <field name="deserve_second_period" />-->
+<!--                        </group>-->
+<!--                    </sheet>-->
+<!--                </form>-->
+            </field>
+        </record>
+
+<!--        <record id="allocation_configuration_action" model="ir.actions.act_window">-->
+<!--            <field name="name">Configuration</field>-->
+<!--            <field name="res_model">allocation.config.settings</field>-->
+<!--            <field name="type">ir.actions.act_window</field>-->
+<!--            <field name="view_mode">form</field>-->
+<!--        </record>-->
+        <record id="allocation_configuration_action2" model="ir.actions.act_window">
+            <field name="name">Settings</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">res.config.settings</field>
+            <field name="view_mode">form</field>
+            <field name="target">inline</field>
+            <field name="context">{'module' : 'hr_annual_leave_allocation'}</field>
+        </record>
+
+        <menuitem
+        id="menu_allocation_settings"
+        name="Settings"
+        parent="hr_holidays.menu_hr_holidays_configuration"
+        sequence="0"
+        action="allocation_configuration_action2"/>
+
+<!--        <menuitem id="maintenance_service_root"-->
+<!--                  name="Maintenance service"-->
+<!--                  parent="fleet.menu_root"-->
+<!--        />-->
+<!--        <menuitem id="service_configuration_menu"-->
+<!--                  name="Service configuration"-->
+<!--                  parent="maintenance_service_root"-->
+<!--        />-->
+<!--        <menuitem id="service_template_menu"-->
+<!--                  name="Service Templates"-->
+<!--                  action="service_template_action"-->
+<!--                  parent="service_configuration_menu"-->
+<!--        />-->
+
+    </data>
+</odoo>

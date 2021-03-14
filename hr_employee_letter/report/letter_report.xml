@@ -1,0 +1,60 @@
+<odoo>
+<data>
+    <report
+        id="letter_report_id"
+        model="letter.request"
+        string="Letter Report"
+        name="hr_employee_letter.letter_report_template"
+        file="hr_employee_letter.letter_report_id"
+        report_type="qweb-pdf"
+    />
+
+    <template id="letter_report_template">
+    <p style="page-break-after:always">
+     <t t-call="web.external_layout">
+     <t t-call="web.html_container">
+          <t t-foreach="docs" t-as="o">
+                 <div class="page">
+                     <div class="container-fluid" >
+                          <div style="width:100%;" class="row">
+                            <div class="col-auto" style="width:100%;text-align:right;line-height: 0.5 !important;">
+<!--                                <p style="color:black;">-->
+<!--                                    <span>....</span>-->
+<!--                                    <span>الي من يهمه الامر</span>-->
+<!--                                </p>-->
+<!--                                <p style="color:black;">تحيه طيبه وبعد</p>-->
+<!--                                <p style="color:black;">-->
+<!--                                    <span>يعمل لدينا</span>-->
+<!--                                    <span t-esc="o.request_id.name"/>-->
+<!--                                    <span>تشهد الشركه بان الموظف</span>-->
+<!--                                </p>-->
+<!--                                <p style="color:black;"><span t-raw="o.letter_type_id.temp_template_id"/></p>-->
+                                <p style="color:black;"><span t-raw="my_list[0]['temp']"/></p>
+                            </div>
+                          </div>
+                     </div>
+                     <br/>
+                     <br/>
+<!--                     <div class="container-fluid" >-->
+<!--                          <div style="width:100%;" class="row">-->
+<!--                            <div class="col-auto" style="width:100%;text-align:left;line-height: 0.5 !important;">-->
+<!--                                <p style="color:black;">-->
+<!--                                    <span>الموافق علي التقرير</span>-->
+<!--                                </p>-->
+<!--                                <p style="color:black;">-->
+<!--                                    <span t-esc="o.employee_id.name"/>-->
+<!--                                </p>-->
+<!--                            </div>-->
+<!--                          </div>-->
+<!--                     </div>-->
+
+                </div>
+         </t>
+</t>
+    </t>
+</p>
+
+</template>
+
+</data>
+</odoo>

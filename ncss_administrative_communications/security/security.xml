@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <!--        Administrative communication Form-->
+        <record id="administrative_communication_security_category" model="ir.module.category">
+            <field name="name">Administrative communication</field>
+        </record>
+
+        <record id="administrative_communication_employee" model="res.groups">
+            <field name="name">Employee</field>
+            <field name="category_id" ref="administrative_communication_security_category"/>
+            <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+        </record>
+
+        <record id="administrative_communication_department_manager" model="res.groups">
+            <field name="name">Department Manager</field>
+            <field name="category_id" ref="administrative_communication_security_category"/>
+            <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+        </record>
+
+        <record id="administrative_communication_center_manager" model="res.groups">
+            <field name="name">Center Manager</field>
+            <field name="category_id" ref="administrative_communication_security_category"/>
+            <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+        </record>
+
+        <!--                Administrative communication Form-->
+
+        <!--                Administrative communication fields-->
+        <record id="ncss_allow_edit_transaction_date" model="res.groups">
+            <field name="name">Allow To Edit Date</field>
+            <field name="category_id" ref="administrative_communication_security_category"/>
+            <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+        </record>
+
+        <record id="edit_transaction_date" model="res.groups">
+            <field name="name">Edit Transaction Date</field>
+            <field name="category_id" ref="administrative_communication_security_category"/>
+            <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+        </record>
+
+        <!--                Administrative communication fields-->
+
+
+        <!--                Administrative communication buttons-->
+
+        <record id="administrative_communication_assign_to_department_button" model="res.groups">
+            <field name="name">Assign To Department Button</field>
+            <field name="category_id" ref="administrative_communication_security_category"/>
+            <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+        </record>
+
+        <record id="administrative_communication_assign_to_employee_button" model="res.groups">
+            <field name="name">Assign To Employee Button</field>
+            <field name="category_id" ref="administrative_communication_security_category"/>
+            <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+        </record>
+
+        <record id="administrative_communication_done_button" model="res.groups">
+            <field name="name">Done Button</field>
+            <field name="category_id" ref="administrative_communication_security_category"/>
+            <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+        </record>
+
+        <record id="administrative_communication_outgoing_button" model="res.groups">
+            <field name="name">Outgoing Button</field>
+            <field name="category_id" ref="administrative_communication_security_category"/>
+            <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+        </record>
+
+        <record id="administrative_communication_print_barcode_button" model="res.groups">
+            <field name="name">Print Barcode Button</field>
+            <field name="category_id" ref="administrative_communication_security_category"/>
+            <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+        </record>
+
+        <record id="administrative_communication_print_instrument_button" model="res.groups">
+            <field name="name">Print Instrument Button</field>
+            <field name="category_id" ref="administrative_communication_security_category"/>
+            <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+        </record>
+
+        <record id="administrative_communication_set_to_draft_button" model="res.groups">
+            <field name="name">Set To Draft Button</field>
+            <field name="category_id" ref="administrative_communication_security_category"/>
+            <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+        </record>
+
+        <!--                Administrative communication buttons-->
+
+        <!--                Administrative communication menu-->
+        <record id="administrative_communication_incoming_menu" model="res.groups">
+            <field name="name">Incoming Menu</field>
+            <field name="category_id" ref="administrative_communication_security_category"/>
+            <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+        </record>
+
+        <record id="administrative_communication_outgoing_menu" model="res.groups">
+            <field name="name">Outgoing Menu</field>
+            <field name="category_id" ref="administrative_communication_security_category"/>
+            <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+        </record>
+
+        <record id="administrative_communication_internal_menu" model="res.groups">
+            <field name="name">Internal Menu</field>
+            <field name="category_id" ref="administrative_communication_security_category"/>
+            <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+        </record>
+
+        <record id="administrative_communication_all_treatment_menu" model="res.groups">
+            <field name="name">All Treatment Menu</field>
+            <field name="category_id" ref="administrative_communication_security_category"/>
+            <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+        </record>
+
+        <record id="administrative_communication_assigned_to_me_menu" model="res.groups">
+            <field name="name">Assigned To Me Menu</field>
+            <field name="category_id" ref="administrative_communication_security_category"/>
+            <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+        </record>
+
+        <record id="administrative_assigned_to_me_menu" model="res.groups">
+            <field name="name">Administrative Assigned To Me Menu</field>
+            <field name="category_id" ref="administrative_communication_security_category"/>
+            <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+        </record>
+
+        <record id="administrative_communication_source_menu" model="res.groups">
+            <field name="name">Source Menu</field>
+            <field name="category_id" ref="administrative_communication_security_category"/>
+            <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+        </record>
+
+        <record id="administrative_communication_department_menu" model="res.groups">
+            <field name="name">Department Menu</field>
+            <field name="category_id" ref="administrative_communication_security_category"/>
+            <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+        </record>
+
+        <record id="administrative_communication_sender_menu" model="res.groups">
+            <field name="name">Sender Menu</field>
+            <field name="category_id" ref="administrative_communication_security_category"/>
+            <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+        </record>
+
+        <record id="administrative_communication_procedure_menu" model="res.groups">
+            <field name="name">Procedure Menu</field>
+            <field name="category_id" ref="administrative_communication_security_category"/>
+            <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+        </record>
+
+        <record id="administrative_communication_contacts_menu" model="res.groups">
+            <field name="name">Contacts Menu</field>
+            <field name="category_id" ref="administrative_communication_security_category"/>
+            <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+        </record>
+
+        <record id="administrative_communication_destination_menu" model="res.groups">
+            <field name="name">Assigned To Menu</field>
+            <field name="category_id" ref="administrative_communication_security_category"/>
+            <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+        </record>
+
+        <!--                Administrative communication menu-->
+
+
+        <!--               Administrative communication source-->
+        <record id="administrative_communication_source_category" model="ir.module.category">
+            <field name="name">Administrative communication Source</field>
+        </record>
+
+        <record id="administrative_communication_source_employee" model="res.groups">
+            <field name="name">Employee</field>
+            <field name="category_id" ref="administrative_communication_source_category"/>
+            <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+        </record>
+
+        <record id="administrative_communication_source_manager" model="res.groups">
+            <field name="name">Manager</field>
+            <field name="category_id" ref="administrative_communication_source_category"/>
+            <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+        </record>
+
+        <!--                Administrative communication source-->
+
+        <!--               Administrative communication Management-->
+        <record id="administrative_communication_management_category" model="ir.module.category">
+            <field name="name">Administrative communication Management</field>
+        </record>
+
+        <record id="administrative_communication_management_employee" model="res.groups">
+            <field name="name">Employee</field>
+            <field name="category_id" ref="administrative_communication_management_category"/>
+            <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+        </record>
+
+        <record id="administrative_communication_management_manager" model="res.groups">
+            <field name="name">Manager</field>
+            <field name="category_id" ref="administrative_communication_management_category"/>
+            <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+        </record>
+
+        <!--                Administrative communication Management-->
+
+
+        <!--               Administrative communication Management-->
+        <record id="administrative_communication_sender_category" model="ir.module.category">
+            <field name="name">Administrative communication Sender</field>
+        </record>
+
+        <record id="administrative_communication_sender_employee" model="res.groups">
+            <field name="name">Employee</field>
+            <field name="category_id" ref="administrative_communication_sender_category"/>
+            <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+        </record>
+
+        <record id="administrative_communication_sender_manager" model="res.groups">
+            <field name="name">Manager</field>
+            <field name="category_id" ref="administrative_communication_sender_category"/>
+            <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+        </record>
+
+        <!--                Administrative communication Management-->
+
+        <!--               Administrative communication Procedures-->
+        <record id="administrative_communication_procedures_category" model="ir.module.category">
+            <field name="name">Administrative communication Procedures</field>
+        </record>
+
+        <record id="administrative_communication_procedures_employee" model="res.groups">
+            <field name="name">Employee</field>
+            <field name="category_id" ref="administrative_communication_procedures_category"/>
+            <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+        </record>
+
+        <record id="administrative_communication_procedures_manager" model="res.groups">
+            <field name="name">Manager</field>
+            <field name="category_id" ref="administrative_communication_procedures_category"/>
+            <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+        </record>
+
+        <!--                Administrative communication Procedures-->
+
+        <!--               Administrative communication Procedures-->
+        <record id="administrative_communication_category_category" model="ir.module.category">
+            <field name="name">Administrative communication Category</field>
+        </record>
+
+        <record id="administrative_communication_category_employee" model="res.groups">
+            <field name="name">Employee</field>
+            <field name="category_id" ref="administrative_communication_category_category"/>
+            <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+        </record>
+
+        <record id="administrative_communication_category_manager" model="res.groups">
+            <field name="name">Manager</field>
+            <field name="category_id" ref="administrative_communication_category_category"/>
+            <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+        </record>
+
+        <!--                Administrative communication Procedures-->
+
+
+    </data>
+</odoo>

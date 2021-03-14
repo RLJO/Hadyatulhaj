@@ -1,0 +1,70 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* hr_expense_approval
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-09-16 12:37+0000\n"
+"PO-Revision-Date: 2020-09-16 12:37+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: hr_expense_approval
+#: model:ir.model.fields.selection,name:hr_expense_approval.selection__hr_expense_sheet__state__center_manager_approve
+#: model_terms:ir.ui.view,arch_db:hr_expense_approval.view_hr_expense_sheet_form
+msgid "Center Manager Approve"
+msgstr "موافقه مدير المركز"
+
+#. module: hr_expense_approval
+#: model:ir.model,name:hr_expense_approval.model_res_company
+msgid "Companies"
+msgstr "الشركات"
+
+#. module: hr_expense_approval
+#: model:ir.model.fields,field_description:hr_expense_approval.field_res_config_settings__company_id
+msgid "Company"
+msgstr "الشركة"
+
+#. module: hr_expense_approval
+#: model:ir.model,name:hr_expense_approval.model_res_config_settings
+msgid "Config Settings"
+msgstr "ضبط الإعدادات"
+
+#. module: hr_expense_approval
+#: model:ir.model.fields.selection,name:hr_expense_approval.selection__hr_expense_sheet__state__direct_manager_approve
+#: model_terms:ir.ui.view,arch_db:hr_expense_approval.view_hr_expense_sheet_form
+msgid "Direct Manager Approve"
+msgstr "موافقه المدير المباشر"
+
+#. module: hr_expense_approval
+#: model:ir.model.fields,field_description:hr_expense_approval.field_res_company__expense_limit_amount
+#: model:ir.model.fields,field_description:hr_expense_approval.field_res_config_settings__expense_limit_amount
+#: model_terms:ir.ui.view,arch_db:hr_expense_approval.res_company_form
+msgid "Expense Limit Amount"
+msgstr "حد طلب موافقه الاداره"
+
+#. module: hr_expense_approval
+#: model:ir.model,name:hr_expense_approval.model_hr_expense_sheet
+msgid "Expense Report"
+msgstr "تقرير المصروف"
+
+#. module: hr_expense_approval
+#: model:ir.model.fields,help:hr_expense_approval.field_hr_expense_sheet__state
+msgid "Expense Report State"
+msgstr "حالة تقرير المصروف"
+
+#. module: hr_expense_approval
+#: model:ir.model.fields,field_description:hr_expense_approval.field_hr_expense_sheet__is_direct_manager
+msgid "Is Direct Manager"
+msgstr "مدير مباشر"
+
+#. module: hr_expense_approval
+#: model:ir.model.fields,field_description:hr_expense_approval.field_hr_expense_sheet__state
+msgid "Status"
+msgstr "الحالة"

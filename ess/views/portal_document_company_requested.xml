@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="ess_view_company_docs_req" name="ESS View Requested Documents">
+        <t t-call="portal.portal_layout">
+            <t>
+                <div class="row justify-content-between mt-4">
+
+                    <nav class="navbar-default navbar-static-side" role="navigation" style="z-index: 1;position: initial;">
+                        <t t-call="ess.side_menu"/>
+                    </nav>
+
+                    <div class="row col-10 col-md col-lg-10"> 
+
+                        <div class="col-lg-12">
+                            <div class="ibox ">
+                                <div class="row iess-title" style="text-align:left;margin-right: 20px;margin-left: 20px;">
+                                    <h3><span>Requested Documents</span></h3>
+                                </div>
+                                <div class="ibox-content">
+                                    <div class="row">
+                                        <div class="col-lg-12" style="margin-top:10px;">
+                                            <form action="/my/view_my_company_requested_document" method="post" enctype="multipart/form-data"> 
+                                                <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+                                                
+                                                <div class="row o_portal_company_doc">
+                                                    <div class="col-lg-12">
+                                                        <!--  -->
+                                                        <div class="ibox-content iess-p20">
+                                                            <div class="table-responsive">
+                                                                <table class="table header-border table-hover table-custom spacing5 ess-table">
+                                                                    <thead>
+                                                                        <tr>
+                                                                            <th>Name</th>
+                                                                            <th>Contact</th>
+                                                                            <th>Requester</th>
+                                                                            <th>Workspace</th>
+                                                                            <th>Upload</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody t-foreach="docs_obj" t-as="doc">
+                                                                        <tr>
+                                                                            <td><div t-esc="doc['name']"/></td>
+                                                                            <td><div t-esc="doc['partner_id'].name"/></td>
+                                                                            <td><div t-esc="doc['create_uid'].name"/></td>
+                                                                            <td><div t-esc="doc['folder_id'].name"/></td>
+                                                                            <td>
+                                                                                <input class="attach" t-if="not doc['attachment_id']" type="file" name="attachment_id" accept="image/*"/>
+                                                                                <input class="hide" type="text" name="id" t-att-value="doc['id']"/>
+                                                                                <button  t-if="not doc['attachment_id']" type="submit" class="btn _save_buttone hide">
+                                                                                    save
+                                                                                </button>
+                                                                                <a t-if="doc['attachment_id']" t-att-href="'/attachment/download?attachment_id=%i' % doc['attachment_id'].id" class="fa fa-download"/>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                        
+
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                            
+                    </div>    
+                </div>
+            </t>
+        </t>
+    </template>
+
+
+</odoo>

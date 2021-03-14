@@ -1,0 +1,37 @@
+<odoo>
+<data>
+
+<!--    <template id="report_purchase_order_document_inherit" inherit_id="purchase.report_purchaseorder_document">-->
+<!--           <xpath expr="//div[hasclass('mt32')]" position="after">-->
+<!--               <div class="row mt32 mb32">-->
+<!--                    <div t-if="o.approved_by1_id" class="col-2 bm-2">-->
+<!--                        <strong>First Approval User</strong>-->
+<!--                        <p t-field="o.approved_by1_id" class="m-0"/>-->
+<!--                    </div>-->
+<!--                    <div t-if="o.level_one_approved_date" class="col-2 bm-2">-->
+<!--                        <strong>First Approval Date</strong>-->
+<!--                        <p t-field="o.level_one_approved_date" class="m-0"/>-->
+<!--                    </div>-->
+
+<!--                    <div t-if="o.approved_by2_id" class="col-2 bm-2">-->
+<!--                        <strong>Second Approval User</strong>-->
+<!--                        <p t-field="o.approved_by2_id" class="m-0"/>-->
+<!--                    </div>-->
+<!--                    <div t-if="o.level_two_approved_date" class="col-2 bm-2">-->
+<!--                        <strong>Second Approval Date</strong>-->
+<!--                        <p t-field="o.level_two_approved_date" class="m-0"/>-->
+<!--                    </div>-->
+
+<!--                    <div t-if="o.approved_by3_id" class="col-2 bm-2">-->
+<!--                        <strong>Third Approval User</strong>-->
+<!--                        <p t-field="o.approved_by3_id" class="m-0"/>-->
+<!--                    </div>-->
+<!--                    <div t-if="o.level_third_approved_date" class="col-2 bm-2">-->
+<!--                        <strong>Third Approval Date</strong>-->
+<!--                        <p t-field="o.level_third_approved_date" class="m-0"/>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--           </xpath>-->
+<!--    </template>-->
+</data>
+</odoo>

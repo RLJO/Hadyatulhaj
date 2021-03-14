@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="ess_tasks" name="ESS Tasks">
+        <t t-call="portal.portal_layout">
+            <t>
+                <div class="row justify-content-between mt-4">
+
+                    <nav class="navbar-default navbar-static-side" role="navigation" style="z-index: 1;position: initial;">
+                        <t t-call="ess.side_menu"/>
+                    </nav>
+
+                    <div class="row col-10 col-md col-lg-10"> 
+                        <div class="col-lg-12">
+                            <div class="ibox ">
+                                <div class="row iess-title" style="text-align:left;margin-right: 20px;margin-left: 20px;">
+                                    <h3><span>My Tasks</span></h3>
+                                </div>
+                                <div class="ibox-content">
+                                    <div class="row">
+                                        <div class="col-lg-12" style="margin-top:10px;">
+                                            <form>
+                                                <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+                                                
+                                                <div class="row">
+                                                    <div class="col-lg-12">
+                                                            <!--  -->
+                                                            <div class="ibox-content iess-p20">
+                                                                <div class="body">
+                                                                    <ul class="nav nav-tabs3">
+                                                                        <li class="nav-item"><a class="nav-link show ess-tab-link active" data-toggle="tab" href="#assigend_to_me">Assigend to me</a></li>
+                                                                        <li class="nav-item"><a class="nav-link ess-tab-link" data-toggle="tab" href="#assigned_by_me">Assigned by me</a></li>
+                                                                    </ul>
+                                                                    <div class="tab-content">
+                                                                        <div class="tab-pane show active" id="assigend_to_me">
+                                                                            <div class="table-responsive">
+                                                                                <table class="table header-border table-hover table-custom spacing5 ess-table">
+                                                                                    <thead>
+                                                                                        <tr>
+                                                                                            <th>Name</th>
+                                                                                            <th>Project Name</th>
+                                                                                            <th>Deadline</th>
+                                                                                            <th>Create By</th>
+                                                                                            <th>Kanban State</th>
+                                                                                            <th>Stage</th>
+                                                                                            <th>description</th>
+                                                                                        </tr>
+                                                                                    </thead>
+                                                                                    <tbody t-foreach="tasks_obj" t-as="task">
+                                                                                        <tr t-if="task['user_id'].id == uid.id">
+                                                                                            <td><div t-esc="task['name']"/></td>
+                                                                                            <td><div t-esc="task['project_id'].name"/></td>
+                                                                                            <td><div t-esc="task['date_deadline']"/></td>
+                                                                                            <td><div t-esc="task['create_uid'].name"/></td>
+                                                                                            <td><div t-esc="task['kanban_state']"/></td>
+                                                                                            <td><div t-esc="task['stage_id'].name"/></td>
+                                                                                            <td><div t-esc="task['description']"/></td>
+                                                                                        </tr>
+                                                                                    </tbody>
+                                                                                </table>
+                                                                            </div>
+                                                                        </div>
+
+                                                                        <div class="tab-pane" id="assigned_by_me">
+
+                                                                            <div class="table-responsive">
+                                                                                <table class="table header-border table-hover table-custom spacing5 ess-table">
+                                                                                    <thead>
+                                                                                        <tr>
+                                                                                            <th>Name</th>
+                                                                                            <th>Project Name</th>
+                                                                                            <th>Deadline</th>
+                                                                                            <th>Assigne To</th>
+                                                                                            <th>Kanban State</th>
+                                                                                            <th>Stage</th>
+                                                                                            <th>description</th>
+                                                                                        </tr>
+                                                                                    </thead>
+                                                                                    <tbody t-foreach="tasks_obj" t-as="task">
+                                                                                        <tr t-if="task['create_uid'].id == uid.id">
+                                                                                            <td><div t-esc="task['name']"/></td>
+                                                                                            <td><div t-esc="task['project_id'].name"/></td>
+                                                                                            <td><div t-esc="task['date_deadline']"/></td>
+                                                                                            <td><div t-esc="task['user_id'].name"/></td>
+                                                                                            <td><div t-esc="task['kanban_state']"/></td>
+                                                                                            <td><div t-esc="task['stage_id'].name"/></td>
+                                                                                            <td><div t-esc="task['description']"/></td>
+                                                                                        </tr>
+                                                                                    </tbody>
+                                                                                </table>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+
+                                                            </div>
+
+                                                        </div>
+                                                        
+
+                                                </div>
+                                            </form>
+                                        </div>          
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </t>
+        </t>
+    </template>
+
+
+</odoo>

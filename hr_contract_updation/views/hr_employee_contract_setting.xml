@@ -1,0 +1,65 @@
+<odoo>
+    <data>
+
+        <record id="view_company_form_view_inherit" model="ir.ui.view" >
+            <field name="name">res.company</field>
+            <field name="model">res.company</field>
+            <field name="inherit_id" ref="base.view_company_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//notebook" position="inside">
+                    <page string="Employee Allowances Percentage">
+                         <group>
+                            <group>
+                                <label for="home_allowance"/>
+                                <div name="home_allowance" class="o_row">
+                                    <field name="home_allowance"/>
+                                    <span>%</span>
+                                </div>
+                            </group>
+                            <group>
+                                <label for="transportation_allowance"/>
+                                <div name="transportation_allowance" class="o_row">
+                                    <field name="transportation_allowance"/>
+                                    <span>%</span>
+                                </div>
+                            </group>
+                        </group>
+                    </page>
+
+                </xpath>
+            </field>
+        </record>
+
+        <record id="res_config_settings_view_form_inherit" model="ir.ui.view" >
+            <field name="name">res.config.settings</field>
+            <field name="model">res.config.settings</field>
+            <field name="inherit_id" ref="hr.res_config_settings_view_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='hr_employee_self_edit']/../../.." position="after">
+                    <h2>Employee Allowances Percentage</h2>
+                    <div class="row mt16 o_settings_container">
+                        <div class="col-12 col-lg-12 o_setting_box" title="Add Employee Allowance Percentage">
+                            <group>
+                                <group>
+                                    <label for="home_allowance"/>
+                                    <div name="home_allowance" class="o_row">
+                                        <field name="home_allowance"/>
+                                        <span>%</span>
+                                    </div>
+                                </group>
+                                <group>
+                                    <label for="transportation_allowance"/>
+                                    <div name="transportation_allowance" class="o_row">
+                                        <field name="transportation_allowance"/>
+                                        <span>%</span>
+                                    </div>
+                                </group>
+                            </group>
+                        </div>
+                    </div>
+                </xpath>
+            </field>
+        </record>
+
+    </data>
+</odoo>

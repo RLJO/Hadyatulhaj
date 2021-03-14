@@ -1,0 +1,8 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+appraisal_recommendations,appraisal_recommendations,model_appraisal_recommendations,,1,1,1,1
+appraisal_manager_recommendations,appraisal_manager_recommendations,model_appraisal_manager_recommendations,,1,1,1,1
+strong_weak_point_lines,strong_weak_point_lines,model_strong_weak_point_lines,,1,1,1,1
+appraisal_level,appraisal_level,model_appraisal_level,,1,1,1,1
+appraisal_criteria,appraisal_criteria,model_appraisal_criteria,,1,1,1,1
+appraisal_item,appraisal_item,model_appraisal_item,,1,1,1,1
+hr_employee_appraisal,hr_employee_appraisal,model_hr_employee_appraisal,,1,1,1,1

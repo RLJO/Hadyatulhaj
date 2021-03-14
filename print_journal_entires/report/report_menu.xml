@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<template id="journal_entries_report_id">
+        <t t-call="web.html_container">
+<!--		<t t-call="web.external_layout">-->
+<!--			<link rel='stylesheet' href="/journal_entries_print/static/src/css/report_css.css"/>-->
+            <t t-foreach="docs" t-as="o">
+				<div class="header">
+					<div class="row" style="float:right;">
+						<div class="col-6">
+							<img class="img" src="/print_journal_entires/static/src/img/ncss_logo.jpeg" style="height:120px;width:150px;"/>
+						</div>
+					</div>
+				</div>
+
+				<div class="article o_report_layout_standard"  t-att-data-oe-model="o and o._name" t-att-data-oe-id="o and o.id" t-att-data-oe-lang="o and o.env.context.get('lang')">
+                        <t t-call="web.address_layout"/>
+                        <div class="page" style="font-size:15px;">
+                            <br t-if="report_type == 'pdf'" />
+							<div style="margin-bottom:20px;">
+								<div style="width:300px;display:inline-block;">
+										<span>التاريخ</span><br/>
+										<span t-field="o.date"/>
+
+								</div>
+								<div style="display:inline-block;width:200px;margin:0 auto;text-align: center;border: 1px solid black;background-color:#b6b3b7;">
+										<span>سند صرف</span><br/>
+										<span>رقم امر الصرف</span>
+								</div>
+							</div>
+							<br></br>
+							<div class="row">
+									<table style="border-collapse: separate;border:0px;" width="100%">
+									   <tr style="text-align:center;">
+											<td style="width:20%;text-align:center;border: 1px solid #000000 !important;border-bottom: 1px solid #000000 !important;">
+												اسم صاحب الاستحقاق
+											</td>
+										    <td style="width:80%;text-align:center;border: 1px solid #000000 !important;border-bottom: 1px solid #000000 !important;">
+												.
+											</td>
+
+										</tr>
+
+									</table>
+							</div>
+							<br></br>
+
+							<div class="row">
+									<table style="border-collapse: separate;border:0px;" width="100%">
+									   <tr style="text-align:center;">
+											<td style="width:10%;text-align:center;border: 1px solid #000000 !important;border-bottom: 1px solid #000000 !important;">
+												البيان
+											</td>
+										    <td style="width:90%;text-align:center;border: 1px solid #000000 !important;border-bottom: 1px solid #000000 !important;">
+												.
+											</td>
+										</tr>
+
+									</table>
+							</div>
+							<br></br>
+
+							<div class="row">
+                    <style>
+                    .tblbordr {
+                        text-align: center;
+                        border: 2px solid black;
+                    }
+						.total {
+                        text-align: center;
+                        border: 2px solid black;
+						background-color:#b6b3b7;
+                    }
+                    </style>
+						<br></br>
+                		<table width="100%" class="border-collapse:separate;">
+                			<thead >
+                				<tr style="text-align:center;border: 1px solid #000000 !important;border-bottom: 0px solid #000000 !important;">
+                					<th style="text-align:center;border: 1px solid #000000 !important;border-bottom: 0px solid #000000 !important;">Account Number</th>
+                					<th style="text-align:center;border: 1px solid #000000 !important;border-bottom: 0px solid #000000 !important;">Account Name</th>
+                					<th style="text-align:center;border: 1px solid #000000 !important;border-bottom: 0px solid #000000 !important;">Debit</th>
+                					<th style="text-align:center;border: 1px solid #000000 !important;border-bottom: 0px solid #000000 !important;">Credit</th>
+                				</tr>
+                			</thead>
+                			<tbody>
+                				 <t t-foreach="o.line_ids" t-as="line">
+                				 	<tr style="text-align:center;border: 1px solid #000000 !important;border-bottom: 0px solid #000000 !important;">
+                				 		<td style="text-align:center;border: 1px solid #000000 !important;border-bottom: 0px solid #000000 !important;">
+                				 			<span t-field="line.account_id.code"/>
+                				 		</td>
+
+                				 		<td style="text-align:center;border: 1px solid #000000 !important;border-bottom: 0px solid #000000 !important;">
+											<span t-field="line.account_id.name"/>
+<!--											<br></br>-->
+<!--                				 			<span t-field="line.partner_id.name"/>-->
+<!--											<br></br>-->
+<!--											<span t-field="line.name"/>-->
+                				 		</td>
+                				 		<td style="text-align:center;border: 1px solid #000000 !important;border-bottom: 0px solid #000000 !important;">
+                				 			<span t-field="line.debit"/>
+                				 		</td>
+                				 		<td style="text-align:center;border: 1px solid #000000 !important;border-bottom: 0px solid #000000 !important;">
+                				 			<span t-field="line.credit"/>
+                				 		</td>
+                				 	</tr>
+                				 </t>
+                			</tbody>
+							<tfooter>
+                				<tr class="total">
+									<td colspan="2">الإجمالـــــــــي</td>
+                					<td style="text-align:center;border: 1px solid #000000 !important;border-bottom: 0px solid #000000 !important;">
+                						<span t-esc="o.total_debit_credit().get('dr_total')"/>
+                					</td>
+                					<td style="text-align:center;border: 1px solid #000000 !important;border-bottom: 0px solid #000000 !important;">
+                						<span t-esc="o.total_debit_credit().get('cr_total')"/>
+                					</td>
+                				</tr>
+                			</tfooter>
+                		</table>
+                	</div>
+						</div>
+				</div>
+
+				<div class="footer o_standard_footer">
+				<div class="container-fluid" >
+				  <div style="width:100%;" class="row">
+					<div class="col-auto" style="width:22%;text-align:center;">
+						<span style="text-align: center;border: 1px solid black;background-color:#b6b3b7;">المحاسب</span><br/>
+						<p>أ.احمدبن سعدابوعباه</p>
+						<p>
+							<t t-if="o.state in ['Accounting Approve','Administrative and Financial Affairs','Financial auditor','posted']" >
+								تم الاعتماد
+							</t>
+							<t t-else="">لم يعتمد</t>
+						</p>
+					</div>
+
+					<div class="col-auto" style="width:27%;text-align:center;">
+						<span style="text-align: center;border: 1px solid black;background-color:#b6b3b7;">الشئون الاداريه والماليه</span><br/>
+						<p>أ.عبدالعزيزبن ثابت العسكر</p>
+						<p>
+							<t t-if="o.state in ['Administrative and Financial Affairs','Financial auditor','posted']" >
+								تم الاعتماد
+							</t>
+							<t t-else="">لم يعتمد</t>
+						</p>
+					</div>
+
+					<div class="col-auto" style="width:24%;text-align:center;">
+						<span style="text-align: center;border: 1px solid black;background-color:#b6b3b7;">المراقب المالي</span><br/>
+						<p>أ.عمادبن احمدالقرعاوى</p>
+						<p>
+							<t t-if="o.state in ['Financial auditor','posted']" >
+								تم الاعتماد
+							</t>
+							<t t-else="">لم يعتمد</t>
+						</p>
+					</div>
+
+					<div class="col-auto" style="width:28%;text-align:center;">
+						<span style="text-align: center;border: 1px solid black;background-color:#b6b3b7;">المدير العام</span><br/>
+						<p>أ.د.سامي بن عبدالعزيزالدامغ</p>
+						<p>
+							<t t-if="o.state =='posted'" >
+								تم الاعتماد
+							</t>
+							<t t-else="">لم يعتمد</t>
+						</p>
+				  </div>
+				  </div>
+
+					<div class="text-center" style="border-top: 1px solid black;">
+
+					<div name="financial_infos">
+						<span t-field="user.company_id.report_footer"/>
+					</div>
+
+					<div t-if="report_type == 'pdf'" class="text-muted">
+						Page: <span class="page"/> / <span class="topage"/>
+					</div>
+					</div>
+			</div>
+		 </div>
+            </t>
+
+
+
+			</t>
+<!--        </t>-->
+    </template>
+
+    <report
+        id="journal_entries_moce_print_id"
+        model = "account.move"
+        string = "Journal Entries"
+        report_type = "qweb-pdf"
+        name = "print_journal_entires.journal_entries_report_id"
+        file = "print_journal_entires.journal_entries_report_id"
+    />
+</odoo>

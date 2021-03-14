@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="view_end_of_service_award_form" model="ir.ui.view">
+        <field name="name">end.of.service.award.form</field>
+        <field name="model">end.of.service.award</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <button string="Approve" groups="hr.group_hr_user" name="action_approve" states="draft"
+                            type="object" class="oe_highlight"/>
+                    <field name="state" widget="statusbar"/>
+                </header>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="employee_id" attrs="{'readonly': [('state','!=','draft')]}"/>
+                            <field name="contact_end_type" attrs="{'readonly': [('state','!=','draft')]}"/>
+<!--                            <label for="total_days_before"/>-->
+<!--                            <div name="total_days_before" class="o_row">-->
+<!--                                <field name="total_days_before"/>-->
+<!--                                <span>Year</span>-->
+<!--                            </div>-->
+
+                            <field name="net_period_before_5year"/>
+                            <field name="net_period_after_5year"/>
+                            <field name="total_deserve"/>
+                            <label for="total_deserved_per_contract_end_type"/>
+                            <div name="total_deserved_per_contract_end_type" class="o_row">
+                                <field name="total_deserved_per_contract_end_type"/>
+                                <span>Days</span>
+                            </div>
+                            <field name="final_deserving" />
+                            <field name="eos_computation_dependency" readonly="1"/>
+                        </group>
+                        <group>
+                            <field name="contract_id"/>
+                            <field name="last_work_date" attrs="{'readonly': [('state','!=','draft')]}"/>
+                            <field name="join_date"/>
+                            <label for="number_of_days_from_join_date" />
+                            <div name="number_of_days_from_join_date" class="o_row">
+                                <field name="number_of_days_from_join_date"/>
+                                <span>day</span>
+                            </div>
+                            <label for="first_period_days" />
+                            <div name="first_period_days" class="o_row">
+                                <field name="first_period_days"/>
+                                <span>day</span>
+                            </div>
+                            <label for="second_period_days" />
+                            <div name="second_period_days" class="o_row">
+                                <field name="second_period_days"/>
+                                <span>day</span>
+                            </div>
+                            <label for="total_unpaid_days"/>
+                            <div name="total_unpaid_days" class="o_row">
+                                <field name="total_unpaid_days"/>
+                                <span>day</span>
+                            </div>
+                            <label for="total_unpaid_days_second_period"/>
+                            <div name="total_unpaid_days_second_period" class="o_row">
+                                <field name="total_unpaid_days_second_period"/>
+                                <span>day</span>
+                            </div>
+                            <label for="net_first_period"/>
+                            <div name="net_first_period" class="o_row">
+                                <field name="net_first_period" />
+                                <span>Year</span>
+                            </div>
+                            <label for="net_second_period"/>
+                            <div name="net_second_period" class="o_row">
+                                <field name="net_second_period" />
+                                <span>Year</span>
+                            </div>
+                            <label for="net_period"/>
+                            <div name="net_period" class="o_row">
+                                <field name="net_period" />
+                                <span>Year</span>
+                            </div>
+
+                        </group>
+                    </group>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" widget="mail_followers" groups="base.group_user"/>
+                    <field name="activity_ids" widget="mail_activity"/>
+                    <field name="message_ids" widget="mail_thread"/>
+                </div>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_end_of_service_award_tree" model="ir.ui.view">
+        <field name="name">end.of.service.award.tree</field>
+        <field name="model">end.of.service.award</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="employee_id"/>
+                <field name="contact_end_type"/>
+                <field name="contract_id"/>
+                <field name="last_work_date"/>
+                <field name="join_date"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="end_of_service_award_action" model="ir.actions.act_window">
+        <field name="name">End of Service Award</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">end.of.service.award</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="end_of_service_award_menu"
+              name="End of Service Award"
+              parent="hr_holidays.menu_hr_holidays_root"
+              action="end_of_service_award_action"
+              sequence="3"/>
+
+</odoo>

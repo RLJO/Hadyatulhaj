@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <data>
+        <record id="im_administrative_communication_sequence" model="ir.sequence">
+            <field name="name">administrative communication IMP.</field>
+            <field name="code">administrative.communication.import</field>
+            <field name="prefix">IMP</field>
+            <field name="padding">5</field>
+        </record>
+    </data>
+
+    <data>
+        <record id="ex_administrative_communication_sequence" model="ir.sequence">
+            <field name="name">administrative communication EXP.</field>
+            <field name="code">administrative.communication.export</field>
+            <field name="prefix">EXP</field>
+            <field name="padding">5</field>
+        </record>
+    </data>
+
+    <data>
+        <record id="int_administrative_communication_sequence" model="ir.sequence">
+            <field name="name">administrative communication INT.</field>
+            <field name="code">administrative.communication.internal</field>
+            <field name="prefix">INT</field>
+            <field name="padding">5</field>
+        </record>
+    </data>
+
+
+</odoo>

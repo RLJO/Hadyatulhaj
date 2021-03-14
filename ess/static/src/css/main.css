@@ -1,0 +1,84 @@
+.hide{
+    display: none;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+  }
+  
+  .card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  }
+
+
+
+.btn-primary{
+  background: linear-gradient(150deg, #875A7B 20%, #62495B 80%) !important;
+  border: 0;
+}
+
+.badge-primary{
+  background: linear-gradient(150deg, #875A7B 20%, #62495B 80%) !important;
+}
+
+
+
+/* *************************** */
+.ibox-content.iess-p20{padding:20px !important;
+  /* max-height: 250px;
+  min-height: 250px;
+  overflow: auto; */
+}
+.ibox-content.iess-p20>div{
+  max-height: 250px;
+  min-height: 250px;
+  overflow: auto; 
+}
+.ibox-content{border:0 !important;}
+  .iess-title{text-align:center; border: 0px;}
+  .iess-title>h3{margin:0;}
+  .iess-title>h3>span{padding: 10px 30px;color: #fff;background: linear-gradient(150deg, #875A7B 20%, #62495B 80%) !important;
+  border-radius: 25px;}
+  .nav.nav-tabs3 {
+    border-bottom: 1px solid #875a7b;
+}
+.nav.nav-tabs3 > li > a.active,.nav.nav-tabs3 > li > a:hover {
+    color: #875a7b;
+    border-bottom: 2px solid #875a7b !important;
+}
+
+  .nav > li > a.ess-tab-link{padding: 10px 15px;margin-right: 5px;}
+  table.ess-table{margin-bottom: 0;box-shadow: none;}
+  .tab-content {
+    margin-top: 15px;
+}
+.feed-activity-list{padding:10px;}
+/* ((())) */
+
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888; 
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+
+

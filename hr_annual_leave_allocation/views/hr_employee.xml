@@ -1,0 +1,84 @@
+<odoo>
+    <data>
+
+        <!-- Cron to synchronize transaction -->
+        <record id="employee_annual_allocation" model="ir.cron">
+          <field name="name">Annual Allocation</field>
+          <field name="model_id" ref="hr.model_hr_employee"/>
+          <field name="state">code</field>
+          <field name="code">model.cron_employee_annual_allocation()</field>
+<!--          <field name="code">model.cron_fetch_online_transactions()</field>-->
+          <field name="active" eval="True"/>
+          <field name="user_id" ref="base.user_root"/>
+          <field name="interval_number">1</field>
+          <field name="interval_type">days</field>
+          <field name="numbercall">-1</field>
+          <field name="doall" eval="False"/>
+        </record>
+
+        <record id="view_employee_form_inherit" model="ir.ui.view" >
+            <field name="name">hr.employee</field>
+            <field name="model">hr.employee</field>
+            <field name="inherit_id" ref="hr.view_employee_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='phone']" position="after">
+<!--                    <field name="contracts_count2" />-->
+                    <field name="join_date" />
+                    <field name="working_date" />
+                    <field name="last_allocation_date" />
+                </xpath>
+                <xpath expr="//notebook" position="inside">
+                    <page  string="Annual Allocation">
+                        <field name="allocation_ids" />
+<!--                            <tree>-->
+<!--                                <field name="name" />-->
+<!--                                <field name="holiday_status_id" />-->
+<!--                                <field name="number_of_days_display"  string="Duration"/>-->
+<!--                            </tree>-->
+<!--                        </field>-->
+                    </page>
+                    <field name="join_date" />
+                </xpath>
+            </field>
+        </record>
+
+        <record id="hr_leave_allocation_view_form_inherit" model="ir.ui.view" >
+            <field name="name">hr.leave.allocation</field>
+            <field name="model">hr.leave.allocation</field>
+            <field name="inherit_id" ref="hr_holidays.hr_leave_allocation_view_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='employee_id']" position="after">
+                    <field name="last_allocation_date" />
+                    <field name="allocated_until" />
+                    <field name="expiry_date" />
+                    <field name="available_from" />
+                </xpath>
+            </field>
+        </record>
+
+        <record id="hr_contract_view_form_inherit" model="ir.ui.view" >
+            <field name="name">hr.contract</field>
+            <field name="model">hr.contract</field>
+            <field name="inherit_id" ref="hr_contract.hr_contract_view_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='department_id']" position="after">
+                    <field name="contract_period" />
+                    <field name="deserved_leave" />
+                </xpath>
+            </field>
+        </record>
+
+        <record id="hr_contract_view_form_inherit2" model="ir.ui.view" >
+            <field name="name">hr.employee</field>
+            <field name="model">hr.employee</field>
+            <field name="inherit_id" ref="hr_contract.hr_hr_employee_view_form2"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='contracts_count']" position="attributes">
+                    <attribute name="store">True</attribute>
+                    <attribute name="force_save">True</attribute>
+                </xpath>
+            </field>
+        </record>
+
+    </data>
+</odoo>

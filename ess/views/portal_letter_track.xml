@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="ess_track_letter" name="ESS Track Document">
+        <t t-call="portal.portal_layout">
+            <t>
+                <div class="row justify-content-between mt-4">
+
+                    <nav class="navbar-default navbar-static-side" role="navigation" style="z-index: 1;position: initial;">
+                        <t t-call="ess.side_menu"/>
+                    </nav>
+
+                    <div class="row col-10 col-md col-lg-10"> 
+                        <div class="col-lg-12">
+                            <div class="ibox ">
+                                <div class="row iess-title" style="text-align:left;margin-right: 20px;margin-left: 20px;">
+                                    <h3><span>Track Document Requests</span></h3>
+                                </div>
+                                <div class="ibox-content">
+                                    <div class="row">
+                                        <div class="col-lg-12" style="margin-top:10px;">                                                
+                                            <div class="row o_portal_details">
+                                                <div class="col-lg-12">
+                                                    <div class="ibox-content iess-p20">
+                                                        <div class="table-responsive">
+                                                            <table class="table header-border table-hover table-custom spacing5 ess-table">
+                                                                <thead>
+                                                                    <tr>
+                                                                        <th>Name</th>
+                                                                        <th>Letter Type</th>
+                                                                        <th>Date</th>
+                                                                        <th>Approval</th>
+                                                                        <th>Status</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody t-foreach="letter_request_obj" t-as="letter">
+                                                                    <tr>
+                                                                        <td><div t-esc="letter['name']"/></td>
+                                                                        <td><div t-esc="letter['letter_type_id'].name"/></td>
+                                                                        <td><div t-esc="letter['Date']"/></td>
+                                                                        <td><div t-esc="letter['employee_id'].name"/></td>
+                                                                        <td><div t-esc="letter['state']"/></td>
+                                                                        <td>
+                                                                            <a t-att-href="'/print/letter/?id=%i' % letter['id']" title="Clear" aria-label="Clear" class="btn">
+                                                                                <i class="fa fa-print float-sm-none float-md-right"> Print</i>
+                                                                            </a>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                            
+                    </div>
+                </div>
+            </t>
+        </t>
+    </template>
+
+
+</odoo>

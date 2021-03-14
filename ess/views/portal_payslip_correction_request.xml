@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="ess_payslip_correction" name="ESS Payslip Correction Request">
+        <t t-call="portal.portal_layout">
+            <t>
+                <div class="row justify-content-between mt-4">
+
+                    <nav class="navbar-default navbar-static-side" role="navigation" style="z-index: 1;position: initial;">
+                        <t t-call="ess.side_menu"/>
+                    </nav>
+
+                    <div class="row col-10 col-md col-lg-10"> 
+                        <div class="col-lg-12">
+                            <div class="ibox ">
+                                <div class="row iess-title" style="text-align:left;margin-right: 20px;margin-left: 20px;">
+                                    <h3><span>Payslip Correction Request</span></h3>
+                                </div>
+                                <div class="ibox-content">
+                                    <div class="row">
+                                        <div class="col-lg-12" style="margin-top:10px;">
+                                            <form action="/my/payslip_correction_request" method="post">
+                                                <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+                                                
+                                                <div class="row o_portal_details">
+                                                    <div class="col-lg-12">
+                                                        <div class="col-lg-12">
+                                                            <div t-if="error_message" class="alert alert-danger" role="alert">
+                                                                <t t-foreach="error_message" t-as="err"><t t-esc="err"/><br /></t>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="row form-group col-lg-12">
+                                                            <div t-attf-class="form-group #{error.get('payslip_id') and 'o_has_error' or ''} col-xl-8">
+                                                                <label class="col-form-label" for="payslip_id">Payslip</label>
+                                                                <select name="payslip_id" t-attf-class="form-control #{error.get('payslip_id') and 'is-invalid' or ''}">
+                                                                    <t t-foreach="payslip_obj or []" t-as="obj">
+                                                                        <option t-att-value="obj.id" >
+                                                                            <t t-esc="obj.name" />
+                                                                        </option>
+                                                                    </t>
+                                                                </select>
+                                                            </div>
+                                                            <div t-attf-class="form-group #{error.get('employee_note') and 'o_has_error' or ''} col-xl-4">
+                                                                <label class="col-form-label" for="employee_note">Note</label>
+                                                                <textarea rows="4" cols="50" name="employee_note" t-attf-class="form-control #{error.get('employee_note') and 'is-invalid' or ''}"/>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="clearfix">
+                                                            <button type="submit" class="btn btn-primary float-right" style='margin-right: 30px;'>
+                                                                Confirm
+                                                            </button>
+                                                        </div> 
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    
+                    
+                </div>
+            </t>
+        </t>
+    </template>
+
+
+</odoo>

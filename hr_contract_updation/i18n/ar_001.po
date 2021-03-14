@@ -1,0 +1,181 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* hr_contract_updation
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-10-04 13:53+0000\n"
+"PO-Revision-Date: 2020-10-04 13:53+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: hr_contract_updation
+#: model_terms:ir.ui.view,arch_db:hr_contract_updation.res_config_settings_view_form_inherit
+msgid "Add Employee Allowance Percentage"
+msgstr "اضافه نسب بدلات الموظف"
+
+#. module: hr_contract_updation
+#: model:ir.model,name:hr_contract_updation.model_res_company
+msgid "Companies"
+msgstr "الشركات"
+
+#. module: hr_contract_updation
+#: model:ir.model.fields,field_description:hr_contract_updation.field_res_config_settings__company_id
+msgid "Company"
+msgstr "الشركة"
+
+#. module: hr_contract_updation
+#: model:ir.model,name:hr_contract_updation.model_res_config_settings
+msgid "Config Settings"
+msgstr "ضبط الإعدادات"
+
+#. module: hr_contract_updation
+#: model:ir.model.fields,field_description:hr_contract_updation.field_hr_contract__contract_period
+msgid "Contract Period"
+msgstr "مده العقد"
+
+#. module: hr_contract_updation
+#: model:ir.model.fields,field_description:hr_contract_updation.field_hr_contract__contract_type
+msgid "Contract Type"
+msgstr "نوع العقد"
+
+#. module: hr_contract_updation
+#: model:ir.model.fields,field_description:hr_contract_updation.field_hr_contract_type__create_uid
+msgid "Created by"
+msgstr "انشأ من قبل"
+
+#. module: hr_contract_updation
+#: model:ir.model.fields,field_description:hr_contract_updation.field_hr_contract_type__create_date
+msgid "Created on"
+msgstr "تم إنشاؤها على"
+
+#. module: hr_contract_updation
+#: model:ir.model.fields,field_description:hr_contract_updation.field_hr_contract__deduct_tamenat
+msgid "Deduct Tamenat"
+msgstr "خصم التامينات"
+
+#. module: hr_contract_updation
+#: model:ir.model.fields,field_description:hr_contract_updation.field_hr_contract_type__display_name
+msgid "Display Name"
+msgstr "اسم العرض"
+
+#. module: hr_contract_updation
+#: model:ir.model,name:hr_contract_updation.model_hr_employee
+msgid "Employee"
+msgstr "الموظف"
+
+#. module: hr_contract_updation
+#: model_terms:ir.ui.view,arch_db:hr_contract_updation.res_config_settings_view_form_inherit
+#: model_terms:ir.ui.view,arch_db:hr_contract_updation.view_company_form_view_inherit
+msgid "Employee Allowances Percentage"
+msgstr "نسب بدلات الموظف"
+
+#. module: hr_contract_updation
+#: model:ir.model,name:hr_contract_updation.model_hr_contract
+msgid "Employee Contract"
+msgstr "عقد موظف"
+
+#. module: hr_contract_updation
+#: model:ir.model.fields,field_description:hr_contract_updation.field_hr_contract__home_allowance
+#: model:ir.model.fields,field_description:hr_contract_updation.field_res_company__home_allowance
+#: model:ir.model.fields,field_description:hr_contract_updation.field_res_config_settings__home_allowance
+msgid "Home Allowance"
+msgstr "بدل سكن"
+
+#. module: hr_contract_updation
+#: model:ir.model.fields,field_description:hr_contract_updation.field_hr_contract_type__id
+msgid "ID"
+msgstr "هوية شخصية"
+
+#. module: hr_contract_updation
+#: model:ir.model.fields,field_description:hr_contract_updation.field_hr_employee__join_date
+msgid "Join Date"
+msgstr "تاريخ الانضمام للعمل"
+
+#. module: hr_contract_updation
+#: model:ir.model.fields,field_description:hr_contract_updation.field_hr_contract_type____last_update
+msgid "Last Modified on"
+msgstr "آخر تعديل في"
+
+#. module: hr_contract_updation
+#: model:ir.model.fields,field_description:hr_contract_updation.field_hr_contract_type__write_uid
+msgid "Last Updated by"
+msgstr "آخر تحديث بواسطة"
+
+#. module: hr_contract_updation
+#: model:ir.model.fields,field_description:hr_contract_updation.field_hr_contract_type__write_date
+msgid "Last Updated on"
+msgstr "آخر تحديث في"
+
+#. module: hr_contract_updation
+#: model:ir.model.fields,field_description:hr_contract_updation.field_hr_contract__mobile_allowance
+msgid "Mobile Allowance"
+msgstr "بدل جوال"
+
+#. module: hr_contract_updation
+#: model:ir.model.fields,field_description:hr_contract_updation.field_hr_contract_type__name
+msgid "Name"
+msgstr "الاسم"
+
+#. module: hr_contract_updation
+#: model:ir.model.fields,field_description:hr_contract_updation.field_hr_contract__net_contract_salary
+msgid "Net Contract Salary"
+msgstr "صافي الراتب"
+
+#. module: hr_contract_updation
+#: model:ir.model.fields,field_description:hr_contract_updation.field_hr_contract__number_of_months
+msgid "Number Of Months"
+msgstr "عدد الشهور"
+
+#. module: hr_contract_updation
+#: model:ir.model.fields.selection,name:hr_contract_updation.selection__hr_contract__contract_period__one_year
+msgid "One Year"
+msgstr "عام"
+
+#. module: hr_contract_updation
+#: model:ir.model.fields,field_description:hr_contract_updation.field_hr_contract__other_allowance
+msgid "Other Allowance"
+msgstr "بدلات اخري"
+
+#. module: hr_contract_updation
+#: model_terms:ir.ui.view,arch_db:hr_contract_updation.hr_contract_view_form_inherit
+msgid "Other Allowence"
+msgstr "بدلات اخري"
+
+#. module: hr_contract_updation
+#: model:ir.model.fields,field_description:hr_contract_updation.field_hr_contract__tameenat_deduction
+msgid "Tameenat Deduction"
+msgstr "خصم التامينات"
+
+#. module: hr_contract_updation
+#: model:ir.model.fields.selection,name:hr_contract_updation.selection__hr_contract__contract_period__temp
+msgid "Temporary"
+msgstr "مؤقت"
+
+#. module: hr_contract_updation
+#: model:ir.model.fields,field_description:hr_contract_updation.field_hr_contract__total_salary
+msgid "Total Salary"
+msgstr "اجمالي الراتب"
+
+#. module: hr_contract_updation
+#: model:ir.model.fields,field_description:hr_contract_updation.field_hr_contract__transportation_allowance
+#: model:ir.model.fields,field_description:hr_contract_updation.field_res_company__transportation_allowance
+#: model:ir.model.fields,field_description:hr_contract_updation.field_res_config_settings__transportation_allowance
+msgid "Transportation Allowance"
+msgstr "بدل انتقال"
+
+#. module: hr_contract_updation
+#: model:ir.model.fields.selection,name:hr_contract_updation.selection__hr_contract__contract_period__two_year
+msgid "Two Year"
+msgstr "عامين"
+
+#. module: hr_contract_updation
+#: model:ir.model,name:hr_contract_updation.model_hr_contract_type
+msgid "hr.contract.type"
+msgstr ""

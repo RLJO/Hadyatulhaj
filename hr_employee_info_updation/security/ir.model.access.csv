@@ -1,0 +1,7 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_health_health,access_health_health,model_health_health,,1,1,1,1
+access_blood_blood,access_blood_blood,model_blood_blood,,1,1,1,1
+access_religion_religion,access_religion_religion,model_religion_religion,,1,1,1,1
+access_hr_job_history,access_hr_job_history,model_hr_job_history,,1,1,1,1
+access_hr_history_line,access_hr_history_line,model_hr_history_line,,1,1,1,1
+certificate_level,certificate_level,model_certificate_level,,1,1,1,1

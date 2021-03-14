@@ -1,0 +1,38 @@
+<odoo>
+    <data>
+
+        <record id="view_move_form_inherit" model="ir.ui.view">
+            <field name="name">account.move.form</field>
+            <field name="model">account.move</field>
+            <field name="inherit_id" ref="account.view_move_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//button[@name='action_post']" position="before">
+                    <button name="action_accounting_approve" string="Accounting Approve"
+                            class="oe_highlight" type="object"
+                            groups="ncss_journal_restrictions.journal_restriction_accounting"
+                            attrs="{'invisible': ['|', ('type', '!=', 'entry'), ('state', '!=', 'draft')]}"
+                    />
+                    <button name="action_financial_affairs" string="Administrative and Financial Affairs"
+                            class="oe_highlight" type="object"
+                            groups="ncss_journal_restrictions.administrative_and_financial_affairs"
+                            attrs="{'invisible': ['|', ('type', '!=', 'entry'), ('state', '!=', 'Accounting Approve')]}"
+                    />
+                    <button name="action_financial_auditor" string="Financial auditor"
+                            class="oe_highlight" type="object"
+                            groups="ncss_journal_restrictions.financial_auditor"
+                            attrs="{'invisible': ['|', ('type', '!=', 'entry'), ('state', '!=', 'Administrative and Financial Affairs')]}"
+                    />
+                </xpath>
+                <xpath expr="//button[@name='action_post']" position="replace">
+                    <button name="action_post" string="Post" class="oe_highlight"
+                            type="object" groups="ncss_journal_restrictions.general_director"
+                            attrs="{'invisible': [('state', '!=', 'Financial auditor'),'|',('type', '=', 'entry'),('state', '!=', 'draft')]}"/>
+                </xpath>
+            </field>
+        </record>
+
+    </data>
+</odoo>
+
+
+

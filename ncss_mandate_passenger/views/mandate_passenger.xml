@@ -1,0 +1,666 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!--    hr employee-->
+        <record id="hr_employee_view_form_inherit" model="ir.ui.view">
+        <field name="name">Hr Employee</field>
+        <field name="model">hr.employee</field>
+        <field name="inherit_id" ref="hr.view_employee_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='department_id']" position="after">
+                <field name="employee_degree_id"/>
+            </xpath>
+        </field>
+        </record>
+    <!--    hr employee-->
+
+    <!--    training_course  -->
+    <record id="training_course_form" model="ir.ui.view">
+        <field name="name">training.course.form</field>
+        <field name="model">training.course</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name" required="1"/>
+                            <field name="type" />
+                            <field name="is_free" />
+                            <field name="price" />
+                               <field name="is_private" />
+                               <field name="employee_id"
+                                attrs="{'invisible':[('is_private','=',False) ]}"
+                               />
+
+                       <field name="doc_attachment_id" widget="many2many_binary" class="oe_inline"/>
+
+
+                        </group>
+                        <group>
+                            <field name="start_date"/>
+                            <field name="end_date"/>
+                            <field name="number_of_days"/>
+                            <field name="course_place_id"/>
+
+                            <field name="description"/>
+                        </group>
+                    </group>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" widget="mail_followers"/>
+                    <field name="activity_ids" widget="mail_activity"/>
+                    <field name="message_ids" widget="mail_thread"/>
+                </div>
+            </form>
+        </field>
+    </record>
+
+    <record id="training_course_tree" model="ir.ui.view">
+        <field name="name">training.course.tree</field>
+        <field name="model">training.course</field>
+        <field name="arch" type="xml">
+            <tree string="">
+                <field name="name" required="1"/>
+                <field name="type" />
+                <field name="price" />
+                <field name="start_date"/>
+                <field name="end_date"/>
+                <field name="number_of_days"/>
+                <field name="description"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="training_course_action" model="ir.actions.act_window">
+            <field name="name">Courses</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">training.course</field>
+            <field name="view_mode">tree,form</field>
+    </record>
+    <!--    training_course  -->
+
+<!--    course_place  -->
+    <record id="course_place_form" model="ir.ui.view">
+        <field name="name">course.place.form</field>
+        <field name="model">course.place</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name" required="1"/>
+                            <field name="need_ticket" />
+                        </group>
+                    </group>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" widget="mail_followers"/>
+                    <field name="activity_ids" widget="mail_activity"/>
+                    <field name="message_ids" widget="mail_thread"/>
+                </div>
+            </form>
+        </field>
+    </record>
+
+    <record id="course_place_tree" model="ir.ui.view">
+        <field name="name">course.place.tree</field>
+        <field name="model">course.place</field>
+        <field name="arch" type="xml">
+            <tree string="">
+                <field name="name" />
+                <field name="need_ticket" />
+            </tree>
+        </field>
+    </record>
+
+    <record id="course_place_action" model="ir.actions.act_window">
+            <field name="name">Course Place</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">course.place</field>
+            <field name="view_mode">tree,form</field>
+    </record>
+    <!--    course_place  -->
+
+<!--    course_place  -->
+    <record id="budget_allocation_form" model="ir.ui.view">
+        <field name="name">budget.allocated.training.form</field>
+        <field name="model">budget.allocated.training</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="department_id" required="1"/>
+                            <field name="start_date" />
+                            <field name="end_date" />
+                        </group>
+                        <group>
+                            <field name="budget" />
+                            <field name="expensed_from_budget" />
+                            <field name="remaining_from_budget" />
+                        </group>
+                    </group>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" widget="mail_followers"/>
+                    <field name="activity_ids" widget="mail_activity"/>
+                    <field name="message_ids" widget="mail_thread"/>
+                </div>
+            </form>
+        </field>
+    </record>
+
+    <record id="budget_allocation_tree" model="ir.ui.view">
+        <field name="name">budget.allocated.training.tree</field>
+        <field name="model">budget.allocated.training</field>
+        <field name="arch" type="xml">
+            <tree string="">
+                <field name="department_id"/>
+                <field name="budget" />
+                <field name="expensed_from_budget" />
+                <field name="remaining_from_budget" />
+                <field name="start_date" />
+                <field name="end_date" />
+            </tree>
+        </field>
+    </record>
+
+    <record id="budget_allocation_action" model="ir.actions.act_window">
+            <field name="name">Budget Allocated For Training</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">budget.allocated.training</field>
+            <field name="view_mode">tree,form</field>
+    </record>
+    <!--    course_place  -->
+
+<!--    training_course  -->
+    <record id="employee_degree_value_form" model="ir.ui.view">
+        <field name="name">employee.degree.value.form</field>
+        <field name="model">employee.degree.value</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name" />
+                            <field name="traveling_type" />
+                            <field name="number_of_paid_courses_per_year" />
+                            <field name="number_of_free_courses_per_year" />
+                            <field name="allowed_period_between_courses" />
+                        </group>
+                        <group>
+                            <field name="internal_day_value" />
+                            <field name="external_day_value" />
+                        </group>
+                    </group>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" widget="mail_followers"/>
+                    <field name="activity_ids" widget="mail_activity"/>
+                    <field name="message_ids" widget="mail_thread"/>
+                </div>
+            </form>
+        </field>
+    </record>
+
+    <record id="employee_degree_value_tree" model="ir.ui.view">
+        <field name="name">employee.degree.value.tree</field>
+        <field name="model">employee.degree.value</field>
+        <field name="arch" type="xml">
+            <tree string="">
+                <field name="name" />
+                <field name="traveling_type" />
+                <field name="internal_day_value" />
+                <field name="external_day_value" />
+                <field name="number_of_paid_courses_per_year" />
+                <field name="number_of_free_courses_per_year" />
+                <field name="allowed_period_between_courses" />
+            </tree>
+        </field>
+    </record>
+
+    <record id="employee_degree_value_action" model="ir.actions.act_window">
+            <field name="name">Employee Value</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">employee.degree.value</field>
+            <field name="view_mode">tree,form</field>
+    </record>
+    <!--    training_course  -->
+
+
+
+
+    <!--    crm.project-->
+    <record id="mandate_passenger_form" model="ir.ui.view">
+        <field name="name">mandate.passenger.form</field>
+        <field name="model">mandate.passenger</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <button name="action_direct_manager_approve" string="Direct Manager Approve"
+                            attrs="{'invisible':['|',('is_direct_manager','=',False),('state','!=','draft')]}"
+                            type="object" class="oe_highlight"
+                            groups="ncss_mandate_passenger.mandate_passenger_direct_manager_button"
+                    />
+                    <button name="action_department_manager_approve" string="Department Manager Approve"
+                            attrs="{'invisible':['|',('is_department_manager','=',False),('state','!=','direct_manager_approve')]}"
+                            type="object" class="oe_highlight"
+                            groups="ncss_mandate_passenger.mandate_passenger_department_manager_button"
+                    />
+                    <button name="action_hr_manager_approve" string="HR Approve"
+                            states='department_manager_approve'
+                            type="object" class="oe_highlight"
+                            groups="ncss_mandate_passenger.mandate_passenger_hr_manager_button"
+                    />
+                    <button name="action_accounting_approve" string="Accounting Approve"
+                            states='hr_approve'
+                            type="object" class="oe_highlight"
+                            groups="ncss_mandate_passenger.mandate_passenger_accounting_manager_button"
+                    />
+                    <button name="refuse_action" string="Refuse"
+                            states='draft,direct_manager_approve,department_manager_approve,hr_approve'
+                            type="object" class="oe_highlight"
+                            groups="ncss_mandate_passenger.mandate_passenger_refuse_button"
+
+                    />
+<!--                    <button name="set_to_draft" string="Set To Draft"-->
+<!--                            states='refuse,accounting_approve'-->
+<!--                            type="object" class="oe_highlight"-->
+<!--                            groups="ncss_mandate_passenger.mandate_passenger_set_to_draft_button"-->
+<!--                    />-->
+                    <field name="state" widget="statusbar"
+                           statusbar_visible="draft,direct_manager_approve,department_manager_approve,hr_approve,accounting_approve"
+                    />
+                </header>
+                <sheet>
+                    <div class="oe_title">
+                        <h2>
+                            <field name="name" readonly="1"/>
+                        </h2>
+                    </div>
+                    <group>
+                        <group>
+                            <field name="employee_id" required="1"
+                            attrs="{'readonly':[('state','in',['refuse','accounting_approve'])]}"/>
+                            <field name="employee_degree_id"
+                            attrs="{'readonly':[('state','in',['refuse','accounting_approve'])]}"/>
+                            <field name="type"
+                            attrs="{'readonly':[('state','in',['refuse','accounting_approve'])]}"/>
+                            <field name="course_id"
+                            attrs="{'readonly':[('state','in',['refuse','accounting_approve'])]}"/>
+                            <field name="course_type"
+                            attrs="{'readonly':[('state','in',['refuse','accounting_approve'])]}"/>
+                            <field name="course_place_id"
+                            attrs="{'readonly':[('state','in',['refuse','accounting_approve'])]}"/>
+                            <field name="description"
+                            attrs="{'readonly':[('state','in',['refuse','accounting_approve'])]}"/>
+                            <field name="price"
+                            attrs="{'readonly':[('state','in',['refuse','accounting_approve'])]}"/>
+                            <field name="start_date" attrs="{'readonly':[('course_type','!=','private')]}" force_save="1"/>
+                            <field name="end_date" attrs="{'readonly':[('course_type','!=','private')]}" force_save="1"/>
+                            <field name="number_of_days"
+                            attrs="{'readonly':[('state','in',['refuse','accounting_approve'])]}"/>
+                        </group>
+                        <group>
+                            <field name="total_value_without_ticket"
+                            attrs="{'readonly':[('state','in',['refuse','accounting_approve'])]}"/>
+                            <field name="day_value"
+                            attrs="{'readonly':[('state','in',['refuse','accounting_approve'])]}"/>
+                            <field name="housing_value"
+                            attrs="{'readonly':[('state','in',['refuse','accounting_approve'])]}"/>
+                            <field name="transportation_value"
+                            attrs="{'readonly':[('state','in',['refuse','accounting_approve'])]}"/>
+                            <field name="daily_expenses"
+                            attrs="{'readonly':[('state','in',['refuse','accounting_approve'])]}"/>
+                            <field name="traveling_type"
+                            attrs="{'readonly':[('state','in',['refuse','accounting_approve'])],'required':[('state','=','department_manager_approve')]}"/>
+                            <field name="attach_file"
+                            attrs="{'readonly':[('state','in',['refuse','accounting_approve'])]}"
+                                   widget="many2many_binary"
+                            groups="ncss_mandate_passenger.mandate_passenger_hr_manager"
+                            />
+                             <field name="attach_file_ticket"
+                             attrs="{'invisible':[('state','in',['draft','direct_manager_approve'])]}"
+                                    widget="many2many_binary"
+
+                             groups="ncss_mandate_passenger.mandate_passenger_hr_manager"
+                            />
+
+                            <field name="Subsistence_rate" invisible="1"/>
+                            <field name="total" />
+                            <field name="is_direct_manager" invisible="1"/>
+                            <field name="is_department_manager" invisible="1"/>
+                            <field name="reason"
+                            attrs="{'readonly':[('state','in',['refuse','accounting_approve'])]}"
+                            />
+                        </group>
+                        <group>
+
+                            <field name="department_id" force_save="1" readonly="1" invisible="1"
+                            attrs="{'invisible':['|',('is_department_manager','=',False),('state','!=','direct_manager_approve')]}"
+                            style="color: red; font-weight: bold;"/>
+                            <field name="budget" force_save="1" readonly="1"
+                            attrs="{'invisible':['|',('is_department_manager','=',False),('state','!=','direct_manager_approve')]}"
+                            style="color: red; font-weight: bold;"/>
+                            <field name="expensed_from_budget" readonly="1" force_save="1"
+                            attrs="{'invisible':['|',('is_department_manager','=',False),('state','!=','direct_manager_approve')]}"
+                           style="color: red; font-weight: bold;" />
+                            <field name="remaining_from_budget" readonly="1" force_save="1"
+                            attrs="{'invisible':['|',('is_department_manager','=',False),('state','!=','direct_manager_approve')]}"
+                            style="color: green; font-weight: bold;"/>
+
+                        </group>
+                    </group>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" widget="mail_followers"/>
+                    <field name="activity_ids" widget="mail_activity"/>
+                    <field name="message_ids" widget="mail_thread"/>
+                </div>
+            </form>
+        </field>
+    </record>
+
+    <record id="mandate_passenger_tree" model="ir.ui.view">
+        <field name="name">mandate.passenger.tree</field>
+        <field name="model">mandate.passenger</field>
+        <field name="arch" type="xml">
+            <tree string="">
+                <field name="employee_id"/>
+                <field name="employee_type"/>
+                <field name="type" />
+                <field name="course_id" />
+                <field name="course_place_id" />
+                <field name="description" />
+                <field name="course_type" />
+                <field name="number_of_days" />
+                <field name="price" />
+                <field name="total_value_without_ticket" />
+                <field name="total" />
+                <field name="state" />
+            </tree>
+        </field>
+    </record>
+
+    <record id="mandate_passenger_graph" model="ir.ui.view">
+        <field name="name">mandate.passenger.graph</field>
+        <field name="model">mandate.passenger</field>
+        <field name="arch" type="xml">
+            <graph>
+                <field name="employee_id"/>
+                <field name="total" type="measure"/>
+            </graph>
+        </field>
+    </record>
+
+    <record id="mandate_passenger_pivot" model="ir.ui.view">
+        <field name="name">mandate.passenger.pivot</field>
+        <field name="model">mandate.passenger</field>
+        <field name="arch" type="xml">
+            <pivot>
+                <field name="employee_id" type="row"/>
+                <field name="total" type="measure"/>
+                <field name="type" type="row"/>
+                <field name="state" type="row"/>
+            </pivot>
+        </field>
+    </record>
+
+<!--    <record id="mandate_passenger_calendar" model="ir.ui.view">-->
+<!--        <field name="name">mandate.passenger.calendar</field>-->
+<!--        <field name="model">mandate.passenger</field>-->
+<!--        <field name="arch" type="xml">-->
+<!--            <calendar color="state" hide_time="true" event_limit="5">-->
+<!--                <field name="employee_id" avatar_field="image_128"/>-->
+<!--                <field name="total"/>-->
+<!--            </calendar>-->
+<!--        </field>-->
+<!--    </record>-->
+
+    <record id="mandate_passenger_kanban" model="ir.ui.view">
+        <field name="name">mandate.passenger.kanban</field>
+        <field name="model">mandate.passenger</field>
+        <field name="arch" type="xml">
+            <kanban default_group_by="state">
+                <field name="employee_id"/>
+                <field name="employee_type"/>
+                <field name="type" />
+                <field name="course_id" />
+                <field name="description" />
+                <field name="course_type" />
+                <field name="number_of_days" />
+                <field name="price" />
+                <field name="total_value_without_ticket" />
+                <field name="total" />
+                <field name="color" />
+                <templates>
+                    <t t-name="kanban-box">
+                        <div t-attf-class="#{kanban_color(record.color.raw_value)} oe_kanban_global_click o_kanban_record_has_image_fill o_crm_project_kanban" >
+                            <div class="oe_kanban_details">
+                                <strong class="o_kanban_record_title"><field name="employee_id"/></strong>
+                                <div class="o_kanban_tags_section"/>
+                                    <ul>
+<!--                                        <li>Employee : <field name="employee_id"/></li>-->
+<!--                                        <li>Employee Type : <field name="employee_type"/></li>-->
+                                        <li>Type : <field name="type"/></li>
+                                        <li>Course: <field name="course_id"/></li>
+                                        <li>Course Type : <field name="course_type"/></li>
+                                        <li>Number Of Days : <field name="number_of_days"/></li>
+                                        <li>Price : <field name="price"/></li>
+                                        <li>Total Value Without Ticket : <field name="total_value_without_ticket"/></li>
+                                        <li>Total : <field name="total"/></li>
+                                    </ul>
+                                </div>
+                            </div>
+                    </t>
+                </templates>
+            </kanban>
+        </field>
+    </record>
+
+
+    <record id="mandate_passenger_action" model="ir.actions.act_window">
+        <field name="name">Mandate And Passenger</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">mandate.passenger</field>
+        <field name="view_mode">tree,kanban,form,graph,pivot</field>
+    </record>
+    <record id="direct_manager_approve_action" model="ir.actions.act_window">
+        <field name="name">Waiting Direct Manager Approve</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">mandate.passenger</field>
+        <field name="domain">[('state','=','draft')]</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+    <record id="department_manager_approve_action" model="ir.actions.act_window">
+        <field name="name">Waiting Department Manager Approve</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">mandate.passenger</field>
+        <field name="domain">[('state','=','direct_manager_approve')]</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+    <record id="waiting_hr_approve_action" model="ir.actions.act_window">
+        <field name="name">Waiting HR Approve</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">mandate.passenger</field>
+        <field name="domain">[('state','=','department_manager_approve')]</field>
+        <field name="view_mode">tree,form</field>
+
+    </record>
+    <record id="accounting_approve_action" model="ir.actions.act_window">
+        <field name="name">Waiting Accounting Approve</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">mandate.passenger</field>
+        <field name="domain">[('state','=','hr_approve')]</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+    <record id="refuse_menu_action" model="ir.actions.act_window">
+        <field name="name">Refuse</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">mandate.passenger</field>
+        <field name="domain">[('state','=','refuse')]</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <record id="travel_ticket_menu_action" model="ir.actions.act_window">
+        <field name="name">Travel Ticket</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">mandate.passenger</field>
+        <field name="domain">[('course_place_id.need_ticket','=',True)]</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+
+        <record id="travel_ticket_hr_menu_action" model="ir.actions.act_window">
+        <field name="name">Travel Ticket Waiting Approve by HR</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">mandate.passenger</field>
+        <field name="domain">[('course_place_id.need_ticket','=',True) ,('state','=','department_manager_approve') ,  ]</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+       <record id="travel_ticket_account_menu_action" model="ir.actions.act_window">
+        <field name="name">Travel Ticket Done</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">mandate.passenger</field>
+        <field name="domain">[('course_place_id.need_ticket','=',True) ,('state','=','accounting_approve') ,  ]</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+    <!--    crm.project Form-->
+
+
+    <menuitem id="mandate_passenger_root"
+              name="Mandate and Passenger"
+              web_icon="ncss_mandate_passenger,static/src/img/mandate.png"
+    />
+
+
+    <menuitem id="mandate_passenger_child_menu"
+              name="Mandate and Passenger"
+              parent="mandate_passenger_root"
+              sequence="2"
+    />
+
+    <menuitem id="mandate_passenger_action_menu"
+              name="Mandate and Passenger"
+              action="mandate_passenger_action"
+              parent="mandate_passenger_child_menu"
+              sequence="4"
+    />
+
+    <menuitem id="direct_manager_approve_menu"
+              name="Waiting Direct Manager Approve"
+              action="direct_manager_approve_action"
+              parent="mandate_passenger_child_menu"
+              sequence="6"
+              groups="ncss_mandate_passenger.mandate_passenger_waiting_direct_manager_approve_menu"
+    />
+
+    <menuitem id="department_manager_approve_menu"
+              name="Waiting Department Manager Approve"
+              action="department_manager_approve_action"
+              parent="mandate_passenger_child_menu"
+              sequence="8"
+              groups="ncss_mandate_passenger.mandate_passenger_waiting_department_manager_approve_menu"
+    />
+
+    <menuitem id="hr_approve_menu"
+              name="Waiting HR Approve"
+              action="waiting_hr_approve_action"
+              parent="mandate_passenger_child_menu"
+              sequence="20"
+              groups="ncss_mandate_passenger.mandate_passenger_hr_manager_menu"
+    />
+
+    <menuitem id="accounting_approve_menu"
+              name="Waiting Accounting Approve"
+              action="accounting_approve_action"
+              parent="mandate_passenger_child_menu"
+              sequence="10"
+              groups="ncss_mandate_passenger.mandate_passenger_waiting_accounting_manager_approve_menu"
+    />
+
+    <menuitem id="refuse_menu"
+              name="Refuse"
+              action="refuse_menu_action"
+              parent="mandate_passenger_child_menu"
+              sequence="12"
+              groups="ncss_mandate_passenger.mandate_passenger_refuse_menu"
+    />
+
+
+    <menuitem id="travel_ticket_child"
+              name="Travel Ticket"
+              parent="mandate_passenger_root"
+              sequence="4"
+              groups="ncss_mandate_passenger.mandate_passenger_travel_ticket"
+    />
+
+    <menuitem id="All_travel_ticket_child"
+              name="All Ticket"
+              action="travel_ticket_menu_action"
+              parent="travel_ticket_child"
+              sequence="5"
+              groups="ncss_mandate_passenger.mandate_passenger_travel_ticket"
+    />
+
+    <menuitem id="travel_ticket_hr_child"
+              name="Ticket Waiting  Appove by HR"
+              action="travel_ticket_hr_menu_action"
+              parent="travel_ticket_child"
+              sequence="6"
+              groups="ncss_mandate_passenger.mandate_passenger_travel_ticket"
+    />
+
+    <menuitem id="travel_ticket_Account_child"
+              name="Travel Ticket Done"
+              action="travel_ticket_account_menu_action"
+              parent="travel_ticket_child"
+              sequence="6"
+              groups="ncss_mandate_passenger.mandate_passenger_travel_ticket"
+    />
+    <menuitem id="mandate_passenger_setting_child"
+              name="Courses"
+              action="training_course_action"
+              parent="mandate_passenger_root"
+              sequence="6"
+              groups="ncss_mandate_passenger.mandate_passenger_user,ncss_mandate_passenger.mandate_passenger_manager"
+    />
+
+    <menuitem id="course_place_menu"
+              name="Course Places"
+              action="course_place_action"
+              parent="mandate_passenger_root"
+              sequence="8"
+              groups="ncss_mandate_passenger.mandate_passenger_course_place_user,ncss_mandate_passenger.mandate_passenger_course_place_manager"
+    />
+
+
+
+
+    <menuitem id="mandate_passenger_setting_menu"
+              name="Setting"
+              parent="mandate_passenger_root"
+              sequence="10"
+    />
+
+
+    <menuitem id="employee_degree_setting_child"
+              name="Employee Degree"
+              action="employee_degree_value_action"
+              parent="mandate_passenger_setting_menu"
+              sequence="4"
+              groups="ncss_mandate_passenger.mandate_passenger_employee_degree_user,ncss_mandate_passenger.mandate_passenger_employee_degree_manager"
+    />
+
+    <menuitem id="budget_allocation_setting_child"
+              name="Budget Allocated For Training"
+              action="budget_allocation_action"
+              parent="mandate_passenger_setting_menu"
+              sequence="6"
+              groups="ncss_mandate_passenger.mandate_passenger_budget_user,ncss_mandate_passenger.mandate_passenger_budget_manager"
+    />
+
+
+
+</odoo>

@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <report
+        id="report_administrative_communication"
+        string="Administrative Communication"
+        model="administrative.communication"
+        report_type="qweb-pdf"
+        name="ncss_administrative_communications.administrative_communication_report"
+        file="ncss_administrative_communications.administrative_communication_report"/>
+
+    <template id="administrative_communication_report">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="o">
+                <t t-call="web.external_layout">
+                    <div class="page">
+                        <div class="oe_structure"/>
+                        <div class="row">
+                            <br/>
+                            <br/>
+                            <br/>
+                            <br/>
+                            <center>
+                                <div id="informations" class="row mt32 mb32">
+                                    <div class="col-auto mw-100 mb-2" t-if="o.sequence" name="sequence">
+                                        <strong>Name:</strong>
+                                        <p class="m-0" t-field="o.sequence"/>
+                                    </div>
+                                    <div class="col-auto mw-100 mb-2" t-if="o.treatment_type" name="treatment_type">
+                                        <strong>Treatment Type:</strong>
+                                        <p class="m-0" t-field="o.treatment_type"/>
+                                    </div>
+
+                                    <div class="col-auto mw-100 mb-2" t-if="o.treatment_type" name="treatment_type">
+                                        <strong>Post Type:</strong>
+                                        <p class="m-0" t-field="o.post_type"/>
+                                    </div>
+                                    <div class="col-auto mw-100 mb-2" t-if="o.treatment_type" name="treatment_type">
+                                        <strong>Nature of Transaction:</strong>
+                                        <p class="m-0" t-field="o.nature_of_transaction"/>
+                                    </div>
+                                    <div class="col-auto mw-100 mb-2" t-if="o.treatment_type" name="treatment_type">
+                                        <strong>Way Of Send:</strong>
+                                        <p class="m-0" t-field="o.way_of_send"/>
+                                    </div>
+
+<!--                                    <div class="col-auto mw-100 mb-2" t-if="o.Category" name="Category">-->
+<!--                                        <strong>Category:</strong>-->
+<!--                                        <p class="m-0" t-field="o.Category"/>-->
+<!--                                    </div>-->
+<!--                                    <div class="col-auto mw-100 mb-2" t-if="o.category_name" name="category_name">-->
+<!--                                        <strong>Category Name:</strong>-->
+<!--                                        <p class="m-0" t-field="o.category_name"/>-->
+<!--                                    </div>-->
+                                    <div class="col-auto mw-100 mb-2" t-if="o.transactions_number and o.treatment_type == 'in'" name="transactions_number">
+                                        <strong>Transactions Number:</strong>
+                                        <p class="m-0" t-field="o.transactions_number"/>
+                                    </div>
+<!--                                    <div class="col-auto mw-100 mb-2" t-if="o.years" name="years">-->
+<!--                                        <strong>Year:</strong>-->
+<!--                                        <p class="m-0" t-field="o.years"/>-->
+<!--                                    </div>-->
+                                    <div class="col-auto mw-100 mb-2" t-if="o.transaction_date" name="transaction_date">
+                                        <strong>Transaction Date:</strong>
+                                        <p class="m-0" t-field="o.transaction_date"/>
+                                    </div>
+                                    <div class="col-auto mw-100 mb-2" t-if="o.hijri_date" name="hijri_date">
+                                        <strong>Hijri Date:</strong>
+                                        <p class="m-0" t-field="o.hijri_date"/>
+                                    </div>
+                                </div>
+
+                                <div id="informations2" class="row mt32 mb32">
+                                    <div class="col-auto mw-100 mb-2" t-if="o.reference_number and o.treatment_type == 'in'" name="reference_number">
+                                        <strong>Reference Number:</strong>
+                                        <p class="m-0" t-field="o.reference_number"/>
+                                    </div>
+
+                                    <div class="col-auto mw-100 mb-2" t-if="o.source_id" name="source_id">
+                                        <strong>Source:</strong>
+                                        <p class="m-0" t-field="o.source_id"/>
+                                    </div>
+                                    <div class="col-auto mw-100 mb-2" t-if="o.transfer_to_id and o.treatment_type == 'in'" name="transfer_to_id">
+                                        <strong>Transfer To:</strong>
+                                        <p class="m-0" t-field="o.transfer_to_id"/>
+                                    </div>
+                                    <div class="col-auto mw-100 mb-2" t-if="o.assign_to_id and o.treatment_type == 'out'" name="assign_to_id">
+                                        <strong>Assign To:</strong>
+                                        <p class="m-0" t-field="o.assign_to_id"/>
+                                    </div>
+                                    <div class="col-auto mw-100 mb-2" t-if="o.assign_to_department_id and o.treatment_type == 'out'" name="assign_to_id">
+                                        <strong>Assign Department:</strong>
+                                        <p class="m-0" t-field="o.assign_to_id"/>
+                                    </div>
+                                    <div class="col-auto mw-100 mb-2" t-if="o.transfer_date" name="transfer_date">
+                                        <strong>Transfer Date:</strong>
+                                        <p class="m-0" t-field="o.transfer_date"/>
+                                    </div>
+                                </div>
+
+                                <div id="informations3" class="row mt32 mb32">
+                                    <div class="col-auto mw-100 mb-2" t-if="o.transfer_number" name="transfer_number">
+                                        <strong>Transfer Number:</strong>
+                                        <p class="m-0" t-field="o.transfer_number"/>
+                                    </div>
+                                    <div class="col-auto mw-100 mb-2" t-if="o.attachments" name="attachments">
+                                        <strong>Attachments:</strong>
+                                        <p class="m-0" t-field="o.attachments"/>
+                                    </div>
+<!--                                    <div class="col-auto mw-100 mb-2" t-if="o.file_number" name="file_number">-->
+<!--                                        <strong>File Number:</strong>-->
+<!--                                        <p class="m-0" t-field="o.file_number"/>-->
+<!--                                    </div>-->
+<!--                                    <div class="col-auto mw-100 mb-2" t-if="o.sender_type" name="sender_type">-->
+<!--                                        <strong>Sender Type:</strong>-->
+<!--                                        <p class="m-0" t-field="o.sender_type"/>-->
+<!--                                    </div>-->
+                                    <div class="col-auto mw-100 mb-2" t-if="o.state" name="state">
+                                        <strong>State:</strong>
+                                        <p class="m-0" t-field="o.state"/>
+                                    </div>
+                                    <div class="col-auto mw-100 mb-2">
+                                        <img t-att-src="'/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s' % ('Code128', o.sequence, 600, 100)" style="width:350px;height:60px"/>
+                                    </div>
+                                </div>
+                             <table class="table table-sm o_main_table" name="invoice_line_table">
+                                <thead>
+                                    <tr>
+                                        <t t-set="colspan" t-value="6"/>
+                                        <th name="attached_by_id" class="text-left"><span>Attached BY</span></th>
+                                        <th name="recipient_by_id" class="text-left"><span>Receipt BY</span></th>
+                                        <th name="source_id" class="text-left"><span>Procedure</span></th>
+<!--                                        <th name="transfer_to_id" class="text-left"><span>Destination</span></th>-->
+<!--                                        <th name="sender_type" class="text-left"><span>Sender Type</span></th>-->
+                                        <th name="date_and_time" class="text-left"><span>Date And Time</span></th>
+                                        <th name="notes" class="text-left"><span>Due Date</span></th>
+                                    </tr>
+                                </thead>
+                                <tbody class="invoice_tbody">
+                                    <t t-foreach="o.transaction_line_ids" t-as="line">
+                                        <tr>
+                                            <td class="text-left">
+                                                <span t-field="line.user_attached_id"/>
+                                            </td>
+                                            <td class="text-left">
+                                                <span t-field="line.user_id"/>
+                                            </td>
+                                            <td class="text-left">
+                                                <span t-field="line.procedure_id"/>
+                                            </td>
+<!--                                            <td class="text-left">-->
+<!--                                                <span t-field="line.transfer_to_id"/>-->
+<!--                                            </td>-->
+<!--                                            <td class="text-left">-->
+<!--                                                <span t-field="line.sender_type"/>-->
+<!--                                            </td>-->
+                                            <td class="text-left">
+                                                <span t-field="line.date_and_time"/>
+                                            </td>
+                                            <td class="text-left">
+                                                <span t-field="line.due_date"/>
+                                            </td>
+
+                                        </tr>
+                                    </t>
+                                </tbody>
+                            </table>
+
+                            </center>
+                        </div>
+                    </div>
+                </t>
+            </t>
+        </t>
+    </template>
+
+</odoo>
